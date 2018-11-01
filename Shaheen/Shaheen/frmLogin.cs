@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Shaheen
 {
-    public partial class Form1 : Form
+    public partial class frmLogin : BaseForm
     {
-        public Form1()
+        public frmLogin()
         {
             InitializeComponent();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -16,7 +16,12 @@ namespace Shaheen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            frmLogin login = new frmLogin();
+            if (login.ShowDialog() == DialogResult.OK)
+            {
+                Application.Run(new MDIMain());
+            }
+            
         }
     }
 }
