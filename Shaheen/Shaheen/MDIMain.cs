@@ -16,5 +16,25 @@ namespace Shaheen
         {
             InitializeComponent();
         }
+
+        public static bool isCustomer = false;
+        public frmCustomer customer = null;
+
+        private void mnuCustomer_Click(object sender, EventArgs e)
+        {
+            if (!isCustomer)
+            {
+                customer = new frmCustomer();
+                customer.MdiParent = this;
+                customer.Show();
+                customer.Focus();
+            }
+            
+        }
+
+        private void MDIMain_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
