@@ -15,6 +15,11 @@ namespace Shaheen
         public BaseForm()
         {
             InitializeComponent();
-        }       
+        }
+
+        private void BaseForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
