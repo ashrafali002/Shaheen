@@ -28,6 +28,7 @@ namespace Shaheen
                 customer.MdiParent = this;
                 customer.Show();
                 customer.Focus();
+                isCustomer = true;
             }
             
         }

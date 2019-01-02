@@ -22,6 +22,11 @@ namespace Shaheen
 
         }
 
-        
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            MDIMain.isCustomer = false;
+            this.Close();
+
+        }
     }
 }
