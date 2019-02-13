@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Model.Store" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Agent">
+          <Key>
+            <PropertyRef Name="agentId" />
+          </Key>
+          <Property Name="agentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="agentCode" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Area">
+          <Key>
+            <PropertyRef Name="areaId" />
+          </Key>
+          <Property Name="areaId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="areaName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="cityId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="cityId" />
+          </Key>
+          <Property Name="cityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="cityName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="districtId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="countryId" />
+          </Key>
+          <Property Name="countryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="countryName" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="District">
+          <Key>
+            <PropertyRef Name="districtId" />
+          </Key>
+          <Property Name="districtId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="districtName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="stateId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="paymentId" />
+          </Key>
+          <Property Name="paymentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="subscriptionId" Type="int" Nullable="false" />
+          <Property Name="paymentType" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="paymentDate" Type="datetime" Nullable="false" />
+          <Property Name="moDate" Type="datetime" Nullable="false" />
+          <Property Name="chequeNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="chequeDate" Type="datetime" Nullable="false" />
+          <Property Name="amountPaid" Type="money" Nullable="false" />
+          <Property Name="receiptNo" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="bankName" Type="nvarchar" MaxLength="200" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="personId" />
+          </Key>
+          <Property Name="personId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="personName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="personAddress" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="areaId" Type="int" Nullable="false" />
+          <Property Name="cityId" Type="int" Nullable="false" />
+          <Property Name="districtId" Type="int" Nullable="false" />
+          <Property Name="stateId" Type="int" Nullable="false" />
+          <Property Name="countryId" Type="int" Nullable="false" />
+          <Property Name="pin" Type="nvarchar" MaxLength="8" />
+          <Property Name="phone" Type="nvarchar" MaxLength="10" />
+          <Property Name="mobile" Type="nvarchar" MaxLength="10" />
+          <Property Name="email" Type="nvarchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="stateId" />
+          </Key>
+          <Property Name="stateId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="stateName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="countryId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Subscription">
+          <Key>
+            <PropertyRef Name="subscriptionId" />
+          </Key>
+          <Property Name="subscriptionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="subscriptionCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="personId" Type="int" Nullable="false" />
+          <Property Name="agentId" Type="int" Nullable="false" />
+          <Property Name="pendingAmount" Type="money" Nullable="false" />
+          <Property Name="subscriptionDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SubscriptionDetail">
+          <Key>
+            <PropertyRef Name="subscriptionDetailId" />
+          </Key>
+          <Property Name="subscriptionDetailId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="subscriptionId" Type="int" Nullable="false" />
+          <Property Name="subscriptionDuration" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="subscriptionAmount" Type="money" Nullable="false" />
+          <Property Name="subscriptionStartDate" Type="datetime" Nullable="false" />
+          <Property Name="subscriptionEndDate" Type="datetime" Nullable="false" />
+          <Property Name="note" Type="nvarchar" MaxLength="1000" />
+        </EntityType>
+        <EntityContainer Name="ModelStoreContainer">
+          <EntitySet Name="Agent" EntityType="Self.Agent" store:Type="Tables" />
+          <EntitySet Name="Area" EntityType="Self.Area" store:Type="Tables" />
+          <EntitySet Name="City" EntityType="Self.City" store:Type="Tables" />
+          <EntitySet Name="Country" EntityType="Self.Country" store:Type="Tables" />
+          <EntitySet Name="District" EntityType="Self.District" store:Type="Tables" />
+          <EntitySet Name="Payment" EntityType="Self.Payment" store:Type="Tables" />
+          <EntitySet Name="Person" EntityType="Self.Person" store:Type="Tables" />
+          <EntitySet Name="State" EntityType="Self.State" store:Type="Tables" />
+          <EntitySet Name="Subscription" EntityType="Self.Subscription" store:Type="Tables" />
+          <EntitySet Name="SubscriptionDetail" EntityType="Self.SubscriptionDetail" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Agent">
+          <Key>
+            <PropertyRef Name="agentId" />
+          </Key>
+          <Property Name="agentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="agentCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Area">
+          <Key>
+            <PropertyRef Name="areaId" />
+          </Key>
+          <Property Name="areaId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="areaName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="cityId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="cityId" />
+          </Key>
+          <Property Name="cityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cityName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="districtId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="countryId" />
+          </Key>
+          <Property Name="countryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="countryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="District">
+          <Key>
+            <PropertyRef Name="districtId" />
+          </Key>
+          <Property Name="districtId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="districtName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="stateId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Payment">
+          <Key>
+            <PropertyRef Name="paymentId" />
+          </Key>
+          <Property Name="paymentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="subscriptionId" Type="Int32" Nullable="false" />
+          <Property Name="paymentType" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="paymentDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="moDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="chequeNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="chequeDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="amountPaid" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="receiptNo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="bankName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Person">
+          <Key>
+            <PropertyRef Name="personId" />
+          </Key>
+          <Property Name="personId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="personName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="personAddress" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="areaId" Type="Int32" Nullable="false" />
+          <Property Name="cityId" Type="Int32" Nullable="false" />
+          <Property Name="districtId" Type="Int32" Nullable="false" />
+          <Property Name="stateId" Type="Int32" Nullable="false" />
+          <Property Name="countryId" Type="Int32" Nullable="false" />
+          <Property Name="pin" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mobile" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="State">
+          <Key>
+            <PropertyRef Name="stateId" />
+          </Key>
+          <Property Name="stateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="stateName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="countryId" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Subscription">
+          <Key>
+            <PropertyRef Name="subscriptionId" />
+          </Key>
+          <Property Name="subscriptionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="subscriptionCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="agentId" Type="Int32" Nullable="false" />
+          <Property Name="pendingAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="subscriptionDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="SubscriptionDetail">
+          <Key>
+            <PropertyRef Name="subscriptionDetailId" />
+          </Key>
+          <Property Name="subscriptionDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="subscriptionId" Type="Int32" Nullable="false" />
+          <Property Name="subscriptionDuration" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="subscriptionAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="subscriptionStartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="subscriptionEndDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ShaheenEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Agents" EntityType="Self.Agent" />
+          <EntitySet Name="Areas" EntityType="Self.Area" />
+          <EntitySet Name="Cities" EntityType="Self.City" />
+          <EntitySet Name="Countries" EntityType="Self.Country" />
+          <EntitySet Name="Districts" EntityType="Self.District" />
+          <EntitySet Name="Payments" EntityType="Self.Payment" />
+          <EntitySet Name="People" EntityType="Self.Person" />
+          <EntitySet Name="States" EntityType="Self.State" />
+          <EntitySet Name="Subscriptions" EntityType="Self.Subscription" />
+          <EntitySet Name="SubscriptionDetails" EntityType="Self.SubscriptionDetail" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ShaheenEntities">
+          <EntitySetMapping Name="Agents">
+            <EntityTypeMapping TypeName="Model.Agent">
+              <MappingFragment StoreEntitySet="Agent">
+                <ScalarProperty Name="agentId" ColumnName="agentId" />
+                <ScalarProperty Name="agentCode" ColumnName="agentCode" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Areas">
+            <EntityTypeMapping TypeName="Model.Area">
+              <MappingFragment StoreEntitySet="Area">
+                <ScalarProperty Name="areaId" ColumnName="areaId" />
+                <ScalarProperty Name="areaName" ColumnName="areaName" />
+                <ScalarProperty Name="cityId" ColumnName="cityId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cities">
+            <EntityTypeMapping TypeName="Model.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="cityId" ColumnName="cityId" />
+                <ScalarProperty Name="cityName" ColumnName="cityName" />
+                <ScalarProperty Name="districtId" ColumnName="districtId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Countries">
+            <EntityTypeMapping TypeName="Model.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="countryId" ColumnName="countryId" />
+                <ScalarProperty Name="countryName" ColumnName="countryName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Districts">
+            <EntityTypeMapping TypeName="Model.District">
+              <MappingFragment StoreEntitySet="District">
+                <ScalarProperty Name="districtId" ColumnName="districtId" />
+                <ScalarProperty Name="districtName" ColumnName="districtName" />
+                <ScalarProperty Name="stateId" ColumnName="stateId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Payments">
+            <EntityTypeMapping TypeName="Model.Payment">
+              <MappingFragment StoreEntitySet="Payment">
+                <ScalarProperty Name="paymentId" ColumnName="paymentId" />
+                <ScalarProperty Name="subscriptionId" ColumnName="subscriptionId" />
+                <ScalarProperty Name="paymentType" ColumnName="paymentType" />
+                <ScalarProperty Name="paymentDate" ColumnName="paymentDate" />
+                <ScalarProperty Name="moDate" ColumnName="moDate" />
+                <ScalarProperty Name="chequeNo" ColumnName="chequeNo" />
+                <ScalarProperty Name="chequeDate" ColumnName="chequeDate" />
+                <ScalarProperty Name="amountPaid" ColumnName="amountPaid" />
+                <ScalarProperty Name="receiptNo" ColumnName="receiptNo" />
+                <ScalarProperty Name="bankName" ColumnName="bankName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="People">
+            <EntityTypeMapping TypeName="Model.Person">
+              <MappingFragment StoreEntitySet="Person">
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="personName" ColumnName="personName" />
+                <ScalarProperty Name="personAddress" ColumnName="personAddress" />
+                <ScalarProperty Name="areaId" ColumnName="areaId" />
+                <ScalarProperty Name="cityId" ColumnName="cityId" />
+                <ScalarProperty Name="districtId" ColumnName="districtId" />
+                <ScalarProperty Name="stateId" ColumnName="stateId" />
+                <ScalarProperty Name="countryId" ColumnName="countryId" />
+                <ScalarProperty Name="pin" ColumnName="pin" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="States">
+            <EntityTypeMapping TypeName="Model.State">
+              <MappingFragment StoreEntitySet="State">
+                <ScalarProperty Name="stateId" ColumnName="stateId" />
+                <ScalarProperty Name="stateName" ColumnName="stateName" />
+                <ScalarProperty Name="countryId" ColumnName="countryId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subscriptions">
+            <EntityTypeMapping TypeName="Model.Subscription">
+              <MappingFragment StoreEntitySet="Subscription">
+                <ScalarProperty Name="subscriptionId" ColumnName="subscriptionId" />
+                <ScalarProperty Name="subscriptionCode" ColumnName="subscriptionCode" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="agentId" ColumnName="agentId" />
+                <ScalarProperty Name="pendingAmount" ColumnName="pendingAmount" />
+                <ScalarProperty Name="subscriptionDate" ColumnName="subscriptionDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubscriptionDetails">
+            <EntityTypeMapping TypeName="Model.SubscriptionDetail">
+              <MappingFragment StoreEntitySet="SubscriptionDetail">
+                <ScalarProperty Name="subscriptionDetailId" ColumnName="subscriptionDetailId" />
+                <ScalarProperty Name="subscriptionId" ColumnName="subscriptionId" />
+                <ScalarProperty Name="subscriptionDuration" ColumnName="subscriptionDuration" />
+                <ScalarProperty Name="subscriptionAmount" ColumnName="subscriptionAmount" />
+                <ScalarProperty Name="subscriptionStartDate" ColumnName="subscriptionStartDate" />
+                <ScalarProperty Name="subscriptionEndDate" ColumnName="subscriptionEndDate" />
+                <ScalarProperty Name="note" ColumnName="note" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

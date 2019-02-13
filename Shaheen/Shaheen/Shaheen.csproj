@@ -32,8 +32,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServerCompact, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.SqlServerCompact.6.2.0\lib\net45\EntityFramework.SqlServerCompact.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +66,13 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\AgentBLL.cs" />
+    <Compile Include="BLL\AreaBLL.cs" />
+    <Compile Include="BLL\CityBLL.cs" />
+    <Compile Include="BLL\CountryBLL.cs" />
+    <Compile Include="BLL\DistrictBLL.cs" />
+    <Compile Include="BLL\PersonBLL.cs" />
+    <Compile Include="BLL\StateBLL.cs" />
     <Compile Include="frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +93,51 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShaheenDB\Agent.cs">
+      <DependentUpon>ShaheenEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShaheenDB\Area.cs">
+      <DependentUpon>ShaheenEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShaheenDB\City.cs">
+      <DependentUpon>ShaheenEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShaheenDB\Country.cs">
+      <DependentUpon>ShaheenEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShaheenDB\District.cs">
+      <DependentUpon>ShaheenEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShaheenDB\Payment.cs">
+      <DependentUpon>ShaheenEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShaheenDB\Person.cs">
+      <DependentUpon>ShaheenEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShaheenDB\ShaheenEF.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShaheenEF.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShaheenDB\ShaheenEF.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShaheenEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShaheenDB\ShaheenEF.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShaheenEF.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ShaheenDB\State.cs">
+      <DependentUpon>ShaheenEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShaheenDB\Subscription.cs">
+      <DependentUpon>ShaheenEF.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ShaheenDB\SubscriptionDetail.cs">
+      <DependentUpon>ShaheenEF.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,6 +159,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -101,15 +169,41 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EntityDeploy Include="ShaheenDB\ShaheenEF.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ShaheenEF.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ShaheenDB\ShaheenEF.edmx.diagram">
+      <DependentUpon>ShaheenEF.edmx</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="ShaheenDB\ShaheenDB.sdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="ShaheenDB\ShaheenEF.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ShaheenEF.edmx</DependentUpon>
+      <LastGenOutput>ShaheenEF.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ShaheenDB\ShaheenEF.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ShaheenEF.edmx</DependentUpon>
+      <LastGenOutput>ShaheenEF.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    if not exist "$(TargetDir)x86" md "$(TargetDir)x86"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\x86\*.*" "$(TargetDir)x86"
+    if not exist "$(TargetDir)amd64" md "$(TargetDir)amd64"
+    xcopy /s /y "$(SolutionDir)packages\Microsoft.SqlServer.Compact.4.0.8876.1\NativeBinaries\amd64\*.*" "$(TargetDir)amd64"</PostBuildEvent>
+  </PropertyGroup>
 </Project>
