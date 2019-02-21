@@ -73,6 +73,8 @@
     <Compile Include="BLL\DistrictBLL.cs" />
     <Compile Include="BLL\PersonBLL.cs" />
     <Compile Include="BLL\StateBLL.cs" />
+    <Compile Include="BLL\SubscriptionBLL.cs" />
+    <Compile Include="BLL\SubscriptionDetailBLL.cs" />
     <Compile Include="frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>

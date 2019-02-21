@@ -171,7 +171,14 @@ namespace Shaheen
             if (isValid())
             {
                 int personId = SavePerson();
+                int subscriptionId = SaveSubscription(personId);
+                int subscriptionDetailId = SaveSubscriptionDetail(subscriptionId);
             }
+        }
+
+        public void SaveCustomer()
+        {
+
         }
 
         public int SavePerson()
@@ -189,8 +196,45 @@ namespace Shaheen
             person.mobile = txtMobile.Text;
             person.email = txtEmail.Text;
             PersonBLL personBll = new PersonBLL();
-            personBll.SavePerson(person);
+            person.personId = personBll.SavePerson(person);
             return person.personId;
+        }
+        public int SaveSubscription(int personId)
+        {
+            var subscription = new Subscription();
+            subscription.agentId = Convert.ToInt32(cmbAgent.SelectedValue);
+            subscription.subscriptionDate = dtpSubscriptionDate.Value;
+            subscription.subscriptionCode = txtCode.Text;
+            subscription.personId = personId;
+            SubscriptionBLL subsBll = new SubscriptionBLL();
+            subsBll.SaveSubscription(subscription);
+            return subscription.subscriptionId;
+        }
+
+        public int SaveSubscriptionDetail(int subscriptionId)
+        {
+            var subscriptionDetail = new SubscriptionDetail();
+            subscriptionDetail.subscriptionId = subscriptionId;
+            subscriptionDetail.note = txtNote.Text;
+            subscriptionDetail.subscriptionAmount = Convert.ToDecimal(txtAmount.Text);
+            subscriptionDetail.subscriptionDuration = txtDuration.Text;
+            subscriptionDetail.subscriptionEndDate = dtpEndDate.Value;
+            subscriptionDetail.subscriptionStartDate = dtpStartDate.Value;
+            SubscriptionDetailBLL subsDetailBll = new SubscriptionDetailBLL();
+            subsDetailBll.SaveSubscriptionDetail(subscriptionDetail);
+            return subscriptionDetail.subscriptionId;
+        }
+        private int SavePayment()
+        {
+            var payment = new Payment();
+            payment.amountPaid = Convert.ToDecimal(txtAmountPaid.Text);
+            payment.bankName = txtBankname.Text;
+            payment.chequeDate = dtpChequeDate.Value;
+            payment.chequeNo = txtChequeNo.Text;
+            payment.moDate = dtpMO.Value;
+            payment.paymentDate = dtpPaymentDate.Value;
+            
+            return payment.paymentId;
         }
     }
 }

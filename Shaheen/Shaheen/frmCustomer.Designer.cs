@@ -78,7 +78,7 @@
             this.lblReceiptNo = new System.Windows.Forms.Label();
             this.txtReceiptNo = new System.Windows.Forms.TextBox();
             this.lblBankName = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtBankname = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.rdoCash = new System.Windows.Forms.RadioButton();
             this.rdoDD = new System.Windows.Forms.RadioButton();
@@ -164,7 +164,7 @@
             this.tableLayoutPanel1.Controls.Add(this.lblReceiptNo, 3, 18);
             this.tableLayoutPanel1.Controls.Add(this.txtReceiptNo, 4, 18);
             this.tableLayoutPanel1.Controls.Add(this.lblBankName, 0, 17);
-            this.tableLayoutPanel1.Controls.Add(this.textBox2, 1, 17);
+            this.tableLayoutPanel1.Controls.Add(this.txtBankname, 1, 17);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 14);
             this.tableLayoutPanel1.Controls.Add(this.lblCountry, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.lblArea, 3, 5);
@@ -202,7 +202,7 @@
             this.dtpEndDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpEndDate.CustomFormat = "";
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEndDate.Location = new System.Drawing.Point(600, 288);
+            this.dtpEndDate.Location = new System.Drawing.Point(600, 290);
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(300, 23);
             this.dtpEndDate.TabIndex = 32;
@@ -212,7 +212,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(463, 291);
+            this.label2.Location = new System.Drawing.Point(463, 293);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 17);
             this.label2.TabIndex = 31;
@@ -221,7 +221,7 @@
             // txtDuration
             // 
             this.txtDuration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDuration.Location = new System.Drawing.Point(600, 259);
+            this.txtDuration.Location = new System.Drawing.Point(600, 261);
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.Size = new System.Drawing.Size(300, 23);
             this.txtDuration.TabIndex = 28;
@@ -230,7 +230,7 @@
             // 
             this.lblDuration.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblDuration.AutoSize = true;
-            this.lblDuration.Location = new System.Drawing.Point(463, 262);
+            this.lblDuration.Location = new System.Drawing.Point(463, 264);
             this.lblDuration.Name = "lblDuration";
             this.lblDuration.Size = new System.Drawing.Size(70, 17);
             this.lblDuration.TabIndex = 27;
@@ -241,7 +241,7 @@
             this.dtpSubscriptionDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpSubscriptionDate.CustomFormat = "";
             this.dtpSubscriptionDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpSubscriptionDate.Location = new System.Drawing.Point(137, 259);
+            this.dtpSubscriptionDate.Location = new System.Drawing.Point(137, 261);
             this.dtpSubscriptionDate.Name = "dtpSubscriptionDate";
             this.dtpSubscriptionDate.Size = new System.Drawing.Size(300, 23);
             this.dtpSubscriptionDate.TabIndex = 26;
@@ -251,7 +251,7 @@
             // 
             this.lblSubscriptionDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblSubscriptionDate.AutoSize = true;
-            this.lblSubscriptionDate.Location = new System.Drawing.Point(3, 262);
+            this.lblSubscriptionDate.Location = new System.Drawing.Point(3, 264);
             this.lblSubscriptionDate.Name = "lblSubscriptionDate";
             this.lblSubscriptionDate.Size = new System.Drawing.Size(128, 17);
             this.lblSubscriptionDate.TabIndex = 25;
@@ -272,7 +272,7 @@
             this.dtpStartDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpStartDate.CustomFormat = "";
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpStartDate.Location = new System.Drawing.Point(137, 288);
+            this.dtpStartDate.Location = new System.Drawing.Point(137, 290);
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.Size = new System.Drawing.Size(300, 23);
             this.dtpStartDate.TabIndex = 30;
@@ -282,7 +282,7 @@
             // 
             this.txtNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.txtNote, 4);
-            this.txtNote.Location = new System.Drawing.Point(137, 346);
+            this.txtNote.Location = new System.Drawing.Point(137, 348);
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(763, 23);
             this.txtNote.TabIndex = 36;
@@ -291,7 +291,7 @@
             // 
             this.lblNote.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblNote.AutoSize = true;
-            this.lblNote.Location = new System.Drawing.Point(3, 349);
+            this.lblNote.Location = new System.Drawing.Point(3, 351);
             this.lblNote.Name = "lblNote";
             this.lblNote.Size = new System.Drawing.Size(46, 17);
             this.lblNote.TabIndex = 35;
@@ -300,7 +300,7 @@
             // txtAmount
             // 
             this.txtAmount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAmount.Location = new System.Drawing.Point(137, 317);
+            this.txtAmount.Location = new System.Drawing.Point(137, 319);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(300, 23);
             this.txtAmount.TabIndex = 34;
@@ -317,7 +317,7 @@
             // 
             this.lblStartDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblStartDate.AutoSize = true;
-            this.lblStartDate.Location = new System.Drawing.Point(3, 291);
+            this.lblStartDate.Location = new System.Drawing.Point(3, 293);
             this.lblStartDate.Name = "lblStartDate";
             this.lblStartDate.Size = new System.Drawing.Size(80, 17);
             this.lblStartDate.TabIndex = 29;
@@ -395,7 +395,7 @@
             // 
             this.cmbArea.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbArea.FormattingEnabled = true;
-            this.cmbArea.Location = new System.Drawing.Point(600, 153);
+            this.cmbArea.Location = new System.Drawing.Point(600, 152);
             this.cmbArea.Name = "cmbArea";
             this.cmbArea.Size = new System.Drawing.Size(300, 24);
             this.cmbArea.TabIndex = 14;
@@ -404,7 +404,7 @@
             // 
             this.lblPhone.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(3, 184);
+            this.lblPhone.Location = new System.Drawing.Point(3, 185);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(57, 17);
             this.lblPhone.TabIndex = 17;
@@ -413,7 +413,7 @@
             // txtPhone
             // 
             this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPhone.Location = new System.Drawing.Point(137, 181);
+            this.txtPhone.Location = new System.Drawing.Point(137, 182);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(300, 23);
             this.txtPhone.TabIndex = 18;
@@ -422,7 +422,7 @@
             // 
             this.lblMobile.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMobile.AutoSize = true;
-            this.lblMobile.Location = new System.Drawing.Point(463, 184);
+            this.lblMobile.Location = new System.Drawing.Point(463, 185);
             this.lblMobile.Name = "lblMobile";
             this.lblMobile.Size = new System.Drawing.Size(57, 17);
             this.lblMobile.TabIndex = 19;
@@ -431,7 +431,7 @@
             // txtMobile
             // 
             this.txtMobile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMobile.Location = new System.Drawing.Point(600, 181);
+            this.txtMobile.Location = new System.Drawing.Point(600, 182);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(300, 23);
             this.txtMobile.TabIndex = 20;
@@ -440,7 +440,7 @@
             // 
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(3, 213);
+            this.lblEmail.Location = new System.Drawing.Point(3, 214);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(50, 17);
             this.lblEmail.TabIndex = 21;
@@ -449,7 +449,7 @@
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(137, 210);
+            this.txtEmail.Location = new System.Drawing.Point(137, 211);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(300, 23);
             this.txtEmail.TabIndex = 22;
@@ -494,7 +494,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(463, 213);
+            this.label1.Location = new System.Drawing.Point(463, 214);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 23;
@@ -513,7 +513,7 @@
             // 
             this.lblAmount.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblAmount.AutoSize = true;
-            this.lblAmount.Location = new System.Drawing.Point(3, 320);
+            this.lblAmount.Location = new System.Drawing.Point(3, 322);
             this.lblAmount.Name = "lblAmount";
             this.lblAmount.Size = new System.Drawing.Size(64, 17);
             this.lblAmount.TabIndex = 33;
@@ -523,7 +523,7 @@
             // 
             this.lblPaymentType.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPaymentType.AutoSize = true;
-            this.lblPaymentType.Location = new System.Drawing.Point(3, 398);
+            this.lblPaymentType.Location = new System.Drawing.Point(3, 400);
             this.lblPaymentType.Name = "lblPaymentType";
             this.lblPaymentType.Size = new System.Drawing.Size(107, 17);
             this.lblPaymentType.TabIndex = 37;
@@ -533,7 +533,7 @@
             // 
             this.lblPaymentDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPaymentDate.AutoSize = true;
-            this.lblPaymentDate.Location = new System.Drawing.Point(3, 427);
+            this.lblPaymentDate.Location = new System.Drawing.Point(3, 429);
             this.lblPaymentDate.Name = "lblPaymentDate";
             this.lblPaymentDate.Size = new System.Drawing.Size(105, 17);
             this.lblPaymentDate.TabIndex = 38;
@@ -544,7 +544,7 @@
             this.dtpPaymentDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpPaymentDate.CustomFormat = "";
             this.dtpPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpPaymentDate.Location = new System.Drawing.Point(137, 424);
+            this.dtpPaymentDate.Location = new System.Drawing.Point(137, 426);
             this.dtpPaymentDate.Name = "dtpPaymentDate";
             this.dtpPaymentDate.Size = new System.Drawing.Size(300, 23);
             this.dtpPaymentDate.TabIndex = 39;
@@ -554,7 +554,7 @@
             // 
             this.lblMO.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMO.AutoSize = true;
-            this.lblMO.Location = new System.Drawing.Point(463, 427);
+            this.lblMO.Location = new System.Drawing.Point(463, 429);
             this.lblMO.Name = "lblMO";
             this.lblMO.Size = new System.Drawing.Size(72, 17);
             this.lblMO.TabIndex = 40;
@@ -565,7 +565,7 @@
             this.dtpMO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpMO.CustomFormat = "";
             this.dtpMO.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpMO.Location = new System.Drawing.Point(600, 424);
+            this.dtpMO.Location = new System.Drawing.Point(600, 426);
             this.dtpMO.Name = "dtpMO";
             this.dtpMO.Size = new System.Drawing.Size(300, 23);
             this.dtpMO.TabIndex = 41;
@@ -575,7 +575,7 @@
             // 
             this.lblChequeNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblChequeNo.AutoSize = true;
-            this.lblChequeNo.Location = new System.Drawing.Point(3, 456);
+            this.lblChequeNo.Location = new System.Drawing.Point(3, 458);
             this.lblChequeNo.Name = "lblChequeNo";
             this.lblChequeNo.Size = new System.Drawing.Size(119, 17);
             this.lblChequeNo.TabIndex = 42;
@@ -584,7 +584,7 @@
             // txtChequeNo
             // 
             this.txtChequeNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtChequeNo.Location = new System.Drawing.Point(137, 453);
+            this.txtChequeNo.Location = new System.Drawing.Point(137, 455);
             this.txtChequeNo.Name = "txtChequeNo";
             this.txtChequeNo.Size = new System.Drawing.Size(300, 23);
             this.txtChequeNo.TabIndex = 43;
@@ -593,7 +593,7 @@
             // 
             this.lblChequeDate.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblChequeDate.AutoSize = true;
-            this.lblChequeDate.Location = new System.Drawing.Point(463, 456);
+            this.lblChequeDate.Location = new System.Drawing.Point(463, 458);
             this.lblChequeDate.Name = "lblChequeDate";
             this.lblChequeDate.Size = new System.Drawing.Size(131, 17);
             this.lblChequeDate.TabIndex = 44;
@@ -604,7 +604,7 @@
             this.dtpChequeDate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtpChequeDate.CustomFormat = "";
             this.dtpChequeDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpChequeDate.Location = new System.Drawing.Point(600, 453);
+            this.dtpChequeDate.Location = new System.Drawing.Point(600, 455);
             this.dtpChequeDate.Name = "dtpChequeDate";
             this.dtpChequeDate.Size = new System.Drawing.Size(300, 23);
             this.dtpChequeDate.TabIndex = 45;
@@ -614,7 +614,7 @@
             // 
             this.lblAmountPaid.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblAmountPaid.AutoSize = true;
-            this.lblAmountPaid.Location = new System.Drawing.Point(3, 514);
+            this.lblAmountPaid.Location = new System.Drawing.Point(3, 516);
             this.lblAmountPaid.Name = "lblAmountPaid";
             this.lblAmountPaid.Size = new System.Drawing.Size(96, 17);
             this.lblAmountPaid.TabIndex = 49;
@@ -623,7 +623,7 @@
             // txtAmountPaid
             // 
             this.txtAmountPaid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtAmountPaid.Location = new System.Drawing.Point(137, 511);
+            this.txtAmountPaid.Location = new System.Drawing.Point(137, 513);
             this.txtAmountPaid.Name = "txtAmountPaid";
             this.txtAmountPaid.Size = new System.Drawing.Size(300, 23);
             this.txtAmountPaid.TabIndex = 50;
@@ -632,7 +632,7 @@
             // 
             this.lblReceiptNo.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblReceiptNo.AutoSize = true;
-            this.lblReceiptNo.Location = new System.Drawing.Point(463, 514);
+            this.lblReceiptNo.Location = new System.Drawing.Point(463, 516);
             this.lblReceiptNo.Name = "lblReceiptNo";
             this.lblReceiptNo.Size = new System.Drawing.Size(86, 17);
             this.lblReceiptNo.TabIndex = 51;
@@ -641,7 +641,7 @@
             // txtReceiptNo
             // 
             this.txtReceiptNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtReceiptNo.Location = new System.Drawing.Point(600, 511);
+            this.txtReceiptNo.Location = new System.Drawing.Point(600, 513);
             this.txtReceiptNo.Name = "txtReceiptNo";
             this.txtReceiptNo.Size = new System.Drawing.Size(300, 23);
             this.txtReceiptNo.TabIndex = 52;
@@ -650,20 +650,20 @@
             // 
             this.lblBankName.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblBankName.AutoSize = true;
-            this.lblBankName.Location = new System.Drawing.Point(3, 485);
+            this.lblBankName.Location = new System.Drawing.Point(3, 487);
             this.lblBankName.Name = "lblBankName";
             this.lblBankName.Size = new System.Drawing.Size(89, 17);
             this.lblBankName.TabIndex = 46;
             this.lblBankName.Text = "Bank Name :";
             // 
-            // textBox2
+            // txtBankname
             // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.textBox2, 4);
-            this.textBox2.Location = new System.Drawing.Point(137, 482);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(763, 23);
-            this.textBox2.TabIndex = 47;
+            this.txtBankname.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel1.SetColumnSpan(this.txtBankname, 4);
+            this.txtBankname.Location = new System.Drawing.Point(137, 484);
+            this.txtBankname.Name = "txtBankname";
+            this.txtBankname.Size = new System.Drawing.Size(763, 23);
+            this.txtBankname.TabIndex = 47;
             // 
             // panel1
             // 
@@ -672,7 +672,7 @@
             this.panel1.Controls.Add(this.rdoDD);
             this.panel1.Controls.Add(this.rdoCheque);
             this.panel1.Controls.Add(this.rdoMO);
-            this.panel1.Location = new System.Drawing.Point(137, 395);
+            this.panel1.Location = new System.Drawing.Point(137, 397);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(423, 23);
             this.panel1.TabIndex = 55;
@@ -873,7 +873,7 @@
         private System.Windows.Forms.Label lblReceiptNo;
         private System.Windows.Forms.TextBox txtReceiptNo;
         private System.Windows.Forms.Label lblBankName;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtBankname;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
