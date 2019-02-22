@@ -7,18 +7,18 @@ using System.Threading.Tasks;
 
 namespace Shaheen.BLL
 {
-    public class PersonBLL
+    public class PaymentBLL
     {
         static ShaheenEntities entities = null;
-        public PersonBLL()
+        public PaymentBLL()
         {
             entities = new ShaheenEntities();
         }
-        public int SavePerson(Person person)
+        public int SavePayment(Payment payment)
         {
-            entities.People.Add(person);
+            entities.Payments.Add(payment);
             entities.SaveChanges();
-            return person.personId;
+            return payment.paymentId;
         }
     }
 }

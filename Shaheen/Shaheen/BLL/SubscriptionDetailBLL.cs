@@ -9,7 +9,11 @@ namespace Shaheen.BLL
 {
     public class SubscriptionDetailBLL
     {
-        ShaheenEntities entities = new ShaheenEntities();
+        static ShaheenEntities entities = null;
+        public SubscriptionDetailBLL()
+        {
+            entities = new ShaheenEntities();
+        }
         public int SaveSubscriptionDetail(SubscriptionDetail subscriptionDetail)
         {
             entities.SubscriptionDetails.Add(subscriptionDetail);

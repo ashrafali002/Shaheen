@@ -9,7 +9,11 @@ namespace Shaheen.BLL
 {
     public class AgentBLL
     {
-        static ShaheenEntities entities = new ShaheenEntities();
+        static ShaheenEntities entities = null;
+        public AgentBLL()
+        {
+            entities = new ShaheenEntities();
+        }
         public static List<Agent> AgentList()
         {
             return entities.Agents.ToList();

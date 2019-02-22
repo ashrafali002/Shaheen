@@ -9,7 +9,11 @@ namespace Shaheen.BLL
 {
     public class CityBLL
     {
-        static ShaheenEntities entities = new ShaheenEntities();
+        static ShaheenEntities entities = null;
+        public CityBLL()
+        {
+            entities = new ShaheenEntities();
+        }
         public static List<City> CityList()
         {
             return entities.Cities.ToList();

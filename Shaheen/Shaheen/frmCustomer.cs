@@ -173,6 +173,7 @@ namespace Shaheen
                 int personId = SavePerson();
                 int subscriptionId = SaveSubscription(personId);
                 int subscriptionDetailId = SaveSubscriptionDetail(subscriptionId);
+                int paymentId = SavePayment(subscriptionId);
             }
         }
 
@@ -224,16 +225,18 @@ namespace Shaheen
             subsDetailBll.SaveSubscriptionDetail(subscriptionDetail);
             return subscriptionDetail.subscriptionId;
         }
-        private int SavePayment()
+        private int SavePayment(int subscriptionId)
         {
             var payment = new Payment();
+            payment.subscriptionId = subscriptionId;
             payment.amountPaid = Convert.ToDecimal(txtAmountPaid.Text);
             payment.bankName = txtBankname.Text;
             payment.chequeDate = dtpChequeDate.Value;
             payment.chequeNo = txtChequeNo.Text;
             payment.moDate = dtpMO.Value;
             payment.paymentDate = dtpPaymentDate.Value;
-            
+            PaymentBLL payBll = new PaymentBLL();
+            payBll.SavePayment(payment);
             return payment.paymentId;
         }
     }

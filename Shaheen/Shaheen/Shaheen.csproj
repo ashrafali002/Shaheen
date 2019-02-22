@@ -68,9 +68,11 @@
     </Compile>
     <Compile Include="BLL\AgentBLL.cs" />
     <Compile Include="BLL\AreaBLL.cs" />
+    <Compile Include="BLL\BaseBLL.cs" />
     <Compile Include="BLL\CityBLL.cs" />
     <Compile Include="BLL\CountryBLL.cs" />
     <Compile Include="BLL\DistrictBLL.cs" />
+    <Compile Include="BLL\PaymentBLL.cs" />
     <Compile Include="BLL\PersonBLL.cs" />
     <Compile Include="BLL\StateBLL.cs" />
     <Compile Include="BLL\SubscriptionBLL.cs" />
