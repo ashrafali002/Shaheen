@@ -9,15 +9,15 @@ namespace Shaheen.BLL
 {
     public class SubscriptionBLL
     {
-        static ShaheenEntities entities = null;
+        ShaheenEntities context = null;
         public SubscriptionBLL()
         {
-            entities = new ShaheenEntities();
+            context = new ShaheenEntities();
         }
         public int SaveSubscription(Subscription subscription)
         {
-            entities.Subscriptions.Add(subscription);
-            entities.SaveChanges();
+            context.Subscriptions.Add(subscription);
+            context.SaveChanges();
             return subscription.subscriptionId;
         }
     }

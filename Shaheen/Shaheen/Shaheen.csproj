@@ -67,6 +67,7 @@
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BLL\AgentBLL.cs" />
+    <Compile Include="BLL\AgentModel.cs" />
     <Compile Include="BLL\AreaBLL.cs" />
     <Compile Include="BLL\BaseBLL.cs" />
     <Compile Include="BLL\CityBLL.cs" />

@@ -9,14 +9,23 @@ namespace Shaheen.BLL
 {
     public class AgentBLL
     {
-        static ShaheenEntities entities = null;
+        static ShaheenEntities context = null;
         public AgentBLL()
         {
-            entities = new ShaheenEntities();
+            context = new ShaheenEntities();
         }
-        public static List<Agent> AgentList()
+        public List<AgentModel> AgentList()
         {
-            return entities.Agents.ToList();
+            var agentList = context.Agents.Join(context.People, a => a.personId, p => p.personId, (a, p) => new
+            AgentModel()
+            {
+                agentId = a.agentId,
+                agentCode = a.agentCode,
+                personId = a.personId,
+                agentName = p.personName
+            });
+
+            return agentList.ToList();
         }
     }
 }

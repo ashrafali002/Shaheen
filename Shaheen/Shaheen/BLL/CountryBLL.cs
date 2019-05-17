@@ -9,14 +9,14 @@ namespace Shaheen.BLL
 {
     public class CountryBLL
     {
-        static ShaheenEntities entities = null;
+        ShaheenEntities context = null;
         public CountryBLL()
         {
-            entities = new ShaheenEntities();
+            context = new ShaheenEntities();
         }
-        public static List<Country> CountryList()
+        public List<Country> CountryList()
         {
-            return entities.Countries.ToList();
+            return context.Countries.ToList();
         }
     }
 }

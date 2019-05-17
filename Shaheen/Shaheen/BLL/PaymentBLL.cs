@@ -9,15 +9,15 @@ namespace Shaheen.BLL
 {
     public class PaymentBLL
     {
-        static ShaheenEntities entities = null;
+        ShaheenEntities context = null;
         public PaymentBLL()
         {
-            entities = new ShaheenEntities();
+            context = new ShaheenEntities();
         }
         public int SavePayment(Payment payment)
         {
-            entities.Payments.Add(payment);
-            entities.SaveChanges();
+            context.Payments.Add(payment);
+            context.SaveChanges();
             return payment.paymentId;
         }
     }

@@ -9,14 +9,14 @@ namespace Shaheen.BLL
 {
     public class DistrictBLL
     {
-        static ShaheenEntities entities = null;
+        ShaheenEntities context = null;
         public DistrictBLL()
         {
-            entities = new ShaheenEntities();
+            context = new ShaheenEntities();
         }
-        public static List<District> DistrictList()
+        public List<District> DistrictList()
         {
-            return entities.Districts.ToList();
+            return context.Districts.ToList();
         }
     }
 }

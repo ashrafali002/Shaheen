@@ -687,6 +687,7 @@
             this.rdoCash.TabStop = true;
             this.rdoCash.Text = "Cash";
             this.rdoCash.UseVisualStyleBackColor = true;
+            this.rdoCash.CheckedChanged += new System.EventHandler(this.rdoCash_CheckedChanged);
             // 
             // rdoDD
             // 
@@ -698,6 +699,7 @@
             this.rdoDD.TabStop = true;
             this.rdoDD.Text = "Demand Draft";
             this.rdoDD.UseVisualStyleBackColor = true;
+            this.rdoDD.CheckedChanged += new System.EventHandler(this.rdoDD_CheckedChanged);
             // 
             // rdoCheque
             // 
@@ -709,6 +711,7 @@
             this.rdoCheque.TabStop = true;
             this.rdoCheque.Text = "Cheque";
             this.rdoCheque.UseVisualStyleBackColor = true;
+            this.rdoCheque.CheckedChanged += new System.EventHandler(this.rdoCheque_CheckedChanged);
             // 
             // rdoMO
             // 
@@ -720,6 +723,7 @@
             this.rdoMO.TabStop = true;
             this.rdoMO.Text = "Money Order";
             this.rdoMO.UseVisualStyleBackColor = true;
+            this.rdoMO.CheckedChanged += new System.EventHandler(this.rdoMO_CheckedChanged);
             // 
             // lblCountry
             // 

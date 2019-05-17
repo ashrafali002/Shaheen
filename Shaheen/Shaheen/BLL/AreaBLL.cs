@@ -9,14 +9,14 @@ namespace Shaheen.BLL
 {
     public class AreaBLL
     {
-        static ShaheenEntities entities = null;
+        ShaheenEntities context = null;
         public AreaBLL()
         {
-            entities = new ShaheenEntities();
+            context = new ShaheenEntities();
         }
-        public static List<Area> AreaList()
+        public List<Area> AreaList()
         {
-            return entities.Areas.ToList();
+            return context.Areas.ToList();
         }
     }
 }

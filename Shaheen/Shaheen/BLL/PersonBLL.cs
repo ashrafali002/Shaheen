@@ -9,15 +9,15 @@ namespace Shaheen.BLL
 {
     public class PersonBLL
     {
-        static ShaheenEntities entities = null;
+        ShaheenEntities context = null;
         public PersonBLL()
         {
-            entities = new ShaheenEntities();
+            context = new ShaheenEntities();
         }
         public int SavePerson(Person person)
         {
-            entities.People.Add(person);
-            entities.SaveChanges();
+            context.People.Add(person);
+            context.SaveChanges();
             return person.personId;
         }
     }
