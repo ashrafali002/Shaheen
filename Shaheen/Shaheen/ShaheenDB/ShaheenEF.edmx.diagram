@@ -5,16 +5,16 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="14dbd3d159bb466e93b2232b9595bc24" Name="Diagram1">
-        <EntityTypeShape EntityType="ShaheenModel.Agent" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShaheenModel.Area" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShaheenModel.City" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShaheenModel.Country" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShaheenModel.District" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShaheenModel.Payment" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShaheenModel.Person" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShaheenModel.State" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShaheenModel.SubscriptionDetail" Width="1.5" PointX="6.75" PointY="5.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ShaheenModel.Subscription" Width="1.5" PointX="2.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ShaheenModel.Agent" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ShaheenModel.Area" Width="1.5" PointX="2.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ShaheenModel.City" Width="1.5" PointX="2.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ShaheenModel.Country" Width="1.5" PointX="4.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ShaheenModel.District" Width="1.5" PointX="4.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ShaheenModel.Person" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ShaheenModel.State" Width="1.5" PointX="2.75" PointY="6.75" />
+        <EntityTypeShape EntityType="ShaheenModel.SubscriptionDetail" Width="1.875" PointX="6.75" PointY="4.75" />
+        <EntityTypeShape EntityType="ShaheenModel.Payment" Width="1.5" PointX="6.625" PointY="0.75" />
+        <EntityTypeShape EntityType="ShaheenModel.Subscription" Width="2" PointX="8.5" PointY="0.875" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

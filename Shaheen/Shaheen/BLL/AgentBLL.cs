@@ -14,18 +14,9 @@ namespace Shaheen.BLL
         {
             context = new ShaheenEntities();
         }
-        public List<AgentModel> AgentList()
+        public List<Agent> AgentList()
         {
-            var agentList = context.Agents.Join(context.People, a => a.personId, p => p.personId, (a, p) => new
-            AgentModel()
-            {
-                agentId = a.agentId,
-                agentCode = a.agentCode,
-                personId = a.personId,
-                agentName = p.personName
-            });
-
-            return agentList.ToList();
+            return context.Agents.ToList();
         }
     }
 }

@@ -222,6 +222,7 @@
             // 
             this.txtDuration.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDuration.Location = new System.Drawing.Point(600, 260);
+            this.txtDuration.MaxLength = 10;
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.Size = new System.Drawing.Size(300, 23);
             this.txtDuration.TabIndex = 28;
@@ -283,6 +284,7 @@
             this.txtNote.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.SetColumnSpan(this.txtNote, 4);
             this.txtNote.Location = new System.Drawing.Point(137, 347);
+            this.txtNote.MaxLength = 1000;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(763, 23);
             this.txtNote.TabIndex = 36;
@@ -304,11 +306,13 @@
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(300, 23);
             this.txtAmount.TabIndex = 34;
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             // 
             // txtName
             // 
             this.txtName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtName.Location = new System.Drawing.Point(137, 3);
+            this.txtName.MaxLength = 100;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(300, 23);
             this.txtName.TabIndex = 0;
@@ -329,6 +333,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAddress.Location = new System.Drawing.Point(137, 32);
+            this.txtAddress.MaxLength = 500;
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.tableLayoutPanel1.SetRowSpan(this.txtAddress, 4);
@@ -414,6 +419,7 @@
             // 
             this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPhone.Location = new System.Drawing.Point(137, 181);
+            this.txtPhone.MaxLength = 10;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(300, 23);
             this.txtPhone.TabIndex = 18;
@@ -432,6 +438,7 @@
             // 
             this.txtMobile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMobile.Location = new System.Drawing.Point(600, 181);
+            this.txtMobile.MaxLength = 10;
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(300, 23);
             this.txtMobile.TabIndex = 20;
@@ -450,6 +457,7 @@
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.Location = new System.Drawing.Point(137, 210);
+            this.txtEmail.MaxLength = 300;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(300, 23);
             this.txtEmail.TabIndex = 22;
@@ -468,6 +476,7 @@
             // 
             this.txtCode.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCode.Location = new System.Drawing.Point(600, 3);
+            this.txtCode.MaxLength = 10;
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(300, 23);
             this.txtCode.TabIndex = 2;
@@ -486,9 +495,11 @@
             // 
             this.txtPIN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPIN.Location = new System.Drawing.Point(137, 152);
+            this.txtPIN.MaxLength = 6;
             this.txtPIN.Name = "txtPIN";
             this.txtPIN.Size = new System.Drawing.Size(300, 23);
             this.txtPIN.TabIndex = 16;
+            this.txtPIN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPIN_KeyPress);
             // 
             // label1
             // 
@@ -627,6 +638,7 @@
             this.txtAmountPaid.Name = "txtAmountPaid";
             this.txtAmountPaid.Size = new System.Drawing.Size(300, 23);
             this.txtAmountPaid.TabIndex = 50;
+            this.txtAmountPaid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmountPaid_KeyPress);
             // 
             // lblReceiptNo
             // 
@@ -642,6 +654,7 @@
             // 
             this.txtReceiptNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtReceiptNo.Location = new System.Drawing.Point(600, 512);
+            this.txtReceiptNo.MaxLength = 20;
             this.txtReceiptNo.Name = "txtReceiptNo";
             this.txtReceiptNo.Size = new System.Drawing.Size(300, 23);
             this.txtReceiptNo.TabIndex = 52;

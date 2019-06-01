@@ -16,6 +16,16 @@ namespace Shaheen.ShaheenDB
     {
         public int agentId { get; set; }
         public string agentCode { get; set; }
-        public int personId { get; set; }
+        public string agentName { get; set; }
+        public string agentAddress { get; set; }
+        public int areaId { get; set; }
+        public int cityId { get; set; }
+        public int districtId { get; set; }
+        public int stateId { get; set; }
+        public int countryId { get; set; }
+        public string pin { get; set; }
+        public string phone { get; set; }
+        public string mobile { get; set; }
+        public string email { get; set; }
     }
 }

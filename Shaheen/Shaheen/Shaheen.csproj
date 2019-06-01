@@ -67,7 +67,6 @@
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
     <Compile Include="BLL\AgentBLL.cs" />
-    <Compile Include="BLL\AgentModel.cs" />
     <Compile Include="BLL\AreaBLL.cs" />
     <Compile Include="BLL\BaseBLL.cs" />
     <Compile Include="BLL\CityBLL.cs" />
@@ -78,6 +77,7 @@
     <Compile Include="BLL\StateBLL.cs" />
     <Compile Include="BLL\SubscriptionBLL.cs" />
     <Compile Include="BLL\SubscriptionDetailBLL.cs" />
+    <Compile Include="Common\EnumClass.cs" />
     <Compile Include="frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>

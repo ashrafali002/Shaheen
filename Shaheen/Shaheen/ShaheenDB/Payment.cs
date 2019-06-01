@@ -18,9 +18,9 @@ namespace Shaheen.ShaheenDB
         public int subscriptionId { get; set; }
         public string paymentType { get; set; }
         public System.DateTime paymentDate { get; set; }
-        public System.DateTime moDate { get; set; }
+        public Nullable<System.DateTime> moDate { get; set; }
         public string chequeNo { get; set; }
-        public System.DateTime chequeDate { get; set; }
+        public Nullable<System.DateTime> chequeDate { get; set; }
         public decimal amountPaid { get; set; }
         public string receiptNo { get; set; }
         public string bankName { get; set; }
