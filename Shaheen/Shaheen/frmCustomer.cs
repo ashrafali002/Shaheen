@@ -73,7 +73,7 @@ namespace Shaheen
             countryList.Insert(0, new Country { countryId = 0, countryName = "---Select Country---" });
             cmbCountry.DataSource = countryList;
             cmbCountry.DisplayMember = "countryName";
-            cmbCountry.ValueMember = "countryId";            
+            cmbCountry.ValueMember = "countryId";
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -145,6 +145,12 @@ namespace Shaheen
                 txtMobile.Focus();
                 isRes = false;
             }
+            else if (!this.checkEmail(txtEmail.Text))
+            {
+                MessageBox.Show("Invalid email format.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEmail.Focus();
+                isRes = false;
+            }
             else if (string.IsNullOrEmpty(txtEmail.Text))
             {
                 MessageBox.Show("Email is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -164,6 +170,13 @@ namespace Shaheen
                 isRes = false;
             }
 
+            else if (string.IsNullOrEmpty(txtDuration.Text))
+            {
+                MessageBox.Show("Duration is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtDuration.Focus();
+                isRes = false;
+            }
+
             else if (string.IsNullOrEmpty(txtAmountPaid.Text))
             {
                 MessageBox.Show("Paid Amount is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -177,11 +190,65 @@ namespace Shaheen
                 txtReceiptNo.Focus();
                 isRes = false;
             }
+
+            else if (dtpStartDate.Value >= dtpEndDate.Value)
+            {
+                MessageBox.Show("Enddate should be greater than Startdate.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtReceiptNo.Focus();
+                isRes = false;
+            }
+
+            else if (rdoDD.Checked)
+            {
+
+                if (string.IsNullOrEmpty(txtChequeNo.Text))
+                {
+                    MessageBox.Show("DD no is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtReceiptNo.Focus();
+                    isRes = false;
+                }
+                else if (string.IsNullOrEmpty(txtBankname.Text))
+                {
+                    MessageBox.Show("Bank name is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtReceiptNo.Focus();
+                    isRes = false;
+                }
+            }
+            else if (rdoCheque.Checked)
+            {
+                if (string.IsNullOrEmpty(txtChequeNo.Text))
+                {
+                    MessageBox.Show("Cheque no is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtReceiptNo.Focus();
+                    isRes = false;
+                }
+                else if (string.IsNullOrEmpty(txtBankname.Text))
+                {
+                    MessageBox.Show("Bank name is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    txtReceiptNo.Focus();
+                    isRes = false;
+                }
+            }            
             else
             {
                 isRes = true;
             }
             return isRes;
+        }
+
+        private bool checkEmail(string email)
+        {
+            bool isValid = false;
+            try
+            {
+                new System.Net.Mail.MailAddress(txtEmail.Text);
+                isValid = true;
+            }
+            catch (Exception)
+            {
+                isValid = false;
+            }
+            return isValid;
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -198,6 +265,7 @@ namespace Shaheen
                             int subscriptionDetailId = SaveSubscriptionDetail(subscriptionId, context);
                             int paymentId = SavePayment(subscriptionId, context);
                             transaction.Commit();
+                            MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception ex)
                         {
