@@ -30,13 +30,15 @@
         {
             this.mnuMain = new System.Windows.Forms.MenuStrip();
             this.mnuCustomer = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuDashboard = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // mnuMain
             // 
             this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuCustomer});
+            this.mnuCustomer,
+            this.mnuDashboard});
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
             this.mnuMain.Size = new System.Drawing.Size(852, 24);
@@ -48,6 +50,13 @@
             this.mnuCustomer.Size = new System.Drawing.Size(76, 20);
             this.mnuCustomer.Text = "Customers";
             this.mnuCustomer.Click += new System.EventHandler(this.mnuCustomer_Click);
+            // 
+            // mnuDashboard
+            // 
+            this.mnuDashboard.Name = "mnuDashboard";
+            this.mnuDashboard.Size = new System.Drawing.Size(76, 20);
+            this.mnuDashboard.Text = "Dashboard";
+            this.mnuDashboard.Click += new System.EventHandler(this.mnuDashboard_Click);
             // 
             // MDIMain
             // 
@@ -74,5 +83,6 @@
 
         private System.Windows.Forms.MenuStrip mnuMain;
         private System.Windows.Forms.ToolStripMenuItem mnuCustomer;
+        private System.Windows.Forms.ToolStripMenuItem mnuDashboard;
     }
 }
