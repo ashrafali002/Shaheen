@@ -66,17 +66,17 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="BLL\AgentBLL.cs" />
-    <Compile Include="BLL\AreaBLL.cs" />
-    <Compile Include="BLL\BaseBLL.cs" />
-    <Compile Include="BLL\CityBLL.cs" />
-    <Compile Include="BLL\CountryBLL.cs" />
-    <Compile Include="BLL\DistrictBLL.cs" />
-    <Compile Include="BLL\PaymentBLL.cs" />
-    <Compile Include="BLL\PersonBLL.cs" />
-    <Compile Include="BLL\StateBLL.cs" />
-    <Compile Include="BLL\SubscriptionBLL.cs" />
-    <Compile Include="BLL\SubscriptionDetailBLL.cs" />
+    <Compile Include="DAL\AgentBLL.cs" />
+    <Compile Include="DAL\AreaBLL.cs" />
+    <Compile Include="DAL\BaseBLL.cs" />
+    <Compile Include="DAL\CityBLL.cs" />
+    <Compile Include="DAL\CountryBLL.cs" />
+    <Compile Include="DAL\DistrictBLL.cs" />
+    <Compile Include="DAL\PaymentBLL.cs" />
+    <Compile Include="DAL\PersonBLL.cs" />
+    <Compile Include="DAL\StateBLL.cs" />
+    <Compile Include="DAL\SubscriptionBLL.cs" />
+    <Compile Include="DAL\SubscriptionDetailBLL.cs" />
     <Compile Include="Common\EnumClass.cs" />
     <Compile Include="frmCustomer.cs">
       <SubType>Form</SubType>

@@ -16,5 +16,13 @@ namespace Shaheen
         {
             InitializeComponent();
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            MDIMain.isDashboard = false;
+            this.Close();
+        }
+
+
     }
 }

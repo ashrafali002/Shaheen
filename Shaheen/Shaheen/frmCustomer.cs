@@ -1,13 +1,6 @@
-﻿using Shaheen.BLL;
+﻿using Shaheen.DAL;
 using Shaheen.ShaheenDB;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shaheen
@@ -33,43 +26,43 @@ namespace Shaheen
 
         private void Dropdownlists()
         {
-            var agentBll = new AgentBLL();
-            var agentList = agentBll.AgentList();
+            var agentDAL = new AgentDAL();
+            var agentList = agentDAL.AgentList();
             agentList.Insert(0, new Agent { agentId = 0, agentName = "---Select Agent---" });
             cmbAgent.DataSource = agentList;
             cmbAgent.DisplayMember = "agentName";
             cmbAgent.ValueMember = "agentId";
 
-            var areaBll = new AreaBLL();
-            var areaList = areaBll.AreaList();
+            var areaDAL = new AreaDAL();
+            var areaList = areaDAL.AreaList();
             areaList.Insert(0, new Area { areaId = 0, areaName = "---Select Area---", cityId = 0 });
             cmbArea.DataSource = areaList;
             cmbArea.DisplayMember = "areaName";
             cmbArea.ValueMember = "areaId";
 
-            var cityBll = new CityBLL();
-            var cityList = cityBll.CityList();
+            var cityDAL = new CityDAL();
+            var cityList = cityDAL.CityList();
             cityList.Insert(0, new City { cityId = 0, cityName = "---Select City---", districtId = 0 });
             cmbCity.DataSource = cityList;
             cmbCity.DisplayMember = "cityName";
             cmbCity.ValueMember = "cityId";
 
-            var districtBll = new DistrictBLL();
-            var districtList = districtBll.DistrictList();
+            var districtDAL = new DistrictDAL();
+            var districtList = districtDAL.DistrictList();
             districtList.Insert(0, new District { districtId = 0, districtName = "---Select District---", stateId = 0 });
             cmbDistrict.DataSource = districtList;
             cmbDistrict.DisplayMember = "districtName";
             cmbDistrict.ValueMember = "districtId";
 
-            var stateBll = new StateBLL();
-            var stateList = stateBll.StateList();
+            var stateDAL = new StateDAL();
+            var stateList = stateDAL.StateList();
             stateList.Insert(0, new State { stateId = 0, stateName = "---Select State---", countryId = 0 });
             cmbState.DataSource = stateList;
             cmbState.DisplayMember = "stateName";
             cmbState.ValueMember = "stateId";
 
-            var countryBll = new CountryBLL();
-            var countryList = countryBll.CountryList();
+            var countryDAL = new CountryDAL();
+            var countryList = countryDAL.CountryList();
             countryList.Insert(0, new Country { countryId = 0, countryName = "---Select Country---" });
             cmbCountry.DataSource = countryList;
             cmbCountry.DisplayMember = "countryName";
