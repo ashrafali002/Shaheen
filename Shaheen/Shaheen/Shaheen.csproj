@@ -200,6 +200,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="ShaheenDB\ShaheenDB.sdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="ShaheenDB\ShaheenEF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ShaheenEF.edmx</DependentUpon>
