@@ -20,5 +20,10 @@ namespace Shaheen.DAL
             context.SaveChanges();
             return person.personId;
         }
+        public List<Person> getPersonList()
+        {
+            var personList = context.People.ToList();
+            return personList;
+        }
     }
 }
