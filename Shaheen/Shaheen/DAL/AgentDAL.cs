@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace Shaheen.DAL
 {
-    public class AgentDAL
+    public class AgentDAL : BaseDAL
     {
-        static ShaheenEntities context = null;
         public AgentDAL()
         {
-            context = new ShaheenEntities();
         }
         public List<Agent> AgentList()
         {

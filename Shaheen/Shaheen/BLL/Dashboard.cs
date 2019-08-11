@@ -24,13 +24,13 @@ namespace Shaheen
     }
     public class Dashboard
     {
-        public List<CustomerModel> getCustomerList()
-        {
-            List<CustomerModel> customerList = new List<CustomerModel>();
-            CustomerModel model = new CustomerModel();
-            PersonDAL person = new PersonDAL();
+        //public List<CustomerModel> getCustomerList()
+        //{
+        //    List<CustomerModel> customerList = new List<CustomerModel>();
+        //    CustomerModel model = new CustomerModel();
+        //    PersonDAL person = new PersonDAL();
             
 
-        }
+        //}
     }
 }

@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace Shaheen.DAL
 {
-    public class PersonDAL
+    public class PersonDAL : BaseDAL
     {
-        ShaheenEntities context = null;
         public PersonDAL()
         {
-            context = new ShaheenEntities();
         }
         public int SavePerson(Person person)
         {

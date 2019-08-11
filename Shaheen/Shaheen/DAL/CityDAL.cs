@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace Shaheen.DAL
 {
-    public class CityDAL
+    public class CityDAL : BaseDAL
     {
-        ShaheenEntities context = null;
         public CityDAL()
         {
-            context = new ShaheenEntities();
         }
         public List<City> CityList()
         {

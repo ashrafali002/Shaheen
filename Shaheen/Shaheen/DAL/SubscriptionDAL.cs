@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace Shaheen.DAL
 {
-    public class SubscriptionDAL
+    public class SubscriptionDAL : BaseDAL
     {
-        ShaheenEntities context = null;
         public SubscriptionDAL()
         {
-            context = new ShaheenEntities();
         }
         public int SaveSubscription(Subscription subscription)
         {

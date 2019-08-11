@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace Shaheen.DAL
 {
-    public class PaymentDAL
+    public class PaymentDAL : BaseDAL
     {
-        ShaheenEntities context = null;
         public PaymentDAL()
         {
-            context = new ShaheenEntities();
         }
         public int SavePayment(Payment payment)
         {
