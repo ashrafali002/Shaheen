@@ -73,6 +73,7 @@
     <Compile Include="DAL\CityDAL.cs" />
     <Compile Include="DAL\CountryDAL.cs" />
     <Compile Include="DAL\DistrictDAL.cs" />
+    <Compile Include="DAL\IAgentDAL.cs" />
     <Compile Include="DAL\IBaseDAL.cs" />
     <Compile Include="DAL\PaymentDAL.cs" />
     <Compile Include="DAL\PersonDAL.cs" />

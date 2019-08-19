@@ -7,14 +7,8 @@ using System.Threading.Tasks;
 
 namespace Shaheen.DAL
 {
-    public class AgentDAL:BaseDAL
+    public interface IAgentDAL
     {
-        public AgentDAL()
-        {
-        }
-        public List<Agent> AgentList()
-        {
-            return context.Agents.ToList();
-        }
+        List<Agent> AgentList();
     }
 }

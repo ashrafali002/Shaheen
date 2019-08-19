@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shaheen.DAL
 {
-    public class IBaseDAL
+    public interface IBaseDAL
     {
     }
 }
