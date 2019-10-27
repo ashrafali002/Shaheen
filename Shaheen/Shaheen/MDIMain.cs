@@ -21,45 +21,14 @@ namespace Shaheen
         public frmCustomer customer = null;
 
         public static bool isDashboard = false;
-        public frmDashboard dashboard = null;
 
-               
         private void mnuCustomer_Click(object sender, EventArgs e)
         {
             ShowCustomerPage();
-        }      
+        }
 
         private void MDIMain_Load(object sender, EventArgs e)
         {
-        }
-        private void mnuDashboard_Click(object sender, EventArgs e)
-        {
-            ShowDashboardPage();
-        }
-
-        public void ShowDashboardPage()
-        {
-            if (!isDashboard)
-            {
-                dashboard = new frmDashboard();
-                dashboard.MdiParent = this;
-                dashboard.Show();
-                dashboard.Focus();
-                isDashboard = true;
-            }
-            else
-            {
-                foreach (Form frm in MdiChildren)
-                {
-                    if (frm.GetType().Name == "frmDashboard")
-                    {
-                        dashboard.MdiParent = this;
-                        dashboard.Show();
-                        dashboard.Focus();
-                        isDashboard = true;
-                    }
-                }
-            }
         }
 
         public void ShowCustomerPage()
@@ -85,6 +54,11 @@ namespace Shaheen
                     }
                 }
             }
+        }
+
+        private void MnuExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

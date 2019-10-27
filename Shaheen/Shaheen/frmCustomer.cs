@@ -2,6 +2,7 @@
 using Shaheen.ShaheenDB;
 using System;
 using System.Windows.Forms;
+using Shaheen.BLL;
 
 namespace Shaheen
 {
@@ -71,7 +72,7 @@ namespace Shaheen
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            MDIMain.isCustomer = false;            
+            MDIMain.isCustomer = false;
             this.Close();
         }
 
@@ -88,6 +89,12 @@ namespace Shaheen
             {
                 MessageBox.Show("Customer Code is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtCode.Focus();
+                isRes = false;
+            }
+            else if (CheckDuplicateSubscription(txtCode.Text))
+            {
+                MessageBox.Show("Duplicate customer code found.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtEmail.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtAddress.Text))
@@ -221,20 +228,24 @@ namespace Shaheen
                     txtReceiptNo.Focus();
                     isRes = false;
                 }
-            }            
+            }
             else
             {
                 isRes = true;
             }
             return isRes;
         }
-
+        private bool CheckDuplicateSubscription(string subscriptionCode)
+        {
+            var subscriptionBll = new SubscriptionBLL();
+            return subscriptionBll.CheckDuplicateSubscription(subscriptionCode);
+        }
         private bool checkEmail(string email)
         {
             bool isValid = false;
             try
             {
-                new System.Net.Mail.MailAddress(txtEmail.Text);
+                new System.Net.Mail.MailAddress(email);
                 isValid = true;
             }
             catch (Exception)
@@ -260,7 +271,7 @@ namespace Shaheen
                             transaction.Commit();
                             MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
                             transaction.Rollback();
                             throw;
@@ -270,7 +281,6 @@ namespace Shaheen
 
             }
         }
-
         public int SavePerson(ShaheenEntities context)
         {
             var person = new Person();
@@ -300,7 +310,6 @@ namespace Shaheen
             context.SaveChanges();
             return res.subscriptionId;
         }
-
         public int SaveSubscriptionDetail(int subscriptionId, ShaheenEntities context)
         {
             var subscriptionDetail = new SubscriptionDetail();
@@ -314,7 +323,6 @@ namespace Shaheen
             context.SaveChanges();
             return res.subscriptionId;
         }
-
         private int SavePayment(int subscriptionId, ShaheenEntities context)
         {
             var payment = new Payment();
@@ -339,7 +347,6 @@ namespace Shaheen
             context.SaveChanges();
             return res.paymentId;
         }
-
         private void rdoCash_CheckedChanged(object sender, EventArgs e)
         {
             if (rdoCash.Checked)
@@ -351,7 +358,6 @@ namespace Shaheen
                 txtBankname.ReadOnly = true;
             }
         }
-
         private void rdoDD_CheckedChanged(object sender, EventArgs e)
         {
             if (rdoDD.Checked)
@@ -363,7 +369,6 @@ namespace Shaheen
                 txtBankname.ReadOnly = false;
             }
         }
-
         private void rdoCheque_CheckedChanged(object sender, EventArgs e)
         {
             if (rdoCheque.Checked)
@@ -375,7 +380,6 @@ namespace Shaheen
                 txtBankname.ReadOnly = false;
             }
         }
-
         private void rdoMO_CheckedChanged(object sender, EventArgs e)
         {
             if (rdoMO.Checked)
@@ -387,7 +391,6 @@ namespace Shaheen
                 txtBankname.ReadOnly = true;
             }
         }
-
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '\b'))
@@ -395,7 +398,6 @@ namespace Shaheen
                 e.Handled = true;
             }
         }
-
         private void txtAmountPaid_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '\b'))
@@ -404,7 +406,6 @@ namespace Shaheen
             }
 
         }
-
         private void txtPIN_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '\b'))

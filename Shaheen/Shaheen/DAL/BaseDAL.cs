@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Shaheen.DAL
 {
-    public class BaseDAL : IBaseDAL
+    public class BaseDAL
     {
         protected ShaheenEntities context;
 

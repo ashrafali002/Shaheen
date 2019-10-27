@@ -31,6 +31,7 @@
             this.mnuMain = new System.Windows.Forms.MenuStrip();
             this.mnuCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDashboard = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,7 +39,8 @@
             // 
             this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuCustomer,
-            this.mnuDashboard});
+            this.mnuDashboard,
+            this.mnuExit});
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
             this.mnuMain.Size = new System.Drawing.Size(852, 24);
@@ -56,7 +58,13 @@
             this.mnuDashboard.Name = "mnuDashboard";
             this.mnuDashboard.Size = new System.Drawing.Size(76, 20);
             this.mnuDashboard.Text = "Dashboard";
-            this.mnuDashboard.Click += new System.EventHandler(this.mnuDashboard_Click);
+            // 
+            // mnuExit
+            // 
+            this.mnuExit.Name = "mnuExit";
+            this.mnuExit.Size = new System.Drawing.Size(37, 20);
+            this.mnuExit.Text = "Exit";
+            this.mnuExit.Click += new System.EventHandler(this.MnuExit_Click);
             // 
             // MDIMain
             // 
@@ -84,5 +92,6 @@
         private System.Windows.Forms.MenuStrip mnuMain;
         private System.Windows.Forms.ToolStripMenuItem mnuCustomer;
         private System.Windows.Forms.ToolStripMenuItem mnuDashboard;
+        private System.Windows.Forms.ToolStripMenuItem mnuExit;
     }
 }
