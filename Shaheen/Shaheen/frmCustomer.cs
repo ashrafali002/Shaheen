@@ -12,7 +12,6 @@ namespace Shaheen
         {
             InitializeComponent();
         }
-
         private void frmCustomer_Load(object sender, EventArgs e)
         {
             Dropdownlists();
@@ -24,7 +23,6 @@ namespace Shaheen
             dtpStartDate.Value = DateTime.Now;
             dtpSubscriptionDate.Value = DateTime.Now;
         }
-
         private void Dropdownlists()
         {
             var agentDAL = new AgentDAL();
@@ -69,13 +67,11 @@ namespace Shaheen
             cmbCountry.DisplayMember = "countryName";
             cmbCountry.ValueMember = "countryId";
         }
-
         private void btnClose_Click(object sender, EventArgs e)
         {
             MDIMain.isCustomer = false;
             this.Close();
         }
-
         private bool isValid()
         {
             bool isRes = true;
