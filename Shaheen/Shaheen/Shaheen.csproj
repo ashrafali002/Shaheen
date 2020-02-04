@@ -66,6 +66,7 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\CountryBLL.cs" />
     <Compile Include="BLL\SubscriptionBLL.cs" />
     <Compile Include="DAL\AgentDAL.cs" />
     <Compile Include="DAL\AreaDAL.cs" />

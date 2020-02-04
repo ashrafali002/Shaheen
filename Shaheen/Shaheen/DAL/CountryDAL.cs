@@ -16,5 +16,12 @@ namespace Shaheen.DAL
         {
             return context.Countries.ToList();
         }
+
+        public bool SaveCountry(Country country)
+        {
+            bool isRes = false;
+            context.Countries.Add(country);
+            return isRes;
+        }
     }
 }

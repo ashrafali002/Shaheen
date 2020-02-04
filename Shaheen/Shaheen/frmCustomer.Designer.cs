@@ -400,7 +400,7 @@
             // 
             this.cmbArea.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbArea.FormattingEnabled = true;
-            this.cmbArea.Location = new System.Drawing.Point(600, 153);
+            this.cmbArea.Location = new System.Drawing.Point(600, 152);
             this.cmbArea.Name = "cmbArea";
             this.cmbArea.Size = new System.Drawing.Size(300, 24);
             this.cmbArea.TabIndex = 14;
@@ -409,7 +409,7 @@
             // 
             this.lblPhone.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblPhone.AutoSize = true;
-            this.lblPhone.Location = new System.Drawing.Point(3, 184);
+            this.lblPhone.Location = new System.Drawing.Point(3, 185);
             this.lblPhone.Name = "lblPhone";
             this.lblPhone.Size = new System.Drawing.Size(57, 17);
             this.lblPhone.TabIndex = 17;
@@ -418,7 +418,7 @@
             // txtPhone
             // 
             this.txtPhone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPhone.Location = new System.Drawing.Point(137, 181);
+            this.txtPhone.Location = new System.Drawing.Point(137, 182);
             this.txtPhone.MaxLength = 10;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(300, 23);
@@ -428,7 +428,7 @@
             // 
             this.lblMobile.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblMobile.AutoSize = true;
-            this.lblMobile.Location = new System.Drawing.Point(463, 184);
+            this.lblMobile.Location = new System.Drawing.Point(463, 185);
             this.lblMobile.Name = "lblMobile";
             this.lblMobile.Size = new System.Drawing.Size(57, 17);
             this.lblMobile.TabIndex = 19;
@@ -437,7 +437,7 @@
             // txtMobile
             // 
             this.txtMobile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtMobile.Location = new System.Drawing.Point(600, 181);
+            this.txtMobile.Location = new System.Drawing.Point(600, 182);
             this.txtMobile.MaxLength = 10;
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(300, 23);
@@ -447,7 +447,7 @@
             // 
             this.lblEmail.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(3, 213);
+            this.lblEmail.Location = new System.Drawing.Point(3, 214);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(50, 17);
             this.lblEmail.TabIndex = 21;
@@ -456,7 +456,7 @@
             // txtEmail
             // 
             this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Location = new System.Drawing.Point(137, 210);
+            this.txtEmail.Location = new System.Drawing.Point(137, 211);
             this.txtEmail.MaxLength = 300;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(300, 23);
@@ -505,7 +505,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(463, 213);
+            this.label1.Location = new System.Drawing.Point(463, 214);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 17);
             this.label1.TabIndex = 23;
@@ -515,7 +515,7 @@
             // 
             this.cmbAgent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbAgent.FormattingEnabled = true;
-            this.cmbAgent.Location = new System.Drawing.Point(600, 210);
+            this.cmbAgent.Location = new System.Drawing.Point(600, 212);
             this.cmbAgent.Name = "cmbAgent";
             this.cmbAgent.Size = new System.Drawing.Size(300, 24);
             this.cmbAgent.TabIndex = 24;

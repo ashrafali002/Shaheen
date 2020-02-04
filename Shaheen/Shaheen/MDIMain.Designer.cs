@@ -32,6 +32,8 @@
             this.mnuCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDashboard = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuMasters = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuCountry = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,6 +42,7 @@
             this.mnuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuCustomer,
             this.mnuDashboard,
+            this.mnuMasters,
             this.mnuExit});
             this.mnuMain.Location = new System.Drawing.Point(0, 0);
             this.mnuMain.Name = "mnuMain";
@@ -62,9 +65,24 @@
             // mnuExit
             // 
             this.mnuExit.Name = "mnuExit";
-            this.mnuExit.Size = new System.Drawing.Size(37, 20);
+            this.mnuExit.Size = new System.Drawing.Size(38, 20);
             this.mnuExit.Text = "Exit";
             this.mnuExit.Click += new System.EventHandler(this.MnuExit_Click);
+            // 
+            // mnuMasters
+            // 
+            this.mnuMasters.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mnuCountry});
+            this.mnuMasters.Name = "mnuMasters";
+            this.mnuMasters.Size = new System.Drawing.Size(60, 20);
+            this.mnuMasters.Text = "Masters";
+            // 
+            // mnuCountry
+            // 
+            this.mnuCountry.Name = "mnuCountry";
+            this.mnuCountry.Size = new System.Drawing.Size(180, 22);
+            this.mnuCountry.Text = "Country";
+            this.mnuCountry.Click += new System.EventHandler(this.MnuCountry_Click);
             // 
             // MDIMain
             // 
@@ -93,5 +111,7 @@
         private System.Windows.Forms.ToolStripMenuItem mnuCustomer;
         private System.Windows.Forms.ToolStripMenuItem mnuDashboard;
         private System.Windows.Forms.ToolStripMenuItem mnuExit;
+        private System.Windows.Forms.ToolStripMenuItem mnuMasters;
+        private System.Windows.Forms.ToolStripMenuItem mnuCountry;
     }
 }
