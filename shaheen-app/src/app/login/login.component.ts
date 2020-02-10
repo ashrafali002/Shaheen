@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LoginService } from '../shared/login.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import { LoginService } from '../shared/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private loginService: LoginService) { }
+  constructor(private loginService: LoginService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -17,6 +18,10 @@ export class LoginComponent implements OnInit {
     event.preventDefault();
     this.loginService.form.reset();
     this.loginService.initializeLoginForm();
+  }
+
+  onSubmit() {
+    this.router.navigate(['/home']);
   }
 
 }

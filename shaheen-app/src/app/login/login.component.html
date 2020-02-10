@@ -1,4 +1,4 @@
-<form [formGroup]="loginService.form" class="normal-form">
+<form [formGroup]="loginService.form" class="normal-form" (submit)="onSubmit()">
     <mat-grid-list cols="1" rowHeight="300px">
         <mat-grid-tile>
             <div class="controls-container">
