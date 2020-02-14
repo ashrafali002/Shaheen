@@ -5,21 +5,23 @@
                 <mat-icon>menu</mat-icon>
             </button>
         </div>
-        <a mat-button class="companyName" routerLink="/">
+        <a mat-button class="companyName" routerLink="/home">
             <span>Shaheen Weekly</span>
         </a>
     </mat-toolbar>
 </div>
-<mat-drawer-container class="example-container" autosize>
-    <mat-drawer #drawer class="example-sidenav" mode="side" style="background-color: gray;">
-        <p>Auto-resizing sidenav</p>
+<mat-drawer-container class="home-container" autosize>
+    <mat-drawer #drawer class="home-sidenav" mode="side">
+        <a mat-button routerLink="/home">Dashboard</a>
+        <a mat-button routerLink="/home">Agent</a>
+        <a mat-button routerLink="/home/master">Masters</a>
+        <a mat-button routerLink="/home">Reports</a>
+        <a mat-button routerLink=".">Logout</a>
     </mat-drawer>
 
-    <div class="example-sidenav-content" style="background-color: hotpink;">
-        <button type="button" mat-button (click)="drawer.toggle()">
-            Toggle sidenav
-        </button>
+    <div class="home-sidenav-content">
         <router-outlet></router-outlet>
+
     </div>
 
 </mat-drawer-container>
