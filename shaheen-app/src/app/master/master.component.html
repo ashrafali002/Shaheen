@@ -1,21 +1,47 @@
-<!-- <mat-grid-list cols="1" rowHeight="300px">
-    <mat-grid-tile>
-        <form [formGroup]="loginService.form" class="normal-form" (submit)="onSubmit()">
-            <div class="controls-container">
-                <mat-form-field>
-                    <input formControlName="userName" matInput placeholder="User name">
-                    <mat-error>Enter user name</mat-error>
-                </mat-form-field>
-                <mat-form-field>
-                    <input formControlName="password" type="password" matInput placeholder="Password">
-                    <mat-error>Enter password</mat-error>
-                </mat-form-field>
-                <div class="button-row">
-                    <button mat-raised-button color="primary" type="submit"
-                        [disabled]=loginService.form.invalid>Login</button>
-                    <button mat-raised-button color="warn" (click)="onCancel($event)">Cancel</button>
+<mat-tab-group>
+    <mat-tab label="Country">
+        <app-country></app-country>
+    </mat-tab>
+    <mat-tab label="State">
+        <app-state></app-state>
+    </mat-tab>
+    <mat-tab label="District">
+        <div class="controls-container">
+            <form [formGroup]="masterService.countryForm" class="normal-form" (submit)="onSubmit()">
+                <div class="controls-container">
+                    <input type="hidden" formControlName="$key">
+                    <mat-form-field>
+                        <input formControlName="countryName" matInput placeholder="Country name">
+                        <mat-error>Enter country name</mat-error>
+                    </mat-form-field>
                 </div>
-            </div>
-        </form>
-    </mat-grid-tile>
-</mat-grid-list> -->
+            </form>
+        </div>
+    </mat-tab>
+    <mat-tab label="City">
+        <div class="controls-container">
+            <form [formGroup]="masterService.countryForm" class="normal-form" (submit)="onSubmit()">
+                <div class="controls-container">
+                    <input type="hidden" formControlName="$key">
+                    <mat-form-field>
+                        <input formControlName="countryName" matInput placeholder="Country name">
+                        <mat-error>Enter country name</mat-error>
+                    </mat-form-field>
+                </div>
+            </form>
+        </div>
+    </mat-tab>
+    <mat-tab label="Area">
+        <div class="controls-container">
+            <form [formGroup]="masterService.countryForm" class="normal-form" (submit)="onSubmit()">
+                <div class="controls-container">
+                    <input type="hidden" formControlName="$key">
+                    <mat-form-field>
+                        <input formControlName="countryName" matInput placeholder="Country name">
+                        <mat-error>Enter country name</mat-error>
+                    </mat-form-field>
+                </div>
+            </form>
+        </div>
+    </mat-tab>
+</mat-tab-group>
