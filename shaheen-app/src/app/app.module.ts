@@ -48,7 +48,13 @@ import { AreaDialogComponent } from './area-dialog/area-dialog.component';
     ReactiveFormsModule,
     FormsModule
   ],
-  entryComponents: [CountryDialogComponent, StateDialogComponent],
+  entryComponents: [
+    CountryDialogComponent,
+    StateDialogComponent,
+    DistrictDialogComponent,
+    CityDialogComponent,
+    AreaDialogComponent
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

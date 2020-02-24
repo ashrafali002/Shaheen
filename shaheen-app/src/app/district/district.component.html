@@ -1,1 +1,50 @@
-<p>district works!</p>
+<div class="controls-container">
+    <div class="flex-box">
+        <p>District List</p>
+        <button mat-fab (click)="openDistrictDialog()">
+            <mat-icon>add</mat-icon>
+        </button>
+    </div>
+
+    <mat-form-field>
+        <mat-label>Filter</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Gujarat">
+    </mat-form-field>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+        <!-- districtId Column -->
+        <ng-container matColumnDef="districtId">
+            <th mat-header-cell *matHeaderCellDef> No. </th>
+            <td mat-cell *matCellDef="let element"> {{element.districtId}} </td>
+        </ng-container>
+
+        <!-- districtName Column -->
+        <ng-container matColumnDef="districtName">
+            <th mat-header-cell *matHeaderCellDef> District Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.districtName}} </td>
+        </ng-container>
+
+        <!-- stateName Column -->
+        <ng-container matColumnDef="stateName">
+            <th mat-header-cell *matHeaderCellDef> State Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.stateName}} </td>
+        </ng-container>
+
+        <!-- Action -->
+        <ng-container matColumnDef="actions">
+            <th mat-header-cell *matHeaderCellDef></th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-icon-button color="primary">
+                    <mat-icon>edit</mat-icon>
+                </button>
+                <button mat-icon-button color="warn">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

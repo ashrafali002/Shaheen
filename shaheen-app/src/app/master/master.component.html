@@ -6,42 +6,12 @@
         <app-state></app-state>
     </mat-tab>
     <mat-tab label="District">
-        <div class="controls-container">
-            <form [formGroup]="masterService.countryForm" class="normal-form" (submit)="onSubmit()">
-                <div class="controls-container">
-                    <input type="hidden" formControlName="$key">
-                    <mat-form-field>
-                        <input formControlName="countryName" matInput placeholder="Country name">
-                        <mat-error>Enter country name</mat-error>
-                    </mat-form-field>
-                </div>
-            </form>
-        </div>
+        <app-district></app-district>
     </mat-tab>
     <mat-tab label="City">
-        <div class="controls-container">
-            <form [formGroup]="masterService.countryForm" class="normal-form" (submit)="onSubmit()">
-                <div class="controls-container">
-                    <input type="hidden" formControlName="$key">
-                    <mat-form-field>
-                        <input formControlName="countryName" matInput placeholder="Country name">
-                        <mat-error>Enter country name</mat-error>
-                    </mat-form-field>
-                </div>
-            </form>
-        </div>
+        <app-city></app-city>
     </mat-tab>
     <mat-tab label="Area">
-        <div class="controls-container">
-            <form [formGroup]="masterService.countryForm" class="normal-form" (submit)="onSubmit()">
-                <div class="controls-container">
-                    <input type="hidden" formControlName="$key">
-                    <mat-form-field>
-                        <input formControlName="countryName" matInput placeholder="Country name">
-                        <mat-error>Enter country name</mat-error>
-                    </mat-form-field>
-                </div>
-            </form>
-        </div>
+        <app-area></app-area>
     </mat-tab>
 </mat-tab-group>
