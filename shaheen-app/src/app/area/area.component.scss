@@ -1,0 +1,29 @@
+form.normal-form {
+  margin: 10px;
+}
+
+.controls-container {
+  width: 90%;
+  margin: 2%;
+}
+.controls-container > * {
+  width: 100%;
+}
+
+.button-row button {
+  margin: 5px;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.flex-box {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { IArea } from '../area/area.component';
 
 @Component({
   selector: 'app-area-dialog',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AreaDialogComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<AreaDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: IArea) { }
 
   ngOnInit() {
+  }
+
+  onClose() {
+    this.dialogRef.close();
   }
 
 }

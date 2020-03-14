@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { ICity } from '../city/city.component';
 
 @Component({
   selector: 'app-city-dialog',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CityDialogComponent implements OnInit {
 
-  constructor() { }
+  constructor(public dialogRef: MatDialogRef<CityDialogComponent>, @Inject(MAT_DIALOG_DATA) public data: ICity) { }
 
   ngOnInit() {
+  }
+
+  onClose() {
+    this.dialogRef.close();
   }
 
 }
