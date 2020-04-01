@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Add / Edit City</h1>
+<div mat-dialog-content>
+    <mat-form-field>
+        <mat-label>City Name</mat-label>
+        <input matInput [(ngModel)]="data.cityName">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Select an District</mat-label>
+        <mat-select [(value)]="selected">
+            <mat-option>None</mat-option>
+            <mat-option value="1">Ahmedabad</mat-option>
+            <mat-option value="2">Vadodara</mat-option>
+            <mat-option value="3">Panchmahal</mat-option>
+            <mat-option value="4">Kheda</mat-option>
+            <mat-option value="5">Anand</mat-option>
+        </mat-select>
+    </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button color="warn" (click)="onClose()">Close</button>
+    <button mat-button color="parimary" [mat-dialog-close]="data.cityName" cdkFocusInitial>Save</button>
+</div>
