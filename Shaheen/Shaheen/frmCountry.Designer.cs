@@ -35,6 +35,7 @@
             this.txtCountry = new System.Windows.Forms.TextBox();
             this.dgvCountry = new System.Windows.Forms.DataGridView();
             this.colCountryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCountry)).BeginInit();
             this.SuspendLayout();
@@ -77,11 +78,11 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 17);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Country Name :";            
+            this.label1.Text = "Country Name :";
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(165, 58);
+            this.txtCountry.Location = new System.Drawing.Point(165, 54);
             this.txtCountry.Name = "txtCountry";
             this.txtCountry.Size = new System.Drawing.Size(251, 23);
             this.txtCountry.TabIndex = 2;
@@ -90,18 +91,29 @@
             // 
             this.dgvCountry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCountry.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.colCountryName});
+            this.colCountryName,
+            this.colDelete});
             this.dgvCountry.Location = new System.Drawing.Point(6, 186);
             this.dgvCountry.Name = "dgvCountry";
             this.dgvCountry.Size = new System.Drawing.Size(493, 282);
-            this.dgvCountry.TabIndex = 5;
+            this.dgvCountry.TabIndex = 5;            
+            this.dgvCountry.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCountry_CellContentClick);
+            this.dgvCountry.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCountry_RowHeaderMouseDoubleClick);
             // 
             // colCountryName
             // 
             this.colCountryName.DataPropertyName = "countryName";
             this.colCountryName.HeaderText = "Country";
             this.colCountryName.Name = "colCountryName";
-            this.colCountryName.Width = 400;
+            this.colCountryName.Width = 350;
+            // 
+            // colDelete
+            // 
+            this.colDelete.HeaderText = "Delete";
+            this.colDelete.Name = "colDelete";
+            this.colDelete.Text = "Delete";
+            this.colDelete.ToolTipText = "Delete";
+            this.colDelete.UseColumnTextForButtonValue = true;
             // 
             // frmCountry
             // 
@@ -114,6 +126,7 @@
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Name = "frmCountry";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCountry";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -127,8 +140,9 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvCountry;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCountryName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCountry;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCountryName;
+        private System.Windows.Forms.DataGridViewButtonColumn colDelete;
     }
 }

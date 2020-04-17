@@ -17,11 +17,33 @@ namespace Shaheen.DAL
             return context.Countries.ToList();
         }
 
-        public bool SaveCountry(Country country)
+        public int SaveCountry(Country country)
         {
-            bool isRes = false;
-            context.Countries.Add(country);
-            return isRes;
+            if (country.countryId == 0)
+            {
+                context.Countries.Add(country);
+            }
+            else
+            {
+                context.Entry(country).State = System.Data.Entity.EntityState.Modified;
+            }
+            
+            context.SaveChanges();
+            return country.countryId;
+        }
+
+        public Country GetCountryById(int Id)
+        {
+            return context.Countries.Where(w => w.countryId == Id).FirstOrDefault();
+        }
+        public Country GetCountryByName(string countryName)
+        {
+            return context.Countries.Where(w => w.countryName == countryName).FirstOrDefault();
+        }
+
+        public List<Country> GetDuplicateCountryName(int countryId, string countryName)
+        {            
+            return context.Countries.Where(w => w.countryName == countryName && w.countryId != countryId).ToList();            
         }
     }
 }
