@@ -23,11 +23,25 @@ namespace Shaheen
             countryBll = new CountryBLL();
         }
 
-        public void ClearField()
+        private void frmCountry_Load(object sender, EventArgs e)
+        {
+            DisableEnableControls(false);
+            btnNew.Text = "New";
+            btnClose.Text = "Close";
+            btnNew.Enabled = true;
+            btnSave.Enabled = false;
+        }
+
+        public void ClearControls()
         {
             country_id = 0;
             txtCountry.Text = string.Empty;
         }
+        public void DisableEnableControls(bool isEnable)
+        {
+            txtCountry.Enabled = isEnable;
+        }
+
         private void FillDataGridView()
         {
             var countryBll = new CountryBLL();
@@ -37,8 +51,22 @@ namespace Shaheen
 
         private void BtnClose_Click(object sender, EventArgs e)
         {
-            this.Close();
-            MDIMain.isCountry = false;
+            if (btnClose.Text == "Close")
+            {
+                this.Close();
+                MDIMain.isCountry = false;
+                frmMain.isCountry = false;
+            }
+            else
+            {
+                DisableEnableControls(false);
+                btnClose.Text = "Close";
+                ClearControls();
+                btnNew.Enabled = true;
+                btnSave.Enabled = false;
+                btnNew.Text = "New";
+                dgvCountry.Enabled = true;
+            }
         }
         public bool isValidated()
         {
@@ -78,10 +106,15 @@ namespace Shaheen
                 if (res > 0)
                 {
                     FillDataGridView();
-                    MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK);                    
-                    ClearField();
+                    MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK);
+                    ClearControls();
+                    DisableEnableControls(false);
+                    btnNew.Text = "New";
+                    btnSave.Enabled = false;
+                    btnNew.Enabled = true;
+                    btnClose.Text = "Close";
+                    dgvCountry.Enabled = true;
                 }
-
             }
         }
 
@@ -89,19 +122,37 @@ namespace Shaheen
         {
             int rowIndex = e.RowIndex;
             DataGridViewRow grdRow = dgvCountry.Rows[rowIndex];
-            country_id= Convert.ToInt32(grdRow.Cells["countryId"].Value);
+            country_id = Convert.ToInt32(grdRow.Cells["countryId"].Value);
             txtCountry.Text = Convert.ToString(grdRow.Cells["colCountryName"].Value);
+            btnNew.Text = "Edit";
+            btnClose.Text = "Cancel";
         }
 
         private void dgvCountry_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             int columnIndex = e.ColumnIndex;
             int rowIndex = e.RowIndex;
             if (dgvCountry.Columns[columnIndex] is DataGridViewButtonColumn && rowIndex >= 0)
-            { 
-                
+            {
+                if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    country_id = Convert.ToInt32(dgvCountry.Rows[rowIndex].Cells["countryId"].Value);
+                    countryBll.DeleteCountry(country_id);
+                    FillDataGridView();
+                    ClearControls();
+                }
             }
+
         }
 
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            DisableEnableControls(true);
+            btnClose.Text = "Cancel";
+            btnNew.Enabled = false;
+            btnSave.Enabled = true;
+            dgvCountry.Enabled = false;
+        }
     }
 }

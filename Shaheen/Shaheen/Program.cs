@@ -19,7 +19,7 @@ namespace Shaheen
             frmLogin login = new frmLogin();
             if (login.ShowDialog() == DialogResult.OK)
             {
-                Application.Run(new MDIMain());
+                Application.Run(new frmMain());
             }
             
         }

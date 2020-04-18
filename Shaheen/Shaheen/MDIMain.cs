@@ -23,6 +23,9 @@ namespace Shaheen
         public static bool isCountry = false;
         public frmCountry country = null;
 
+        public static bool isState = false;
+        public frmState state = null;
+
         public static bool isDashboard = false;
 
         private void mnuCustomer_Click(object sender, EventArgs e)
@@ -84,6 +87,29 @@ namespace Shaheen
             Application.Exit();
         }
 
-
+        private void mnuState_Click(object sender, EventArgs e)
+        {
+            if (!isState)
+            {
+                state = new frmState();
+                state.MdiParent = this;
+                state.Show();
+                state.Focus();
+                isState = true;
+            }
+            else
+            {
+                foreach (Form frm in MdiChildren)
+                {
+                    if (frm.GetType().Name == "frmState")
+                    {
+                        state.MdiParent = this;
+                        state.Show();
+                        state.Focus();
+                        isState = true;
+                    }
+                }
+            }
+        }
     }
 }

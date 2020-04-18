@@ -49,6 +49,11 @@ namespace Shaheen.BLL
             return isDuplicateFound;
         }
 
+        public void DeleteCountry(int countryId)
+        {
+            countryDal.DeleteCountry(countryId);
+        }
+
 
     }
 }

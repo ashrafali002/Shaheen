@@ -31,9 +31,10 @@
             this.mnuMain = new System.Windows.Forms.MenuStrip();
             this.mnuCustomer = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuDashboard = new System.Windows.Forms.ToolStripMenuItem();
-            this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMasters = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuCountry = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuState = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnuExit = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,37 +53,45 @@
             // mnuCustomer
             // 
             this.mnuCustomer.Name = "mnuCustomer";
-            this.mnuCustomer.Size = new System.Drawing.Size(76, 20);
+            this.mnuCustomer.Size = new System.Drawing.Size(69, 19);
             this.mnuCustomer.Text = "Customers";
             this.mnuCustomer.Click += new System.EventHandler(this.mnuCustomer_Click);
             // 
             // mnuDashboard
             // 
             this.mnuDashboard.Name = "mnuDashboard";
-            this.mnuDashboard.Size = new System.Drawing.Size(76, 20);
+            this.mnuDashboard.Size = new System.Drawing.Size(69, 19);
             this.mnuDashboard.Text = "Dashboard";
-            // 
-            // mnuExit
-            // 
-            this.mnuExit.Name = "mnuExit";
-            this.mnuExit.Size = new System.Drawing.Size(38, 20);
-            this.mnuExit.Text = "Exit";
-            this.mnuExit.Click += new System.EventHandler(this.MnuExit_Click);
             // 
             // mnuMasters
             // 
             this.mnuMasters.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.mnuCountry});
+            this.mnuCountry,
+            this.mnuState});
             this.mnuMasters.Name = "mnuMasters";
-            this.mnuMasters.Size = new System.Drawing.Size(60, 20);
+            this.mnuMasters.Size = new System.Drawing.Size(69, 19);
             this.mnuMasters.Text = "Masters";
             // 
             // mnuCountry
             // 
             this.mnuCountry.Name = "mnuCountry";
-            this.mnuCountry.Size = new System.Drawing.Size(180, 22);
+            this.mnuCountry.Size = new System.Drawing.Size(117, 22);
             this.mnuCountry.Text = "Country";
             this.mnuCountry.Click += new System.EventHandler(this.MnuCountry_Click);
+            // 
+            // mnuState
+            // 
+            this.mnuState.Name = "mnuState";
+            this.mnuState.Size = new System.Drawing.Size(117, 22);
+            this.mnuState.Text = "State";
+            this.mnuState.Click += new System.EventHandler(this.mnuState_Click);
+            // 
+            // mnuExit
+            // 
+            this.mnuExit.Name = "mnuExit";
+            this.mnuExit.Size = new System.Drawing.Size(69, 19);
+            this.mnuExit.Text = "Exit";
+            this.mnuExit.Click += new System.EventHandler(this.MnuExit_Click);
             // 
             // MDIMain
             // 
@@ -113,5 +122,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnuExit;
         private System.Windows.Forms.ToolStripMenuItem mnuMasters;
         private System.Windows.Forms.ToolStripMenuItem mnuCountry;
+        private System.Windows.Forms.ToolStripMenuItem mnuState;
     }
 }

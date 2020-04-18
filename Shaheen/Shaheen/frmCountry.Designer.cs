@@ -30,19 +30,20 @@
         {
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpCountry = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txtCountry = new System.Windows.Forms.TextBox();
             this.dgvCountry = new System.Windows.Forms.DataGridView();
             this.colCountryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.groupBox1.SuspendLayout();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.grpCountry.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCountry)).BeginInit();
             this.SuspendLayout();
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(331, 145);
+            this.btnSave.Location = new System.Drawing.Point(317, 101);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(84, 35);
             this.btnSave.TabIndex = 0;
@@ -52,7 +53,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(421, 145);
+            this.btnClose.Location = new System.Drawing.Point(404, 101);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(84, 35);
             this.btnClose.TabIndex = 1;
@@ -60,21 +61,21 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
             // 
-            // groupBox1
+            // grpCountry
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtCountry);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(493, 127);
-            this.groupBox1.TabIndex = 4;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add Country";
+            this.grpCountry.Controls.Add(this.label1);
+            this.grpCountry.Controls.Add(this.txtCountry);
+            this.grpCountry.Location = new System.Drawing.Point(12, 12);
+            this.grpCountry.Name = "grpCountry";
+            this.grpCountry.Size = new System.Drawing.Size(476, 83);
+            this.grpCountry.TabIndex = 4;
+            this.grpCountry.TabStop = false;
+            this.grpCountry.Text = "Add / Edit Country";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 61);
+            this.label1.Location = new System.Drawing.Point(30, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 17);
             this.label1.TabIndex = 3;
@@ -82,21 +83,27 @@
             // 
             // txtCountry
             // 
-            this.txtCountry.Location = new System.Drawing.Point(165, 54);
+            this.txtCountry.Location = new System.Drawing.Point(142, 34);
             this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(251, 23);
+            this.txtCountry.Size = new System.Drawing.Size(267, 23);
             this.txtCountry.TabIndex = 2;
             // 
             // dgvCountry
             // 
-            this.dgvCountry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCountry.AllowUserToAddRows = false;
+            this.dgvCountry.AllowUserToDeleteRows = false;
+            this.dgvCountry.AllowUserToOrderColumns = true;
+            this.dgvCountry.AllowUserToResizeColumns = false;
+            this.dgvCountry.AllowUserToResizeRows = false;
+            this.dgvCountry.ColumnHeadersHeight = 35;
             this.dgvCountry.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCountryName,
             this.colDelete});
-            this.dgvCountry.Location = new System.Drawing.Point(6, 186);
+            this.dgvCountry.Location = new System.Drawing.Point(12, 142);
             this.dgvCountry.Name = "dgvCountry";
-            this.dgvCountry.Size = new System.Drawing.Size(493, 282);
-            this.dgvCountry.TabIndex = 5;            
+            this.dgvCountry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCountry.Size = new System.Drawing.Size(476, 346);
+            this.dgvCountry.TabIndex = 5;
             this.dgvCountry.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCountry_CellContentClick);
             this.dgvCountry.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCountry_RowHeaderMouseDoubleClick);
             // 
@@ -105,7 +112,8 @@
             this.colCountryName.DataPropertyName = "countryName";
             this.colCountryName.HeaderText = "Country";
             this.colCountryName.Name = "colCountryName";
-            this.colCountryName.Width = 350;
+            this.colCountryName.ReadOnly = true;
+            this.colCountryName.Width = 330;
             // 
             // colDelete
             // 
@@ -115,21 +123,33 @@
             this.colDelete.ToolTipText = "Delete";
             this.colDelete.UseColumnTextForButtonValue = true;
             // 
+            // btnNew
+            // 
+            this.btnNew.Location = new System.Drawing.Point(230, 101);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(84, 35);
+            this.btnNew.TabIndex = 6;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
             // frmCountry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(516, 480);
+            this.ClientSize = new System.Drawing.Size(500, 500);
+            this.Controls.Add(this.btnNew);
             this.Controls.Add(this.dgvCountry);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpCountry);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnClose);
             this.Name = "frmCountry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCountry";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.frmCountry_Load);
+            this.grpCountry.ResumeLayout(false);
+            this.grpCountry.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCountry)).EndInit();
             this.ResumeLayout(false);
 
@@ -138,10 +158,11 @@
         #endregion
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpCountry;
         private System.Windows.Forms.DataGridView dgvCountry;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtCountry;
+        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCountryName;
         private System.Windows.Forms.DataGridViewButtonColumn colDelete;
     }

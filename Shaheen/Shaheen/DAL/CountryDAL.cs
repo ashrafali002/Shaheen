@@ -25,7 +25,9 @@ namespace Shaheen.DAL
             }
             else
             {
-                context.Entry(country).State = System.Data.Entity.EntityState.Modified;
+                Country c = context.Countries.Find(country.countryId);
+                c.countryName = country.countryName;
+                context.Entry(c).State = System.Data.Entity.EntityState.Modified;
             }
             
             context.SaveChanges();
@@ -44,6 +46,13 @@ namespace Shaheen.DAL
         public List<Country> GetDuplicateCountryName(int countryId, string countryName)
         {            
             return context.Countries.Where(w => w.countryName == countryName && w.countryId != countryId).ToList();            
+        }
+
+        public void DeleteCountry(int countryId)
+        {
+            var c = context.Countries.Find(countryId);
+            context.Countries.Remove(c);
+            context.SaveChanges();
         }
     }
 }
