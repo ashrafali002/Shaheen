@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shaheen
@@ -26,6 +20,9 @@ namespace Shaheen
         public static bool isState = false;
         public frmState state = null;
 
+        public static bool isDistrict = false;
+        public frmDistrict district = null;
+
         private bool CheckOpened(string name)
         {
             FormCollection fc = Application.OpenForms;
@@ -39,6 +36,10 @@ namespace Shaheen
             return false;
         }
 
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
+        }
         private void btnCountry_Click(object sender, EventArgs e)
         {
             if (!isCountry)
@@ -57,20 +58,18 @@ namespace Shaheen
             }
             else
             {
-
-                if (CheckOpened("frmCountry"))
+                if (CheckOpened("Country"))
                 {
+                    country.BringToFront();
                     country.Location = new Point()
                     {
                         X = pnlForm.Width / 2 - country.Width / 2,
                         Y = pnlForm.Height / 2 - country.Height / 2
-                    };
-                    country.BringToFront();
+                    };                    
                     country.Show();
                     country.Focus();
                     isCountry = true;
                 }
-
             }
         }
 
@@ -92,17 +91,83 @@ namespace Shaheen
             }
             else
             {
-                if (CheckOpened("frmState"))
+                if (CheckOpened("State"))
                 {
                     state.BringToFront();
                     state.Location = new Point()
                     {
                         X = pnlForm.Width / 2 - state.Width / 2,
                         Y = pnlForm.Height / 2 - state.Height / 2
-                    };
+                    };                    
                     state.Show();
                     state.Focus();
                     isState = true;
+                }
+            }
+        }        
+
+        private void btnSubscription_Click(object sender, EventArgs e)
+        {
+            if (!isCustomer)
+            {
+                customer = new frmCustomer() { TopLevel = false };
+                customer.Location = new Point()
+                {
+                    X = pnlForm.Width / 2 - customer.Width / 2,
+                    Y = pnlForm.Height / 2 - customer.Height / 2
+                };
+                this.pnlForm.Controls.Add(customer);
+                customer.BringToFront();
+                customer.Show();
+                customer.Focus();
+                isCustomer = true;
+            }
+            else
+            {
+                if (CheckOpened("Customer"))
+                {
+                    customer.BringToFront();
+                    customer.Location = new Point()
+                    {
+                        X = pnlForm.Width / 2 - customer.Width / 2,
+                        Y = pnlForm.Height / 2 - customer.Height / 2
+                    };                    
+                    customer.Show();
+                    customer.Focus();
+                    isCustomer = true;
+                }
+            }
+        }
+
+        private void btnDistrict_Click(object sender, EventArgs e)
+        {
+            if (!isDistrict)
+            {
+                district = new frmDistrict() { TopLevel = false };
+                district.Location = new Point()
+                {
+                    X = pnlForm.Width / 2 - district.Width / 2,
+                    Y = pnlForm.Height / 2 - district.Height / 2
+                };
+                this.pnlForm.Controls.Add(district);
+                district.BringToFront();
+                district.Show();
+                district.Focus();
+                isDistrict = true;
+            }
+            else
+            {
+                if (CheckOpened("District"))
+                {
+                    district.BringToFront();
+                    district.Location = new Point()
+                    {
+                        X = pnlForm.Width / 2 - district.Width / 2,
+                        Y = pnlForm.Height / 2 - district.Height / 2
+                    };
+                    district.Show();
+                    district.Focus();
+                    isDistrict = true;
                 }
             }
         }

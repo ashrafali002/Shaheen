@@ -30,63 +30,41 @@
         {
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.grpCountry = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtCountry = new System.Windows.Forms.TextBox();
             this.dgvCountry = new System.Windows.Forms.DataGridView();
             this.colCountryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btnNew = new System.Windows.Forms.Button();
-            this.grpCountry.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCountry = new System.Windows.Forms.TextBox();
+            this.lblCountryName = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCountry)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(317, 101);
+            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Location = new System.Drawing.Point(104, 290);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(84, 35);
+            this.btnSave.Size = new System.Drawing.Size(75, 30);
             this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.BtnSave_Click);
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(404, 101);
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(182, 290);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(84, 35);
+            this.btnClose.Size = new System.Drawing.Size(75, 30);
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.BtnClose_Click);
-            // 
-            // grpCountry
-            // 
-            this.grpCountry.Controls.Add(this.label1);
-            this.grpCountry.Controls.Add(this.txtCountry);
-            this.grpCountry.Location = new System.Drawing.Point(12, 12);
-            this.grpCountry.Name = "grpCountry";
-            this.grpCountry.Size = new System.Drawing.Size(476, 83);
-            this.grpCountry.TabIndex = 4;
-            this.grpCountry.TabStop = false;
-            this.grpCountry.Text = "Add / Edit Country";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(30, 37);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 17);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Country Name :";
-            // 
-            // txtCountry
-            // 
-            this.txtCountry.Location = new System.Drawing.Point(142, 34);
-            this.txtCountry.Name = "txtCountry";
-            this.txtCountry.Size = new System.Drawing.Size(267, 23);
-            this.txtCountry.TabIndex = 2;
             // 
             // dgvCountry
             // 
@@ -95,14 +73,18 @@
             this.dgvCountry.AllowUserToOrderColumns = true;
             this.dgvCountry.AllowUserToResizeColumns = false;
             this.dgvCountry.AllowUserToResizeRows = false;
+            this.dgvCountry.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCountry.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dgvCountry.ColumnHeadersHeight = 35;
+            this.dgvCountry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCountry.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCountryName,
             this.colDelete});
-            this.dgvCountry.Location = new System.Drawing.Point(12, 142);
+            this.dgvCountry.EnableHeadersVisualStyles = false;
+            this.dgvCountry.Location = new System.Drawing.Point(298, 11);
             this.dgvCountry.Name = "dgvCountry";
             this.dgvCountry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCountry.Size = new System.Drawing.Size(476, 346);
+            this.dgvCountry.Size = new System.Drawing.Size(478, 339);
             this.dgvCountry.TabIndex = 5;
             this.dgvCountry.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCountry_CellContentClick);
             this.dgvCountry.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCountry_RowHeaderMouseDoubleClick);
@@ -110,6 +92,7 @@
             // colCountryName
             // 
             this.colCountryName.DataPropertyName = "countryName";
+            this.colCountryName.FillWeight = 151.7241F;
             this.colCountryName.HeaderText = "Country";
             this.colCountryName.Name = "colCountryName";
             this.colCountryName.ReadOnly = true;
@@ -117,40 +100,86 @@
             // 
             // colDelete
             // 
+            this.colDelete.FillWeight = 48.27586F;
             this.colDelete.HeaderText = "Delete";
             this.colDelete.Name = "colDelete";
             this.colDelete.Text = "Delete";
             this.colDelete.ToolTipText = "Delete";
             this.colDelete.UseColumnTextForButtonValue = true;
+            this.colDelete.Width = 105;
             // 
             // btnNew
             // 
-            this.btnNew.Location = new System.Drawing.Point(230, 101);
+            this.btnNew.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Location = new System.Drawing.Point(26, 290);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(84, 35);
+            this.btnNew.Size = new System.Drawing.Size(75, 30);
             this.btnNew.TabIndex = 6;
             this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = true;
+            this.btnNew.UseVisualStyleBackColor = false;
             this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Location = new System.Drawing.Point(18, 86);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(250, 1);
+            this.panel1.TabIndex = 18;
+            // 
+            // txtCountry
+            // 
+            this.txtCountry.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtCountry.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCountry.Location = new System.Drawing.Point(18, 66);
+            this.txtCountry.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtCountry.Name = "txtCountry";
+            this.txtCountry.Size = new System.Drawing.Size(250, 16);
+            this.txtCountry.TabIndex = 16;
+            // 
+            // lblCountryName
+            // 
+            this.lblCountryName.AutoSize = true;
+            this.lblCountryName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblCountryName.Location = new System.Drawing.Point(14, 45);
+            this.lblCountryName.Margin = new System.Windows.Forms.Padding(0);
+            this.lblCountryName.Name = "lblCountryName";
+            this.lblCountryName.Size = new System.Drawing.Size(96, 15);
+            this.lblCountryName.TabIndex = 17;
+            this.lblCountryName.Text = "Country Name : ";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.panel1);
+            this.groupBox1.Controls.Add(this.btnClose);
+            this.groupBox1.Controls.Add(this.btnNew);
+            this.groupBox1.Controls.Add(this.btnSave);
+            this.groupBox1.Controls.Add(this.txtCountry);
+            this.groupBox1.Controls.Add(this.lblCountryName);
+            this.groupBox1.Location = new System.Drawing.Point(10, 11);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(282, 337);
+            this.groupBox1.TabIndex = 19;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Add / Edit Country";
             // 
             // frmCountry
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(500, 500);
-            this.Controls.Add(this.btnNew);
+            this.ClientSize = new System.Drawing.Size(786, 360);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dgvCountry);
-            this.Controls.Add(this.grpCountry);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnClose);
             this.Name = "frmCountry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCountry";
+            this.Text = "Country";
             this.Load += new System.EventHandler(this.frmCountry_Load);
-            this.grpCountry.ResumeLayout(false);
-            this.grpCountry.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCountry)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -158,12 +187,13 @@
         #endregion
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.GroupBox grpCountry;
         private System.Windows.Forms.DataGridView dgvCountry;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtCountry;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCountryName;
         private System.Windows.Forms.DataGridViewButtonColumn colDelete;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtCountry;
+        private System.Windows.Forms.Label lblCountryName;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

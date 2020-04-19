@@ -1,9 +1,6 @@
 ﻿using Shaheen.ShaheenDB;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shaheen.DAL
 {
@@ -29,7 +26,7 @@ namespace Shaheen.DAL
                 c.countryName = country.countryName;
                 context.Entry(c).State = System.Data.Entity.EntityState.Modified;
             }
-            
+
             context.SaveChanges();
             return country.countryId;
         }
@@ -44,8 +41,8 @@ namespace Shaheen.DAL
         }
 
         public List<Country> GetDuplicateCountryName(int countryId, string countryName)
-        {            
-            return context.Countries.Where(w => w.countryName == countryName && w.countryId != countryId).ToList();            
+        {
+            return context.Countries.Where(w => w.countryName == countryName && w.countryId != countryId).ToList();
         }
 
         public void DeleteCountry(int countryId)

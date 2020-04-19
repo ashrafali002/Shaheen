@@ -1,13 +1,7 @@
 ﻿using Shaheen.BLL;
 using Shaheen.ShaheenDB;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shaheen
@@ -47,6 +41,8 @@ namespace Shaheen
             var countryBll = new CountryBLL();
             dgvCountry.DataSource = countryBll.CountryList();
             dgvCountry.Columns["countryId"].Visible = false;
+            //dgvCountry.ColumnHeadersDefaultCellStyle.BackColor = "";
+            //dgvCountry.EnableHeadersVisualStyles = false;
         }
 
         private void BtnClose_Click(object sender, EventArgs e)

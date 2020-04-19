@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shaheen
@@ -19,7 +12,7 @@ namespace Shaheen
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            this.txtUsername.MinimumSize = new System.Drawing.Size(226, 30);
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

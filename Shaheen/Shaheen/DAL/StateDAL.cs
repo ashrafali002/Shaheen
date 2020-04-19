@@ -22,7 +22,7 @@ namespace Shaheen.DAL
             {
                 stateId = s.stateId,
                 stateName = s.stateName,
-                countryId = s.countryId,                
+                countryId = s.countryId,
                 countryName = c.countryName
             }).ToList();
             return list;

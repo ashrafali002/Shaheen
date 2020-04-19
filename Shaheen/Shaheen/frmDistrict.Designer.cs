@@ -1,6 +1,6 @@
 ﻿namespace Shaheen
 {
-    partial class frmState
+    partial class frmDistrict
     {
         /// <summary>
         /// Required designer variable.
@@ -30,32 +30,32 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtDistrictName = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtState = new System.Windows.Forms.TextBox();
-            this.ddlCountry = new System.Windows.Forms.ComboBox();
+            this.ddlState = new System.Windows.Forms.ComboBox();
             this.lblStateName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvState = new System.Windows.Forms.DataGridView();
+            this.dgvDistrict = new System.Windows.Forms.DataGridView();
+            this.colDistrictName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCountryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.districtId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvState)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDistrict)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtState);
+            this.groupBox1.Controls.Add(this.txtDistrictName);
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.btnNew);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.ddlCountry);
+            this.groupBox1.Controls.Add(this.ddlState);
             this.groupBox1.Controls.Add(this.lblStateName);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(10, 10);
@@ -63,7 +63,17 @@
             this.groupBox1.Size = new System.Drawing.Size(282, 337);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add / Edit State";
+            this.groupBox1.Text = "Add / Edit District";
+            // 
+            // txtDistrictName
+            // 
+            this.txtDistrictName.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtDistrictName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDistrictName.Location = new System.Drawing.Point(19, 61);
+            this.txtDistrictName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtDistrictName.Name = "txtDistrictName";
+            this.txtDistrictName.Size = new System.Drawing.Size(245, 16);
+            this.txtDistrictName.TabIndex = 19;
             // 
             // btnClose
             // 
@@ -111,27 +121,17 @@
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 21;
             // 
-            // txtState
+            // ddlState
             // 
-            this.txtState.BackColor = System.Drawing.Color.SkyBlue;
-            this.txtState.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtState.Location = new System.Drawing.Point(19, 61);
-            this.txtState.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(245, 16);
-            this.txtState.TabIndex = 19;
-            // 
-            // ddlCountry
-            // 
-            this.ddlCountry.BackColor = System.Drawing.Color.SkyBlue;
-            this.ddlCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddlCountry.IntegralHeight = false;
-            this.ddlCountry.Location = new System.Drawing.Point(19, 120);
-            this.ddlCountry.Margin = new System.Windows.Forms.Padding(0);
-            this.ddlCountry.MinimumSize = new System.Drawing.Size(250, 0);
-            this.ddlCountry.Name = "ddlCountry";
-            this.ddlCountry.Size = new System.Drawing.Size(250, 23);
-            this.ddlCountry.TabIndex = 5;
+            this.ddlState.BackColor = System.Drawing.Color.SkyBlue;
+            this.ddlState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ddlState.IntegralHeight = false;
+            this.ddlState.Location = new System.Drawing.Point(19, 120);
+            this.ddlState.Margin = new System.Windows.Forms.Padding(0);
+            this.ddlState.MinimumSize = new System.Drawing.Size(250, 0);
+            this.ddlState.Name = "ddlState";
+            this.ddlState.Size = new System.Drawing.Size(250, 23);
+            this.ddlState.TabIndex = 5;
             // 
             // lblStateName
             // 
@@ -140,9 +140,9 @@
             this.lblStateName.Location = new System.Drawing.Point(18, 41);
             this.lblStateName.Margin = new System.Windows.Forms.Padding(0);
             this.lblStateName.Name = "lblStateName";
-            this.lblStateName.Size = new System.Drawing.Size(83, 15);
+            this.lblStateName.Size = new System.Drawing.Size(94, 15);
             this.lblStateName.TabIndex = 20;
-            this.lblStateName.Text = "State Name : ";
+            this.lblStateName.Text = "District Name : ";
             // 
             // label2
             // 
@@ -150,30 +150,30 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(18, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 15);
+            this.label2.Size = new System.Drawing.Size(43, 15);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Country :";
+            this.label2.Text = "State :";
             // 
-            // dgvState
+            // dgvDistrict
             // 
-            this.dgvState.AllowUserToAddRows = false;
-            this.dgvState.AllowUserToDeleteRows = false;
-            this.dgvState.AllowUserToOrderColumns = true;
-            this.dgvState.AllowUserToResizeColumns = false;
-            this.dgvState.AllowUserToResizeRows = false;
-            this.dgvState.BackgroundColor = System.Drawing.Color.White;
-            this.dgvState.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvState.ColumnHeadersHeight = 35;
-            this.dgvState.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvDistrict.AllowUserToAddRows = false;
+            this.dgvDistrict.AllowUserToDeleteRows = false;
+            this.dgvDistrict.AllowUserToOrderColumns = true;
+            this.dgvDistrict.AllowUserToResizeColumns = false;
+            this.dgvDistrict.AllowUserToResizeRows = false;
+            this.dgvDistrict.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDistrict.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvDistrict.ColumnHeadersHeight = 35;
+            this.dgvDistrict.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colDistrictName,
             this.colStateName,
-            this.colCountryName,
             this.stateId,
-            this.countryId,
+            this.districtId,
             this.colDelete});
-            this.dgvState.EnableHeadersVisualStyles = false;
-            this.dgvState.Location = new System.Drawing.Point(298, 11);
-            this.dgvState.MultiSelect = false;
-            this.dgvState.Name = "dgvState";
+            this.dgvDistrict.EnableHeadersVisualStyles = false;
+            this.dgvDistrict.Location = new System.Drawing.Point(298, 11);
+            this.dgvDistrict.MultiSelect = false;
+            this.dgvDistrict.Name = "dgvDistrict";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,13 +181,21 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvState.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvState.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvState.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvState.Size = new System.Drawing.Size(478, 339);
-            this.dgvState.TabIndex = 5;
-            this.dgvState.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvState_CellContentClick);
-            this.dgvState.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvState_RowHeaderMouseDoubleClick);
+            this.dgvDistrict.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvDistrict.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvDistrict.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDistrict.Size = new System.Drawing.Size(478, 339);
+            this.dgvDistrict.TabIndex = 5;
+            this.dgvDistrict.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDistrict_CellContentClick);
+            this.dgvDistrict.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDistrict_RowHeaderMouseDoubleClick);
+            // 
+            // colDistrictName
+            // 
+            this.colDistrictName.DataPropertyName = "districtName";
+            this.colDistrictName.HeaderText = "District";
+            this.colDistrictName.Name = "colDistrictName";
+            this.colDistrictName.ReadOnly = true;
+            this.colDistrictName.Width = 190;
             // 
             // colStateName
             // 
@@ -195,16 +203,8 @@
             this.colStateName.HeaderText = "State";
             this.colStateName.Name = "colStateName";
             this.colStateName.ReadOnly = true;
-            this.colStateName.Width = 190;
-            // 
-            // colCountryName
-            // 
-            this.colCountryName.DataPropertyName = "countryName";
-            this.colCountryName.HeaderText = "Country";
-            this.colCountryName.Name = "colCountryName";
-            this.colCountryName.ReadOnly = true;
-            this.colCountryName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colCountryName.Width = 145;
+            this.colStateName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colStateName.Width = 145;
             // 
             // stateId
             // 
@@ -213,12 +213,12 @@
             this.stateId.Name = "stateId";
             this.stateId.Visible = false;
             // 
-            // countryId
+            // districtId
             // 
-            this.countryId.DataPropertyName = "countryId";
-            this.countryId.HeaderText = "countryId";
-            this.countryId.Name = "countryId";
-            this.countryId.Visible = false;
+            this.districtId.DataPropertyName = "districtId";
+            this.districtId.HeaderText = "districtId";
+            this.districtId.Name = "districtId";
+            this.districtId.Visible = false;
             // 
             // colDelete
             // 
@@ -228,40 +228,40 @@
             this.colDelete.ToolTipText = "Delete";
             this.colDelete.UseColumnTextForButtonValue = true;
             // 
-            // frmState
+            // frmDistrict
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(786, 360);
-            this.Controls.Add(this.dgvState);
+            this.Controls.Add(this.dgvDistrict);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmState";
+            this.Name = "frmDistrict";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "State";
-            this.Load += new System.EventHandler(this.frmState_Load);
+            this.Load += new System.EventHandler(this.frmDistrict_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvState)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDistrict)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgvState;
-        private System.Windows.Forms.ComboBox ddlCountry;
+        private System.Windows.Forms.DataGridView dgvDistrict;
+        private System.Windows.Forms.ComboBox ddlState;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtState;
+        private System.Windows.Forms.TextBox txtDistrictName;
         private System.Windows.Forms.Label lblStateName;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDistrictName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStateName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colCountryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn stateId;
-        private System.Windows.Forms.DataGridViewTextBoxColumn countryId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn districtId;
         private System.Windows.Forms.DataGridViewButtonColumn colDelete;
     }
 }
