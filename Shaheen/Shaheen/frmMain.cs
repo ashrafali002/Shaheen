@@ -23,6 +23,9 @@ namespace Shaheen
         public static bool isDistrict = false;
         public frmDistrict district = null;
 
+        public static bool isCity = false;
+        public frmCity city = null;
+
         private bool CheckOpened(string name)
         {
             FormCollection fc = Application.OpenForms;
@@ -168,6 +171,39 @@ namespace Shaheen
                     district.Show();
                     district.Focus();
                     isDistrict = true;
+                }
+            }
+        }
+
+        private void btnCity_Click(object sender, EventArgs e)
+        {
+            if (!isCity)
+            {
+                city = new frmCity() { TopLevel = false };
+                city.Location = new Point()
+                {
+                    X = pnlForm.Width / 2 - city.Width / 2,
+                    Y = pnlForm.Height / 2 - city.Height / 2
+                };
+                this.pnlForm.Controls.Add(city);
+                city.BringToFront();
+                city.Show();
+                city.Focus();
+                isCity = true;
+            }
+            else
+            {
+                if (CheckOpened("City"))
+                {
+                    city.BringToFront();
+                    city.Location = new Point()
+                    {
+                        X = pnlForm.Width / 2 - city.Width / 2,
+                        Y = pnlForm.Height / 2 - city.Height / 2
+                    };
+                    city.Show();
+                    city.Focus();
+                    isCity = true;
                 }
             }
         }

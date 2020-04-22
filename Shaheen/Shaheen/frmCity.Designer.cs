@@ -1,6 +1,6 @@
 ﻿namespace Shaheen
 {
-    partial class frmDistrict
+    partial class frmCity
     {
         /// <summary>
         /// Required designer variable.
@@ -30,32 +30,32 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.txtDistrictName = new System.Windows.Forms.TextBox();
+            this.txtCity = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ddlState = new System.Windows.Forms.ComboBox();
+            this.ddlDistrict = new System.Windows.Forms.ComboBox();
             this.lblStateName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvDistrict = new System.Windows.Forms.DataGridView();
+            this.dgvCity = new System.Windows.Forms.DataGridView();
+            this.colCityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDistrictName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.districtId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDistrict)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCity)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.txtDistrictName);
+            this.groupBox1.Controls.Add(this.txtCity);
             this.groupBox1.Controls.Add(this.btnClose);
             this.groupBox1.Controls.Add(this.btnNew);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.ddlState);
+            this.groupBox1.Controls.Add(this.ddlDistrict);
             this.groupBox1.Controls.Add(this.lblStateName);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(10, 10);
@@ -63,17 +63,17 @@
             this.groupBox1.Size = new System.Drawing.Size(282, 337);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add / Edit District";
+            this.groupBox1.Text = "Add / Edit City";
             // 
-            // txtDistrictName
+            // txtCity
             // 
-            this.txtDistrictName.BackColor = System.Drawing.Color.SkyBlue;
-            this.txtDistrictName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDistrictName.Location = new System.Drawing.Point(19, 61);
-            this.txtDistrictName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtDistrictName.Name = "txtDistrictName";
-            this.txtDistrictName.Size = new System.Drawing.Size(245, 16);
-            this.txtDistrictName.TabIndex = 19;
+            this.txtCity.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCity.Location = new System.Drawing.Point(19, 61);
+            this.txtCity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtCity.Name = "txtCity";
+            this.txtCity.Size = new System.Drawing.Size(245, 16);
+            this.txtCity.TabIndex = 19;
             // 
             // btnClose
             // 
@@ -121,17 +121,17 @@
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 21;
             // 
-            // ddlState
+            // ddlDistrict
             // 
-            this.ddlState.BackColor = System.Drawing.Color.SkyBlue;
-            this.ddlState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddlState.IntegralHeight = false;
-            this.ddlState.Location = new System.Drawing.Point(19, 120);
-            this.ddlState.Margin = new System.Windows.Forms.Padding(0);
-            this.ddlState.MinimumSize = new System.Drawing.Size(250, 0);
-            this.ddlState.Name = "ddlState";
-            this.ddlState.Size = new System.Drawing.Size(250, 23);
-            this.ddlState.TabIndex = 5;
+            this.ddlDistrict.BackColor = System.Drawing.Color.SkyBlue;
+            this.ddlDistrict.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ddlDistrict.IntegralHeight = false;
+            this.ddlDistrict.Location = new System.Drawing.Point(19, 120);
+            this.ddlDistrict.Margin = new System.Windows.Forms.Padding(0);
+            this.ddlDistrict.MinimumSize = new System.Drawing.Size(250, 0);
+            this.ddlDistrict.Name = "ddlDistrict";
+            this.ddlDistrict.Size = new System.Drawing.Size(250, 23);
+            this.ddlDistrict.TabIndex = 5;
             // 
             // lblStateName
             // 
@@ -140,9 +140,9 @@
             this.lblStateName.Location = new System.Drawing.Point(18, 41);
             this.lblStateName.Margin = new System.Windows.Forms.Padding(0);
             this.lblStateName.Name = "lblStateName";
-            this.lblStateName.Size = new System.Drawing.Size(94, 15);
+            this.lblStateName.Size = new System.Drawing.Size(74, 15);
             this.lblStateName.TabIndex = 20;
-            this.lblStateName.Text = "District Name : ";
+            this.lblStateName.Text = "City Name : ";
             // 
             // label2
             // 
@@ -150,30 +150,30 @@
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label2.Location = new System.Drawing.Point(18, 102);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 15);
+            this.label2.Size = new System.Drawing.Size(54, 15);
             this.label2.TabIndex = 4;
-            this.label2.Text = "State :";
+            this.label2.Text = "District :";
             // 
-            // dgvDistrict
+            // dgvCity
             // 
-            this.dgvDistrict.AllowUserToAddRows = false;
-            this.dgvDistrict.AllowUserToDeleteRows = false;
-            this.dgvDistrict.AllowUserToOrderColumns = true;
-            this.dgvDistrict.AllowUserToResizeColumns = false;
-            this.dgvDistrict.AllowUserToResizeRows = false;
-            this.dgvDistrict.BackgroundColor = System.Drawing.Color.White;
-            this.dgvDistrict.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvDistrict.ColumnHeadersHeight = 35;
-            this.dgvDistrict.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvCity.AllowUserToAddRows = false;
+            this.dgvCity.AllowUserToDeleteRows = false;
+            this.dgvCity.AllowUserToOrderColumns = true;
+            this.dgvCity.AllowUserToResizeColumns = false;
+            this.dgvCity.AllowUserToResizeRows = false;
+            this.dgvCity.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCity.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvCity.ColumnHeadersHeight = 35;
+            this.dgvCity.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colCityName,
             this.colDistrictName,
-            this.colStateName,
-            this.stateId,
+            this.cityId,
             this.districtId,
             this.colDelete});
-            this.dgvDistrict.EnableHeadersVisualStyles = false;
-            this.dgvDistrict.Location = new System.Drawing.Point(298, 11);
-            this.dgvDistrict.MultiSelect = false;
-            this.dgvDistrict.Name = "dgvDistrict";
+            this.dgvCity.EnableHeadersVisualStyles = false;
+            this.dgvCity.Location = new System.Drawing.Point(298, 11);
+            this.dgvCity.MultiSelect = false;
+            this.dgvCity.Name = "dgvCity";
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,13 +181,21 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDistrict.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvDistrict.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.dgvDistrict.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDistrict.Size = new System.Drawing.Size(478, 339);
-            this.dgvDistrict.TabIndex = 5;
-            this.dgvDistrict.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDistrict_CellContentClick);
-            this.dgvDistrict.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDistrict_RowHeaderMouseDoubleClick);
+            this.dgvCity.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCity.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dgvCity.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvCity.Size = new System.Drawing.Size(478, 339);
+            this.dgvCity.TabIndex = 5;
+            this.dgvCity.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCity_CellContentClick);
+            this.dgvCity.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCity_RowHeaderMouseDoubleClick);
+            // 
+            // colCityName
+            // 
+            this.colCityName.DataPropertyName = "cityName";
+            this.colCityName.HeaderText = "City";
+            this.colCityName.Name = "colCityName";
+            this.colCityName.ReadOnly = true;
+            this.colCityName.Width = 190;
             // 
             // colDistrictName
             // 
@@ -195,23 +203,15 @@
             this.colDistrictName.HeaderText = "District";
             this.colDistrictName.Name = "colDistrictName";
             this.colDistrictName.ReadOnly = true;
-            this.colDistrictName.Width = 190;
+            this.colDistrictName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colDistrictName.Width = 145;
             // 
-            // colStateName
+            // cityId
             // 
-            this.colStateName.DataPropertyName = "stateName";
-            this.colStateName.HeaderText = "State";
-            this.colStateName.Name = "colStateName";
-            this.colStateName.ReadOnly = true;
-            this.colStateName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colStateName.Width = 145;
-            // 
-            // stateId
-            // 
-            this.stateId.DataPropertyName = "stateId";
-            this.stateId.HeaderText = "stateId";
-            this.stateId.Name = "stateId";
-            this.stateId.Visible = false;
+            this.cityId.DataPropertyName = "cityId";
+            this.cityId.HeaderText = "cityId";
+            this.cityId.Name = "cityId";
+            this.cityId.Visible = false;
             // 
             // districtId
             // 
@@ -228,39 +228,39 @@
             this.colDelete.ToolTipText = "Delete";
             this.colDelete.UseColumnTextForButtonValue = true;
             // 
-            // frmDistrict
+            // frmCity
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
             this.ClientSize = new System.Drawing.Size(786, 360);
-            this.Controls.Add(this.dgvDistrict);
+            this.Controls.Add(this.dgvCity);
             this.Controls.Add(this.groupBox1);
-            this.Name = "frmDistrict";
+            this.Name = "frmCity";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "District";
-            this.Load += new System.EventHandler(this.frmDistrict_Load);
+            this.Text = "City";
+            this.Load += new System.EventHandler(this.frmCity_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDistrict)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCity)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dgvDistrict;
-        private System.Windows.Forms.ComboBox ddlState;
+        private System.Windows.Forms.DataGridView dgvCity;
+        private System.Windows.Forms.ComboBox ddlDistrict;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txtDistrictName;
+        private System.Windows.Forms.TextBox txtCity;
         private System.Windows.Forms.Label lblStateName;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCityName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDistrictName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colStateName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn stateId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityId;
         private System.Windows.Forms.DataGridViewTextBoxColumn districtId;
         private System.Windows.Forms.DataGridViewButtonColumn colDelete;
     }

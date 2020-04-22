@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDistrict = new System.Windows.Forms.Button();
             this.btnSubscription = new System.Windows.Forms.Button();
             this.btnState = new System.Windows.Forms.Button();
             this.btnCountry = new System.Windows.Forms.Button();
@@ -37,7 +38,7 @@
             this.lblLogoText = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlForm = new System.Windows.Forms.Panel();
-            this.btnDistrict = new System.Windows.Forms.Button();
+            this.btnCity = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panel1.Controls.Add(this.btnCity);
             this.panel1.Controls.Add(this.btnDistrict);
             this.panel1.Controls.Add(this.btnSubscription);
             this.panel1.Controls.Add(this.btnState);
@@ -56,6 +58,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 823);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDistrict
+            // 
+            this.btnDistrict.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDistrict.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDistrict.Location = new System.Drawing.Point(12, 282);
+            this.btnDistrict.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDistrict.Name = "btnDistrict";
+            this.btnDistrict.Size = new System.Drawing.Size(265, 38);
+            this.btnDistrict.TabIndex = 6;
+            this.btnDistrict.Text = "Add / Edit District";
+            this.btnDistrict.UseVisualStyleBackColor = false;
+            this.btnDistrict.Click += new System.EventHandler(this.btnDistrict_Click);
             // 
             // btnSubscription
             // 
@@ -150,18 +165,18 @@
             this.pnlForm.Size = new System.Drawing.Size(1058, 726);
             this.pnlForm.TabIndex = 2;
             // 
-            // btnDistrict
+            // btnCity
             // 
-            this.btnDistrict.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnDistrict.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDistrict.Location = new System.Drawing.Point(12, 282);
-            this.btnDistrict.Margin = new System.Windows.Forms.Padding(4);
-            this.btnDistrict.Name = "btnDistrict";
-            this.btnDistrict.Size = new System.Drawing.Size(265, 38);
-            this.btnDistrict.TabIndex = 6;
-            this.btnDistrict.Text = "Add / Edit District";
-            this.btnDistrict.UseVisualStyleBackColor = false;
-            this.btnDistrict.Click += new System.EventHandler(this.btnDistrict_Click);
+            this.btnCity.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCity.Location = new System.Drawing.Point(12, 328);
+            this.btnCity.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCity.Name = "btnCity";
+            this.btnCity.Size = new System.Drawing.Size(265, 38);
+            this.btnCity.TabIndex = 7;
+            this.btnCity.Text = "Add / Edit City";
+            this.btnCity.UseVisualStyleBackColor = false;
+            this.btnCity.Click += new System.EventHandler(this.btnCity_Click);
             // 
             // frmMain
             // 
@@ -196,5 +211,6 @@
         private System.Windows.Forms.Button btnState;
         private System.Windows.Forms.Button btnSubscription;
         private System.Windows.Forms.Button btnDistrict;
+        private System.Windows.Forms.Button btnCity;
     }
 }

@@ -35,5 +35,6 @@ namespace Shaheen.ShaheenDB
         public virtual DbSet<State> States { get; set; }
         public virtual DbSet<Subscription> Subscriptions { get; set; }
         public virtual DbSet<SubscriptionDetail> SubscriptionDetails { get; set; }
+        public object Citys { get; internal set; }
     }
 }

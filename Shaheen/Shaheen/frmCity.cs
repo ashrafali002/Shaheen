@@ -1,21 +1,29 @@
 ﻿using Shaheen.BLL;
 using Shaheen.ShaheenDB;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shaheen
 {
-    public partial class frmDistrict : BaseForm
+    public partial class frmCity : BaseForm
     {
-        public DistrictBLL districtBll;
-        private int district_id = 0;
-        public frmDistrict()
+        public CityBLL cityBll;
+        private int city_id = 0;
+
+        public frmCity()
         {
             InitializeComponent();
-            districtBll = new DistrictBLL();
+            cityBll = new CityBLL();
         }
 
-        private void frmDistrict_Load(object sender, EventArgs e)
+        private void frmCity_Load(object sender, EventArgs e)
         {
             FillDataGridView();
             BindDropdownLists();
@@ -25,60 +33,61 @@ namespace Shaheen
             btnNew.Enabled = true;
             btnSave.Enabled = false;
         }
+
         public void ClearControls()
         {
-            district_id = 0;
-            txtDistrictName.Text = string.Empty;
-            ddlState.SelectedIndex = 0;
+            city_id = 0;
+            txtCity.Text = string.Empty;
+            ddlDistrict.SelectedIndex = 0;
         }
 
         private void BindDropdownLists()
         {
-            var stateBll = new StateBLL();
-            var stateList = stateBll.StateList();
-            stateList.Insert(0, new State { stateId = 0, stateName = "--- Select State ---" });
-            ddlState.DataSource = stateList;
-            ddlState.DisplayMember = "stateName";
-            ddlState.ValueMember = "stateId";
+            var districtBll = new DistrictBLL();
+            var districtList = districtBll.DistrictList();
+            districtList.Insert(0, new District { districtId = 0, districtName = "--- Select District ---" });
+            ddlDistrict.DataSource = districtList;
+            ddlDistrict.DisplayMember = "districtName";
+            ddlDistrict.ValueMember = "districtId";
         }
+
         public void DisableEnableControls(bool isEnable)
         {
-            txtDistrictName.Enabled = isEnable;
-            ddlState.Enabled = isEnable;
-            dgvDistrict.Enabled = !isEnable;
+            txtCity.Enabled = isEnable;
+            ddlDistrict.Enabled = isEnable;
+            dgvCity.Enabled = !isEnable;
         }
         private void FillDataGridView()
         {
-            dgvDistrict.AutoGenerateColumns = false;
-            dgvDistrict.DataSource = districtBll.DistrictStateList();
+            dgvCity.AutoGenerateColumns = false;
+            dgvCity.DataSource = cityBll.CityDistrictList();
         }
 
         public bool isValidated()
         {
             bool isSuccess = true;
-            if (string.IsNullOrEmpty(txtDistrictName.Text))
+            if (string.IsNullOrEmpty(txtCity.Text))
             {
-                MessageBox.Show("District name is required", "Shaheen Weekly", MessageBoxButtons.OK);
-                txtDistrictName.Focus();
+                MessageBox.Show("City name is required", "Shaheen Weekly", MessageBoxButtons.OK);
+                txtCity.Focus();
                 isSuccess = false;
             }
-            else if (districtBll.IsDuplicateDistrictName(district_id, txtDistrictName.Text))
+            else if (cityBll.IsDuplicateCityName(city_id, txtCity.Text))
             {
                 MessageBox.Show("Duplicate record found", "Shaheen Weekly", MessageBoxButtons.OK);
-                txtDistrictName.Focus();
+                txtCity.Focus();
                 isSuccess = false;
             }
-            else if (ddlState.SelectedIndex <= 0)
+            else if (ddlDistrict.SelectedIndex <= 0)
             {
-                MessageBox.Show("Select state", "Shaheen Weekly", MessageBoxButtons.OK);
-                ddlState.Focus();
+                MessageBox.Show("Select district", "Shaheen Weekly", MessageBoxButtons.OK);
+                ddlDistrict.Focus();
                 isSuccess = false;
             }
             else
             {
                 isSuccess = true;
             }
-
             return isSuccess;
         }
 
@@ -98,11 +107,11 @@ namespace Shaheen
             }
             else
             {
-                var district = new District();
-                district.districtId = district_id;
-                district.districtName = txtDistrictName.Text;
-                district.stateId = Convert.ToInt32(ddlState.SelectedValue);
-                int res = districtBll.SaveDistrict(district);
+                var city = new City();
+                city.cityId= city_id;
+                city.cityName= txtCity.Text;
+                city.districtId= Convert.ToInt32(ddlDistrict.SelectedValue);
+                int res = cityBll.SaveCity(city);
                 if (res > 0)
                 {
                     FillDataGridView();
@@ -122,7 +131,7 @@ namespace Shaheen
             if (btnClose.Text == "Close")
             {
                 this.Close();
-                frmMain.isDistrict= false;
+                frmMain.isCity = false;
             }
             else
             {
@@ -135,27 +144,27 @@ namespace Shaheen
             }
         }
 
-        private void dgvDistrict_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvCity_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int rowIndex = e.RowIndex;
-            DataGridViewRow grdRow = dgvDistrict.Rows[rowIndex];
-            district_id = Convert.ToInt32(grdRow.Cells["districtId"].Value);
-            ddlState.SelectedValue = grdRow.Cells["stateId"].Value;
-            txtDistrictName.Text = Convert.ToString(grdRow.Cells["colDistrictName"].Value);
+            DataGridViewRow grdRow = dgvCity.Rows[rowIndex];
+            city_id = Convert.ToInt32(grdRow.Cells["cityId"].Value);
+            ddlDistrict.SelectedValue = grdRow.Cells["districtId"].Value;
+            txtCity.Text = Convert.ToString(grdRow.Cells["colCityName"].Value);
             btnNew.Text = "Edit";
             btnClose.Text = "Cancel";
         }
 
-        private void dgvDistrict_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvCity_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int columnIndex = e.ColumnIndex;
             int rowIndex = e.RowIndex;
-            if (dgvDistrict.Columns[columnIndex] is DataGridViewButtonColumn && rowIndex >= 0)
+            if (dgvCity.Columns[columnIndex] is DataGridViewButtonColumn && rowIndex >= 0)
             {
                 if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    district_id = Convert.ToInt32(dgvDistrict.Rows[rowIndex].Cells["districtId"].Value);
-                    districtBll.DeleteDistrict(district_id);
+                    city_id = Convert.ToInt32(dgvCity.Rows[rowIndex].Cells["districtId"].Value);
+                    cityBll.DeleteCity(city_id);
                     FillDataGridView();
                     ClearControls();
                 }
