@@ -66,6 +66,7 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\AreaBLL.cs" />
     <Compile Include="BLL\CityBLL.cs" />
     <Compile Include="BLL\CountryBLL.cs" />
     <Compile Include="BLL\DistrictBLL.cs" />
@@ -83,6 +84,12 @@
     <Compile Include="DAL\SubscriptionDAL.cs" />
     <Compile Include="DAL\SubscriptionDetailDAL.cs" />
     <Compile Include="Common\EnumClass.cs" />
+    <Compile Include="frmArea.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmArea.Designer.cs">
+      <DependentUpon>frmArea.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCity.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +138,7 @@
     <Compile Include="MDIMain.Designer.cs">
       <DependentUpon>MDIMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AreaCity.cs" />
     <Compile Include="Models\CityDistrict.cs" />
     <Compile Include="Models\DistrictState.cs" />
     <Compile Include="Models\StateCountry.cs" />
@@ -183,6 +191,9 @@
     </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmArea.resx">
+      <DependentUpon>frmArea.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmCity.resx">
       <DependentUpon>frmCity.cs</DependentUpon>

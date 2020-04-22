@@ -12,18 +12,17 @@ using System.Windows.Forms;
 
 namespace Shaheen
 {
-    public partial class frmCity : BaseForm
+    public partial class frmArea : BaseForm
     {
-        public CityBLL cityBll;
-        private int city_id = 0;
-
-        public frmCity()
+        public AreaBLL areaBll;
+        public int area_id = 0;
+        public frmArea()
         {
             InitializeComponent();
-            cityBll = new CityBLL();
+            areaBll = new AreaBLL();
         }
 
-        private void frmCity_Load(object sender, EventArgs e)
+        private void frmArea_Load(object sender, EventArgs e)
         {
             FillDataGridView();
             BindDropdownLists();
@@ -36,52 +35,51 @@ namespace Shaheen
 
         public void ClearControls()
         {
-            city_id = 0;
-            txtCity.Text = string.Empty;
-            ddlDistrict.SelectedIndex = 0;
+            area_id = 0;
+            txtAreaName.Text = string.Empty;
+            ddlCity.SelectedIndex = 0;
         }
 
         private void BindDropdownLists()
         {
-            var districtBll = new DistrictBLL();
-            var districtList = districtBll.DistrictList();
-            districtList.Insert(0, new District { districtId = 0, districtName = "--- Select District ---" });
-            ddlDistrict.DataSource = districtList;
-            ddlDistrict.DisplayMember = "districtName";
-            ddlDistrict.ValueMember = "districtId";
+            var cityBll = new CityBLL();
+            var cityList = cityBll.CityList();
+            cityList.Insert(0, new City { cityId = 0, cityName = "--- Select City ---" });
+            ddlCity.DataSource = cityList;
+            ddlCity.DisplayMember = "cityName";
+            ddlCity.ValueMember = "cityId";
         }
-
         public void DisableEnableControls(bool isEnable)
         {
-            txtCity.Enabled = isEnable;
-            ddlDistrict.Enabled = isEnable;
-            dgvCity.Enabled = !isEnable;
+            txtAreaName.Enabled = isEnable;
+            ddlCity.Enabled = isEnable;
+            dgvArea.Enabled = !isEnable;
         }
         private void FillDataGridView()
         {
-            dgvCity.AutoGenerateColumns = false;
-            dgvCity.DataSource = cityBll.CityDistrictList();
+            dgvArea.AutoGenerateColumns = false;
+            dgvArea.DataSource = areaBll.AreaCityList();
         }
 
         public bool isValidated()
         {
             bool isSuccess = true;
-            if (string.IsNullOrEmpty(txtCity.Text))
+            if (string.IsNullOrEmpty(txtAreaName.Text))
             {
-                MessageBox.Show("City name is required", "Shaheen Weekly", MessageBoxButtons.OK);
-                txtCity.Focus();
+                MessageBox.Show("Area name is required", "Shaheen Weekly", MessageBoxButtons.OK);
+                txtAreaName.Focus();
                 isSuccess = false;
             }
-            else if (cityBll.IsDuplicateCityName(city_id, txtCity.Text))
+            else if (areaBll.IsDuplicateAreaName(area_id, txtAreaName.Text))
             {
                 MessageBox.Show("Duplicate record found", "Shaheen Weekly", MessageBoxButtons.OK);
-                txtCity.Focus();
+                txtAreaName.Focus();
                 isSuccess = false;
             }
-            else if (ddlDistrict.SelectedIndex <= 0)
+            else if (ddlCity.SelectedIndex <= 0)
             {
-                MessageBox.Show("Select district", "Shaheen Weekly", MessageBoxButtons.OK);
-                ddlDistrict.Focus();
+                MessageBox.Show("Select city", "Shaheen Weekly", MessageBoxButtons.OK);
+                ddlCity.Focus();
                 isSuccess = false;
             }
             else
@@ -107,11 +105,11 @@ namespace Shaheen
             }
             else
             {
-                var city = new City();
-                city.cityId= city_id;
-                city.cityName= txtCity.Text;
-                city.districtId= Convert.ToInt32(ddlDistrict.SelectedValue);
-                int res = cityBll.SaveCity(city);
+                var area = new Area();
+                area.areaId = area_id;
+                area.areaName= txtAreaName.Text;
+                area.cityId= Convert.ToInt32(ddlCity.SelectedValue);
+                int res = areaBll.SaveArea(area);
                 if (res > 0)
                 {
                     FillDataGridView();
@@ -131,7 +129,7 @@ namespace Shaheen
             if (btnClose.Text == "Close")
             {
                 this.Close();
-                frmMain.isCity = false;
+                frmMain.isArea = false;
             }
             else
             {
@@ -144,27 +142,27 @@ namespace Shaheen
             }
         }
 
-        private void dgvCity_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dgvArea_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             int rowIndex = e.RowIndex;
-            DataGridViewRow grdRow = dgvCity.Rows[rowIndex];
-            city_id = Convert.ToInt32(grdRow.Cells["cityId"].Value);
-            ddlDistrict.SelectedValue = grdRow.Cells["districtId"].Value;
-            txtCity.Text = Convert.ToString(grdRow.Cells["colCityName"].Value);
+            DataGridViewRow grdRow = dgvArea.Rows[rowIndex];
+            area_id = Convert.ToInt32(grdRow.Cells["areaId"].Value);
+            ddlCity.SelectedValue = grdRow.Cells["cityId"].Value;
+            txtAreaName.Text = Convert.ToString(grdRow.Cells["colAreaName"].Value);
             btnNew.Text = "Edit";
             btnClose.Text = "Cancel";
         }
 
-        private void dgvCity_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvArea_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int columnIndex = e.ColumnIndex;
             int rowIndex = e.RowIndex;
-            if (dgvCity.Columns[columnIndex] is DataGridViewButtonColumn && rowIndex >= 0)
+            if (dgvArea.Columns[columnIndex] is DataGridViewButtonColumn && rowIndex >= 0)
             {
                 if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    city_id = Convert.ToInt32(dgvCity.Rows[rowIndex].Cells["cityId"].Value);
-                    cityBll.DeleteCity(city_id);
+                    area_id= Convert.ToInt32(dgvArea.Rows[rowIndex].Cells["areaId"].Value);
+                    areaBll.DeleteArea(area_id);
                     FillDataGridView();
                     ClearControls();
                 }

@@ -26,6 +26,9 @@ namespace Shaheen
         public static bool isCity = false;
         public frmCity city = null;
 
+        public static bool isArea = false;
+        public frmArea area = null;
+
         private bool CheckOpened(string name)
         {
             FormCollection fc = Application.OpenForms;
@@ -68,7 +71,7 @@ namespace Shaheen
                     {
                         X = pnlForm.Width / 2 - country.Width / 2,
                         Y = pnlForm.Height / 2 - country.Height / 2
-                    };                    
+                    };
                     country.Show();
                     country.Focus();
                     isCountry = true;
@@ -101,13 +104,13 @@ namespace Shaheen
                     {
                         X = pnlForm.Width / 2 - state.Width / 2,
                         Y = pnlForm.Height / 2 - state.Height / 2
-                    };                    
+                    };
                     state.Show();
                     state.Focus();
                     isState = true;
                 }
             }
-        }        
+        }
 
         private void btnSubscription_Click(object sender, EventArgs e)
         {
@@ -134,7 +137,7 @@ namespace Shaheen
                     {
                         X = pnlForm.Width / 2 - customer.Width / 2,
                         Y = pnlForm.Height / 2 - customer.Height / 2
-                    };                    
+                    };
                     customer.Show();
                     customer.Focus();
                     isCustomer = true;
@@ -204,6 +207,39 @@ namespace Shaheen
                     city.Show();
                     city.Focus();
                     isCity = true;
+                }
+            }
+        }
+
+        private void btnArea_Click(object sender, EventArgs e)
+        {
+            if (!isArea)
+            {
+                area = new frmArea() { TopLevel = false };
+                area.Location = new Point()
+                {
+                    X = pnlForm.Width / 2 - area.Width / 2,
+                    Y = pnlForm.Height / 2 - area.Height / 2
+                };
+                this.pnlForm.Controls.Add(area);
+                area.BringToFront();
+                area.Show();
+                area.Focus();
+                isArea = true;
+            }
+            else
+            {
+                if (CheckOpened("Area"))
+                {
+                    area.BringToFront();
+                    area.Location = new Point()
+                    {
+                        X = pnlForm.Width / 2 - area.Width / 2,
+                        Y = pnlForm.Height / 2 - area.Height / 2
+                    };
+                    area.Show();
+                    area.Focus();
+                    isArea = true;
                 }
             }
         }

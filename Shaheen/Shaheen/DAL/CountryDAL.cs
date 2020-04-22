@@ -11,7 +11,7 @@ namespace Shaheen.DAL
         }
         public List<Country> CountryList()
         {
-            return context.Countries.ToList();
+            return context.Countries.OrderBy(o => o.countryName).ToList();
         }
 
         public int SaveCountry(Country country)

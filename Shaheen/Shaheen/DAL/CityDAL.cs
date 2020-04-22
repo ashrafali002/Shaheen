@@ -12,7 +12,7 @@ namespace Shaheen.DAL
         }
         public List<City> CityList()
         {
-            return context.Cities.ToList();
+            return context.Cities.OrderBy(o => o.cityName).ToList();
         }
 
         public List<CityDistrict> CityDistrictList()
@@ -24,7 +24,7 @@ namespace Shaheen.DAL
                 cityName = s.cityName,
                 districtId = s.districtId,
                 districtName = c.districtName
-            }).ToList();
+            }).OrderBy(o => o.cityId).ToList();
             return list;
         }
         public int SaveCity(City city)

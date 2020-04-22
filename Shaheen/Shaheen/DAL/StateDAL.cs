@@ -12,7 +12,7 @@ namespace Shaheen.DAL
         }
         public List<State> StateList()
         {
-            return context.States.ToList();
+            return context.States.OrderBy(o => o.stateName).ToList();
         }
 
         public List<StateCountry> StateCountryList()
@@ -24,7 +24,7 @@ namespace Shaheen.DAL
                 stateName = s.stateName,
                 countryId = s.countryId,
                 countryName = c.countryName
-            }).ToList();
+            }).OrderBy(o => o.stateId).ToList();
             return list;
         }
         public int SaveState(State state)

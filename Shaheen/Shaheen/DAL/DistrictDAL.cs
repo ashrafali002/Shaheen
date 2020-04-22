@@ -12,7 +12,7 @@ namespace Shaheen.DAL
         }
         public List<District> DistrictList()
         {
-            return context.Districts.ToList();
+            return context.Districts.OrderBy(o => o.districtName).ToList();
         }
 
         public List<DistrictState> DistrictStateList()
@@ -24,7 +24,7 @@ namespace Shaheen.DAL
                 districtName = s.districtName,
                 stateId = s.stateId,
                 stateName = c.stateName
-            }).ToList();
+            }).OrderBy(o => o.districtId).ToList();
             return list;
         }
         public int SaveDistrict(District district)
