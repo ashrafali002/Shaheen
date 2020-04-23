@@ -38,7 +38,7 @@ namespace Shaheen
         {
             city_id = 0;
             txtCity.Text = string.Empty;
-            ddlDistrict.SelectedIndex = 0;
+            cmbDistrictName.SelectedIndex = 0;
         }
 
         private void BindDropdownLists()
@@ -46,15 +46,15 @@ namespace Shaheen
             var districtBll = new DistrictBLL();
             var districtList = districtBll.DistrictList();
             districtList.Insert(0, new District { districtId = 0, districtName = "--- Select District ---" });
-            ddlDistrict.DataSource = districtList;
-            ddlDistrict.DisplayMember = "districtName";
-            ddlDistrict.ValueMember = "districtId";
+            cmbDistrictName.DataSource = districtList;
+            cmbDistrictName.DisplayMember = "districtName";
+            cmbDistrictName.ValueMember = "districtId";
         }
 
         public void DisableEnableControls(bool isEnable)
         {
             txtCity.Enabled = isEnable;
-            ddlDistrict.Enabled = isEnable;
+            cmbDistrictName.Enabled = isEnable;
             dgvCity.Enabled = !isEnable;
         }
         private void FillDataGridView()
@@ -78,10 +78,10 @@ namespace Shaheen
                 txtCity.Focus();
                 isSuccess = false;
             }
-            else if (ddlDistrict.SelectedIndex <= 0)
+            else if (cmbDistrictName.SelectedIndex <= 0)
             {
                 MessageBox.Show("Select district", "Shaheen Weekly", MessageBoxButtons.OK);
-                ddlDistrict.Focus();
+                cmbDistrictName.Focus();
                 isSuccess = false;
             }
             else
@@ -110,7 +110,7 @@ namespace Shaheen
                 var city = new City();
                 city.cityId= city_id;
                 city.cityName= txtCity.Text;
-                city.districtId= Convert.ToInt32(ddlDistrict.SelectedValue);
+                city.districtId= Convert.ToInt32(cmbDistrictName.SelectedValue);
                 int res = cityBll.SaveCity(city);
                 if (res > 0)
                 {
@@ -149,7 +149,7 @@ namespace Shaheen
             int rowIndex = e.RowIndex;
             DataGridViewRow grdRow = dgvCity.Rows[rowIndex];
             city_id = Convert.ToInt32(grdRow.Cells["cityId"].Value);
-            ddlDistrict.SelectedValue = grdRow.Cells["districtId"].Value;
+            cmbDistrictName.SelectedValue = grdRow.Cells["districtId"].Value;
             txtCity.Text = Convert.ToString(grdRow.Cells["colCityName"].Value);
             btnNew.Text = "Edit";
             btnClose.Text = "Cancel";

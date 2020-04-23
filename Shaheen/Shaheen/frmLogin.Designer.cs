@@ -64,10 +64,11 @@
             // 
             this.txtPassword.BackColor = System.Drawing.Color.SkyBlue;
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPassword.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(45, 227);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(226, 16);
+            this.txtPassword.Size = new System.Drawing.Size(226, 20);
             this.txtPassword.TabIndex = 11;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
@@ -95,10 +96,11 @@
             // 
             this.txtUsername.BackColor = System.Drawing.Color.SkyBlue;
             this.txtUsername.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtUsername.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(45, 164);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(226, 16);
+            this.txtUsername.Size = new System.Drawing.Size(226, 20);
             this.txtUsername.TabIndex = 10;
             // 
             // btnLogin

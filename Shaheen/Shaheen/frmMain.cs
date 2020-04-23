@@ -29,6 +29,9 @@ namespace Shaheen
         public static bool isArea = false;
         public frmArea area = null;
 
+        public static bool isSubscription = false;
+        public frmSubscription subscription = null;
+
         private bool CheckOpened(string name)
         {
             FormCollection fc = Application.OpenForms;
@@ -114,35 +117,64 @@ namespace Shaheen
 
         private void btnSubscription_Click(object sender, EventArgs e)
         {
-            if (!isCustomer)
+            if (!isSubscription)
             {
-                customer = new frmCustomer() { TopLevel = false };
-                customer.Location = new Point()
+                subscription = new frmSubscription() { TopLevel = false };
+                subscription.Location = new Point()
                 {
-                    X = pnlForm.Width / 2 - customer.Width / 2,
-                    Y = pnlForm.Height / 2 - customer.Height / 2
+                    X = pnlForm.Width / 2 - subscription.Width / 2,
+                    Y = pnlForm.Height / 2 - subscription.Height / 2
                 };
-                this.pnlForm.Controls.Add(customer);
-                customer.BringToFront();
-                customer.Show();
-                customer.Focus();
-                isCustomer = true;
+                this.pnlForm.Controls.Add(subscription);
+                subscription.BringToFront();
+                subscription.Show();
+                subscription.Focus();
+                isSubscription = true;
             }
             else
             {
-                if (CheckOpened("Customer"))
+                if (CheckOpened("Subscription"))
                 {
-                    customer.BringToFront();
-                    customer.Location = new Point()
+                    subscription.BringToFront();
+                    subscription.Location = new Point()
                     {
-                        X = pnlForm.Width / 2 - customer.Width / 2,
-                        Y = pnlForm.Height / 2 - customer.Height / 2
+                        X = pnlForm.Width / 2 - subscription.Width / 2,
+                        Y = pnlForm.Height / 2 - subscription.Height / 2
                     };
-                    customer.Show();
-                    customer.Focus();
-                    isCustomer = true;
+                    subscription.Show();
+                    subscription.Focus();
+                    isSubscription = true;
                 }
             }
+            //if (!isCustomer)
+            //{
+            //    customer = new frmCustomer() { TopLevel = false };
+            //    customer.Location = new Point()
+            //    {
+            //        X = pnlForm.Width / 2 - customer.Width / 2,
+            //        Y = pnlForm.Height / 2 - customer.Height / 2
+            //    };
+            //    this.pnlForm.Controls.Add(customer);
+            //    customer.BringToFront();
+            //    customer.Show();
+            //    customer.Focus();
+            //    isCustomer = true;
+            //}
+            //else
+            //{
+            //    if (CheckOpened("Customer"))
+            //    {
+            //        customer.BringToFront();
+            //        customer.Location = new Point()
+            //        {
+            //            X = pnlForm.Width / 2 - customer.Width / 2,
+            //            Y = pnlForm.Height / 2 - customer.Height / 2
+            //        };
+            //        customer.Show();
+            //        customer.Focus();
+            //        isCustomer = true;
+            //    }
+            //}
         }
 
         private void btnDistrict_Click(object sender, EventArgs e)

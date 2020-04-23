@@ -102,7 +102,7 @@
             this.grpCustomerInfo.Controls.Add(this.tableLayoutPanel1);
             this.grpCustomerInfo.Location = new System.Drawing.Point(11, 10);
             this.grpCustomerInfo.Name = "grpCustomerInfo";
-            this.grpCustomerInfo.Size = new System.Drawing.Size(802, 532);
+            this.grpCustomerInfo.Size = new System.Drawing.Size(832, 556);
             this.grpCustomerInfo.TabIndex = 0;
             this.grpCustomerInfo.TabStop = false;
             this.grpCustomerInfo.Text = "Customer Information";
@@ -194,7 +194,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(796, 510);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(826, 534);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dtpEndDate
@@ -400,7 +400,7 @@
             // 
             this.cmbArea.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbArea.FormattingEnabled = true;
-            this.cmbArea.Location = new System.Drawing.Point(531, 148);
+            this.cmbArea.Location = new System.Drawing.Point(531, 149);
             this.cmbArea.Name = "cmbArea";
             this.cmbArea.Size = new System.Drawing.Size(288, 23);
             this.cmbArea.TabIndex = 14;
@@ -515,7 +515,7 @@
             // 
             this.cmbAgent.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmbAgent.FormattingEnabled = true;
-            this.cmbAgent.Location = new System.Drawing.Point(531, 206);
+            this.cmbAgent.Location = new System.Drawing.Point(531, 207);
             this.cmbAgent.Name = "cmbAgent";
             this.cmbAgent.Size = new System.Drawing.Size(288, 23);
             this.cmbAgent.TabIndex = 24;
@@ -802,7 +802,7 @@
             // 
             this.grpButton.Controls.Add(this.btnSave);
             this.grpButton.Controls.Add(this.btnClose);
-            this.grpButton.Location = new System.Drawing.Point(11, 539);
+            this.grpButton.Location = new System.Drawing.Point(12, 563);
             this.grpButton.Name = "grpButton";
             this.grpButton.Size = new System.Drawing.Size(802, 51);
             this.grpButton.TabIndex = 2;
@@ -813,7 +813,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(825, 597);
+            this.ClientSize = new System.Drawing.Size(870, 625);
             this.Controls.Add(this.grpCustomerInfo);
             this.Controls.Add(this.grpButton);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
