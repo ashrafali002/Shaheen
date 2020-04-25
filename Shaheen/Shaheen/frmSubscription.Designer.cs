@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.grpPerson = new System.Windows.Forms.GroupBox();
             this.cmbAgent = new System.Windows.Forms.ComboBox();
@@ -124,17 +123,6 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Location = new System.Drawing.Point(602, 18);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 30);
-            this.btnNew.TabIndex = 0;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = false;
             // 
             // btnSave
             // 
@@ -1019,7 +1007,6 @@
             // 
             this.grpButtons.Controls.Add(this.btnClose);
             this.grpButtons.Controls.Add(this.btnSave);
-            this.grpButtons.Controls.Add(this.btnNew);
             this.grpButtons.Location = new System.Drawing.Point(12, 636);
             this.grpButtons.Name = "grpButtons";
             this.grpButtons.Size = new System.Drawing.Size(848, 59);
@@ -1055,7 +1042,6 @@
 
         #endregion
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Panel panel2;

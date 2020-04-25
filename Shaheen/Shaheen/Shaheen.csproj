@@ -85,6 +85,12 @@
     <Compile Include="DAL\SubscriptionDAL.cs" />
     <Compile Include="DAL\SubscriptionDetailDAL.cs" />
     <Compile Include="Common\EnumClass.cs" />
+    <Compile Include="frmAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgent.Designer.cs">
+      <DependentUpon>frmAgent.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmArea.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +151,7 @@
     <Compile Include="MDIMain.Designer.cs">
       <DependentUpon>MDIMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AgentModel.cs" />
     <Compile Include="Models\AreaCity.cs" />
     <Compile Include="Models\CityDistrict.cs" />
     <Compile Include="Models\DistrictState.cs" />

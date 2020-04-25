@@ -15,7 +15,6 @@ namespace Shaheen
     public partial class frmSubscription : BaseForm
     {
         public SubscriptionBLL subscriptionBll;
-        public int subscription_id = 0;
         public frmSubscription()
         {
             InitializeComponent();
@@ -147,7 +146,7 @@ namespace Shaheen
                 txtCode.Focus();
                 isRes = false;
             }
-            else if (subscriptionBll.IsDuplicateSubscriptionCode(subscription_id, txtCode.Text))
+            else if (subscriptionBll.IsDuplicateSubscriptionCode(0, txtCode.Text))
             {
                 MessageBox.Show("Duplicate customer code found.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
@@ -290,6 +289,7 @@ namespace Shaheen
                             int paymentId = SavePayment(subscriptionId, context);
                             transaction.Commit();
                             MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ClearControls();
                         }
                         catch (Exception)
                         {
