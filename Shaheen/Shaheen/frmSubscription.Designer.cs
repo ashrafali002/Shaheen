@@ -32,32 +32,32 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.grpPerson = new System.Windows.Forms.GroupBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
+            this.cmbAgent = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtMobile = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPIN = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbArea = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.cmbCity = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.cmbDistrict = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cmbState = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbCountry = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -67,37 +67,37 @@
             this.label1 = new System.Windows.Forms.Label();
             this.grpSubscription = new System.Windows.Forms.GroupBox();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtNote = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtAmount = new System.Windows.Forms.TextBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpEndDate = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dtpStartDate = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtDuration = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.dtpSubscriptionDate = new System.Windows.Forms.DateTimePicker();
             this.grpPayment = new System.Windows.Forms.GroupBox();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtReceiptNo = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtBankName = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtPaidAmout = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
-            this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
+            this.dtpChequeDate = new System.Windows.Forms.DateTimePicker();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtChequeNo = new System.Windows.Forms.TextBox();
             this.panel13 = new System.Windows.Forms.Panel();
             this.label21 = new System.Windows.Forms.Label();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.dtpPaymentDate = new System.Windows.Forms.DateTimePicker();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label20 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -123,6 +123,7 @@
             this.btnClose.TabIndex = 8;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnNew
             // 
@@ -148,32 +149,32 @@
             // 
             // grpPerson
             // 
-            this.grpPerson.Controls.Add(this.comboBox5);
+            this.grpPerson.Controls.Add(this.cmbAgent);
             this.grpPerson.Controls.Add(this.label13);
             this.grpPerson.Controls.Add(this.label2);
-            this.grpPerson.Controls.Add(this.textBox6);
+            this.grpPerson.Controls.Add(this.txtEmail);
             this.grpPerson.Controls.Add(this.panel8);
-            this.grpPerson.Controls.Add(this.textBox3);
+            this.grpPerson.Controls.Add(this.txtMobile);
             this.grpPerson.Controls.Add(this.label11);
             this.grpPerson.Controls.Add(this.panel6);
-            this.grpPerson.Controls.Add(this.textBox4);
+            this.grpPerson.Controls.Add(this.txtPhone);
             this.grpPerson.Controls.Add(this.panel7);
             this.grpPerson.Controls.Add(this.label12);
-            this.grpPerson.Controls.Add(this.textBox2);
+            this.grpPerson.Controls.Add(this.txtPIN);
             this.grpPerson.Controls.Add(this.panel5);
             this.grpPerson.Controls.Add(this.label10);
-            this.grpPerson.Controls.Add(this.comboBox1);
+            this.grpPerson.Controls.Add(this.cmbArea);
             this.grpPerson.Controls.Add(this.label9);
-            this.grpPerson.Controls.Add(this.comboBox3);
+            this.grpPerson.Controls.Add(this.cmbCity);
             this.grpPerson.Controls.Add(this.label7);
-            this.grpPerson.Controls.Add(this.comboBox4);
+            this.grpPerson.Controls.Add(this.cmbDistrict);
             this.grpPerson.Controls.Add(this.label8);
-            this.grpPerson.Controls.Add(this.comboBox2);
+            this.grpPerson.Controls.Add(this.cmbState);
             this.grpPerson.Controls.Add(this.label6);
             this.grpPerson.Controls.Add(this.cmbCountry);
             this.grpPerson.Controls.Add(this.label5);
             this.grpPerson.Controls.Add(this.label4);
-            this.grpPerson.Controls.Add(this.textBox1);
+            this.grpPerson.Controls.Add(this.txtAddress);
             this.grpPerson.Controls.Add(this.panel4);
             this.grpPerson.Controls.Add(this.txtName);
             this.grpPerson.Controls.Add(this.label3);
@@ -184,22 +185,22 @@
             this.grpPerson.ForeColor = System.Drawing.Color.Black;
             this.grpPerson.Location = new System.Drawing.Point(12, 12);
             this.grpPerson.Name = "grpPerson";
-            this.grpPerson.Size = new System.Drawing.Size(564, 425);
+            this.grpPerson.Size = new System.Drawing.Size(564, 414);
             this.grpPerson.TabIndex = 5;
             this.grpPerson.TabStop = false;
             this.grpPerson.Text = "Person Details";
             // 
-            // comboBox5
+            // cmbAgent
             // 
-            this.comboBox5.BackColor = System.Drawing.Color.SkyBlue;
-            this.comboBox5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox5.IntegralHeight = false;
-            this.comboBox5.Location = new System.Drawing.Point(302, 371);
-            this.comboBox5.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(245, 27);
-            this.comboBox5.TabIndex = 57;
+            this.cmbAgent.BackColor = System.Drawing.Color.SkyBlue;
+            this.cmbAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbAgent.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAgent.IntegralHeight = false;
+            this.cmbAgent.Location = new System.Drawing.Point(302, 371);
+            this.cmbAgent.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbAgent.Name = "cmbAgent";
+            this.cmbAgent.Size = new System.Drawing.Size(245, 27);
+            this.cmbAgent.TabIndex = 57;
             // 
             // label13
             // 
@@ -222,16 +223,16 @@
             this.label2.TabIndex = 54;
             this.label2.Text = "Email :";
             // 
-            // textBox6
+            // txtEmail
             // 
-            this.textBox6.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox6.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(20, 373);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(245, 20);
-            this.textBox6.TabIndex = 53;
+            this.txtEmail.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(20, 373);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(245, 20);
+            this.txtEmail.TabIndex = 53;
             // 
             // panel8
             // 
@@ -243,16 +244,16 @@
             this.panel8.Size = new System.Drawing.Size(245, 1);
             this.panel8.TabIndex = 55;
             // 
-            // textBox3
+            // txtMobile
             // 
-            this.textBox3.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(302, 320);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(245, 20);
-            this.textBox3.TabIndex = 44;
+            this.txtMobile.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtMobile.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtMobile.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMobile.Location = new System.Drawing.Point(302, 320);
+            this.txtMobile.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtMobile.Name = "txtMobile";
+            this.txtMobile.Size = new System.Drawing.Size(245, 20);
+            this.txtMobile.TabIndex = 44;
             // 
             // label11
             // 
@@ -275,16 +276,16 @@
             this.panel6.Size = new System.Drawing.Size(245, 1);
             this.panel6.TabIndex = 46;
             // 
-            // textBox4
+            // txtPhone
             // 
-            this.textBox4.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(20, 320);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(245, 20);
-            this.textBox4.TabIndex = 47;
+            this.txtPhone.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPhone.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(20, 320);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(245, 20);
+            this.txtPhone.TabIndex = 47;
             // 
             // panel7
             // 
@@ -307,16 +308,16 @@
             this.label12.TabIndex = 45;
             this.label12.Text = "Mobile :";
             // 
-            // textBox2
+            // txtPIN
             // 
-            this.textBox2.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(302, 267);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(245, 20);
-            this.textBox2.TabIndex = 41;
+            this.txtPIN.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtPIN.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPIN.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPIN.Location = new System.Drawing.Point(302, 267);
+            this.txtPIN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPIN.Name = "txtPIN";
+            this.txtPIN.Size = new System.Drawing.Size(245, 20);
+            this.txtPIN.TabIndex = 41;
             // 
             // panel5
             // 
@@ -339,17 +340,17 @@
             this.label10.TabIndex = 42;
             this.label10.Text = "PIN :";
             // 
-            // comboBox1
+            // cmbArea
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.SkyBlue;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Location = new System.Drawing.Point(20, 265);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(247, 27);
-            this.comboBox1.TabIndex = 40;
+            this.cmbArea.BackColor = System.Drawing.Color.SkyBlue;
+            this.cmbArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbArea.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbArea.IntegralHeight = false;
+            this.cmbArea.Location = new System.Drawing.Point(20, 265);
+            this.cmbArea.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbArea.Name = "cmbArea";
+            this.cmbArea.Size = new System.Drawing.Size(247, 27);
+            this.cmbArea.TabIndex = 40;
             // 
             // label9
             // 
@@ -361,17 +362,17 @@
             this.label9.TabIndex = 39;
             this.label9.Text = "Area :";
             // 
-            // comboBox3
+            // cmbCity
             // 
-            this.comboBox3.BackColor = System.Drawing.Color.SkyBlue;
-            this.comboBox3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.IntegralHeight = false;
-            this.comboBox3.Location = new System.Drawing.Point(302, 215);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(245, 27);
-            this.comboBox3.TabIndex = 38;
+            this.cmbCity.BackColor = System.Drawing.Color.SkyBlue;
+            this.cmbCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCity.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCity.IntegralHeight = false;
+            this.cmbCity.Location = new System.Drawing.Point(302, 215);
+            this.cmbCity.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbCity.Name = "cmbCity";
+            this.cmbCity.Size = new System.Drawing.Size(245, 27);
+            this.cmbCity.TabIndex = 38;
             // 
             // label7
             // 
@@ -383,17 +384,17 @@
             this.label7.TabIndex = 37;
             this.label7.Text = "City :";
             // 
-            // comboBox4
+            // cmbDistrict
             // 
-            this.comboBox4.BackColor = System.Drawing.Color.SkyBlue;
-            this.comboBox4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox4.IntegralHeight = false;
-            this.comboBox4.Location = new System.Drawing.Point(20, 215);
-            this.comboBox4.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(247, 27);
-            this.comboBox4.TabIndex = 36;
+            this.cmbDistrict.BackColor = System.Drawing.Color.SkyBlue;
+            this.cmbDistrict.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDistrict.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDistrict.IntegralHeight = false;
+            this.cmbDistrict.Location = new System.Drawing.Point(20, 215);
+            this.cmbDistrict.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbDistrict.Name = "cmbDistrict";
+            this.cmbDistrict.Size = new System.Drawing.Size(247, 27);
+            this.cmbDistrict.TabIndex = 36;
             // 
             // label8
             // 
@@ -405,17 +406,17 @@
             this.label8.TabIndex = 35;
             this.label8.Text = "District :";
             // 
-            // comboBox2
+            // cmbState
             // 
-            this.comboBox2.BackColor = System.Drawing.Color.SkyBlue;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.IntegralHeight = false;
-            this.comboBox2.Location = new System.Drawing.Point(302, 161);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(0);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(245, 27);
-            this.comboBox2.TabIndex = 34;
+            this.cmbState.BackColor = System.Drawing.Color.SkyBlue;
+            this.cmbState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbState.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbState.IntegralHeight = false;
+            this.cmbState.Location = new System.Drawing.Point(302, 161);
+            this.cmbState.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbState.Name = "cmbState";
+            this.cmbState.Size = new System.Drawing.Size(245, 27);
+            this.cmbState.TabIndex = 34;
             // 
             // label6
             // 
@@ -460,16 +461,16 @@
             this.label4.TabIndex = 29;
             this.label4.Text = "Address :";
             // 
-            // textBox1
+            // txtAddress
             // 
-            this.textBox1.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(20, 106);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(525, 20);
-            this.textBox1.TabIndex = 28;
+            this.txtAddress.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAddress.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(20, 106);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(525, 20);
+            this.txtAddress.TabIndex = 28;
             // 
             // panel4
             // 
@@ -522,7 +523,7 @@
             this.txtCode.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(245, 20);
-            this.txtCode.TabIndex = 25;
+            this.txtCode.TabIndex = 0;
             // 
             // panel3
             // 
@@ -548,23 +549,23 @@
             // grpSubscription
             // 
             this.grpSubscription.Controls.Add(this.label19);
-            this.grpSubscription.Controls.Add(this.textBox8);
+            this.grpSubscription.Controls.Add(this.txtNote);
             this.grpSubscription.Controls.Add(this.panel10);
             this.grpSubscription.Controls.Add(this.label18);
-            this.grpSubscription.Controls.Add(this.textBox7);
+            this.grpSubscription.Controls.Add(this.txtAmount);
             this.grpSubscription.Controls.Add(this.panel9);
             this.grpSubscription.Controls.Add(this.label17);
-            this.grpSubscription.Controls.Add(this.dateTimePicker2);
+            this.grpSubscription.Controls.Add(this.dtpEndDate);
             this.grpSubscription.Controls.Add(this.label16);
-            this.grpSubscription.Controls.Add(this.dateTimePicker1);
+            this.grpSubscription.Controls.Add(this.dtpStartDate);
             this.grpSubscription.Controls.Add(this.label15);
-            this.grpSubscription.Controls.Add(this.textBox5);
+            this.grpSubscription.Controls.Add(this.txtDuration);
             this.grpSubscription.Controls.Add(this.panel1);
             this.grpSubscription.Controls.Add(this.label14);
             this.grpSubscription.Controls.Add(this.dtpSubscriptionDate);
             this.grpSubscription.Location = new System.Drawing.Point(582, 13);
             this.grpSubscription.Name = "grpSubscription";
-            this.grpSubscription.Size = new System.Drawing.Size(278, 424);
+            this.grpSubscription.Size = new System.Drawing.Size(278, 413);
             this.grpSubscription.TabIndex = 10;
             this.grpSubscription.TabStop = false;
             this.grpSubscription.Text = "Subscription Details";
@@ -580,17 +581,17 @@
             this.label19.TabIndex = 45;
             this.label19.Text = "Note :";
             // 
-            // textBox8
+            // txtNote
             // 
-            this.textBox8.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(18, 319);
-            this.textBox8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(245, 67);
-            this.textBox8.TabIndex = 44;
+            this.txtNote.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNote.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNote.Location = new System.Drawing.Point(18, 319);
+            this.txtNote.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNote.Multiline = true;
+            this.txtNote.Name = "txtNote";
+            this.txtNote.Size = new System.Drawing.Size(245, 67);
+            this.txtNote.TabIndex = 44;
             // 
             // panel10
             // 
@@ -613,16 +614,16 @@
             this.label18.TabIndex = 42;
             this.label18.Text = "Amount :";
             // 
-            // textBox7
+            // txtAmount
             // 
-            this.textBox7.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(18, 266);
-            this.textBox7.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(245, 20);
-            this.textBox7.TabIndex = 41;
+            this.txtAmount.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAmount.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmount.Location = new System.Drawing.Point(18, 266);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtAmount.Name = "txtAmount";
+            this.txtAmount.Size = new System.Drawing.Size(245, 20);
+            this.txtAmount.TabIndex = 41;
             // 
             // panel9
             // 
@@ -644,17 +645,17 @@
             this.label17.TabIndex = 40;
             this.label17.Text = "End Date :";
             // 
-            // dateTimePicker2
+            // dtpEndDate
             // 
-            this.dateTimePicker2.CustomFormat = "";
-            this.dateTimePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(18, 214);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(247, 27);
-            this.dateTimePicker2.TabIndex = 39;
-            this.dateTimePicker2.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
+            this.dtpEndDate.CustomFormat = "";
+            this.dtpEndDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpEndDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpEndDate.Location = new System.Drawing.Point(18, 214);
+            this.dtpEndDate.Name = "dtpEndDate";
+            this.dtpEndDate.Size = new System.Drawing.Size(247, 27);
+            this.dtpEndDate.TabIndex = 39;
+            this.dtpEndDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
             // label16
             // 
@@ -666,17 +667,17 @@
             this.label16.TabIndex = 38;
             this.label16.Text = "Start Date :";
             // 
-            // dateTimePicker1
+            // dtpStartDate
             // 
-            this.dateTimePicker1.CustomFormat = "";
-            this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(18, 160);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(247, 27);
-            this.dateTimePicker1.TabIndex = 37;
-            this.dateTimePicker1.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
+            this.dtpStartDate.CustomFormat = "";
+            this.dtpStartDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpStartDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpStartDate.Location = new System.Drawing.Point(18, 160);
+            this.dtpStartDate.Name = "dtpStartDate";
+            this.dtpStartDate.Size = new System.Drawing.Size(247, 27);
+            this.dtpStartDate.TabIndex = 37;
+            this.dtpStartDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
             // label15
             // 
@@ -689,16 +690,16 @@
             this.label15.TabIndex = 35;
             this.label15.Text = "Duration :";
             // 
-            // textBox5
+            // txtDuration
             // 
-            this.textBox5.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(18, 105);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(245, 20);
-            this.textBox5.TabIndex = 34;
+            this.txtDuration.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtDuration.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDuration.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDuration.Location = new System.Drawing.Point(18, 105);
+            this.txtDuration.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtDuration.Name = "txtDuration";
+            this.txtDuration.Size = new System.Drawing.Size(245, 20);
+            this.txtDuration.TabIndex = 34;
             // 
             // panel1
             // 
@@ -735,25 +736,25 @@
             // grpPayment
             // 
             this.grpPayment.Controls.Add(this.label26);
-            this.grpPayment.Controls.Add(this.textBox12);
+            this.grpPayment.Controls.Add(this.txtReceiptNo);
             this.grpPayment.Controls.Add(this.panel16);
             this.grpPayment.Controls.Add(this.label25);
-            this.grpPayment.Controls.Add(this.textBox11);
+            this.grpPayment.Controls.Add(this.txtBankName);
             this.grpPayment.Controls.Add(this.label24);
             this.grpPayment.Controls.Add(this.panel15);
-            this.grpPayment.Controls.Add(this.textBox10);
+            this.grpPayment.Controls.Add(this.txtPaidAmout);
             this.grpPayment.Controls.Add(this.panel14);
             this.grpPayment.Controls.Add(this.label23);
-            this.grpPayment.Controls.Add(this.dateTimePicker4);
+            this.grpPayment.Controls.Add(this.dtpChequeDate);
             this.grpPayment.Controls.Add(this.label22);
-            this.grpPayment.Controls.Add(this.textBox9);
+            this.grpPayment.Controls.Add(this.txtChequeNo);
             this.grpPayment.Controls.Add(this.panel13);
             this.grpPayment.Controls.Add(this.label21);
-            this.grpPayment.Controls.Add(this.dateTimePicker3);
+            this.grpPayment.Controls.Add(this.dtpPaymentDate);
             this.grpPayment.Controls.Add(this.panel12);
             this.grpPayment.Controls.Add(this.label20);
             this.grpPayment.Controls.Add(this.panel11);
-            this.grpPayment.Location = new System.Drawing.Point(12, 443);
+            this.grpPayment.Location = new System.Drawing.Point(12, 433);
             this.grpPayment.Name = "grpPayment";
             this.grpPayment.Size = new System.Drawing.Size(848, 200);
             this.grpPayment.TabIndex = 11;
@@ -771,16 +772,16 @@
             this.label26.TabIndex = 68;
             this.label26.Text = "Receipt No :";
             // 
-            // textBox12
+            // txtReceiptNo
             // 
-            this.textBox12.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox12.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox12.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(588, 165);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(245, 20);
-            this.textBox12.TabIndex = 67;
+            this.txtReceiptNo.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtReceiptNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtReceiptNo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceiptNo.Location = new System.Drawing.Point(588, 165);
+            this.txtReceiptNo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtReceiptNo.Name = "txtReceiptNo";
+            this.txtReceiptNo.Size = new System.Drawing.Size(245, 20);
+            this.txtReceiptNo.TabIndex = 67;
             // 
             // panel16
             // 
@@ -803,16 +804,16 @@
             this.label25.TabIndex = 59;
             this.label25.Text = "Bank Name :";
             // 
-            // textBox11
+            // txtBankName
             // 
-            this.textBox11.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(20, 165);
-            this.textBox11.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(525, 20);
-            this.textBox11.TabIndex = 58;
+            this.txtBankName.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtBankName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBankName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBankName.Location = new System.Drawing.Point(20, 165);
+            this.txtBankName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtBankName.Name = "txtBankName";
+            this.txtBankName.Size = new System.Drawing.Size(525, 20);
+            this.txtBankName.TabIndex = 58;
             // 
             // label24
             // 
@@ -835,16 +836,16 @@
             this.panel15.Size = new System.Drawing.Size(525, 1);
             this.panel15.TabIndex = 60;
             // 
-            // textBox10
+            // txtPaidAmout
             // 
-            this.textBox10.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(588, 110);
-            this.textBox10.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(245, 20);
-            this.textBox10.TabIndex = 64;
+            this.txtPaidAmout.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtPaidAmout.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPaidAmout.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaidAmout.Location = new System.Drawing.Point(588, 110);
+            this.txtPaidAmout.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPaidAmout.Name = "txtPaidAmout";
+            this.txtPaidAmout.Size = new System.Drawing.Size(245, 20);
+            this.txtPaidAmout.TabIndex = 64;
             // 
             // panel14
             // 
@@ -866,17 +867,17 @@
             this.label23.TabIndex = 63;
             this.label23.Text = "DD / Cheque / MO Date :";
             // 
-            // dateTimePicker4
+            // dtpChequeDate
             // 
-            this.dateTimePicker4.CustomFormat = "";
-            this.dateTimePicker4.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker4.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker4.Location = new System.Drawing.Point(302, 107);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(247, 27);
-            this.dateTimePicker4.TabIndex = 62;
-            this.dateTimePicker4.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
+            this.dtpChequeDate.CustomFormat = "";
+            this.dtpChequeDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpChequeDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpChequeDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpChequeDate.Location = new System.Drawing.Point(302, 107);
+            this.dtpChequeDate.Name = "dtpChequeDate";
+            this.dtpChequeDate.Size = new System.Drawing.Size(247, 27);
+            this.dtpChequeDate.TabIndex = 62;
+            this.dtpChequeDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
             // label22
             // 
@@ -889,16 +890,16 @@
             this.label22.TabIndex = 60;
             this.label22.Text = "DD / Cheque / MO No :";
             // 
-            // textBox9
+            // txtChequeNo
             // 
-            this.textBox9.BackColor = System.Drawing.Color.SkyBlue;
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox9.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(20, 110);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(245, 20);
-            this.textBox9.TabIndex = 59;
+            this.txtChequeNo.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtChequeNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtChequeNo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChequeNo.Location = new System.Drawing.Point(20, 110);
+            this.txtChequeNo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtChequeNo.Name = "txtChequeNo";
+            this.txtChequeNo.Size = new System.Drawing.Size(245, 20);
+            this.txtChequeNo.TabIndex = 59;
             // 
             // panel13
             // 
@@ -920,17 +921,17 @@
             this.label21.TabIndex = 48;
             this.label21.Text = "Payment Date :";
             // 
-            // dateTimePicker3
+            // dtpPaymentDate
             // 
-            this.dateTimePicker3.CustomFormat = "";
-            this.dateTimePicker3.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker3.Location = new System.Drawing.Point(588, 48);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(247, 27);
-            this.dateTimePicker3.TabIndex = 47;
-            this.dateTimePicker3.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
+            this.dtpPaymentDate.CustomFormat = "";
+            this.dtpPaymentDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dtpPaymentDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpPaymentDate.Location = new System.Drawing.Point(588, 48);
+            this.dtpPaymentDate.Name = "dtpPaymentDate";
+            this.dtpPaymentDate.Size = new System.Drawing.Size(247, 27);
+            this.dtpPaymentDate.TabIndex = 47;
+            this.dtpPaymentDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
             // panel12
             // 
@@ -1014,7 +1015,7 @@
             this.grpButtons.Controls.Add(this.btnClose);
             this.grpButtons.Controls.Add(this.btnSave);
             this.grpButtons.Controls.Add(this.btnNew);
-            this.grpButtons.Location = new System.Drawing.Point(12, 644);
+            this.grpButtons.Location = new System.Drawing.Point(12, 636);
             this.grpButtons.Name = "grpButtons";
             this.grpButtons.Size = new System.Drawing.Size(848, 59);
             this.grpButtons.TabIndex = 12;
@@ -1025,7 +1026,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(870, 713);
+            this.ClientSize = new System.Drawing.Size(870, 706);
             this.Controls.Add(this.grpButtons);
             this.Controls.Add(this.grpPayment);
             this.Controls.Add(this.grpSubscription);
@@ -1033,6 +1034,7 @@
             this.Name = "frmSubscription";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subscription";
+            this.Load += new System.EventHandler(this.frmSubscription_Load);
             this.grpPerson.ResumeLayout(false);
             this.grpPerson.PerformLayout();
             this.grpSubscription.ResumeLayout(false);
@@ -1057,47 +1059,47 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cmbState;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbCountry;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox cmbCity;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.ComboBox cmbDistrict;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPIN;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbArea;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtMobile;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtPhone;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.ComboBox cmbAgent;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.GroupBox grpSubscription;
         private System.Windows.Forms.DateTimePicker dtpSubscriptionDate;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtDuration;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dtpStartDate;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpEndDate;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtAmount;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.GroupBox grpPayment;
         private System.Windows.Forms.Panel panel11;
@@ -1108,20 +1110,20 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Panel panel12;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.DateTimePicker dateTimePicker3;
+        private System.Windows.Forms.DateTimePicker dtpPaymentDate;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtChequeNo;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.DateTimePicker dateTimePicker4;
+        private System.Windows.Forms.DateTimePicker dtpChequeDate;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtPaidAmout;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtBankName;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtReceiptNo;
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.GroupBox grpButtons;
         private System.Windows.Forms.GroupBox grpPerson;
