@@ -234,7 +234,7 @@ namespace Shaheen
         private bool CheckDuplicateSubscription(string subscriptionCode)
         {
             var subscriptionBll = new SubscriptionBLL();
-            return subscriptionBll.CheckDuplicateSubscription(subscriptionCode);
+            return false;
         }
         private bool checkEmail(string email)
         {

@@ -11,39 +11,39 @@ namespace Shaheen.BLL
 {
     public class AreaBLL
     {
-        public AreaDAL cityDal;
+        public AreaDAL areaDal;
         public AreaBLL()
         {
-            cityDal = new AreaDAL();
+            areaDal = new AreaDAL();
         }
         public List<Area> AreaList()
         {
-            var list = cityDal.AreaList();
+            var list = areaDal.AreaList();
             return list;
         }
 
         public List<AreaCity> AreaCityList()
         {
-            return cityDal.AreaCityList();
+            return areaDal.AreaCityList();
         }
 
         public int SaveArea(Area state)
         {
-            return cityDal.SaveArea(state);
+            return areaDal.SaveArea(state);
         }
 
         public Area GetAreaById(int Id)
         {
-            return cityDal.GetAreaById(Id);
+            return areaDal.GetAreaById(Id);
         }
         public Area GetAreaByName(string stateName)
         {
-            return cityDal.GetAreaByName(stateName);
+            return areaDal.GetAreaByName(stateName);
         }
         public bool IsDuplicateAreaName(int stateId, string stateName)
         {
             var isDuplicateFound = true;
-            var duplicateList = cityDal.GetDuplicateAreaName(stateId, stateName);
+            var duplicateList = areaDal.GetDuplicateAreaName(stateId, stateName);
             if (duplicateList.Count() == 0)
             {
                 isDuplicateFound = false;
@@ -57,7 +57,7 @@ namespace Shaheen.BLL
 
         public void DeleteArea(int districtId)
         {
-            cityDal.DeleteArea(districtId);
+            areaDal.DeleteArea(districtId);
 
         }
     }
