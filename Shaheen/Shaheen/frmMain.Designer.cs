@@ -40,6 +40,7 @@
             this.lblLogoText = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlForm = new System.Windows.Forms.Panel();
+            this.btnAgent = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panel1.Controls.Add(this.btnAgent);
             this.panel1.Controls.Add(this.btnArea);
             this.panel1.Controls.Add(this.btnCity);
             this.panel1.Controls.Add(this.btnDistrict);
@@ -66,7 +68,7 @@
             this.btnArea.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnArea.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnArea.Location = new System.Drawing.Point(13, 374);
+            this.btnArea.Location = new System.Drawing.Point(11, 374);
             this.btnArea.Margin = new System.Windows.Forms.Padding(4);
             this.btnArea.Name = "btnArea";
             this.btnArea.Size = new System.Drawing.Size(265, 38);
@@ -80,7 +82,7 @@
             this.btnCity.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCity.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCity.Location = new System.Drawing.Point(12, 328);
+            this.btnCity.Location = new System.Drawing.Point(11, 328);
             this.btnCity.Margin = new System.Windows.Forms.Padding(4);
             this.btnCity.Name = "btnCity";
             this.btnCity.Size = new System.Drawing.Size(265, 38);
@@ -94,7 +96,7 @@
             this.btnDistrict.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnDistrict.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDistrict.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDistrict.Location = new System.Drawing.Point(12, 282);
+            this.btnDistrict.Location = new System.Drawing.Point(11, 282);
             this.btnDistrict.Margin = new System.Windows.Forms.Padding(4);
             this.btnDistrict.Name = "btnDistrict";
             this.btnDistrict.Size = new System.Drawing.Size(265, 38);
@@ -108,7 +110,7 @@
             this.btnSubscription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.btnSubscription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSubscription.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSubscription.Location = new System.Drawing.Point(12, 102);
+            this.btnSubscription.Location = new System.Drawing.Point(11, 144);
             this.btnSubscription.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubscription.Name = "btnSubscription";
             this.btnSubscription.Size = new System.Drawing.Size(265, 38);
@@ -122,7 +124,7 @@
             this.btnState.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnState.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnState.Location = new System.Drawing.Point(12, 236);
+            this.btnState.Location = new System.Drawing.Point(11, 236);
             this.btnState.Margin = new System.Windows.Forms.Padding(4);
             this.btnState.Name = "btnState";
             this.btnState.Size = new System.Drawing.Size(265, 38);
@@ -136,7 +138,7 @@
             this.btnCountry.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCountry.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCountry.Location = new System.Drawing.Point(10, 190);
+            this.btnCountry.Location = new System.Drawing.Point(11, 190);
             this.btnCountry.Margin = new System.Windows.Forms.Padding(4);
             this.btnCountry.Name = "btnCountry";
             this.btnCountry.Size = new System.Drawing.Size(265, 38);
@@ -199,6 +201,20 @@
             this.pnlForm.Size = new System.Drawing.Size(1058, 726);
             this.pnlForm.TabIndex = 2;
             // 
+            // btnAgent
+            // 
+            this.btnAgent.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgent.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgent.Location = new System.Drawing.Point(11, 420);
+            this.btnAgent.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgent.Name = "btnAgent";
+            this.btnAgent.Size = new System.Drawing.Size(265, 38);
+            this.btnAgent.TabIndex = 9;
+            this.btnAgent.Text = "Add / Edit Agent";
+            this.btnAgent.UseVisualStyleBackColor = false;
+            this.btnAgent.Click += new System.EventHandler(this.btnAgent_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -234,5 +250,6 @@
         private System.Windows.Forms.Button btnDistrict;
         private System.Windows.Forms.Button btnCity;
         private System.Windows.Forms.Button btnArea;
+        private System.Windows.Forms.Button btnAgent;
     }
 }

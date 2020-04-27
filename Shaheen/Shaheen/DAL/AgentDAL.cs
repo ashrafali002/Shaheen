@@ -26,7 +26,6 @@ namespace Shaheen.DAL
                 .Select(m => new AgentModel
                 {
                     agentId = m.ag.ag.ag.ag.ag.agentId,
-                    agentCode = m.ag.ag.ag.ag.ag.agentCode,
                     agentName = m.ag.ag.ag.ag.ag.agentName,
                     agentAddress = m.ag.ag.ag.ag.ag.agentAddress,
                     areaId = m.ag.ag.ag.ag.ag.areaId,
@@ -56,7 +55,6 @@ namespace Shaheen.DAL
             else
             {
                 Agent a = context.Agents.Find(agent.agentId);
-                a.agentCode = agent.agentCode;
                 a.agentName = agent.agentName;
                 a.agentAddress = agent.agentAddress;
                 a.areaId = agent.areaId;

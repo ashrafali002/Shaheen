@@ -32,6 +32,9 @@ namespace Shaheen
         public static bool isSubscription = false;
         public frmSubscription subscription = null;
 
+        public static bool isAgent = false;
+        public frmAgent agent = null;
+
         private bool CheckOpened(string name)
         {
             FormCollection fc = Application.OpenForms;
@@ -272,6 +275,39 @@ namespace Shaheen
                     area.Show();
                     area.Focus();
                     isArea = true;
+                }
+            }
+        }
+
+        private void btnAgent_Click(object sender, EventArgs e)
+        {
+            if (!isAgent)
+            {
+                agent = new frmAgent() { TopLevel = false };
+                agent.Location = new Point()
+                {
+                    X = pnlForm.Width / 2 - agent.Width / 2,
+                    Y = pnlForm.Height / 2 - agent.Height / 2
+                };
+                this.pnlForm.Controls.Add(agent);
+                agent.BringToFront();
+                agent.Show();
+                agent.Focus();
+                isAgent = true;
+            }
+            else
+            {
+                if (CheckOpened("Agent"))
+                {
+                    agent.BringToFront();
+                    agent.Location = new Point()
+                    {
+                        X = pnlForm.Width / 2 - agent.Width / 2,
+                        Y = pnlForm.Height / 2 - agent.Height / 2
+                    };
+                    agent.Show();
+                    agent.Focus();
+                    isAgent = true;
                 }
             }
         }

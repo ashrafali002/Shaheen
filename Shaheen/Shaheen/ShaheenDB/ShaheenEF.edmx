@@ -10,7 +10,6 @@
             <PropertyRef Name="agentId" />
           </Key>
           <Property Name="agentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="agentCode" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="agentName" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="agentAddress" Type="nvarchar" MaxLength="500" Nullable="false" />
           <Property Name="areaId" Type="int" Nullable="false" />
@@ -134,7 +133,6 @@
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityContainer Name="ShaheenEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Agents" EntityType="Model.Agent" />
           <EntitySet Name="Areas" EntityType="Model.Area" />
           <EntitySet Name="Cities" EntityType="Model.City" />
           <EntitySet Name="Countries" EntityType="Model.Country" />
@@ -144,25 +142,8 @@
           <EntitySet Name="States" EntityType="Model.State" />
           <EntitySet Name="Subscriptions" EntityType="Model.Subscription" />
           <EntitySet Name="SubscriptionDetails" EntityType="Model.SubscriptionDetail" />
+          <EntitySet Name="Agents" EntityType="Model.Agent" />
         </EntityContainer>
-        <EntityType Name="Agent">
-          <Key>
-            <PropertyRef Name="agentId" />
-          </Key>
-          <Property Name="agentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="agentCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="agentName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
-          <Property Name="agentAddress" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
-          <Property Name="areaId" Type="Int32" Nullable="false" />
-          <Property Name="cityId" Type="Int32" Nullable="false" />
-          <Property Name="districtId" Type="Int32" Nullable="false" />
-          <Property Name="stateId" Type="Int32" Nullable="false" />
-          <Property Name="countryId" Type="Int32" Nullable="false" />
-          <Property Name="pin" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
-          <Property Name="phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="mobile" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="email" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
-        </EntityType>
         <EntityType Name="Area">
           <Key>
             <PropertyRef Name="areaId" />
@@ -257,31 +238,29 @@
           <Property Name="subscriptionEndDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
         </EntityType>
+        <EntityType Name="Agent">
+          <Key>
+            <PropertyRef Name="agentId" />
+          </Key>
+          <Property Name="agentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="agentName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="agentAddress" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Name="areaId" Type="Int32" Nullable="false" />
+          <Property Name="cityId" Type="Int32" Nullable="false" />
+          <Property Name="districtId" Type="Int32" Nullable="false" />
+          <Property Name="stateId" Type="Int32" Nullable="false" />
+          <Property Name="countryId" Type="Int32" Nullable="false" />
+          <Property Name="pin" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="mobile" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
         <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="ShaheenEntities">
-          <EntitySetMapping Name="Agents">
-            <EntityTypeMapping TypeName="Model.Agent">
-              <MappingFragment StoreEntitySet="Agent">
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="mobile" ColumnName="mobile" />
-                <ScalarProperty Name="phone" ColumnName="phone" />
-                <ScalarProperty Name="pin" ColumnName="pin" />
-                <ScalarProperty Name="countryId" ColumnName="countryId" />
-                <ScalarProperty Name="stateId" ColumnName="stateId" />
-                <ScalarProperty Name="districtId" ColumnName="districtId" />
-                <ScalarProperty Name="cityId" ColumnName="cityId" />
-                <ScalarProperty Name="areaId" ColumnName="areaId" />
-                <ScalarProperty Name="agentAddress" ColumnName="agentAddress" />
-                <ScalarProperty Name="agentName" ColumnName="agentName" />
-                <ScalarProperty Name="agentCode" ColumnName="agentCode" />
-                <ScalarProperty Name="agentId" ColumnName="agentId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Areas">
             <EntityTypeMapping TypeName="Model.Area">
               <MappingFragment StoreEntitySet="Area">
@@ -382,6 +361,24 @@
                 <ScalarProperty Name="subscriptionDuration" ColumnName="subscriptionDuration" />
                 <ScalarProperty Name="subscriptionId" ColumnName="subscriptionId" />
                 <ScalarProperty Name="subscriptionDetailId" ColumnName="subscriptionDetailId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Agents">
+            <EntityTypeMapping TypeName="Model.Agent">
+              <MappingFragment StoreEntitySet="Agent">
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mobile" ColumnName="mobile" />
+                <ScalarProperty Name="phone" ColumnName="phone" />
+                <ScalarProperty Name="pin" ColumnName="pin" />
+                <ScalarProperty Name="countryId" ColumnName="countryId" />
+                <ScalarProperty Name="stateId" ColumnName="stateId" />
+                <ScalarProperty Name="districtId" ColumnName="districtId" />
+                <ScalarProperty Name="cityId" ColumnName="cityId" />
+                <ScalarProperty Name="areaId" ColumnName="areaId" />
+                <ScalarProperty Name="agentAddress" ColumnName="agentAddress" />
+                <ScalarProperty Name="agentName" ColumnName="agentName" />
+                <ScalarProperty Name="agentId" ColumnName="agentId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

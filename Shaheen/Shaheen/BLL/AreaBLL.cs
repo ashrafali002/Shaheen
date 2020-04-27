@@ -27,23 +27,23 @@ namespace Shaheen.BLL
             return areaDal.AreaCityList();
         }
 
-        public int SaveArea(Area state)
+        public int SaveArea(Area area)
         {
-            return areaDal.SaveArea(state);
+            return areaDal.SaveArea(area);
         }
 
         public Area GetAreaById(int Id)
         {
             return areaDal.GetAreaById(Id);
         }
-        public Area GetAreaByName(string stateName)
+        public Area GetAreaByName(string areaName)
         {
-            return areaDal.GetAreaByName(stateName);
+            return areaDal.GetAreaByName(areaName);
         }
-        public bool IsDuplicateAreaName(int stateId, string stateName)
+        public bool IsDuplicateAreaName(int areaId, string areaName)
         {
             var isDuplicateFound = true;
-            var duplicateList = areaDal.GetDuplicateAreaName(stateId, stateName);
+            var duplicateList = areaDal.GetDuplicateAreaName(areaId, areaName);
             if (duplicateList.Count() == 0)
             {
                 isDuplicateFound = false;
@@ -55,9 +55,9 @@ namespace Shaheen.BLL
             return isDuplicateFound;
         }
 
-        public void DeleteArea(int districtId)
+        public void DeleteArea(int areaId)
         {
-            areaDal.DeleteArea(districtId);
+            areaDal.DeleteArea(areaId);
 
         }
     }

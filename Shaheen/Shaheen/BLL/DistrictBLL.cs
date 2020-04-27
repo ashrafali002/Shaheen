@@ -24,23 +24,23 @@ namespace Shaheen.BLL
             return districtDal.DistrictStateList();
         }
 
-        public int SaveDistrict(District state)
+        public int SaveDistrict(District district)
         {
-            return districtDal.SaveDistrict(state);
+            return districtDal.SaveDistrict(district);
         }
 
         public District GetDistrictById(int Id)
         {
             return districtDal.GetDistrictById(Id);
         }
-        public District GetDistrictByName(string stateName)
+        public District GetDistrictByName(string districtName)
         {
-            return districtDal.GetDistrictByName(stateName);
+            return districtDal.GetDistrictByName(districtName);
         }
-        public bool IsDuplicateDistrictName(int stateId, string stateName)
+        public bool IsDuplicateDistrictName(int districtId, string districtName)
         {
             var isDuplicateFound = true;
-            var duplicateList = districtDal.GetDuplicateDistrictName(stateId, stateName);
+            var duplicateList = districtDal.GetDuplicateDistrictName(districtId, districtName);
             if (duplicateList.Count() == 0)
             {
                 isDuplicateFound = false;
