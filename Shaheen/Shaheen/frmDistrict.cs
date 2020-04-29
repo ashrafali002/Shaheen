@@ -29,7 +29,7 @@ namespace Shaheen
         {
             district_id = 0;
             txtDistrictName.Text = string.Empty;
-            ddlState.SelectedIndex = 0;
+            cmbStateName.SelectedIndex = 0;
         }
 
         private void BindDropdownLists()
@@ -37,14 +37,14 @@ namespace Shaheen
             var stateBll = new StateBLL();
             var stateList = stateBll.StateList();
             stateList.Insert(0, new State { stateId = 0, stateName = "--- Select State ---" });
-            ddlState.DataSource = stateList;
-            ddlState.DisplayMember = "stateName";
-            ddlState.ValueMember = "stateId";
+            cmbStateName.DataSource = stateList;
+            cmbStateName.DisplayMember = "stateName";
+            cmbStateName.ValueMember = "stateId";
         }
         public void DisableEnableControls(bool isEnable)
         {
             txtDistrictName.Enabled = isEnable;
-            ddlState.Enabled = isEnable;
+            cmbStateName.Enabled = isEnable;
             dgvDistrict.Enabled = !isEnable;
         }
         private void FillDataGridView()
@@ -68,10 +68,10 @@ namespace Shaheen
                 txtDistrictName.Focus();
                 isSuccess = false;
             }
-            else if (ddlState.SelectedIndex <= 0)
+            else if (cmbStateName.SelectedIndex <= 0)
             {
                 MessageBox.Show("Select state", "Shaheen Weekly", MessageBoxButtons.OK);
-                ddlState.Focus();
+                cmbStateName.Focus();
                 isSuccess = false;
             }
             else
@@ -101,7 +101,7 @@ namespace Shaheen
                 var district = new District();
                 district.districtId = district_id;
                 district.districtName = txtDistrictName.Text;
-                district.stateId = Convert.ToInt32(ddlState.SelectedValue);
+                district.stateId = Convert.ToInt32(cmbStateName.SelectedValue);
                 int res = districtBll.SaveDistrict(district);
                 if (res > 0)
                 {
@@ -122,7 +122,6 @@ namespace Shaheen
             if (btnClose.Text == "Close")
             {
                 this.Close();
-                frmMain.isDistrict= false;
             }
             else
             {
@@ -140,7 +139,7 @@ namespace Shaheen
             int rowIndex = e.RowIndex;
             DataGridViewRow grdRow = dgvDistrict.Rows[rowIndex];
             district_id = Convert.ToInt32(grdRow.Cells["districtId"].Value);
-            ddlState.SelectedValue = grdRow.Cells["stateId"].Value;
+            cmbStateName.SelectedValue = grdRow.Cells["stateId"].Value;
             txtDistrictName.Text = Convert.ToString(grdRow.Cells["colDistrictName"].Value);
             btnNew.Text = "Edit";
             btnClose.Text = "Cancel";

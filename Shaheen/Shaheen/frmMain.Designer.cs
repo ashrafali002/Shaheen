@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAgent = new System.Windows.Forms.Button();
+            this.btnArea = new System.Windows.Forms.Button();
             this.btnCity = new System.Windows.Forms.Button();
             this.btnDistrict = new System.Windows.Forms.Button();
             this.btnSubscription = new System.Windows.Forms.Button();
@@ -39,7 +41,6 @@
             this.lblLogoText = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlForm = new System.Windows.Forms.Panel();
-            this.btnArea = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panel1.Controls.Add(this.btnAgent);
             this.panel1.Controls.Add(this.btnArea);
             this.panel1.Controls.Add(this.btnCity);
             this.panel1.Controls.Add(this.btnDistrict);
@@ -61,11 +63,40 @@
             this.panel1.Size = new System.Drawing.Size(286, 823);
             this.panel1.TabIndex = 0;
             // 
+            // btnAgent
+            // 
+            this.btnAgent.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgent.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgent.Location = new System.Drawing.Point(11, 420);
+            this.btnAgent.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgent.Name = "btnAgent";
+            this.btnAgent.Size = new System.Drawing.Size(265, 38);
+            this.btnAgent.TabIndex = 9;
+            this.btnAgent.Text = "Add / Edit Agent";
+            this.btnAgent.UseVisualStyleBackColor = false;
+            this.btnAgent.Click += new System.EventHandler(this.btnAgent_Click);
+            // 
+            // btnArea
+            // 
+            this.btnArea.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnArea.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnArea.Location = new System.Drawing.Point(11, 374);
+            this.btnArea.Margin = new System.Windows.Forms.Padding(4);
+            this.btnArea.Name = "btnArea";
+            this.btnArea.Size = new System.Drawing.Size(265, 38);
+            this.btnArea.TabIndex = 8;
+            this.btnArea.Text = "Add / Edit Area";
+            this.btnArea.UseVisualStyleBackColor = false;
+            this.btnArea.Click += new System.EventHandler(this.btnArea_Click);
+            // 
             // btnCity
             // 
             this.btnCity.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCity.Location = new System.Drawing.Point(12, 328);
+            this.btnCity.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCity.Location = new System.Drawing.Point(11, 328);
             this.btnCity.Margin = new System.Windows.Forms.Padding(4);
             this.btnCity.Name = "btnCity";
             this.btnCity.Size = new System.Drawing.Size(265, 38);
@@ -78,7 +109,8 @@
             // 
             this.btnDistrict.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnDistrict.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDistrict.Location = new System.Drawing.Point(12, 282);
+            this.btnDistrict.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDistrict.Location = new System.Drawing.Point(11, 282);
             this.btnDistrict.Margin = new System.Windows.Forms.Padding(4);
             this.btnDistrict.Name = "btnDistrict";
             this.btnDistrict.Size = new System.Drawing.Size(265, 38);
@@ -89,14 +121,15 @@
             // 
             // btnSubscription
             // 
-            this.btnSubscription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnSubscription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.btnSubscription.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSubscription.Location = new System.Drawing.Point(12, 102);
+            this.btnSubscription.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSubscription.Location = new System.Drawing.Point(11, 144);
             this.btnSubscription.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubscription.Name = "btnSubscription";
             this.btnSubscription.Size = new System.Drawing.Size(265, 38);
             this.btnSubscription.TabIndex = 5;
-            this.btnSubscription.Text = "Subscription";
+            this.btnSubscription.Text = "New Subscription";
             this.btnSubscription.UseVisualStyleBackColor = false;
             this.btnSubscription.Click += new System.EventHandler(this.btnSubscription_Click);
             // 
@@ -104,7 +137,8 @@
             // 
             this.btnState.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnState.Location = new System.Drawing.Point(12, 236);
+            this.btnState.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnState.Location = new System.Drawing.Point(11, 236);
             this.btnState.Margin = new System.Windows.Forms.Padding(4);
             this.btnState.Name = "btnState";
             this.btnState.Size = new System.Drawing.Size(265, 38);
@@ -117,7 +151,8 @@
             // 
             this.btnCountry.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCountry.Location = new System.Drawing.Point(10, 190);
+            this.btnCountry.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCountry.Location = new System.Drawing.Point(11, 190);
             this.btnCountry.Margin = new System.Windows.Forms.Padding(4);
             this.btnCountry.Name = "btnCountry";
             this.btnCountry.Size = new System.Drawing.Size(265, 38);
@@ -135,7 +170,7 @@
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(286, 94);
+            this.pnlLogo.Size = new System.Drawing.Size(286, 97);
             this.pnlLogo.TabIndex = 2;
             // 
             // lblClient
@@ -180,19 +215,6 @@
             this.pnlForm.Size = new System.Drawing.Size(1058, 726);
             this.pnlForm.TabIndex = 2;
             // 
-            // btnArea
-            // 
-            this.btnArea.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnArea.Location = new System.Drawing.Point(13, 374);
-            this.btnArea.Margin = new System.Windows.Forms.Padding(4);
-            this.btnArea.Name = "btnArea";
-            this.btnArea.Size = new System.Drawing.Size(265, 38);
-            this.btnArea.TabIndex = 8;
-            this.btnArea.Text = "Add / Edit Area";
-            this.btnArea.UseVisualStyleBackColor = false;
-            this.btnArea.Click += new System.EventHandler(this.btnArea_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -204,7 +226,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
-            this.Text = "frmMain";
+            this.Text = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
@@ -228,5 +250,6 @@
         private System.Windows.Forms.Button btnDistrict;
         private System.Windows.Forms.Button btnCity;
         private System.Windows.Forms.Button btnArea;
+        private System.Windows.Forms.Button btnAgent;
     }
 }

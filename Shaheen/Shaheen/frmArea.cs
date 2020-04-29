@@ -37,7 +37,7 @@ namespace Shaheen
         {
             area_id = 0;
             txtAreaName.Text = string.Empty;
-            ddlCity.SelectedIndex = 0;
+            cmbCityName.SelectedIndex = 0;
         }
 
         private void BindDropdownLists()
@@ -45,14 +45,14 @@ namespace Shaheen
             var cityBll = new CityBLL();
             var cityList = cityBll.CityList();
             cityList.Insert(0, new City { cityId = 0, cityName = "--- Select City ---" });
-            ddlCity.DataSource = cityList;
-            ddlCity.DisplayMember = "cityName";
-            ddlCity.ValueMember = "cityId";
+            cmbCityName.DataSource = cityList;
+            cmbCityName.DisplayMember = "cityName";
+            cmbCityName.ValueMember = "cityId";
         }
         public void DisableEnableControls(bool isEnable)
         {
             txtAreaName.Enabled = isEnable;
-            ddlCity.Enabled = isEnable;
+            cmbCityName.Enabled = isEnable;
             dgvArea.Enabled = !isEnable;
         }
         private void FillDataGridView()
@@ -76,10 +76,10 @@ namespace Shaheen
                 txtAreaName.Focus();
                 isSuccess = false;
             }
-            else if (ddlCity.SelectedIndex <= 0)
+            else if (cmbCityName.SelectedIndex <= 0)
             {
                 MessageBox.Show("Select city", "Shaheen Weekly", MessageBoxButtons.OK);
-                ddlCity.Focus();
+                cmbCityName.Focus();
                 isSuccess = false;
             }
             else
@@ -108,7 +108,7 @@ namespace Shaheen
                 var area = new Area();
                 area.areaId = area_id;
                 area.areaName= txtAreaName.Text;
-                area.cityId= Convert.ToInt32(ddlCity.SelectedValue);
+                area.cityId= Convert.ToInt32(cmbCityName.SelectedValue);
                 int res = areaBll.SaveArea(area);
                 if (res > 0)
                 {
@@ -129,7 +129,6 @@ namespace Shaheen
             if (btnClose.Text == "Close")
             {
                 this.Close();
-                frmMain.isArea = false;
             }
             else
             {
@@ -147,7 +146,7 @@ namespace Shaheen
             int rowIndex = e.RowIndex;
             DataGridViewRow grdRow = dgvArea.Rows[rowIndex];
             area_id = Convert.ToInt32(grdRow.Cells["areaId"].Value);
-            ddlCity.SelectedValue = grdRow.Cells["cityId"].Value;
+            cmbCityName.SelectedValue = grdRow.Cells["cityId"].Value;
             txtAreaName.Text = Convert.ToString(grdRow.Cells["colAreaName"].Value);
             btnNew.Text = "Edit";
             btnClose.Text = "Cancel";

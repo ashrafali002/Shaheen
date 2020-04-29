@@ -24,23 +24,23 @@ namespace Shaheen.BLL
             return cityDal.CityDistrictList();
         }
 
-        public int SaveCity(City state)
+        public int SaveCity(City city)
         {
-            return cityDal.SaveCity(state);
+            return cityDal.SaveCity(city);
         }
 
         public City GetCityById(int Id)
         {
             return cityDal.GetCityById(Id);
         }
-        public City GetCityByName(string stateName)
+        public City GetCityByName(string cityName)
         {
-            return cityDal.GetCityByName(stateName);
+            return cityDal.GetCityByName(cityName);
         }
-        public bool IsDuplicateCityName(int stateId, string stateName)
+        public bool IsDuplicateCityName(int cityId, string cityName)
         {
             var isDuplicateFound = true;
-            var duplicateList = cityDal.GetDuplicateCityName(stateId, stateName);
+            var duplicateList = cityDal.GetDuplicateCityName(cityId, cityName);
             if (duplicateList.Count() == 0)
             {
                 isDuplicateFound = false;
@@ -52,10 +52,9 @@ namespace Shaheen.BLL
             return isDuplicateFound;
         }
 
-        public void DeleteCity(int districtId)
+        public void DeleteCity(int cityId)
         {
-            cityDal.DeleteCity(districtId);
-
+            cityDal.DeleteCity(cityId);
         }
     }
 }

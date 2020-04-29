@@ -66,6 +66,7 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="BLL\AgentBLL.cs" />
     <Compile Include="BLL\AreaBLL.cs" />
     <Compile Include="BLL\CityBLL.cs" />
     <Compile Include="BLL\CountryBLL.cs" />
@@ -84,6 +85,12 @@
     <Compile Include="DAL\SubscriptionDAL.cs" />
     <Compile Include="DAL\SubscriptionDetailDAL.cs" />
     <Compile Include="Common\EnumClass.cs" />
+    <Compile Include="frmAgent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgent.Designer.cs">
+      <DependentUpon>frmAgent.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmArea.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,12 +139,19 @@
     <Compile Include="frmState.Designer.cs">
       <DependentUpon>frmState.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSubscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubscription.Designer.cs">
+      <DependentUpon>frmSubscription.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MDIMain.Designer.cs">
       <DependentUpon>MDIMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\AgentModel.cs" />
     <Compile Include="Models\AreaCity.cs" />
     <Compile Include="Models\CityDistrict.cs" />
     <Compile Include="Models\DistrictState.cs" />
@@ -192,6 +206,9 @@
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgent.resx">
+      <DependentUpon>frmAgent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmArea.resx">
       <DependentUpon>frmArea.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmState.resx">
       <DependentUpon>frmState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubscription.resx">
+      <DependentUpon>frmSubscription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIMain.resx">
       <DependentUpon>MDIMain.cs</DependentUpon>

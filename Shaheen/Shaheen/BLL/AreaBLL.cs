@@ -11,39 +11,39 @@ namespace Shaheen.BLL
 {
     public class AreaBLL
     {
-        public AreaDAL cityDal;
+        public AreaDAL areaDal;
         public AreaBLL()
         {
-            cityDal = new AreaDAL();
+            areaDal = new AreaDAL();
         }
         public List<Area> AreaList()
         {
-            var list = cityDal.AreaList();
+            var list = areaDal.AreaList();
             return list;
         }
 
         public List<AreaCity> AreaCityList()
         {
-            return cityDal.AreaCityList();
+            return areaDal.AreaCityList();
         }
 
-        public int SaveArea(Area state)
+        public int SaveArea(Area area)
         {
-            return cityDal.SaveArea(state);
+            return areaDal.SaveArea(area);
         }
 
         public Area GetAreaById(int Id)
         {
-            return cityDal.GetAreaById(Id);
+            return areaDal.GetAreaById(Id);
         }
-        public Area GetAreaByName(string stateName)
+        public Area GetAreaByName(string areaName)
         {
-            return cityDal.GetAreaByName(stateName);
+            return areaDal.GetAreaByName(areaName);
         }
-        public bool IsDuplicateAreaName(int stateId, string stateName)
+        public bool IsDuplicateAreaName(int areaId, string areaName)
         {
             var isDuplicateFound = true;
-            var duplicateList = cityDal.GetDuplicateAreaName(stateId, stateName);
+            var duplicateList = areaDal.GetDuplicateAreaName(areaId, areaName);
             if (duplicateList.Count() == 0)
             {
                 isDuplicateFound = false;
@@ -55,9 +55,9 @@ namespace Shaheen.BLL
             return isDuplicateFound;
         }
 
-        public void DeleteArea(int districtId)
+        public void DeleteArea(int areaId)
         {
-            cityDal.DeleteArea(districtId);
+            areaDal.DeleteArea(areaId);
 
         }
     }

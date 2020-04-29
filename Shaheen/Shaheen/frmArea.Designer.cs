@@ -35,7 +35,7 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ddlCity = new System.Windows.Forms.ComboBox();
+            this.cmbCityName = new System.Windows.Forms.ComboBox();
             this.lblAreaName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvArea = new System.Windows.Forms.DataGridView();
@@ -55,7 +55,7 @@
             this.groupBox1.Controls.Add(this.btnNew);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.ddlCity);
+            this.groupBox1.Controls.Add(this.cmbCityName);
             this.groupBox1.Controls.Add(this.lblAreaName);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(10, 10);
@@ -63,7 +63,7 @@
             this.groupBox1.Size = new System.Drawing.Size(282, 337);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Add / Edit City";
+            this.groupBox1.Text = "Add / Edit Area";
             // 
             // txtAreaName
             // 
@@ -121,17 +121,17 @@
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 21;
             // 
-            // ddlCity
+            // cmbCityName
             // 
-            this.ddlCity.BackColor = System.Drawing.Color.SkyBlue;
-            this.ddlCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddlCity.IntegralHeight = false;
-            this.ddlCity.Location = new System.Drawing.Point(19, 120);
-            this.ddlCity.Margin = new System.Windows.Forms.Padding(0);
-            this.ddlCity.MinimumSize = new System.Drawing.Size(250, 0);
-            this.ddlCity.Name = "ddlCity";
-            this.ddlCity.Size = new System.Drawing.Size(250, 23);
-            this.ddlCity.TabIndex = 5;
+            this.cmbCityName.BackColor = System.Drawing.Color.SkyBlue;
+            this.cmbCityName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCityName.IntegralHeight = false;
+            this.cmbCityName.Location = new System.Drawing.Point(19, 120);
+            this.cmbCityName.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbCityName.MinimumSize = new System.Drawing.Size(250, 0);
+            this.cmbCityName.Name = "cmbCityName";
+            this.cmbCityName.Size = new System.Drawing.Size(250, 23);
+            this.cmbCityName.TabIndex = 5;
             // 
             // lblAreaName
             // 
@@ -251,7 +251,7 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvArea;
-        private System.Windows.Forms.ComboBox ddlCity;
+        private System.Windows.Forms.ComboBox cmbCityName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtAreaName;

@@ -35,7 +35,7 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ddlDistrict = new System.Windows.Forms.ComboBox();
+            this.cmbDistrictName = new System.Windows.Forms.ComboBox();
             this.lblStateName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvCity = new System.Windows.Forms.DataGridView();
@@ -55,7 +55,7 @@
             this.groupBox1.Controls.Add(this.btnNew);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.ddlDistrict);
+            this.groupBox1.Controls.Add(this.cmbDistrictName);
             this.groupBox1.Controls.Add(this.lblStateName);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(10, 10);
@@ -121,17 +121,17 @@
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 21;
             // 
-            // ddlDistrict
+            // cmbDistrictName
             // 
-            this.ddlDistrict.BackColor = System.Drawing.Color.SkyBlue;
-            this.ddlDistrict.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddlDistrict.IntegralHeight = false;
-            this.ddlDistrict.Location = new System.Drawing.Point(19, 120);
-            this.ddlDistrict.Margin = new System.Windows.Forms.Padding(0);
-            this.ddlDistrict.MinimumSize = new System.Drawing.Size(250, 0);
-            this.ddlDistrict.Name = "ddlDistrict";
-            this.ddlDistrict.Size = new System.Drawing.Size(250, 23);
-            this.ddlDistrict.TabIndex = 5;
+            this.cmbDistrictName.BackColor = System.Drawing.Color.SkyBlue;
+            this.cmbDistrictName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDistrictName.IntegralHeight = false;
+            this.cmbDistrictName.Location = new System.Drawing.Point(19, 120);
+            this.cmbDistrictName.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbDistrictName.MinimumSize = new System.Drawing.Size(250, 0);
+            this.cmbDistrictName.Name = "cmbDistrictName";
+            this.cmbDistrictName.Size = new System.Drawing.Size(250, 23);
+            this.cmbDistrictName.TabIndex = 5;
             // 
             // lblStateName
             // 
@@ -250,7 +250,7 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvCity;
-        private System.Windows.Forms.ComboBox ddlDistrict;
+        private System.Windows.Forms.ComboBox cmbDistrictName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtCity;

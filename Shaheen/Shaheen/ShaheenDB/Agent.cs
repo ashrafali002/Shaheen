@@ -15,7 +15,6 @@ namespace Shaheen.ShaheenDB
     public partial class Agent
     {
         public int agentId { get; set; }
-        public string agentCode { get; set; }
         public string agentName { get; set; }
         public string agentAddress { get; set; }
         public int areaId { get; set; }

@@ -35,7 +35,7 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ddlState = new System.Windows.Forms.ComboBox();
+            this.cmbStateName = new System.Windows.Forms.ComboBox();
             this.lblStateName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDistrict = new System.Windows.Forms.DataGridView();
@@ -55,7 +55,7 @@
             this.groupBox1.Controls.Add(this.btnNew);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.ddlState);
+            this.groupBox1.Controls.Add(this.cmbStateName);
             this.groupBox1.Controls.Add(this.lblStateName);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(10, 10);
@@ -121,17 +121,17 @@
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 21;
             // 
-            // ddlState
+            // cmbStateName
             // 
-            this.ddlState.BackColor = System.Drawing.Color.SkyBlue;
-            this.ddlState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddlState.IntegralHeight = false;
-            this.ddlState.Location = new System.Drawing.Point(19, 120);
-            this.ddlState.Margin = new System.Windows.Forms.Padding(0);
-            this.ddlState.MinimumSize = new System.Drawing.Size(250, 0);
-            this.ddlState.Name = "ddlState";
-            this.ddlState.Size = new System.Drawing.Size(250, 23);
-            this.ddlState.TabIndex = 5;
+            this.cmbStateName.BackColor = System.Drawing.Color.SkyBlue;
+            this.cmbStateName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbStateName.IntegralHeight = false;
+            this.cmbStateName.Location = new System.Drawing.Point(19, 120);
+            this.cmbStateName.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbStateName.MinimumSize = new System.Drawing.Size(250, 0);
+            this.cmbStateName.Name = "cmbStateName";
+            this.cmbStateName.Size = new System.Drawing.Size(250, 23);
+            this.cmbStateName.TabIndex = 5;
             // 
             // lblStateName
             // 
@@ -250,7 +250,7 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvDistrict;
-        private System.Windows.Forms.ComboBox ddlState;
+        private System.Windows.Forms.ComboBox cmbStateName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtDistrictName;

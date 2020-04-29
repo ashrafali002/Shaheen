@@ -30,12 +30,12 @@
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtState = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtState = new System.Windows.Forms.TextBox();
-            this.ddlCountry = new System.Windows.Forms.ComboBox();
+            this.cmbCountryName = new System.Windows.Forms.ComboBox();
             this.lblStateName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvState = new System.Windows.Forms.DataGridView();
@@ -55,7 +55,7 @@
             this.groupBox1.Controls.Add(this.btnNew);
             this.groupBox1.Controls.Add(this.btnSave);
             this.groupBox1.Controls.Add(this.panel1);
-            this.groupBox1.Controls.Add(this.ddlCountry);
+            this.groupBox1.Controls.Add(this.cmbCountryName);
             this.groupBox1.Controls.Add(this.lblStateName);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(10, 10);
@@ -64,6 +64,16 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add / Edit State";
+            // 
+            // txtState
+            // 
+            this.txtState.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtState.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtState.Location = new System.Drawing.Point(19, 61);
+            this.txtState.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtState.Name = "txtState";
+            this.txtState.Size = new System.Drawing.Size(245, 16);
+            this.txtState.TabIndex = 19;
             // 
             // btnClose
             // 
@@ -111,27 +121,17 @@
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 21;
             // 
-            // txtState
+            // cmbCountryName
             // 
-            this.txtState.BackColor = System.Drawing.Color.SkyBlue;
-            this.txtState.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtState.Location = new System.Drawing.Point(19, 61);
-            this.txtState.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(245, 16);
-            this.txtState.TabIndex = 19;
-            // 
-            // ddlCountry
-            // 
-            this.ddlCountry.BackColor = System.Drawing.Color.SkyBlue;
-            this.ddlCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ddlCountry.IntegralHeight = false;
-            this.ddlCountry.Location = new System.Drawing.Point(19, 120);
-            this.ddlCountry.Margin = new System.Windows.Forms.Padding(0);
-            this.ddlCountry.MinimumSize = new System.Drawing.Size(250, 0);
-            this.ddlCountry.Name = "ddlCountry";
-            this.ddlCountry.Size = new System.Drawing.Size(250, 23);
-            this.ddlCountry.TabIndex = 5;
+            this.cmbCountryName.BackColor = System.Drawing.Color.SkyBlue;
+            this.cmbCountryName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCountryName.IntegralHeight = false;
+            this.cmbCountryName.Location = new System.Drawing.Point(19, 120);
+            this.cmbCountryName.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbCountryName.MinimumSize = new System.Drawing.Size(250, 0);
+            this.cmbCountryName.Name = "cmbCountryName";
+            this.cmbCountryName.Size = new System.Drawing.Size(250, 23);
+            this.cmbCountryName.TabIndex = 5;
             // 
             // lblStateName
             // 
@@ -250,7 +250,7 @@
         #endregion
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvState;
-        private System.Windows.Forms.ComboBox ddlCountry;
+        private System.Windows.Forms.ComboBox cmbCountryName;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtState;

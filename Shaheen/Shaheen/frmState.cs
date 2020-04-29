@@ -30,7 +30,7 @@ namespace Shaheen
         {
             state_id = 0;
             txtState.Text = string.Empty;
-            ddlCountry.SelectedIndex = 0;
+            cmbCountryName.SelectedIndex = 0;
         }
 
         private void BindDropdownLists()
@@ -38,15 +38,15 @@ namespace Shaheen
             var countryBll = new CountryBLL();
             var countryList = countryBll.CountryList();
             countryList.Insert(0, new Country { countryId = 0, countryName = "--- Select Country ---" });
-            ddlCountry.DataSource = countryList;
-            ddlCountry.DisplayMember = "countryName";
-            ddlCountry.ValueMember = "countryId";
+            cmbCountryName.DataSource = countryList;
+            cmbCountryName.DisplayMember = "countryName";
+            cmbCountryName.ValueMember = "countryId";
         }
 
         public void DisableEnableControls(bool isEnable)
         {
             txtState.Enabled = isEnable;
-            ddlCountry.Enabled = isEnable;
+            cmbCountryName.Enabled = isEnable;
         }
 
         private void FillDataGridView()
@@ -71,10 +71,10 @@ namespace Shaheen
                 txtState.Focus();
                 isSuccess = false;
             }
-            else if (ddlCountry.SelectedIndex <= 0)
+            else if (cmbCountryName.SelectedIndex <= 0)
             {
                 MessageBox.Show("Select country", "Shaheen Weekly", MessageBoxButtons.OK);
-                ddlCountry.Focus();
+                cmbCountryName.Focus();
                 isSuccess = false;
             }
             else
@@ -105,7 +105,7 @@ namespace Shaheen
                 var state = new State();
                 state.stateId = state_id;
                 state.stateName = txtState.Text;
-                state.countryId = Convert.ToInt32(ddlCountry.SelectedValue);
+                state.countryId = Convert.ToInt32(cmbCountryName.SelectedValue);
                 int res = stateBll.SaveState(state);
                 if (res > 0)
                 {
@@ -127,8 +127,6 @@ namespace Shaheen
             if (btnClose.Text == "Close")
             {
                 this.Close();
-                MDIMain.isState = false;
-                frmMain.isState = false;
             }
             else
             {
@@ -147,7 +145,7 @@ namespace Shaheen
             int rowIndex = e.RowIndex;
             DataGridViewRow grdRow = dgvState.Rows[rowIndex];
             state_id = Convert.ToInt32(grdRow.Cells["stateId"].Value);
-            ddlCountry.SelectedValue = grdRow.Cells["countryId"].Value;
+            cmbCountryName.SelectedValue = grdRow.Cells["countryId"].Value;
             txtState.Text = Convert.ToString(grdRow.Cells["colStateName"].Value);
             btnNew.Text = "Edit";
             btnClose.Text = "Cancel";

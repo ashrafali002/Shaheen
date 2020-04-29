@@ -1,77 +1,135 @@
 ﻿using Shaheen.BLL;
-using Shaheen.DAL;
 using Shaheen.ShaheenDB;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shaheen
 {
-    public partial class frmCustomer : BaseForm
+    public partial class frmSubscription : BaseForm
     {
-        public frmCustomer()
+        public SubscriptionBLL subscriptionBll;
+        public frmSubscription()
         {
             InitializeComponent();
+            subscriptionBll = new SubscriptionBLL();
         }
-        private void frmCustomer_Load(object sender, EventArgs e)
+
+        private void frmSubscription_Load(object sender, EventArgs e)
         {
             Dropdownlists();
             rdoCash.Checked = true;
             dtpChequeDate.Value = DateTime.Now;
             dtpEndDate.Value = DateTime.Now;
-            dtpMO.Value = DateTime.Now;
             dtpPaymentDate.Value = DateTime.Now;
             dtpStartDate.Value = DateTime.Now;
             dtpSubscriptionDate.Value = DateTime.Now;
         }
+
         private void Dropdownlists()
         {
-            var agentDAL = new AgentDAL();
-            var agentList = agentDAL.AgentList();
+            var agentBll = new AgentBLL();
+            var agentList = agentBll.AgentList();
             agentList.Insert(0, new Agent { agentId = 0, agentName = "---Select Agent---" });
             cmbAgent.DataSource = agentList;
             cmbAgent.DisplayMember = "agentName";
             cmbAgent.ValueMember = "agentId";
 
-            var areaDAL = new AreaDAL();
-            var areaList = areaDAL.AreaList();
+            var areaBll = new AreaBLL();
+            var areaList = areaBll.AreaList();
             areaList.Insert(0, new Area { areaId = 0, areaName = "---Select Area---", cityId = 0 });
             cmbArea.DataSource = areaList;
             cmbArea.DisplayMember = "areaName";
             cmbArea.ValueMember = "areaId";
 
-            var cityDAL = new CityDAL();
-            var cityList = cityDAL.CityList();
+            var cityBll = new CityBLL();
+            var cityList = cityBll.CityList();
             cityList.Insert(0, new City { cityId = 0, cityName = "---Select City---", districtId = 0 });
             cmbCity.DataSource = cityList;
             cmbCity.DisplayMember = "cityName";
             cmbCity.ValueMember = "cityId";
 
-            var districtDAL = new DistrictDAL();
-            var districtList = districtDAL.DistrictList();
+            var districtBll = new DistrictBLL();
+            var districtList = districtBll.DistrictList();
             districtList.Insert(0, new District { districtId = 0, districtName = "---Select District---", stateId = 0 });
             cmbDistrict.DataSource = districtList;
             cmbDistrict.DisplayMember = "districtName";
             cmbDistrict.ValueMember = "districtId";
 
-            var stateDAL = new StateDAL();
-            var stateList = stateDAL.StateList();
+            var stateBll = new StateBLL();
+            var stateList = stateBll.StateList();
             stateList.Insert(0, new State { stateId = 0, stateName = "---Select State---", countryId = 0 });
             cmbState.DataSource = stateList;
             cmbState.DisplayMember = "stateName";
             cmbState.ValueMember = "stateId";
 
-            var countryDAL = new CountryDAL();
-            var countryList = countryDAL.CountryList();
+            var countryBll = new CountryBLL();
+            var countryList = countryBll.CountryList();
             countryList.Insert(0, new Country { countryId = 0, countryName = "---Select Country---" });
             cmbCountry.DataSource = countryList;
             cmbCountry.DisplayMember = "countryName";
             cmbCountry.ValueMember = "countryId";
         }
+
         private void btnClose_Click(object sender, EventArgs e)
         {
-            MDIMain.isCustomer = false;
             this.Close();
         }
+        public void ClearControls()
+        {
+            foreach (Control c in grpPerson.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = string.Empty;
+                }
+                else if (c is ComboBox)
+                {
+                    ((ComboBox)c).SelectedIndex = 0;
+                }
+                else
+                {
+                    //Contingency Plan
+                }
+            }
+            foreach (Control c in grpSubscription.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = string.Empty;
+                }
+                else if (c is DateTimePicker)
+                {
+                    ((DateTimePicker)c).Value = DateTime.Now;
+                }
+                else
+                {
+                    //Contingency Plan
+                }
+            }
+            foreach (Control c in grpPayment.Controls)
+            {
+                if (c is TextBox)
+                {
+                    c.Text = string.Empty;
+                }
+                else if (c is DateTimePicker)
+                {
+                    ((DateTimePicker)c).Value = DateTime.Now;
+                }
+                else
+                {
+                    //Contingency Plan
+                }
+            }
+        }        
+
         private bool isValid()
         {
             bool isRes = true;
@@ -87,7 +145,7 @@ namespace Shaheen
                 txtCode.Focus();
                 isRes = false;
             }
-            else if (CheckDuplicateSubscription(txtCode.Text))
+            else if (subscriptionBll.IsDuplicateSubscriptionCode(0, txtCode.Text))
             {
                 MessageBox.Show("Duplicate customer code found.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
@@ -141,7 +199,7 @@ namespace Shaheen
                 txtMobile.Focus();
                 isRes = false;
             }
-            else if (!this.checkEmail(txtEmail.Text))
+            else if (!CommonFunctions.checkEmail(txtEmail.Text))
             {
                 MessageBox.Show("Invalid email format.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
@@ -173,52 +231,34 @@ namespace Shaheen
                 isRes = false;
             }
 
-            else if (string.IsNullOrEmpty(txtAmountPaid.Text))
+            else if (string.IsNullOrEmpty(txtPaidAmout.Text))
             {
                 MessageBox.Show("Paid Amount is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtAmountPaid.Focus();
+                txtPaidAmout.Focus();
                 isRes = false;
             }
-
             else if (string.IsNullOrEmpty(txtReceiptNo.Text))
             {
                 MessageBox.Show("Receipt no is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtReceiptNo.Focus();
                 isRes = false;
             }
-
             else if (dtpStartDate.Value >= dtpEndDate.Value)
             {
                 MessageBox.Show("Enddate should be greater than Startdate.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtReceiptNo.Focus();
                 isRes = false;
             }
-
-            else if (rdoDD.Checked)
+            else if (rdoDD.Checked || rdoCheque.Checked || rdoMO.Checked)
             {
 
                 if (string.IsNullOrEmpty(txtChequeNo.Text))
                 {
-                    MessageBox.Show("DD no is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("DD/Cheque/MO number is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtReceiptNo.Focus();
                     isRes = false;
                 }
-                else if (string.IsNullOrEmpty(txtBankname.Text))
-                {
-                    MessageBox.Show("Bank name is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtReceiptNo.Focus();
-                    isRes = false;
-                }
-            }
-            else if (rdoCheque.Checked)
-            {
-                if (string.IsNullOrEmpty(txtChequeNo.Text))
-                {
-                    MessageBox.Show("Cheque no is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtReceiptNo.Focus();
-                    isRes = false;
-                }
-                else if (string.IsNullOrEmpty(txtBankname.Text))
+                else if (string.IsNullOrEmpty(txtBankName.Text))
                 {
                     MessageBox.Show("Bank name is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtReceiptNo.Focus();
@@ -231,25 +271,7 @@ namespace Shaheen
             }
             return isRes;
         }
-        private bool CheckDuplicateSubscription(string subscriptionCode)
-        {
-            var subscriptionBll = new SubscriptionBLL();
-            return false;
-        }
-        private bool checkEmail(string email)
-        {
-            bool isValid = false;
-            try
-            {
-                new System.Net.Mail.MailAddress(email);
-                isValid = true;
-            }
-            catch (Exception)
-            {
-                isValid = false;
-            }
-            return isValid;
-        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (isValid())
@@ -266,6 +288,7 @@ namespace Shaheen
                             int paymentId = SavePayment(subscriptionId, context);
                             transaction.Commit();
                             MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            ClearControls();
                         }
                         catch (Exception)
                         {
@@ -277,6 +300,7 @@ namespace Shaheen
 
             }
         }
+
         public int SavePerson(ShaheenEntities context)
         {
             var person = new Person();
@@ -333,60 +357,24 @@ namespace Shaheen
             else if (rdoMO.Checked)
                 payment.paymentType = PaymentType.MO.ToString();
             payment.receiptNo = txtReceiptNo.Text;
-            payment.amountPaid = Convert.ToDecimal(txtAmountPaid.Text);
-            payment.bankName = txtBankname.Text;
+            payment.amountPaid = Convert.ToDecimal(txtPaidAmout.Text);
+            payment.bankName = txtBankName.Text;
             payment.chequeDate = dtpChequeDate.Value;
-            payment.chequeNo = txtChequeNo.Text;
-            payment.moDate = dtpMO.Value;
+            payment.chequeNo = txtChequeNo.Text;            
             payment.paymentDate = dtpPaymentDate.Value;
             var res = context.Payments.Add(payment);
             context.SaveChanges();
             return res.paymentId;
         }
-        private void rdoCash_CheckedChanged(object sender, EventArgs e)
+
+        private void txtPIN_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (rdoCash.Checked)
+            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '\b'))
             {
-                dtpPaymentDate.Enabled = true;
-                dtpMO.Enabled = false;
-                txtChequeNo.ReadOnly = true;
-                dtpChequeDate.Enabled = false;
-                txtBankname.ReadOnly = true;
+                e.Handled = true;
             }
         }
-        private void rdoDD_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rdoDD.Checked)
-            {
-                dtpPaymentDate.Enabled = true;
-                dtpMO.Enabled = false;
-                txtChequeNo.ReadOnly = false;
-                dtpChequeDate.Enabled = true;
-                txtBankname.ReadOnly = false;
-            }
-        }
-        private void rdoCheque_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rdoCheque.Checked)
-            {
-                dtpPaymentDate.Enabled = true;
-                dtpMO.Enabled = false;
-                txtChequeNo.ReadOnly = false;
-                dtpChequeDate.Enabled = true;
-                txtBankname.ReadOnly = false;
-            }
-        }
-        private void rdoMO_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rdoMO.Checked)
-            {
-                dtpPaymentDate.Enabled = true;
-                dtpMO.Enabled = true;
-                txtChequeNo.ReadOnly = true;
-                dtpChequeDate.Enabled = false;
-                txtBankname.ReadOnly = true;
-            }
-        }
+
         private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '\b'))
@@ -394,15 +382,8 @@ namespace Shaheen
                 e.Handled = true;
             }
         }
-        private void txtAmountPaid_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '\b'))
-            {
-                e.Handled = true;
-            }
 
-        }
-        private void txtPIN_KeyPress(object sender, KeyPressEventArgs e)
+        private void txtPaidAmout_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '\b'))
             {
