@@ -28,11 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpAgent = new System.Windows.Forms.GroupBox();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnNew = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -61,11 +58,24 @@
             this.txtName = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnNew = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.dgvAgent = new System.Windows.Forms.DataGridView();
             this.colAgentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAgentAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.agentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.districtId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cityId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.areaId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PIN = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.grpAgent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgent)).BeginInit();
@@ -109,42 +119,6 @@
             this.grpAgent.TabIndex = 1;
             this.grpAgent.TabStop = false;
             this.grpAgent.Text = "Add / Edit Agent";
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(400, 14);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 30);
-            this.btnClose.TabIndex = 32;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnNew
-            // 
-            this.btnNew.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Location = new System.Drawing.Point(244, 14);
-            this.btnNew.Name = "btnNew";
-            this.btnNew.Size = new System.Drawing.Size(75, 30);
-            this.btnNew.TabIndex = 33;
-            this.btnNew.Text = "New";
-            this.btnNew.UseVisualStyleBackColor = false;
-            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(322, 14);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 30);
-            this.btnSave.TabIndex = 31;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label2
             // 
@@ -449,6 +423,42 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Name :";
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(400, 14);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 30);
+            this.btnClose.TabIndex = 32;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnNew
+            // 
+            this.btnNew.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNew.Location = new System.Drawing.Point(244, 14);
+            this.btnNew.Name = "btnNew";
+            this.btnNew.Size = new System.Drawing.Size(75, 30);
+            this.btnNew.TabIndex = 33;
+            this.btnNew.Text = "New";
+            this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Location = new System.Drawing.Point(322, 14);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 30);
+            this.btnSave.TabIndex = 31;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // dgvAgent
             // 
             this.dgvAgent.AllowUserToAddRows = false;
@@ -463,23 +473,35 @@
             this.colAgentName,
             this.colAgentAddress,
             this.colCityName,
-            this.colDelete});
+            this.colDelete,
+            this.agentId,
+            this.countryId,
+            this.stateId,
+            this.districtId,
+            this.cityId,
+            this.areaId,
+            this.PIN,
+            this.phone,
+            this.mobile,
+            this.email});
             this.dgvAgent.EnableHeadersVisualStyles = false;
-            this.dgvAgent.Location = new System.Drawing.Point(513, 14);
+            this.dgvAgent.Location = new System.Drawing.Point(513, 12);
             this.dgvAgent.MultiSelect = false;
             this.dgvAgent.Name = "dgvAgent";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAgent.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAgent.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvAgent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvAgent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAgent.Size = new System.Drawing.Size(646, 454);
+            this.dgvAgent.Size = new System.Drawing.Size(646, 456);
             this.dgvAgent.TabIndex = 6;
+            this.dgvAgent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgent_CellContentClick);
+            this.dgvAgent.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAgent_RowHeaderMouseDoubleClick);
             // 
             // colAgentName
             // 
@@ -514,6 +536,76 @@
             this.colDelete.Text = "Delete";
             this.colDelete.ToolTipText = "Delete";
             this.colDelete.UseColumnTextForButtonValue = true;
+            // 
+            // agentId
+            // 
+            this.agentId.DataPropertyName = "agentId";
+            this.agentId.HeaderText = "agentId";
+            this.agentId.Name = "agentId";
+            this.agentId.Visible = false;
+            // 
+            // countryId
+            // 
+            this.countryId.DataPropertyName = "countryId";
+            this.countryId.HeaderText = "countryId";
+            this.countryId.Name = "countryId";
+            this.countryId.Visible = false;
+            // 
+            // stateId
+            // 
+            this.stateId.DataPropertyName = "stateId";
+            this.stateId.HeaderText = "stateId";
+            this.stateId.Name = "stateId";
+            this.stateId.Visible = false;
+            // 
+            // districtId
+            // 
+            this.districtId.DataPropertyName = "districtId";
+            this.districtId.HeaderText = "districtId";
+            this.districtId.Name = "districtId";
+            this.districtId.Visible = false;
+            // 
+            // cityId
+            // 
+            this.cityId.DataPropertyName = "cityId";
+            this.cityId.HeaderText = "cityId";
+            this.cityId.Name = "cityId";
+            this.cityId.Visible = false;
+            // 
+            // areaId
+            // 
+            this.areaId.DataPropertyName = "areaId";
+            this.areaId.HeaderText = "areaId";
+            this.areaId.Name = "areaId";
+            this.areaId.Visible = false;
+            // 
+            // PIN
+            // 
+            this.PIN.DataPropertyName = "pin";
+            this.PIN.HeaderText = "PIN";
+            this.PIN.Name = "PIN";
+            this.PIN.Visible = false;
+            // 
+            // phone
+            // 
+            this.phone.DataPropertyName = "phone";
+            this.phone.HeaderText = "phone";
+            this.phone.Name = "phone";
+            this.phone.Visible = false;
+            // 
+            // mobile
+            // 
+            this.mobile.DataPropertyName = "mobile";
+            this.mobile.HeaderText = "mobile";
+            this.mobile.Name = "mobile";
+            this.mobile.Visible = false;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "email";
+            this.email.Name = "email";
+            this.email.Visible = false;
             // 
             // groupBox1
             // 
@@ -580,10 +672,20 @@
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridView dgvAgent;
+        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAgentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAgentAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCityName;
         private System.Windows.Forms.DataGridViewButtonColumn colDelete;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn agentId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countryId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn stateId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn districtId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cityId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn areaId;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PIN;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phone;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mobile;
+        private System.Windows.Forms.DataGridViewTextBoxColumn email;
     }
 }

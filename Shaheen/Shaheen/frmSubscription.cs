@@ -79,7 +79,6 @@ namespace Shaheen
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            frmMain.isSubscription = false;
             this.Close();
         }
         public void ClearControls()

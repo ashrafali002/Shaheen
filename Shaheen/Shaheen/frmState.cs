@@ -127,8 +127,6 @@ namespace Shaheen
             if (btnClose.Text == "Close")
             {
                 this.Close();
-                MDIMain.isState = false;
-                frmMain.isState = false;
             }
             else
             {

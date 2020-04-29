@@ -131,7 +131,6 @@ namespace Shaheen
             if (btnClose.Text == "Close")
             {
                 this.Close();
-                frmMain.isCity = false;
             }
             else
             {

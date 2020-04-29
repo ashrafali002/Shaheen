@@ -195,7 +195,7 @@ namespace Shaheen
             else
             {
                 var agent = new Agent();
-                agent.areaId = agent_id;
+                agent.agentId = agent_id;
                 agent.agentName = txtName.Text;
                 agent.agentAddress = txtAddress.Text;
                 agent.countryId = Convert.ToInt32(cmbCountry.SelectedValue);
@@ -227,7 +227,6 @@ namespace Shaheen
             if (btnClose.Text == "Close")
             {
                 this.Close();
-                frmMain.isAgent = false;
             }
             else
             {
@@ -238,6 +237,42 @@ namespace Shaheen
                 btnSave.Enabled = false;
                 btnNew.Text = "New";
             }
+        }
+
+        private void dgvAgent_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int columnIndex = e.ColumnIndex;
+            int rowIndex = e.RowIndex;
+            if (dgvAgent.Columns[columnIndex] is DataGridViewButtonColumn && rowIndex >= 0)
+            {
+                if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    agent_id = Convert.ToInt32(dgvAgent.Rows[rowIndex].Cells["agentId"].Value);
+                    agentBll.DeleteAgent(agent_id);
+                    FillDataGridView();
+                    ClearControls();
+                }
+            }
+        }
+
+        private void dgvAgent_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            DataGridViewRow grdRow = dgvAgent.Rows[rowIndex];
+            agent_id = Convert.ToInt32(grdRow.Cells["agentId"].Value);
+            txtName.Text = Convert.ToString(grdRow.Cells["colAgentName"].Value);
+            txtAddress.Text = Convert.ToString(grdRow.Cells["colAgentAddress"].Value);
+            cmbCountry.SelectedValue = Convert.ToInt32(grdRow.Cells["countryId"].Value);
+            cmbState.SelectedValue = Convert.ToInt32(grdRow.Cells["stateId"].Value);
+            cmbDistrict.SelectedValue = Convert.ToInt32(grdRow.Cells["districtId"].Value);
+            cmbCity.SelectedValue = Convert.ToInt32(grdRow.Cells["cityId"].Value);
+            cmbArea.SelectedValue = Convert.ToInt32(grdRow.Cells["areaId"].Value);
+            txtPIN.Text = Convert.ToString(grdRow.Cells["PIN"].Value);
+            txtPhone.Text = Convert.ToString(grdRow.Cells["phone"].Value);
+            txtMobile.Text = Convert.ToString(grdRow.Cells["mobile"].Value);
+            txtEmail.Text = Convert.ToString(grdRow.Cells["email"].Value);
+            btnNew.Text = "Edit";
+            btnClose.Text = "Cancel";
         }
     }
 }

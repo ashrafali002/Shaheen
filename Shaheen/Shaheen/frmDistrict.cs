@@ -122,7 +122,6 @@ namespace Shaheen
             if (btnClose.Text == "Close")
             {
                 this.Close();
-                frmMain.isDistrict= false;
             }
             else
             {

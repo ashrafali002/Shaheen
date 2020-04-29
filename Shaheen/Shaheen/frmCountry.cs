@@ -49,8 +49,6 @@ namespace Shaheen
             if (btnClose.Text == "Close")
             {
                 this.Close();
-                MDIMain.isCountry = false;
-                frmMain.isCountry = false;
             }
             else
             {

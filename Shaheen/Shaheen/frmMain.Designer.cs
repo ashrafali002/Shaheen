@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAgent = new System.Windows.Forms.Button();
             this.btnArea = new System.Windows.Forms.Button();
             this.btnCity = new System.Windows.Forms.Button();
             this.btnDistrict = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.lblLogoText = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlForm = new System.Windows.Forms.Panel();
-            this.btnAgent = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +62,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 823);
             this.panel1.TabIndex = 0;
+            // 
+            // btnAgent
+            // 
+            this.btnAgent.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgent.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgent.Location = new System.Drawing.Point(11, 420);
+            this.btnAgent.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAgent.Name = "btnAgent";
+            this.btnAgent.Size = new System.Drawing.Size(265, 38);
+            this.btnAgent.TabIndex = 9;
+            this.btnAgent.Text = "Add / Edit Agent";
+            this.btnAgent.UseVisualStyleBackColor = false;
+            this.btnAgent.Click += new System.EventHandler(this.btnAgent_Click);
             // 
             // btnArea
             // 
@@ -201,20 +215,6 @@
             this.pnlForm.Size = new System.Drawing.Size(1058, 726);
             this.pnlForm.TabIndex = 2;
             // 
-            // btnAgent
-            // 
-            this.btnAgent.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgent.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgent.Location = new System.Drawing.Point(11, 420);
-            this.btnAgent.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAgent.Name = "btnAgent";
-            this.btnAgent.Size = new System.Drawing.Size(265, 38);
-            this.btnAgent.TabIndex = 9;
-            this.btnAgent.Text = "Add / Edit Agent";
-            this.btnAgent.UseVisualStyleBackColor = false;
-            this.btnAgent.Click += new System.EventHandler(this.btnAgent_Click);
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -226,7 +226,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
-            this.Text = "frmMain";
+            this.Text = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
