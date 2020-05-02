@@ -172,7 +172,7 @@
             this.grpPerson.Controls.Add(this.panel3);
             this.grpPerson.Controls.Add(this.label1);
             this.grpPerson.ForeColor = System.Drawing.Color.Black;
-            this.grpPerson.Location = new System.Drawing.Point(12, 12);
+            this.grpPerson.Location = new System.Drawing.Point(11, 12);
             this.grpPerson.Name = "grpPerson";
             this.grpPerson.Size = new System.Drawing.Size(564, 414);
             this.grpPerson.TabIndex = 0;
@@ -219,6 +219,7 @@
             this.txtEmail.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(20, 373);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtEmail.MaxLength = 300;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(245, 20);
             this.txtEmail.TabIndex = 29;
@@ -240,6 +241,7 @@
             this.txtMobile.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMobile.Location = new System.Drawing.Point(302, 320);
             this.txtMobile.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtMobile.MaxLength = 15;
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(245, 20);
             this.txtMobile.TabIndex = 26;
@@ -272,6 +274,7 @@
             this.txtPhone.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(20, 320);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPhone.MaxLength = 15;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(245, 20);
             this.txtPhone.TabIndex = 23;
@@ -459,6 +462,7 @@
             this.txtAddress.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(20, 106);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtAddress.MaxLength = 500;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(525, 20);
             this.txtAddress.TabIndex = 7;
@@ -480,6 +484,7 @@
             this.txtName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(181, 48);
             this.txtName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtName.MaxLength = 100;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(364, 20);
             this.txtName.TabIndex = 4;
@@ -512,6 +517,7 @@
             this.txtCode.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCode.Location = new System.Drawing.Point(20, 48);
             this.txtCode.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtCode.MaxLength = 10;
             this.txtCode.Name = "txtCode";
             this.txtCode.Size = new System.Drawing.Size(135, 20);
             this.txtCode.TabIndex = 1;
@@ -554,7 +560,7 @@
             this.grpSubscription.Controls.Add(this.panel1);
             this.grpSubscription.Controls.Add(this.label14);
             this.grpSubscription.Controls.Add(this.dtpSubscriptionDate);
-            this.grpSubscription.Location = new System.Drawing.Point(582, 13);
+            this.grpSubscription.Location = new System.Drawing.Point(581, 13);
             this.grpSubscription.Name = "grpSubscription";
             this.grpSubscription.Size = new System.Drawing.Size(278, 413);
             this.grpSubscription.TabIndex = 1;
@@ -579,6 +585,7 @@
             this.txtNote.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNote.Location = new System.Drawing.Point(18, 319);
             this.txtNote.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtNote.MaxLength = 1000;
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
             this.txtNote.Size = new System.Drawing.Size(245, 67);
@@ -612,6 +619,7 @@
             this.txtAmount.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAmount.Location = new System.Drawing.Point(18, 266);
             this.txtAmount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtAmount.MaxLength = 10;
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(245, 20);
             this.txtAmount.TabIndex = 10;
@@ -689,9 +697,11 @@
             this.txtDuration.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDuration.Location = new System.Drawing.Point(18, 105);
             this.txtDuration.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtDuration.MaxLength = 3;
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.Size = new System.Drawing.Size(245, 20);
             this.txtDuration.TabIndex = 3;
+            this.txtDuration.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDuration_KeyPress);
             // 
             // panel1
             // 
@@ -746,7 +756,7 @@
             this.grpPayment.Controls.Add(this.panel12);
             this.grpPayment.Controls.Add(this.label20);
             this.grpPayment.Controls.Add(this.panel11);
-            this.grpPayment.Location = new System.Drawing.Point(12, 433);
+            this.grpPayment.Location = new System.Drawing.Point(11, 425);
             this.grpPayment.Name = "grpPayment";
             this.grpPayment.Size = new System.Drawing.Size(848, 200);
             this.grpPayment.TabIndex = 2;
@@ -771,6 +781,7 @@
             this.txtReceiptNo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtReceiptNo.Location = new System.Drawing.Point(588, 165);
             this.txtReceiptNo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtReceiptNo.MaxLength = 20;
             this.txtReceiptNo.Name = "txtReceiptNo";
             this.txtReceiptNo.Size = new System.Drawing.Size(245, 20);
             this.txtReceiptNo.TabIndex = 17;
@@ -803,6 +814,7 @@
             this.txtBankName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBankName.Location = new System.Drawing.Point(20, 165);
             this.txtBankName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtBankName.MaxLength = 200;
             this.txtBankName.Name = "txtBankName";
             this.txtBankName.Size = new System.Drawing.Size(525, 20);
             this.txtBankName.TabIndex = 14;
@@ -835,6 +847,7 @@
             this.txtPaidAmout.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPaidAmout.Location = new System.Drawing.Point(588, 110);
             this.txtPaidAmout.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtPaidAmout.MaxLength = 10;
             this.txtPaidAmout.Name = "txtPaidAmout";
             this.txtPaidAmout.Size = new System.Drawing.Size(245, 20);
             this.txtPaidAmout.TabIndex = 11;
@@ -890,6 +903,7 @@
             this.txtChequeNo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtChequeNo.Location = new System.Drawing.Point(20, 110);
             this.txtChequeNo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtChequeNo.MaxLength = 20;
             this.txtChequeNo.Name = "txtChequeNo";
             this.txtChequeNo.Size = new System.Drawing.Size(245, 20);
             this.txtChequeNo.TabIndex = 6;
@@ -966,9 +980,9 @@
             this.rdoCash.Name = "rdoCash";
             this.rdoCash.Size = new System.Drawing.Size(63, 23);
             this.rdoCash.TabIndex = 0;
-            this.rdoCash.TabStop = true;
             this.rdoCash.Text = "Cash";
             this.rdoCash.UseVisualStyleBackColor = true;
+            this.rdoCash.CheckedChanged += new System.EventHandler(this.rdoCash_CheckedChanged);
             // 
             // rdoDD
             // 
@@ -977,7 +991,6 @@
             this.rdoDD.Name = "rdoDD";
             this.rdoDD.Size = new System.Drawing.Size(127, 23);
             this.rdoDD.TabIndex = 1;
-            this.rdoDD.TabStop = true;
             this.rdoDD.Text = "Demand Draft";
             this.rdoDD.UseVisualStyleBackColor = true;
             // 
@@ -988,7 +1001,6 @@
             this.rdoCheque.Name = "rdoCheque";
             this.rdoCheque.Size = new System.Drawing.Size(80, 23);
             this.rdoCheque.TabIndex = 2;
-            this.rdoCheque.TabStop = true;
             this.rdoCheque.Text = "Cheque";
             this.rdoCheque.UseVisualStyleBackColor = true;
             // 
@@ -999,7 +1011,6 @@
             this.rdoMO.Name = "rdoMO";
             this.rdoMO.Size = new System.Drawing.Size(117, 23);
             this.rdoMO.TabIndex = 3;
-            this.rdoMO.TabStop = true;
             this.rdoMO.Text = "Money Order";
             this.rdoMO.UseVisualStyleBackColor = true;
             // 
@@ -1007,7 +1018,7 @@
             // 
             this.grpButtons.Controls.Add(this.btnClose);
             this.grpButtons.Controls.Add(this.btnSave);
-            this.grpButtons.Location = new System.Drawing.Point(12, 636);
+            this.grpButtons.Location = new System.Drawing.Point(11, 624);
             this.grpButtons.Name = "grpButtons";
             this.grpButtons.Size = new System.Drawing.Size(848, 59);
             this.grpButtons.TabIndex = 3;
@@ -1018,11 +1029,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(870, 706);
-            this.Controls.Add(this.grpButtons);
+            this.ClientSize = new System.Drawing.Size(870, 694);
             this.Controls.Add(this.grpPayment);
             this.Controls.Add(this.grpSubscription);
             this.Controls.Add(this.grpPerson);
+            this.Controls.Add(this.grpButtons);
             this.Name = "frmSubscription";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Subscription";

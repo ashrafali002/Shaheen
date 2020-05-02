@@ -29,11 +29,11 @@ namespace Shaheen.ShaheenDB
         public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<District> Districts { get; set; }
-        public virtual DbSet<Payment> Payments { get; set; }
-        public virtual DbSet<Person> People { get; set; }
         public virtual DbSet<State> States { get; set; }
         public virtual DbSet<Subscription> Subscriptions { get; set; }
         public virtual DbSet<SubscriptionDetail> SubscriptionDetails { get; set; }
+        public virtual DbSet<Person> People { get; set; }
         public virtual DbSet<Agent> Agents { get; set; }
+        public virtual DbSet<Payment> Payments { get; set; }
     }
 }
