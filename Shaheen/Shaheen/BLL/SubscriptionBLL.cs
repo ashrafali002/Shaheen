@@ -1,4 +1,6 @@
 ﻿using Shaheen.DAL;
+using Shaheen.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Shaheen.BLL
@@ -23,6 +25,11 @@ namespace Shaheen.BLL
                 isDuplicateFound = true;
             }
             return isDuplicateFound;
+        }
+
+        public List<SubscriptionModel> SubscriptionListWhole()
+        {
+            return subscriptionDal.SubscriptionListWhole();
         }
     }
 }

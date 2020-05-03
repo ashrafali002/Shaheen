@@ -161,8 +161,9 @@
             this.dgvArea.AllowUserToOrderColumns = true;
             this.dgvArea.AllowUserToResizeColumns = false;
             this.dgvArea.AllowUserToResizeRows = false;
+            this.dgvArea.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvArea.BackgroundColor = System.Drawing.Color.White;
-            this.dgvArea.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvArea.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvArea.ColumnHeadersHeight = 35;
             this.dgvArea.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colAreaName,
@@ -192,20 +193,20 @@
             // colAreaName
             // 
             this.colAreaName.DataPropertyName = "areaName";
+            this.colAreaName.FillWeight = 130.4348F;
             this.colAreaName.HeaderText = "Area";
             this.colAreaName.Name = "colAreaName";
             this.colAreaName.ReadOnly = true;
-            this.colAreaName.Width = 190;
             // 
             // colCityName
             // 
             this.colCityName.DataPropertyName = "cityName";
+            this.colCityName.FillWeight = 96.89352F;
             this.colCityName.HeaderText = "City";
             this.colCityName.Name = "colCityName";
             this.colCityName.ReadOnly = true;
             this.colCityName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             this.colCityName.ToolTipText = "City";
-            this.colCityName.Width = 145;
             // 
             // areaId
             // 
@@ -223,6 +224,7 @@
             // 
             // colDelete
             // 
+            this.colDelete.FillWeight = 72.67169F;
             this.colDelete.HeaderText = "Delete";
             this.colDelete.Name = "colDelete";
             this.colDelete.Text = "Delete";

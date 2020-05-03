@@ -102,6 +102,7 @@
           <Property Name="agentId" Type="int" Nullable="false" />
           <Property Name="pendingAmount" Type="money" Nullable="false" />
           <Property Name="subscriptionDate" Type="datetime" Nullable="false" />
+          <Property Name="status" Type="int" />
         </EntityType>
         <EntityType Name="SubscriptionDetail">
           <Key>
@@ -114,6 +115,7 @@
           <Property Name="subscriptionStartDate" Type="datetime" Nullable="false" />
           <Property Name="subscriptionEndDate" Type="datetime" Nullable="false" />
           <Property Name="note" Type="nvarchar" MaxLength="1000" />
+          <Property Name="status" Type="bit" />
         </EntityType>
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Agent" EntityType="Self.Agent" store:Type="Tables" />
@@ -137,11 +139,11 @@
           <EntitySet Name="Countries" EntityType="Model.Country" />
           <EntitySet Name="Districts" EntityType="Model.District" />
           <EntitySet Name="States" EntityType="Model.State" />
-          <EntitySet Name="Subscriptions" EntityType="Model.Subscription" />
-          <EntitySet Name="SubscriptionDetails" EntityType="Model.SubscriptionDetail" />
           <EntitySet Name="People" EntityType="Model.Person" />
           <EntitySet Name="Agents" EntityType="Model.Agent" />
           <EntitySet Name="Payments" EntityType="Model.Payment" />
+          <EntitySet Name="Subscriptions" EntityType="Model.Subscription" />
+          <EntitySet Name="SubscriptionDetails" EntityType="Model.SubscriptionDetail" />
         </EntityContainer>
         <EntityType Name="Area">
           <Key>
@@ -181,29 +183,6 @@
           <Property Name="stateId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="stateName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="countryId" Type="Int32" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Subscription">
-          <Key>
-            <PropertyRef Name="subscriptionId" />
-          </Key>
-          <Property Name="subscriptionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="subscriptionCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="personId" Type="Int32" Nullable="false" />
-          <Property Name="agentId" Type="Int32" Nullable="false" />
-          <Property Name="pendingAmount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-          <Property Name="subscriptionDate" Type="DateTime" Nullable="false" Precision="3" />
-        </EntityType>
-        <EntityType Name="SubscriptionDetail">
-          <Key>
-            <PropertyRef Name="subscriptionDetailId" />
-          </Key>
-          <Property Name="subscriptionDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="subscriptionId" Type="Int32" Nullable="false" />
-          <Property Name="subscriptionDuration" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-          <Property Name="subscriptionAmount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
-          <Property Name="subscriptionStartDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="subscriptionEndDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="Person">
           <Key>
@@ -252,6 +231,31 @@
           <Property Name="amountPaid" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
           <Property Name="receiptNo" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="bankName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Subscription">
+          <Key>
+            <PropertyRef Name="subscriptionId" />
+          </Key>
+          <Property Name="subscriptionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="subscriptionCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="agentId" Type="Int32" Nullable="false" />
+          <Property Name="pendingAmount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="subscriptionDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="SubscriptionDetail">
+          <Key>
+            <PropertyRef Name="subscriptionDetailId" />
+          </Key>
+          <Property Name="subscriptionDetailId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="subscriptionId" Type="Int32" Nullable="false" />
+          <Property Name="subscriptionDuration" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="subscriptionAmount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="subscriptionStartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="subscriptionEndDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="note" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="Boolean" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -303,31 +307,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Subscriptions">
-            <EntityTypeMapping TypeName="Model.Subscription">
-              <MappingFragment StoreEntitySet="Subscription">
-                <ScalarProperty Name="subscriptionDate" ColumnName="subscriptionDate" />
-                <ScalarProperty Name="pendingAmount" ColumnName="pendingAmount" />
-                <ScalarProperty Name="agentId" ColumnName="agentId" />
-                <ScalarProperty Name="personId" ColumnName="personId" />
-                <ScalarProperty Name="subscriptionCode" ColumnName="subscriptionCode" />
-                <ScalarProperty Name="subscriptionId" ColumnName="subscriptionId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="SubscriptionDetails">
-            <EntityTypeMapping TypeName="Model.SubscriptionDetail">
-              <MappingFragment StoreEntitySet="SubscriptionDetail">
-                <ScalarProperty Name="note" ColumnName="note" />
-                <ScalarProperty Name="subscriptionEndDate" ColumnName="subscriptionEndDate" />
-                <ScalarProperty Name="subscriptionStartDate" ColumnName="subscriptionStartDate" />
-                <ScalarProperty Name="subscriptionAmount" ColumnName="subscriptionAmount" />
-                <ScalarProperty Name="subscriptionDuration" ColumnName="subscriptionDuration" />
-                <ScalarProperty Name="subscriptionId" ColumnName="subscriptionId" />
-                <ScalarProperty Name="subscriptionDetailId" ColumnName="subscriptionDetailId" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="People">
             <EntityTypeMapping TypeName="Model.Person">
               <MappingFragment StoreEntitySet="Person">
@@ -376,6 +355,33 @@
                 <ScalarProperty Name="paymentType" ColumnName="paymentType" />
                 <ScalarProperty Name="subscriptionId" ColumnName="subscriptionId" />
                 <ScalarProperty Name="paymentId" ColumnName="paymentId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subscriptions">
+            <EntityTypeMapping TypeName="Model.Subscription">
+              <MappingFragment StoreEntitySet="Subscription">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="subscriptionDate" ColumnName="subscriptionDate" />
+                <ScalarProperty Name="pendingAmount" ColumnName="pendingAmount" />
+                <ScalarProperty Name="agentId" ColumnName="agentId" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="subscriptionCode" ColumnName="subscriptionCode" />
+                <ScalarProperty Name="subscriptionId" ColumnName="subscriptionId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubscriptionDetails">
+            <EntityTypeMapping TypeName="Model.SubscriptionDetail">
+              <MappingFragment StoreEntitySet="SubscriptionDetail">
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="note" ColumnName="note" />
+                <ScalarProperty Name="subscriptionEndDate" ColumnName="subscriptionEndDate" />
+                <ScalarProperty Name="subscriptionStartDate" ColumnName="subscriptionStartDate" />
+                <ScalarProperty Name="subscriptionAmount" ColumnName="subscriptionAmount" />
+                <ScalarProperty Name="subscriptionDuration" ColumnName="subscriptionDuration" />
+                <ScalarProperty Name="subscriptionId" ColumnName="subscriptionId" />
+                <ScalarProperty Name="subscriptionDetailId" ColumnName="subscriptionDetailId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

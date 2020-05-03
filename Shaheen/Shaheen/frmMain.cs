@@ -27,6 +27,8 @@ namespace Shaheen
 
         public frmAgent agent = null;
 
+        public frmSubscriptionList subscriptionList = null;
+
         private bool CheckOpened(string name)
         {
             FormCollection fc = Application.OpenForms;
@@ -191,6 +193,21 @@ namespace Shaheen
             agent.BringToFront();
             agent.Show();
             agent.Focus();
+        }
+
+        private void btnSubscriptionList_Click(object sender, EventArgs e)
+        {
+            CloseAllOpenForm();
+            subscriptionList = new frmSubscriptionList() { TopLevel = false };
+            subscriptionList.Location = new Point()
+            {
+                X = pnlForm.Width / 2 - subscriptionList.Width / 2,
+                Y = pnlForm.Height / 2 - subscriptionList.Height / 2
+            };
+            this.pnlForm.Controls.Add(subscriptionList);
+            subscriptionList.BringToFront();
+            subscriptionList.Show();
+            subscriptionList.Focus();
         }
     }
 }

@@ -20,5 +20,9 @@ namespace Shaheen.DAL
             var personList = context.People.ToList();
             return personList;
         }
+        public Person GetPersonById(int Id)
+        {
+            return context.People.Where(w => w.personId == Id).FirstOrDefault();
+        }
     }
 }

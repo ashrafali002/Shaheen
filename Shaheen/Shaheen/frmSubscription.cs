@@ -298,6 +298,7 @@ namespace Shaheen
             subscription.agentId = Convert.ToInt32(cmbAgent.SelectedValue);
             subscription.subscriptionDate = dtpSubscriptionDate.Value;
             subscription.subscriptionCode = txtCode.Text;
+            subscription.status = Convert.ToInt32(SubscriptionStatus.Active);
             subscription.personId = personId;
             var res = context.Subscriptions.Add(subscription);
             context.SaveChanges();
@@ -312,6 +313,7 @@ namespace Shaheen
             subscriptionDetail.subscriptionDuration = txtDuration.Text;
             subscriptionDetail.subscriptionEndDate = dtpEndDate.Value;
             subscriptionDetail.subscriptionStartDate = dtpStartDate.Value;
+            subscriptionDetail.status = true;
             var res = context.SubscriptionDetails.Add(subscriptionDetail);
             context.SaveChanges();
             return res.subscriptionId;

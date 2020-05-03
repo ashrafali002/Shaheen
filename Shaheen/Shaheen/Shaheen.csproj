@@ -43,6 +43,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.SqlServer.Compact.4.0.8876.1\lib\net40\System.Data.SqlServerCe.dll</HintPath>
@@ -71,6 +72,7 @@
     <Compile Include="BLL\CityBLL.cs" />
     <Compile Include="BLL\CountryBLL.cs" />
     <Compile Include="BLL\DistrictBLL.cs" />
+    <Compile Include="BLL\PersonBLL.cs" />
     <Compile Include="BLL\StateBLL.cs" />
     <Compile Include="BLL\SubscriptionBLL.cs" />
     <Compile Include="DAL\AgentDAL.cs" />
@@ -121,6 +123,12 @@
     <Compile Include="frmDistrict.Designer.cs">
       <DependentUpon>frmDistrict.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditPerson.Designer.cs">
+      <DependentUpon>frmEditPerson.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -145,6 +153,12 @@
     <Compile Include="frmSubscription.Designer.cs">
       <DependentUpon>frmSubscription.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSubscriptionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSubscriptionList.Designer.cs">
+      <DependentUpon>frmSubscriptionList.cs</DependentUpon>
+    </Compile>
     <Compile Include="MDIMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +170,7 @@
     <Compile Include="Models\CityDistrict.cs" />
     <Compile Include="Models\DistrictState.cs" />
     <Compile Include="Models\StateCountry.cs" />
+    <Compile Include="Models\SubscriptionModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShaheenDB\Agent.cs">
@@ -224,6 +239,9 @@
     <EmbeddedResource Include="frmDistrict.resx">
       <DependentUpon>frmDistrict.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditPerson.resx">
+      <DependentUpon>frmEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSubscription.resx">
       <DependentUpon>frmSubscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSubscriptionList.resx">
+      <DependentUpon>frmSubscriptionList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MDIMain.resx">
       <DependentUpon>MDIMain.cs</DependentUpon>
