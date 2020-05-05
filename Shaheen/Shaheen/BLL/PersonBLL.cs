@@ -19,5 +19,10 @@ namespace Shaheen.BLL
         {
             return personDal.GetPersonById(Id);
         }
+
+        public int SavePerson(Person person)
+        {
+            return personDal.SavePerson(person);
+        }
     }
 }

@@ -148,7 +148,7 @@ namespace Shaheen
             else if (subscriptionBll.IsDuplicateSubscriptionCode(0, txtCode.Text))
             {
                 MessageBox.Show("Duplicate customer code found.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtEmail.Focus();
+                txtCode.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtAddress.Text))
@@ -220,7 +220,7 @@ namespace Shaheen
             else if (dtpStartDate.Value >= dtpEndDate.Value)
             {
                 MessageBox.Show("Enddate should be greater than Startdate.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtReceiptNo.Focus();
+                dtpStartDate.Focus();
                 isRes = false;
             }
             else if (rdoDD.Checked || rdoCheque.Checked || rdoMO.Checked)
@@ -229,13 +229,13 @@ namespace Shaheen
                 if (string.IsNullOrEmpty(txtChequeNo.Text))
                 {
                     MessageBox.Show("DD/Cheque/MO number is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtReceiptNo.Focus();
+                    txtChequeNo.Focus();
                     isRes = false;
                 }
                 else if (string.IsNullOrEmpty(txtBankName.Text))
                 {
                     MessageBox.Show("Bank name is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    txtReceiptNo.Focus();
+                    txtBankName.Focus();
                     isRes = false;
                 }
             }
@@ -279,11 +279,11 @@ namespace Shaheen
             var person = new Person();
             person.personName = txtName.Text;
             person.personAddress = txtAddress.Text;
-            person.areaId = Convert.ToInt32(cmbCountry.SelectedValue);
-            person.cityId = Convert.ToInt32(cmbState.SelectedValue);
+            person.countryId = Convert.ToInt32(cmbCountry.SelectedValue);
+            person.stateId = Convert.ToInt32(cmbState.SelectedValue);
             person.districtId = Convert.ToInt32(cmbDistrict.SelectedValue);
-            person.stateId = Convert.ToInt32(cmbCity.SelectedValue);
-            person.countryId = Convert.ToInt32(cmbArea.SelectedValue);
+            person.cityId = Convert.ToInt32(cmbCity.SelectedValue);
+            person.areaId = Convert.ToInt32(cmbArea.SelectedValue);
             person.pin = txtPIN.Text;
             person.phone = txtPhone.Text;
             person.mobile = txtMobile.Text;

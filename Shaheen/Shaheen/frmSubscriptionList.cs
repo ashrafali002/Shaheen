@@ -38,7 +38,7 @@ namespace Shaheen
         private int rowIndex = 0;
         private void dgvSubscriptionList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (e.Button == MouseButtons.Right)
+            if (e.RowIndex != -1 && e.Button == MouseButtons.Right)
             {
                 rowIndex = e.RowIndex;
                 dgvSubscriptionList.Rows[rowIndex].Selected = true;
@@ -50,9 +50,20 @@ namespace Shaheen
         private void ctxmEditPerson_Click(object sender, EventArgs e)
         {
             frmEditPerson editPerson = new frmEditPerson();
-            editPerson.PersonId  = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["personId"].Value);
-            editPerson.SubscriptionCode = Convert.ToString(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionCode"].Value);
+            editPerson.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["personId"].Value);
+            editPerson.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
             if (editPerson.ShowDialog() == DialogResult.OK)
+            {
+                FillDataGridView();
+            }
+        }
+
+        private void ctxmSubscriptionDetails_Click(object sender, EventArgs e)
+        {
+            frmEditSubscription editSubscription = new frmEditSubscription();
+            editSubscription.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
+            editSubscription.SubscriptionDetailId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionDetailId"].Value);
+            if (editSubscription.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
             }

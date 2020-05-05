@@ -75,6 +75,7 @@
     <Compile Include="BLL\PersonBLL.cs" />
     <Compile Include="BLL\StateBLL.cs" />
     <Compile Include="BLL\SubscriptionBLL.cs" />
+    <Compile Include="BLL\SubscriptionDetailBLL.cs" />
     <Compile Include="DAL\AgentDAL.cs" />
     <Compile Include="DAL\AreaDAL.cs" />
     <Compile Include="DAL\BaseDAL.cs" />
@@ -128,6 +129,12 @@
     </Compile>
     <Compile Include="frmEditPerson.Designer.cs">
       <DependentUpon>frmEditPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditSubscription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditSubscription.Designer.cs">
+      <DependentUpon>frmEditSubscription.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -241,6 +248,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditPerson.resx">
       <DependentUpon>frmEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditSubscription.resx">
+      <DependentUpon>frmEditSubscription.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

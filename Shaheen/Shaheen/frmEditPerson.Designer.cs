@@ -479,7 +479,7 @@
             // 
             this.grpButtons.Controls.Add(this.btnClose);
             this.grpButtons.Controls.Add(this.btnSave);
-            this.grpButtons.Location = new System.Drawing.Point(12, 432);
+            this.grpButtons.Location = new System.Drawing.Point(12, 426);
             this.grpButtons.Name = "grpButtons";
             this.grpButtons.Size = new System.Drawing.Size(564, 59);
             this.grpButtons.TabIndex = 4;
@@ -507,12 +507,13 @@
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmEditPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 505);
+            this.ClientSize = new System.Drawing.Size(588, 500);
             this.Controls.Add(this.grpButtons);
             this.Controls.Add(this.grpPerson);
             this.Name = "frmEditPerson";

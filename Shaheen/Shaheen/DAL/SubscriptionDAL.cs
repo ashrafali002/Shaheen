@@ -3,6 +3,7 @@ using Shaheen.ShaheenDB;
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity;
 using System.Data.SqlServerCe;
 using System.Linq;
 
@@ -12,17 +13,36 @@ namespace Shaheen.DAL
     {
         public SubscriptionDAL()
         {
-            
+
         }
-        public int SaveSubscription(Subscription subscription)
+        public Subscription GetSubscriptionById(int Id)
         {
-            context.Subscriptions.Add(subscription);
-            context.SaveChanges();
-            return subscription.subscriptionId;
-        }
+            return context.Subscriptions.Where(w => w.subscriptionId == Id).FirstOrDefault();
+        }        
         public List<Subscription> GetDuplicateSubscriptionCode(int subscriptionId, string subscriptionCode)
         {
             return context.Subscriptions.Where(w => w.subscriptionCode == subscriptionCode && w.subscriptionId != subscriptionId).ToList();
+        }
+
+        public int SaveSubscription(Subscription subscription)
+        {
+            if (subscription.subscriptionId == 0)
+            {
+                context.Subscriptions.Add(subscription);
+            }
+            else
+            {
+                Subscription s = context.Subscriptions.Find(subscription.subscriptionId);
+                s.subscriptionCode = subscription.subscriptionCode;
+                s.personId = subscription.personId;
+                s.agentId = subscription.agentId;
+                s.pendingAmount = subscription.pendingAmount;
+                s.subscriptionDate = subscription.subscriptionDate;
+                s.status = subscription.status;
+                context.Entry(s).State = EntityState.Modified;
+            }
+            context.SaveChanges();
+            return subscription.subscriptionId;
         }
 
         public List<SubscriptionModel> SubscriptionListWhole()
@@ -75,34 +95,7 @@ namespace Shaheen.DAL
                     }
                 }
             }
-
             return list;
-
-            //list = context.People.Join(context.Subscriptions, p => p.personId, sub => sub.personId, (p, sub) => new { p, sub })
-            //    .Join(context.SubscriptionDetails, sub => sub.sub.subscriptionId, subd => subd.subscriptionId, (sub, subd) => new { sub, subd })
-            //    .Join(context.Areas, p => p.sub.p.areaId, a => a.areaId, (p, a) => new { p, a })
-            //    .Join(context.Cities, p => p.p.sub.p.cityId, ct => ct.cityId, (p, ct) => new { p, ct })
-            //    .Join(context.Districts, p => p.p.p.sub.p.districtId, dist => dist.districtId, (p, dist) => new { p, dist })
-            //    .Join(context.States, p => p.p.p.p.sub.p.stateId, st => st.stateId, (p, st) => new { p, st })
-            //    .Join(context.Agents, p => p.p.p.p.p.sub.sub.agentId, ag => ag.agentId, (p, ag) => new { p, ag })
-            //    .Select(m => new SubscriptionModel
-            //    {
-            //        personId = m.p.p.p.p.p.sub.p.personId,
-            //        personName = m.p.p.p.p.p.sub.p.personName,
-            //        subscriptionId = m.p.p.p.p.p.sub.sub.subscriptionId,
-            //        subscriptionCode = m.p.p.p.p.p.sub.sub.subscriptionCode,
-            //        subscriptionDate = m.p.p.p.p.p.sub.sub.subscriptionDate,
-            //        pendingAmount = m.p.p.p.p.p.sub.sub.pendingAmount,
-            //        subscriptionDetailId = m.p.p.p.p.p.subd.subscriptionDetailId,
-            //        subscriptionStartDate = m.p.p.p.p.p.subd.subscriptionStartDate,
-            //        subscriptionEndDate = m.p.p.p.p.p.subd.subscriptionEndDate,
-            //        AreaName = m.p.p.p.p.a.areaName,
-            //        cityName = m.p.p.p.ct.cityName,
-            //        districtName = m.p.p.dist.districtName,
-            //        stateName = m.p.st.stateName,
-            //        agentName = m.ag.agentName
-
-            //    }).ToList();
         }
     }
 }
