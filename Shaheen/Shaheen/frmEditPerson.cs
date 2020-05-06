@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,6 +20,10 @@ namespace Shaheen
 
         private PersonBLL personBll;
         private SubscriptionBLL subscriptionBll;
+
+        dynamic subscription = new Subscription();
+        dynamic person = new Person();
+
         public int PersonId
         {
             get { return _personId; }
@@ -90,7 +95,6 @@ namespace Shaheen
         private void frmEditPerson_Load(object sender, EventArgs e)
         {
             Dropdownlists();
-            var person = new Person();
             person = personBll.GetPersonById(_personId);
             txtName.Text = person.personName;
             txtAddress.Text = person.personAddress;
@@ -104,7 +108,6 @@ namespace Shaheen
             txtMobile.Text = person.mobile;
             txtEmail.Text = person.email;
 
-            var subscription = new Subscription();
             subscription = subscriptionBll.GetSubscriptionById(_subscriptionId);
             txtCode.Text = subscription.subscriptionCode;
             cmbAgent.SelectedValue = subscription.agentId;
@@ -181,8 +184,7 @@ namespace Shaheen
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!isValid()) return;
-            var person = new Person();
+            if (!isValid()) return;            
             person.personId = _personId;
             person.personName = txtName.Text;
             person.personAddress = txtAddress.Text;
@@ -196,8 +198,7 @@ namespace Shaheen
             person.mobile = txtMobile.Text;
             person.email = txtEmail.Text;
             personBll.SavePerson(person);
-
-            var subscription = new Subscription();
+            
             subscription.subscriptionId = _subscriptionId;
             subscription.agentId = Convert.ToInt32(cmbAgent.SelectedValue);
             subscription.subscriptionCode = txtCode.Text;

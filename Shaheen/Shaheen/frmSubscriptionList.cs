@@ -14,6 +14,7 @@ namespace Shaheen
     public partial class frmSubscriptionList : BaseForm
     {
         public SubscriptionBLL subscriptionBll;
+        private int rowIndex = 0;
         public frmSubscriptionList()
         {
             InitializeComponent();
@@ -34,8 +35,7 @@ namespace Shaheen
             dgvSubscriptionList.Columns["subscriptionEndDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
-
-        private int rowIndex = 0;
+        
         private void dgvSubscriptionList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex != -1 && e.Button == MouseButtons.Right)
