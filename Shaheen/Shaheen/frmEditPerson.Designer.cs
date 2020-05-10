@@ -65,8 +65,11 @@
             this.grpButtons = new System.Windows.Forms.GroupBox();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
             this.grpPerson.SuspendLayout();
             this.grpButtons.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpPerson
@@ -105,7 +108,7 @@
             this.grpPerson.Controls.Add(this.panel3);
             this.grpPerson.Controls.Add(this.label1);
             this.grpPerson.ForeColor = System.Drawing.Color.Black;
-            this.grpPerson.Location = new System.Drawing.Point(12, 12);
+            this.grpPerson.Location = new System.Drawing.Point(12, 43);
             this.grpPerson.Name = "grpPerson";
             this.grpPerson.Size = new System.Drawing.Size(564, 414);
             this.grpPerson.TabIndex = 1;
@@ -479,7 +482,7 @@
             // 
             this.grpButtons.Controls.Add(this.btnClose);
             this.grpButtons.Controls.Add(this.btnSave);
-            this.grpButtons.Location = new System.Drawing.Point(12, 426);
+            this.grpButtons.Location = new System.Drawing.Point(12, 457);
             this.grpButtons.Name = "grpButtons";
             this.grpButtons.Size = new System.Drawing.Size(564, 59);
             this.grpButtons.TabIndex = 4;
@@ -509,21 +512,44 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.label14);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(588, 37);
+            this.panel1.TabIndex = 38;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(7, 6);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(119, 25);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Edit Person";
+            // 
             // frmEditPerson
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(588, 500);
+            this.ClientSize = new System.Drawing.Size(588, 530);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.grpButtons);
             this.Controls.Add(this.grpPerson);
             this.Name = "frmEditPerson";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "EditPerson";
             this.Load += new System.EventHandler(this.frmEditPerson_Load);
             this.grpPerson.ResumeLayout(false);
             this.grpPerson.PerformLayout();
             this.grpButtons.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -567,5 +593,7 @@
         private System.Windows.Forms.GroupBox grpButtons;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label14;
     }
 }

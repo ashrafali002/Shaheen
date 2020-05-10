@@ -62,23 +62,24 @@ namespace Shaheen
         {
             #region Display
             personModel = personBll.GetPersonModelById(_personId);
-            txtName.Text = personModel.personName;
-            txtAddress.Text = personModel.personAddress;
-            txtCountry.Text = personModel.countryName;
-            txtState.Text = personModel.stateName;
-            txtDistrict.Text = personModel.districtName;
-            txtCity.Text = personModel.cityName;
-            txtArea.Text = personModel.areaName;
-            txtPIN.Text = personModel.pin;
-            txtPhone.Text = personModel.phone;
-            txtMobile.Text = personModel.mobile;
-            txtEmail.Text = personModel.email;
-            txtAgent.Text = AgentName;
+
+            lblAddress.Text = personModel.personAddress;
+            lblCountry.Text = personModel.countryName;
+            lblState.Text = personModel.stateName;
+            lblDistrict.Text = personModel.districtName;
+            lblCity.Text = personModel.cityName;
+            lblArea.Text = personModel.areaName;
+            lblPin.Text = personModel.pin;
+
+            string contact = string.IsNullOrEmpty(personModel.phone) ? string.Empty : personModel.phone + " - ";
+            lblContact.Text = contact + personModel.mobile;
+            lblAgent.Text = AgentName;
+            lblEmail.Text = personModel.email;
             #endregion
 
             subscription = subscriptionBll.GetSubscriptionById(_subscriptionId);
             dtpSubscriptionDate.Value = subscription.subscriptionDate;
-            txtCode.Text = subscription.subscriptionCode;
+            lblCode.Text = subscription.subscriptionCode + " - " + personModel.personName;
 
             subscriptionDetail = subscriptionDetailBll.GetSubscriptionDetailById(_subscriptionDetailId);
             txtDuration.Text = subscriptionDetail.subscriptionDuration;

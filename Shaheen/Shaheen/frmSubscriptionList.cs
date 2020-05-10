@@ -52,12 +52,10 @@ namespace Shaheen
             frmEditPerson editPerson = new frmEditPerson();
             editPerson.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["personId"].Value);
             editPerson.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
-            this.Hide();
             if (editPerson.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
             }
-            this.Show();
         }
 
 
@@ -68,8 +66,16 @@ namespace Shaheen
             editSubscription.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
             editSubscription.SubscriptionDetailId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionDetailId"].Value);
             editSubscription.AgentName = Convert.ToString(dgvSubscriptionList.Rows[rowIndex].Cells["agentName"].Value);
-            this.Hide();
             if (editSubscription.ShowDialog() == DialogResult.OK)
+            {
+                FillDataGridView();
+            }
+        }
+
+        private void ctxmRenewSubscription_Click(object sender, EventArgs e)
+        {
+            frmRenew renew = new frmRenew();
+            if (renew.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
             }

@@ -50,6 +50,7 @@
             this.mnuContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ctxmEditPerson = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxmSubscriptionDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxmRenewSubscription = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubscriptionList)).BeginInit();
             this.mnuContext.SuspendLayout();
             this.SuspendLayout();
@@ -232,9 +233,10 @@
             // 
             this.mnuContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ctxmEditPerson,
-            this.ctxmSubscriptionDetails});
+            this.ctxmSubscriptionDetails,
+            this.ctxmRenewSubscription});
             this.mnuContext.Name = "mnuContext";
-            this.mnuContext.Size = new System.Drawing.Size(199, 70);
+            this.mnuContext.Size = new System.Drawing.Size(199, 92);
             // 
             // ctxmEditPerson
             // 
@@ -249,6 +251,13 @@
             this.ctxmSubscriptionDetails.Size = new System.Drawing.Size(198, 22);
             this.ctxmSubscriptionDetails.Text = "Edit SubscriptionDetails";
             this.ctxmSubscriptionDetails.Click += new System.EventHandler(this.ctxmSubscriptionDetails_Click);
+            // 
+            // ctxmRenewSubscription
+            // 
+            this.ctxmRenewSubscription.Name = "ctxmRenewSubscription";
+            this.ctxmRenewSubscription.Size = new System.Drawing.Size(198, 22);
+            this.ctxmRenewSubscription.Text = "Renew Subscription";
+            this.ctxmRenewSubscription.Click += new System.EventHandler(this.ctxmRenewSubscription_Click);
             // 
             // frmSubscriptionList
             // 
@@ -286,5 +295,6 @@
         private System.Windows.Forms.ContextMenuStrip mnuContext;
         private System.Windows.Forms.ToolStripMenuItem ctxmEditPerson;
         private System.Windows.Forms.ToolStripMenuItem ctxmSubscriptionDetails;
+        private System.Windows.Forms.ToolStripMenuItem ctxmRenewSubscription;
     }
 }
