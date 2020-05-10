@@ -337,7 +337,6 @@ namespace Shaheen
             payment.bankName = txtBankname.Text;
             payment.chequeDate = dtpChequeDate.Value;
             payment.chequeNo = txtChequeNo.Text;
-            payment.moDate = dtpMO.Value;
             payment.paymentDate = dtpPaymentDate.Value;
             var res = context.Payments.Add(payment);
             context.SaveChanges();

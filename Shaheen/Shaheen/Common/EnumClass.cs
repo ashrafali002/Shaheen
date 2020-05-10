@@ -14,6 +14,12 @@ namespace Shaheen
         Cheque,
         MO
     }
+    public enum SubscriptionStatus
+    {
+        Active = 1,     //Active Subscription
+        Close = 2,      //Close Subscription
+        Continue = 3    //Expired but Active
+    }
 
     public class CommonFunctions
     {

@@ -1,4 +1,7 @@
 ﻿using Shaheen.DAL;
+using Shaheen.Models;
+using Shaheen.ShaheenDB;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Shaheen.BLL
@@ -24,5 +27,19 @@ namespace Shaheen.BLL
             }
             return isDuplicateFound;
         }
+
+        public List<SubscriptionModel> SubscriptionListWhole()
+        {
+            return subscriptionDal.SubscriptionListWhole();
+        }
+        public Subscription GetSubscriptionById(int Id)
+        {
+            return subscriptionDal.GetSubscriptionById(Id);
+        }
+        public int SaveSubscription(Subscription subscription)
+        {
+            return subscriptionDal.SaveSubscription(subscription);
+        }
+
     }
 }

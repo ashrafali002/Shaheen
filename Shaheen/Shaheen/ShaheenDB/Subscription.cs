@@ -20,5 +20,6 @@ namespace Shaheen.ShaheenDB
         public int agentId { get; set; }
         public decimal pendingAmount { get; set; }
         public System.DateTime subscriptionDate { get; set; }
+        public Nullable<int> status { get; set; }
     }
 }

@@ -21,5 +21,6 @@ namespace Shaheen.ShaheenDB
         public System.DateTime subscriptionStartDate { get; set; }
         public System.DateTime subscriptionEndDate { get; set; }
         public string note { get; set; }
+        public Nullable<bool> status { get; set; }
     }
 }
