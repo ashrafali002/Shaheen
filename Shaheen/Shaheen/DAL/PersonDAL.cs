@@ -1,4 +1,5 @@
-﻿using Shaheen.ShaheenDB;
+﻿using Shaheen.Models;
+using Shaheen.ShaheenDB;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -17,6 +18,43 @@ namespace Shaheen.DAL
         public Person GetPersonById(int Id)
         {
             return context.People.Where(w => w.personId == Id).FirstOrDefault();
+        }
+
+        public PersonModel GetPersonModelById(int personId)
+        {
+            var personModel = new PersonModel();
+            personModel = PersonFull().Where(w => w.personId == personId).FirstOrDefault();
+            return personModel;
+        }
+        public List<PersonModel> PersonFull()
+        {
+            var list = new List<PersonModel>();
+            list = context.People.Join(context.Countries, ag => ag.countryId, cn => cn.countryId, (ag, cn) => new { ag, cn })
+                .Join(context.States, ag => ag.ag.stateId, st => st.stateId, (ag, st) => new { ag, st })
+                .Join(context.Districts, ag => ag.ag.ag.districtId, dt => dt.districtId, (ag, dt) => new { ag, dt })
+                .Join(context.Cities, ag => ag.ag.ag.ag.cityId, ct => ct.cityId, (ag, ct) => new { ag, ct })
+                .Join(context.Areas, ag => ag.ag.ag.ag.ag.areaId, aa => aa.areaId, (ag, aa) => new { ag, aa })
+                .Select(m => new PersonModel
+                {
+                    personId = m.ag.ag.ag.ag.ag.personId,
+                    personName = m.ag.ag.ag.ag.ag.personName,
+                    personAddress = m.ag.ag.ag.ag.ag.personAddress,
+                    areaId = m.ag.ag.ag.ag.ag.areaId,
+                    areaName = m.aa.areaName,
+                    cityId = m.ag.ag.ag.ag.ag.cityId,
+                    cityName = m.ag.ct.cityName,
+                    districtId = m.ag.ag.ag.ag.ag.districtId,
+                    districtName = m.ag.ag.dt.districtName,
+                    stateId = m.ag.ag.ag.ag.ag.stateId,
+                    stateName = m.ag.ag.ag.st.stateName,
+                    countryId = m.ag.ag.ag.ag.ag.countryId,
+                    countryName = m.ag.ag.ag.ag.cn.countryName,
+                    pin = m.ag.ag.ag.ag.ag.pin,
+                    phone = m.ag.ag.ag.ag.ag.phone,
+                    mobile = m.ag.ag.ag.ag.ag.mobile,
+                    email = m.ag.ag.ag.ag.ag.email
+                }).ToList();
+            return list;
         }
 
         public int SavePerson(Person person)

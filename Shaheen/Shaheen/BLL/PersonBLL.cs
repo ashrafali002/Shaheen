@@ -1,4 +1,5 @@
 ﻿using Shaheen.DAL;
+using Shaheen.Models;
 using Shaheen.ShaheenDB;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,10 @@ namespace Shaheen.BLL
         public int SavePerson(Person person)
         {
             return personDal.SavePerson(person);
+        }
+        public PersonModel GetPersonModelById(int personId)
+        {
+            return personDal.GetPersonModelById(personId);
         }
     }
 }

@@ -518,7 +518,7 @@
             this.Controls.Add(this.grpPerson);
             this.Name = "frmEditPerson";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EditPerson";
             this.Load += new System.EventHandler(this.frmEditPerson_Load);
             this.grpPerson.ResumeLayout(false);

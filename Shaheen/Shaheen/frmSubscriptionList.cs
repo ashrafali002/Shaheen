@@ -35,7 +35,7 @@ namespace Shaheen
             dgvSubscriptionList.Columns["subscriptionEndDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
-        
+
         private void dgvSubscriptionList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex != -1 && e.Button == MouseButtons.Right)
@@ -52,21 +52,28 @@ namespace Shaheen
             frmEditPerson editPerson = new frmEditPerson();
             editPerson.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["personId"].Value);
             editPerson.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
+            this.Hide();
             if (editPerson.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
             }
+            this.Show();
         }
+
 
         private void ctxmSubscriptionDetails_Click(object sender, EventArgs e)
         {
             frmEditSubscription editSubscription = new frmEditSubscription();
+            editSubscription.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["personId"].Value);
             editSubscription.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
             editSubscription.SubscriptionDetailId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionDetailId"].Value);
+            editSubscription.AgentName = Convert.ToString(dgvSubscriptionList.Rows[rowIndex].Cells["agentName"].Value);
+            this.Hide();
             if (editSubscription.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
             }
+            this.Show();
         }
     }
 }

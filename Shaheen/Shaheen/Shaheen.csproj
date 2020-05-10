@@ -176,6 +176,7 @@
     <Compile Include="Models\AreaCity.cs" />
     <Compile Include="Models\CityDistrict.cs" />
     <Compile Include="Models\DistrictState.cs" />
+    <Compile Include="Models\PersonModel.cs" />
     <Compile Include="Models\StateCountry.cs" />
     <Compile Include="Models\SubscriptionModel.cs" />
     <Compile Include="Program.cs" />

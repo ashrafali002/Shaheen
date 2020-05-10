@@ -1,5 +1,6 @@
 ﻿using Shaheen.BLL;
 using Shaheen.DAL;
+using Shaheen.Models;
 using Shaheen.ShaheenDB;
 using System;
 using System.Collections.Generic;
@@ -17,12 +18,27 @@ namespace Shaheen
     {
         private int _subscriptionId;
         private int _subscriptionDetailId;
+        private int _personId;
+        private string _agentName;
 
         private SubscriptionBLL subscriptionBll;
         private SubscriptionDetailBLL subscriptionDetailBll;
+        private PersonBLL personBll;
 
         dynamic subscription = new Subscription();
         dynamic subscriptionDetail = new SubscriptionDetail();
+        dynamic personModel = new PersonModel();
+
+        public int PersonId
+        {
+            get { return _personId; }
+            set { _personId = value; }
+        }
+        public string AgentName
+        {
+            get { return _agentName; }
+            set { _agentName = value; }
+        }
         public int SubscriptionId
         {
             get { return _subscriptionId; }
@@ -39,12 +55,30 @@ namespace Shaheen
             InitializeComponent();
             subscriptionBll = new SubscriptionBLL();
             subscriptionDetailBll = new SubscriptionDetailBLL();
+            personBll = new PersonBLL();
         }
 
         private void frmEditSubscription_Load(object sender, EventArgs e)
         {
+            #region Display
+            personModel = personBll.GetPersonModelById(_personId);
+            txtName.Text = personModel.personName;
+            txtAddress.Text = personModel.personAddress;
+            txtCountry.Text = personModel.countryName;
+            txtState.Text = personModel.stateName;
+            txtDistrict.Text = personModel.districtName;
+            txtCity.Text = personModel.cityName;
+            txtArea.Text = personModel.areaName;
+            txtPIN.Text = personModel.pin;
+            txtPhone.Text = personModel.phone;
+            txtMobile.Text = personModel.mobile;
+            txtEmail.Text = personModel.email;
+            txtAgent.Text = AgentName;
+            #endregion
+
             subscription = subscriptionBll.GetSubscriptionById(_subscriptionId);
             dtpSubscriptionDate.Value = subscription.subscriptionDate;
+            txtCode.Text = subscription.subscriptionCode;
 
             subscriptionDetail = subscriptionDetailBll.GetSubscriptionDetailById(_subscriptionDetailId);
             txtDuration.Text = subscriptionDetail.subscriptionDuration;
