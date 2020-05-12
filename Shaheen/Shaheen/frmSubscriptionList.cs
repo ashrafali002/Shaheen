@@ -75,6 +75,10 @@ namespace Shaheen
         private void ctxmRenewSubscription_Click(object sender, EventArgs e)
         {
             frmRenew renew = new frmRenew();
+            renew.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["personId"].Value);
+            renew.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
+            renew.SubscriptionDetailId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionDetailId"].Value);
+            renew.AgentName = Convert.ToString(dgvSubscriptionList.Rows[rowIndex].Cells["agentName"].Value);
             if (renew.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();

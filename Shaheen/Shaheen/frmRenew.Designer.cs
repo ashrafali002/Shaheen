@@ -31,6 +31,7 @@
             this.panel17 = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
             this.grpSubscription = new System.Windows.Forms.GroupBox();
+            this.lblSubscriptionDate = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.TextBox();
             this.panel10 = new System.Windows.Forms.Panel();
@@ -46,7 +47,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.grpPerson = new System.Windows.Forms.GroupBox();
-            this.lblSubscriptionDate = new System.Windows.Forms.Label();
             this.lblAgent = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblContact = new System.Windows.Forms.Label();
@@ -142,6 +142,16 @@
             this.grpSubscription.TabStop = false;
             this.grpSubscription.Text = "Subscription Details";
             // 
+            // lblSubscriptionDate
+            // 
+            this.lblSubscriptionDate.AutoSize = true;
+            this.lblSubscriptionDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSubscriptionDate.Location = new System.Drawing.Point(17, 52);
+            this.lblSubscriptionDate.Name = "lblSubscriptionDate";
+            this.lblSubscriptionDate.Size = new System.Drawing.Size(135, 19);
+            this.lblSubscriptionDate.TabIndex = 1;
+            this.lblSubscriptionDate.Text = "Subscription Date";
+            // 
             // label19
             // 
             this.label19.AutoSize = true;
@@ -163,15 +173,15 @@
             this.txtNote.MaxLength = 1000;
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(245, 67);
-            this.txtNote.TabIndex = 13;
+            this.txtNote.Size = new System.Drawing.Size(245, 95);
+            this.txtNote.TabIndex = 4;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.SkyBlue;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel10.Location = new System.Drawing.Point(18, 405);
+            this.panel10.Location = new System.Drawing.Point(18, 430);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(245, 1);
             this.panel10.TabIndex = 14;
@@ -197,14 +207,15 @@
             this.txtAmount.MaxLength = 10;
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(245, 20);
-            this.txtAmount.TabIndex = 10;
+            this.txtAmount.TabIndex = 3;
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.SkyBlue;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel9.Location = new System.Drawing.Point(18, 297);
+            this.panel9.Location = new System.Drawing.Point(18, 300);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(245, 1);
             this.panel9.TabIndex = 11;
@@ -228,7 +239,7 @@
             this.dtpEndDate.Location = new System.Drawing.Point(18, 217);
             this.dtpEndDate.Name = "dtpEndDate";
             this.dtpEndDate.Size = new System.Drawing.Size(247, 27);
-            this.dtpEndDate.TabIndex = 8;
+            this.dtpEndDate.TabIndex = 2;
             this.dtpEndDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
             // label16
@@ -250,7 +261,7 @@
             this.dtpStartDate.Location = new System.Drawing.Point(18, 160);
             this.dtpStartDate.Name = "dtpStartDate";
             this.dtpStartDate.Size = new System.Drawing.Size(247, 27);
-            this.dtpStartDate.TabIndex = 6;
+            this.dtpStartDate.TabIndex = 1;
             this.dtpStartDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
             // label15
@@ -274,14 +285,15 @@
             this.txtDuration.MaxLength = 3;
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.Size = new System.Drawing.Size(245, 20);
-            this.txtDuration.TabIndex = 3;
+            this.txtDuration.TabIndex = 0;
+            this.txtDuration.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDuration_KeyPress);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(18, 125);
+            this.panel1.Location = new System.Drawing.Point(18, 128);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 4;
@@ -321,16 +333,6 @@
             this.grpPerson.TabIndex = 0;
             this.grpPerson.TabStop = false;
             this.grpPerson.Text = "Person Details";
-            // 
-            // lblSubscriptionDate
-            // 
-            this.lblSubscriptionDate.AutoSize = true;
-            this.lblSubscriptionDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSubscriptionDate.Location = new System.Drawing.Point(17, 52);
-            this.lblSubscriptionDate.Name = "lblSubscriptionDate";
-            this.lblSubscriptionDate.Size = new System.Drawing.Size(135, 19);
-            this.lblSubscriptionDate.TabIndex = 45;
-            this.lblSubscriptionDate.Text = "Subscription Date";
             // 
             // lblAgent
             // 
@@ -545,7 +547,7 @@
             this.txtReceiptNo.MaxLength = 20;
             this.txtReceiptNo.Name = "txtReceiptNo";
             this.txtReceiptNo.Size = new System.Drawing.Size(245, 20);
-            this.txtReceiptNo.TabIndex = 17;
+            this.txtReceiptNo.TabIndex = 14;
             // 
             // panel16
             // 
@@ -578,7 +580,7 @@
             this.txtBankName.MaxLength = 200;
             this.txtBankName.Name = "txtBankName";
             this.txtBankName.Size = new System.Drawing.Size(245, 20);
-            this.txtBankName.TabIndex = 14;
+            this.txtBankName.TabIndex = 13;
             // 
             // label24
             // 
@@ -588,7 +590,7 @@
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(85, 15);
-            this.label24.TabIndex = 10;
+            this.label24.TabIndex = 5;
             this.label24.Text = "Paid Amount :";
             // 
             // panel15
@@ -596,7 +598,7 @@
             this.panel15.BackColor = System.Drawing.Color.SkyBlue;
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel15.Location = new System.Drawing.Point(17, 240);
+            this.panel15.Location = new System.Drawing.Point(17, 241);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(245, 1);
             this.panel15.TabIndex = 15;
@@ -611,7 +613,8 @@
             this.txtPaidAmout.MaxLength = 10;
             this.txtPaidAmout.Name = "txtPaidAmout";
             this.txtPaidAmout.Size = new System.Drawing.Size(245, 20);
-            this.txtPaidAmout.TabIndex = 11;
+            this.txtPaidAmout.TabIndex = 10;
+            this.txtPaidAmout.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPaidAmout_KeyPress);
             // 
             // panel14
             // 
@@ -621,7 +624,7 @@
             this.panel14.Location = new System.Drawing.Point(299, 129);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(245, 1);
-            this.panel14.TabIndex = 12;
+            this.panel14.TabIndex = 7;
             // 
             // label23
             // 
@@ -630,7 +633,7 @@
             this.label23.Location = new System.Drawing.Point(299, 145);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(146, 15);
-            this.label23.TabIndex = 8;
+            this.label23.TabIndex = 11;
             this.label23.Text = "DD / Cheque / MO Date :";
             // 
             // dtpChequeDate
@@ -642,7 +645,7 @@
             this.dtpChequeDate.Location = new System.Drawing.Point(299, 162);
             this.dtpChequeDate.Name = "dtpChequeDate";
             this.dtpChequeDate.Size = new System.Drawing.Size(247, 27);
-            this.dtpChequeDate.TabIndex = 9;
+            this.dtpChequeDate.TabIndex = 12;
             this.dtpChequeDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
             // label22
@@ -653,7 +656,7 @@
             this.label22.Margin = new System.Windows.Forms.Padding(0);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(135, 15);
-            this.label22.TabIndex = 5;
+            this.label22.TabIndex = 8;
             this.label22.Text = "DD / Cheque / MO No :";
             // 
             // txtChequeNo
@@ -666,17 +669,17 @@
             this.txtChequeNo.MaxLength = 20;
             this.txtChequeNo.Name = "txtChequeNo";
             this.txtChequeNo.Size = new System.Drawing.Size(245, 20);
-            this.txtChequeNo.TabIndex = 6;
+            this.txtChequeNo.TabIndex = 11;
             // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.SkyBlue;
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel13.Location = new System.Drawing.Point(17, 185);
+            this.panel13.Location = new System.Drawing.Point(17, 188);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(245, 1);
-            this.panel13.TabIndex = 7;
+            this.panel13.TabIndex = 10;
             // 
             // label21
             // 
@@ -697,7 +700,7 @@
             this.dtpPaymentDate.Location = new System.Drawing.Point(17, 103);
             this.dtpPaymentDate.Name = "dtpPaymentDate";
             this.dtpPaymentDate.Size = new System.Drawing.Size(247, 27);
-            this.dtpPaymentDate.TabIndex = 4;
+            this.dtpPaymentDate.TabIndex = 9;
             this.dtpPaymentDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
             // panel12
@@ -739,9 +742,10 @@
             this.rdoCash.Location = new System.Drawing.Point(3, 1);
             this.rdoCash.Name = "rdoCash";
             this.rdoCash.Size = new System.Drawing.Size(63, 23);
-            this.rdoCash.TabIndex = 0;
+            this.rdoCash.TabIndex = 5;
             this.rdoCash.Text = "Cash";
             this.rdoCash.UseVisualStyleBackColor = true;
+            this.rdoCash.CheckedChanged += new System.EventHandler(this.rdoCash_CheckedChanged);
             // 
             // rdoDD
             // 
@@ -749,7 +753,7 @@
             this.rdoDD.Location = new System.Drawing.Point(110, 1);
             this.rdoDD.Name = "rdoDD";
             this.rdoDD.Size = new System.Drawing.Size(127, 23);
-            this.rdoDD.TabIndex = 1;
+            this.rdoDD.TabIndex = 6;
             this.rdoDD.Text = "Demand Draft";
             this.rdoDD.UseVisualStyleBackColor = true;
             // 
@@ -759,7 +763,7 @@
             this.rdoCheque.Location = new System.Drawing.Point(281, 1);
             this.rdoCheque.Name = "rdoCheque";
             this.rdoCheque.Size = new System.Drawing.Size(80, 23);
-            this.rdoCheque.TabIndex = 2;
+            this.rdoCheque.TabIndex = 7;
             this.rdoCheque.Text = "Cheque";
             this.rdoCheque.UseVisualStyleBackColor = true;
             // 
@@ -769,7 +773,7 @@
             this.rdoMO.Location = new System.Drawing.Point(405, 1);
             this.rdoMO.Name = "rdoMO";
             this.rdoMO.Size = new System.Drawing.Size(117, 23);
-            this.rdoMO.TabIndex = 3;
+            this.rdoMO.TabIndex = 8;
             this.rdoMO.Text = "Money Order";
             this.rdoMO.UseVisualStyleBackColor = true;
             // 
@@ -790,7 +794,7 @@
             this.btnClose.Location = new System.Drawing.Point(188, 21);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 30);
-            this.btnClose.TabIndex = 2;
+            this.btnClose.TabIndex = 16;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -802,9 +806,10 @@
             this.btnSave.Location = new System.Drawing.Point(107, 21);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 30);
-            this.btnSave.TabIndex = 1;
+            this.btnSave.TabIndex = 15;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // frmRenew
             // 
@@ -820,6 +825,7 @@
             this.Name = "frmRenew";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Subscription";
+            this.Load += new System.EventHandler(this.frmRenew_Load);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             this.grpSubscription.ResumeLayout(false);

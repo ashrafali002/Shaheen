@@ -46,7 +46,7 @@ namespace Shaheen.DAL
         }
 
         public List<SubscriptionModel> SubscriptionListWhole()
-        {
+        {   
             DataTable dt = new DataTable();
             string strQuery = @"Select P.personId, p.personName,
                 SUB.subscriptionId, SUB.subscriptionCode,SUB.subscriptionDate,SUB.pendingAmount,
