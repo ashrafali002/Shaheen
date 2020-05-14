@@ -72,6 +72,7 @@
     <Compile Include="BLL\CityBLL.cs" />
     <Compile Include="BLL\CountryBLL.cs" />
     <Compile Include="BLL\DistrictBLL.cs" />
+    <Compile Include="BLL\PaymentBLL.cs" />
     <Compile Include="BLL\PersonBLL.cs" />
     <Compile Include="BLL\StateBLL.cs" />
     <Compile Include="BLL\SubscriptionBLL.cs" />
@@ -147,6 +148,12 @@
     </Compile>
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPayment.Designer.cs">
+      <DependentUpon>frmPayment.cs</DependentUpon>
     </Compile>
     <Compile Include="frmRenew.cs">
       <SubType>Form</SubType>
@@ -264,6 +271,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPayment.resx">
+      <DependentUpon>frmPayment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRenew.resx">
       <DependentUpon>frmRenew.cs</DependentUpon>

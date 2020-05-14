@@ -515,7 +515,8 @@
             this.Controls.Add(this.grpSubscription);
             this.Controls.Add(this.grpPerson);
             this.Name = "frmEditSubscription";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmEditSubscription";
             this.Load += new System.EventHandler(this.frmEditSubscription_Load);
             this.grpSubscription.ResumeLayout(false);

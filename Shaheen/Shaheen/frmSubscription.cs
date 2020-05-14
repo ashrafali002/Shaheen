@@ -1,13 +1,6 @@
 ﻿using Shaheen.BLL;
 using Shaheen.ShaheenDB;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shaheen
@@ -300,6 +293,7 @@ namespace Shaheen
             subscription.subscriptionCode = txtCode.Text;
             subscription.status = Convert.ToInt32(SubscriptionStatus.Active);
             subscription.personId = personId;
+            subscription.pendingAmount = Convert.ToDecimal(txtAmount.Text) - Convert.ToDecimal(txtPaidAmout.Text);
             var res = context.Subscriptions.Add(subscription);
             context.SaveChanges();
             return res.subscriptionId;
@@ -358,7 +352,7 @@ namespace Shaheen
             context.SaveChanges();
             return res.paymentId;
         }
-
+        
         private void txtPIN_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '\b'))

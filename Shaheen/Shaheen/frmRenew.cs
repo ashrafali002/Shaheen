@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,7 @@ namespace Shaheen
         private int _subscriptionDetailId;
         private int _personId;
         private string _agentName;
+        private decimal _pendingAmount;
 
         private SubscriptionBLL subscriptionBll;
         private SubscriptionDetailBLL subscriptionDetailBll;
@@ -47,6 +49,12 @@ namespace Shaheen
         {
             get { return _subscriptionDetailId; }
             set { _subscriptionDetailId = value; }
+        }
+
+        public decimal PendingAmount
+        {
+            get { return _pendingAmount; }
+            set { _pendingAmount = value; }
         }
         public frmRenew()
         {
@@ -80,6 +88,7 @@ namespace Shaheen
             subscription = subscriptionBll.GetSubscriptionById(_subscriptionId);
             lblSubscriptionDate.Text = Convert.ToDateTime(subscription.subscriptionDate).ToShortDateString();
             lblCode.Text = subscription.subscriptionCode + " - " + personModel.personName;
+            PendingAmount = subscription.pendingAmount;
 
             subscriptionDetail = subscriptionDetailBll.GetSubscriptionDetailById(_subscriptionDetailId);
             txtDuration.Focus();
@@ -161,6 +170,7 @@ namespace Shaheen
                     {
                         try
                         {
+                            int subscriptionId = UpdateSubscriptionPendingAmount(_subscriptionId, context);
                             int oldSubscriptionDetailId = UpdateCurrentSubscriptionDetailStatus(_subscriptionDetailId, context);
                             int subscriptionDetailId = SaveSubscriptionDetail(_subscriptionId, context);
                             int paymentId = SavePayment(_subscriptionId, context);
@@ -213,13 +223,19 @@ namespace Shaheen
                 }
             }
         }
-
+        public int UpdateSubscriptionPendingAmount(int subscriptionId, ShaheenEntities context)
+        {
+            subscription.pendingAmount = (PendingAmount + Convert.ToDecimal(txtAmount.Text)) - Convert.ToDecimal(txtPaidAmout.Text);
+            context.Entry(subscription).State = EntityState.Modified;
+            context.SaveChanges();
+            return subscriptionId;
+        }
         public int UpdateCurrentSubscriptionDetailStatus(int subscriptionDetailId, ShaheenEntities context)
         {
             var subscriptionDetail = new SubscriptionDetail();
             subscriptionDetail = subscriptionDetailBll.GetSubscriptionDetailById(subscriptionDetailId);
             subscriptionDetail.status = false;
-            context.Entry(subscriptionDetail).State = System.Data.Entity.EntityState.Modified;
+            context.Entry(subscriptionDetail).State = EntityState.Modified;
             context.SaveChanges();
             return subscriptionDetailId;
 

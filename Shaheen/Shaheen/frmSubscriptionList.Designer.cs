@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvSubscriptionList = new System.Windows.Forms.DataGridView();
             this.subscriptionCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +51,7 @@
             this.ctxmEditPerson = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxmSubscriptionDetails = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxmRenewSubscription = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxmPayment = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubscriptionList)).BeginInit();
             this.mnuContext.SuspendLayout();
             this.SuspendLayout();
@@ -61,19 +62,19 @@
             this.dgvSubscriptionList.AllowUserToDeleteRows = false;
             this.dgvSubscriptionList.AllowUserToResizeColumns = false;
             this.dgvSubscriptionList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
-            this.dgvSubscriptionList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Gainsboro;
+            this.dgvSubscriptionList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSubscriptionList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSubscriptionList.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvSubscriptionList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSubscriptionList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubscriptionList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSubscriptionList.ColumnHeadersHeight = 50;
             this.dgvSubscriptionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSubscriptionList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -96,14 +97,14 @@
             this.dgvSubscriptionList.Location = new System.Drawing.Point(0, 0);
             this.dgvSubscriptionList.MultiSelect = false;
             this.dgvSubscriptionList.Name = "dgvSubscriptionList";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSubscriptionList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.SkyBlue;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubscriptionList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvSubscriptionList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSubscriptionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSubscriptionList.Size = new System.Drawing.Size(1177, 722);
@@ -234,9 +235,10 @@
             this.mnuContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ctxmEditPerson,
             this.ctxmSubscriptionDetails,
-            this.ctxmRenewSubscription});
+            this.ctxmRenewSubscription,
+            this.ctxmPayment});
             this.mnuContext.Name = "mnuContext";
-            this.mnuContext.Size = new System.Drawing.Size(199, 92);
+            this.mnuContext.Size = new System.Drawing.Size(199, 114);
             // 
             // ctxmEditPerson
             // 
@@ -258,6 +260,13 @@
             this.ctxmRenewSubscription.Size = new System.Drawing.Size(198, 22);
             this.ctxmRenewSubscription.Text = "Renew Subscription";
             this.ctxmRenewSubscription.Click += new System.EventHandler(this.ctxmRenewSubscription_Click);
+            // 
+            // ctxmPayment
+            // 
+            this.ctxmPayment.Name = "ctxmPayment";
+            this.ctxmPayment.Size = new System.Drawing.Size(198, 22);
+            this.ctxmPayment.Text = "Payment";
+            this.ctxmPayment.Click += new System.EventHandler(this.ctxmPayment_Click);
             // 
             // frmSubscriptionList
             // 
@@ -296,5 +305,6 @@
         private System.Windows.Forms.ToolStripMenuItem ctxmEditPerson;
         private System.Windows.Forms.ToolStripMenuItem ctxmSubscriptionDetails;
         private System.Windows.Forms.ToolStripMenuItem ctxmRenewSubscription;
+        private System.Windows.Forms.ToolStripMenuItem ctxmPayment;
     }
 }

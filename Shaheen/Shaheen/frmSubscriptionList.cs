@@ -1,12 +1,5 @@
 ﻿using Shaheen.BLL;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shaheen
@@ -80,6 +73,19 @@ namespace Shaheen
             renew.SubscriptionDetailId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionDetailId"].Value);
             renew.AgentName = Convert.ToString(dgvSubscriptionList.Rows[rowIndex].Cells["agentName"].Value);
             if (renew.ShowDialog() == DialogResult.OK)
+            {
+                FillDataGridView();
+            }
+            this.Show();
+        }
+
+        private void ctxmPayment_Click(object sender, EventArgs e)
+        {
+            frmPayment payment = new frmPayment();
+            payment.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["personId"].Value);
+            payment.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
+            payment.AgentName = Convert.ToString(dgvSubscriptionList.Rows[rowIndex].Cells["agentName"].Value);
+            if (payment.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
             }

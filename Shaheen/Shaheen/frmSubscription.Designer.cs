@@ -229,7 +229,7 @@
             this.panel8.BackColor = System.Drawing.Color.SkyBlue;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel8.Location = new System.Drawing.Point(20, 393);
+            this.panel8.Location = new System.Drawing.Point(20, 397);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(245, 1);
             this.panel8.TabIndex = 30;
@@ -262,7 +262,7 @@
             this.panel6.BackColor = System.Drawing.Color.SkyBlue;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel6.Location = new System.Drawing.Point(302, 340);
+            this.panel6.Location = new System.Drawing.Point(302, 343);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(245, 1);
             this.panel6.TabIndex = 27;
@@ -284,7 +284,7 @@
             this.panel7.BackColor = System.Drawing.Color.SkyBlue;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel7.Location = new System.Drawing.Point(20, 340);
+            this.panel7.Location = new System.Drawing.Point(20, 343);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(245, 1);
             this.panel7.TabIndex = 24;
@@ -318,7 +318,7 @@
             this.panel5.BackColor = System.Drawing.Color.SkyBlue;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel5.Location = new System.Drawing.Point(302, 287);
+            this.panel5.Location = new System.Drawing.Point(302, 291);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(245, 1);
             this.panel5.TabIndex = 21;
@@ -472,7 +472,7 @@
             this.panel4.BackColor = System.Drawing.Color.SkyBlue;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel4.Location = new System.Drawing.Point(20, 126);
+            this.panel4.Location = new System.Drawing.Point(20, 129);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(525, 1);
             this.panel4.TabIndex = 8;
@@ -505,7 +505,7 @@
             this.panel2.BackColor = System.Drawing.Color.SkyBlue;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(181, 68);
+            this.panel2.Location = new System.Drawing.Point(181, 71);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(364, 1);
             this.panel2.TabIndex = 5;
@@ -527,7 +527,7 @@
             this.panel3.BackColor = System.Drawing.Color.SkyBlue;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel3.Location = new System.Drawing.Point(20, 68);
+            this.panel3.Location = new System.Drawing.Point(20, 71);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(135, 1);
             this.panel3.TabIndex = 2;
@@ -588,7 +588,7 @@
             this.txtNote.MaxLength = 1000;
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(245, 67);
+            this.txtNote.Size = new System.Drawing.Size(245, 73);
             this.txtNote.TabIndex = 13;
             // 
             // panel10
@@ -596,7 +596,7 @@
             this.panel10.BackColor = System.Drawing.Color.SkyBlue;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel10.Location = new System.Drawing.Point(18, 392);
+            this.panel10.Location = new System.Drawing.Point(18, 396);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(245, 1);
             this.panel10.TabIndex = 14;
@@ -630,7 +630,7 @@
             this.panel9.BackColor = System.Drawing.Color.SkyBlue;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel9.Location = new System.Drawing.Point(18, 286);
+            this.panel9.Location = new System.Drawing.Point(18, 290);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(245, 1);
             this.panel9.TabIndex = 11;
@@ -708,7 +708,7 @@
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(18, 125);
+            this.panel1.Location = new System.Drawing.Point(18, 128);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 4;
@@ -791,7 +791,7 @@
             this.panel16.BackColor = System.Drawing.Color.SkyBlue;
             this.panel16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel16.Location = new System.Drawing.Point(588, 185);
+            this.panel16.Location = new System.Drawing.Point(588, 188);
             this.panel16.Name = "panel16";
             this.panel16.Size = new System.Drawing.Size(245, 1);
             this.panel16.TabIndex = 18;
@@ -835,7 +835,7 @@
             this.panel15.BackColor = System.Drawing.Color.SkyBlue;
             this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel15.Location = new System.Drawing.Point(20, 185);
+            this.panel15.Location = new System.Drawing.Point(20, 188);
             this.panel15.Name = "panel15";
             this.panel15.Size = new System.Drawing.Size(525, 1);
             this.panel15.TabIndex = 15;
@@ -858,7 +858,7 @@
             this.panel14.BackColor = System.Drawing.Color.SkyBlue;
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel14.Location = new System.Drawing.Point(588, 130);
+            this.panel14.Location = new System.Drawing.Point(588, 133);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(245, 1);
             this.panel14.TabIndex = 12;
@@ -913,7 +913,7 @@
             this.panel13.BackColor = System.Drawing.Color.SkyBlue;
             this.panel13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel13.Location = new System.Drawing.Point(20, 130);
+            this.panel13.Location = new System.Drawing.Point(20, 133);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(245, 1);
             this.panel13.TabIndex = 7;
