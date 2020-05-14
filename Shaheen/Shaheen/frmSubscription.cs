@@ -23,6 +23,7 @@ namespace Shaheen
             dtpPaymentDate.Value = DateTime.Now;
             dtpStartDate.Value = DateTime.Now;
             dtpSubscriptionDate.Value = DateTime.Now;
+            txtCode.Focus();
         }
 
         private void Dropdownlists()

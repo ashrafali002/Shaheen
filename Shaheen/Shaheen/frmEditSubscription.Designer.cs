@@ -89,9 +89,9 @@
             this.grpSubscription.Controls.Add(this.panel1);
             this.grpSubscription.Controls.Add(this.label14);
             this.grpSubscription.Controls.Add(this.dtpSubscriptionDate);
-            this.grpSubscription.Location = new System.Drawing.Point(11, 287);
+            this.grpSubscription.Location = new System.Drawing.Point(11, 259);
             this.grpSubscription.Name = "grpSubscription";
-            this.grpSubscription.Size = new System.Drawing.Size(548, 214);
+            this.grpSubscription.Size = new System.Drawing.Size(468, 214);
             this.grpSubscription.TabIndex = 2;
             this.grpSubscription.TabStop = false;
             this.grpSubscription.Text = "Subscription Details";
@@ -100,7 +100,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label19.Location = new System.Drawing.Point(285, 155);
+            this.label19.Location = new System.Drawing.Point(253, 155);
             this.label19.Margin = new System.Windows.Forms.Padding(0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(40, 15);
@@ -112,11 +112,11 @@
             this.txtNote.BackColor = System.Drawing.Color.SkyBlue;
             this.txtNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNote.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNote.Location = new System.Drawing.Point(285, 175);
+            this.txtNote.Location = new System.Drawing.Point(253, 175);
             this.txtNote.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtNote.MaxLength = 1000;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(245, 20);
+            this.txtNote.Size = new System.Drawing.Size(200, 20);
             this.txtNote.TabIndex = 13;
             // 
             // panel10
@@ -124,9 +124,9 @@
             this.panel10.BackColor = System.Drawing.Color.SkyBlue;
             this.panel10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel10.Location = new System.Drawing.Point(285, 195);
+            this.panel10.Location = new System.Drawing.Point(253, 198);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(245, 1);
+            this.panel10.Size = new System.Drawing.Size(200, 1);
             this.panel10.TabIndex = 14;
             // 
             // label18
@@ -149,7 +149,7 @@
             this.txtAmount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAmount.MaxLength = 10;
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(245, 20);
+            this.txtAmount.Size = new System.Drawing.Size(203, 20);
             this.txtAmount.TabIndex = 10;
             // 
             // panel9
@@ -157,16 +157,16 @@
             this.panel9.BackColor = System.Drawing.Color.SkyBlue;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel9.Location = new System.Drawing.Point(17, 195);
+            this.panel9.Location = new System.Drawing.Point(17, 198);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(245, 1);
+            this.panel9.Size = new System.Drawing.Size(203, 1);
             this.panel9.TabIndex = 11;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label17.Location = new System.Drawing.Point(285, 92);
+            this.label17.Location = new System.Drawing.Point(253, 84);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(64, 15);
             this.label17.TabIndex = 7;
@@ -178,9 +178,9 @@
             this.dtpEndDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpEndDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEndDate.Location = new System.Drawing.Point(285, 110);
+            this.dtpEndDate.Location = new System.Drawing.Point(253, 102);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(247, 27);
+            this.dtpEndDate.Size = new System.Drawing.Size(200, 27);
             this.dtpEndDate.TabIndex = 8;
             this.dtpEndDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
@@ -188,7 +188,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label16.Location = new System.Drawing.Point(20, 92);
+            this.label16.Location = new System.Drawing.Point(20, 84);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(70, 15);
             this.label16.TabIndex = 5;
@@ -200,9 +200,9 @@
             this.dtpStartDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpStartDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpStartDate.Location = new System.Drawing.Point(20, 110);
+            this.dtpStartDate.Location = new System.Drawing.Point(20, 102);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(247, 27);
+            this.dtpStartDate.Size = new System.Drawing.Size(200, 27);
             this.dtpStartDate.TabIndex = 6;
             this.dtpStartDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
@@ -210,7 +210,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label15.Location = new System.Drawing.Point(284, 26);
+            this.label15.Location = new System.Drawing.Point(253, 26);
             this.label15.Margin = new System.Windows.Forms.Padding(0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(61, 15);
@@ -222,11 +222,11 @@
             this.txtDuration.BackColor = System.Drawing.Color.SkyBlue;
             this.txtDuration.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDuration.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDuration.Location = new System.Drawing.Point(287, 51);
+            this.txtDuration.Location = new System.Drawing.Point(253, 50);
             this.txtDuration.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtDuration.MaxLength = 3;
             this.txtDuration.Name = "txtDuration";
-            this.txtDuration.Size = new System.Drawing.Size(245, 20);
+            this.txtDuration.Size = new System.Drawing.Size(198, 20);
             this.txtDuration.TabIndex = 3;
             // 
             // panel1
@@ -234,9 +234,9 @@
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(287, 71);
+            this.panel1.Location = new System.Drawing.Point(253, 73);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 1);
+            this.panel1.Size = new System.Drawing.Size(198, 1);
             this.panel1.TabIndex = 4;
             // 
             // label14
@@ -257,7 +257,7 @@
             this.dtpSubscriptionDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpSubscriptionDate.Location = new System.Drawing.Point(20, 47);
             this.dtpSubscriptionDate.Name = "dtpSubscriptionDate";
-            this.dtpSubscriptionDate.Size = new System.Drawing.Size(247, 27);
+            this.dtpSubscriptionDate.Size = new System.Drawing.Size(200, 27);
             this.dtpSubscriptionDate.TabIndex = 1;
             this.dtpSubscriptionDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
@@ -265,9 +265,9 @@
             // 
             this.grpButtons.Controls.Add(this.btnClose);
             this.grpButtons.Controls.Add(this.btnSave);
-            this.grpButtons.Location = new System.Drawing.Point(11, 501);
+            this.grpButtons.Location = new System.Drawing.Point(11, 473);
             this.grpButtons.Name = "grpButtons";
-            this.grpButtons.Size = new System.Drawing.Size(548, 58);
+            this.grpButtons.Size = new System.Drawing.Size(468, 58);
             this.grpButtons.TabIndex = 5;
             this.grpButtons.TabStop = false;
             // 
@@ -275,7 +275,7 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(461, 20);
+            this.btnClose.Location = new System.Drawing.Point(378, 20);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 30);
             this.btnClose.TabIndex = 2;
@@ -287,7 +287,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(380, 20);
+            this.btnSave.Location = new System.Drawing.Point(297, 20);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 30);
             this.btnSave.TabIndex = 1;
@@ -301,7 +301,7 @@
             this.panel2.Controls.Add(this.label20);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(570, 37);
+            this.panel2.Size = new System.Drawing.Size(489, 37);
             this.panel2.TabIndex = 39;
             // 
             // label20
@@ -336,7 +336,7 @@
             this.grpPerson.ForeColor = System.Drawing.Color.Black;
             this.grpPerson.Location = new System.Drawing.Point(11, 43);
             this.grpPerson.Name = "grpPerson";
-            this.grpPerson.Size = new System.Drawing.Size(548, 242);
+            this.grpPerson.Size = new System.Drawing.Size(468, 216);
             this.grpPerson.TabIndex = 40;
             this.grpPerson.TabStop = false;
             this.grpPerson.Text = "Person Details";
@@ -345,7 +345,7 @@
             // 
             this.lblAgent.AutoSize = true;
             this.lblAgent.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgent.Location = new System.Drawing.Point(99, 211);
+            this.lblAgent.Location = new System.Drawing.Point(99, 186);
             this.lblAgent.Name = "lblAgent";
             this.lblAgent.Size = new System.Drawing.Size(50, 19);
             this.lblAgent.TabIndex = 44;
@@ -355,7 +355,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(99, 180);
+            this.lblEmail.Location = new System.Drawing.Point(99, 159);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(49, 19);
             this.lblEmail.TabIndex = 43;
@@ -365,7 +365,7 @@
             // 
             this.lblContact.AutoSize = true;
             this.lblContact.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContact.Location = new System.Drawing.Point(99, 149);
+            this.lblContact.Location = new System.Drawing.Point(99, 132);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(64, 19);
             this.lblContact.TabIndex = 42;
@@ -375,7 +375,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(12, 149);
+            this.label5.Location = new System.Drawing.Point(12, 134);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 15);
@@ -386,7 +386,7 @@
             // 
             this.lblCountry.AutoSize = true;
             this.lblCountry.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountry.Location = new System.Drawing.Point(408, 117);
+            this.lblCountry.Location = new System.Drawing.Point(384, 105);
             this.lblCountry.Name = "lblCountry";
             this.lblCountry.Size = new System.Drawing.Size(64, 19);
             this.lblCountry.TabIndex = 40;
@@ -396,7 +396,7 @@
             // 
             this.lblPin.AutoSize = true;
             this.lblPin.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPin.Location = new System.Drawing.Point(408, 86);
+            this.lblPin.Location = new System.Drawing.Point(384, 78);
             this.lblPin.Name = "lblPin";
             this.lblPin.Size = new System.Drawing.Size(34, 19);
             this.lblPin.TabIndex = 39;
@@ -406,7 +406,7 @@
             // 
             this.lblState.AutoSize = true;
             this.lblState.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblState.Location = new System.Drawing.Point(256, 117);
+            this.lblState.Location = new System.Drawing.Point(244, 105);
             this.lblState.Name = "lblState";
             this.lblState.Size = new System.Drawing.Size(46, 19);
             this.lblState.TabIndex = 38;
@@ -416,7 +416,7 @@
             // 
             this.lblDistrict.AutoSize = true;
             this.lblDistrict.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDistrict.Location = new System.Drawing.Point(99, 117);
+            this.lblDistrict.Location = new System.Drawing.Point(99, 105);
             this.lblDistrict.Name = "lblDistrict";
             this.lblDistrict.Size = new System.Drawing.Size(59, 19);
             this.lblDistrict.TabIndex = 37;
@@ -426,7 +426,7 @@
             // 
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.Location = new System.Drawing.Point(256, 86);
+            this.lblCity.Location = new System.Drawing.Point(244, 78);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(36, 19);
             this.lblCity.TabIndex = 36;
@@ -436,7 +436,7 @@
             // 
             this.lblArea.AutoSize = true;
             this.lblArea.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArea.Location = new System.Drawing.Point(99, 86);
+            this.lblArea.Location = new System.Drawing.Point(99, 78);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(41, 19);
             this.lblArea.TabIndex = 35;
@@ -446,7 +446,7 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(99, 55);
+            this.lblAddress.Location = new System.Drawing.Point(99, 51);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(66, 19);
             this.lblAddress.TabIndex = 34;
@@ -466,7 +466,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(42, 211);
+            this.label13.Location = new System.Drawing.Point(42, 188);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 15);
             this.label13.TabIndex = 31;
@@ -476,7 +476,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(44, 180);
+            this.label2.Location = new System.Drawing.Point(44, 161);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 15);
@@ -487,7 +487,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(28, 55);
+            this.label4.Location = new System.Drawing.Point(28, 53);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 15);
@@ -509,7 +509,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(570, 570);
+            this.ClientSize = new System.Drawing.Size(489, 540);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.grpButtons);
             this.Controls.Add(this.grpSubscription);

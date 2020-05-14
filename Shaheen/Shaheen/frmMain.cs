@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shaheen.ShaheenDB;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -12,22 +13,15 @@ namespace Shaheen
         }
 
         public frmCustomer customer = null;
-
         public frmCountry country = null;
-
         public frmState state = null;
-
         public frmDistrict district = null;
-
         public frmCity city = null;
-
         public frmArea area = null;
-
         public frmSubscription subscription = null;
-
         public frmAgent agent = null;
-
         public frmSubscriptionList subscriptionList = null;
+        public frmPaymentList paymentList = null;
 
         private bool CheckOpened(string name)
         {
@@ -68,6 +62,7 @@ namespace Shaheen
                 X = pnlForm.Width / 2 - country.Width / 2,
                 Y = pnlForm.Height / 2 - country.Height / 2
             };
+            //subscriptionList.Location = new Point(0, 0);
             this.pnlForm.Controls.Add(country);
             country.BringToFront();
             country.Show();
@@ -113,6 +108,7 @@ namespace Shaheen
                 X = pnlForm.Width / 2 - state.Width / 2,
                 Y = pnlForm.Height / 2 - state.Height / 2
             };
+            //subscriptionList.Location = new Point(0, 0);
             this.pnlForm.Controls.Add(state);
             state.BringToFront();
             state.Show();
@@ -129,6 +125,7 @@ namespace Shaheen
                 X = pnlForm.Width / 2 - subscription.Width / 2,
                 Y = pnlForm.Height / 2 - subscription.Height / 2
             };
+            //subscription.Location = new Point(0, 0);
             this.pnlForm.Controls.Add(subscription);
             subscription.BringToFront();
             subscription.Show();
@@ -144,6 +141,7 @@ namespace Shaheen
                 X = pnlForm.Width / 2 - district.Width / 2,
                 Y = pnlForm.Height / 2 - district.Height / 2
             };
+            //subscriptionList.Location = new Point(0, 0);
             this.pnlForm.Controls.Add(district);
             district.BringToFront();
             district.Show();
@@ -159,6 +157,7 @@ namespace Shaheen
                 X = pnlForm.Width / 2 - city.Width / 2,
                 Y = pnlForm.Height / 2 - city.Height / 2
             };
+            //subscriptionList.Location = new Point(0, 0);
             this.pnlForm.Controls.Add(city);
             city.BringToFront();
             city.Show();
@@ -174,6 +173,7 @@ namespace Shaheen
                 X = pnlForm.Width / 2 - area.Width / 2,
                 Y = pnlForm.Height / 2 - area.Height / 2
             };
+            //subscriptionList.Location = new Point(0, 0);
             this.pnlForm.Controls.Add(area);
             area.BringToFront();
             area.Show();
@@ -189,6 +189,7 @@ namespace Shaheen
                 X = pnlForm.Width / 2 - agent.Width / 2,
                 Y = pnlForm.Height / 2 - agent.Height / 2
             };
+            //subscriptionList.Location = new Point(0, 0);
             this.pnlForm.Controls.Add(agent);
             agent.BringToFront();
             agent.Show();
@@ -204,10 +205,27 @@ namespace Shaheen
                 X = pnlForm.Width / 2 - subscriptionList.Width / 2,
                 Y = pnlForm.Height / 2 - subscriptionList.Height / 2
             };
+            //subscriptionList.Location = new Point(0, 0);
             this.pnlForm.Controls.Add(subscriptionList);
             subscriptionList.BringToFront();
             subscriptionList.Show();
             subscriptionList.Focus();
+        }
+
+        private void btnPaymentList_Click(object sender, EventArgs e)
+        {
+            CloseAllOpenForm();
+            paymentList = new frmPaymentList() { TopLevel = false };
+            paymentList.Location = new Point()
+            {
+                X = pnlForm.Width / 2 - paymentList.Width / 2,
+                Y = pnlForm.Height / 2 - paymentList.Height / 2
+            };
+            //subscriptionList.Location = new Point(0, 0);
+            this.pnlForm.Controls.Add(paymentList);
+            paymentList.BringToFront();
+            paymentList.Show();
+            paymentList.Focus();
         }
     }
 }
