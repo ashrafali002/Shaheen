@@ -7,8 +7,10 @@ namespace Shaheen.DAL
 {
     public class CityDAL : BaseDAL
     {
+        protected ShaheenEntities context;
         public CityDAL()
         {
+            context = new ShaheenEntities();
         }
         public List<City> CityList()
         {

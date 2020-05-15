@@ -11,10 +11,11 @@ namespace Shaheen.DAL
 {
     public class SubscriptionDAL : BaseDAL
     {
+        private readonly ShaheenEntities context;
         public SubscriptionDAL()
         {
-
-        }
+            context = new ShaheenEntities();
+    }
         public SubscriptionModel GetSubscriptionWholeByCode(string code)
         {
             return SubscriptionListWhole().Where(w => w.subscriptionCode == code).FirstOrDefault();

@@ -7,8 +7,10 @@ namespace Shaheen.DAL
 {
     public class DistrictDAL : BaseDAL
     {
+        protected ShaheenEntities context;
         public DistrictDAL()
         {
+            context = new ShaheenEntities();
         }
         public List<District> DistrictList()
         {

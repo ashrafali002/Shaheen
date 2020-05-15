@@ -6,8 +6,10 @@ namespace Shaheen.DAL
 {
     public class CountryDAL : BaseDAL
     {
+        protected ShaheenEntities context;
         public CountryDAL()
         {
+            context = new ShaheenEntities();
         }
         public List<Country> CountryList()
         {

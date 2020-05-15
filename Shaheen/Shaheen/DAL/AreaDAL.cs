@@ -8,8 +8,10 @@ namespace Shaheen.DAL
 {
     public class AreaDAL : BaseDAL
     {
+        protected ShaheenEntities context;
         public AreaDAL()
         {
+            context = new ShaheenEntities();
         }
         public List<Area> AreaList()
         {

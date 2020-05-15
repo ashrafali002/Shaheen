@@ -10,8 +10,10 @@ namespace Shaheen.DAL
 {
     public class PersonDAL : BaseDAL
     {
+        protected ShaheenEntities context;
         public PersonDAL()
         {
+            context = new ShaheenEntities();
         }
         public List<Person> getPersonList()
         {

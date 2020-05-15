@@ -6,8 +6,10 @@ namespace Shaheen.DAL
 {
     public class SubscriptionDetailDAL : BaseDAL
     {
+        protected ShaheenEntities context;
         public SubscriptionDetailDAL()
         {
+            context = new ShaheenEntities();
         }
         public SubscriptionDetail GetSubscriptionDetailById(int Id)
         {

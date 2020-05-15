@@ -1,14 +1,18 @@
-﻿using Shaheen.Models;
+﻿using Microsoft.Win32.SafeHandles;
+using Shaheen.Models;
 using Shaheen.ShaheenDB;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mime;
 
 namespace Shaheen.DAL
 {
     public class AgentDAL : BaseDAL
     {
+        protected ShaheenEntities context;
         public AgentDAL()
         {
+            context = new ShaheenEntities();
         }
         public List<Agent> AgentList()
         {

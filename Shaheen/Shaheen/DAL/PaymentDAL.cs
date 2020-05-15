@@ -6,12 +6,15 @@ namespace Shaheen.DAL
 {
     public class PaymentDAL : BaseDAL
     {
+        protected ShaheenEntities context;
         public PaymentDAL()
         {
+            context = new ShaheenEntities();
         }
 
         public List<Payment> GetPaymentBySubscriptionId(int subscriptionId)
         {
+            context = new ShaheenEntities();
             return context.Payments.Where(w => w.subscriptionId == subscriptionId).OrderByDescending(o => o.paymentId).ToList();
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace Shaheen
 {
-    partial class frmPayment
+    partial class frmEditPayment
     {
         /// <summary>
         /// Required designer variable.
@@ -28,28 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.grpPerson = new System.Windows.Forms.GroupBox();
-            this.lblAgent = new System.Windows.Forms.Label();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblContact = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblCountry = new System.Windows.Forms.Label();
-            this.lblPin = new System.Windows.Forms.Label();
-            this.lblState = new System.Windows.Forms.Label();
-            this.lblDistrict = new System.Windows.Forms.Label();
-            this.lblCity = new System.Windows.Forms.Label();
-            this.lblArea = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
-            this.lblCode = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.label27 = new System.Windows.Forms.Label();
-            this.grpButtons = new System.Windows.Forms.GroupBox();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.grpPayment = new System.Windows.Forms.GroupBox();
             this.label26 = new System.Windows.Forms.Label();
             this.txtReceiptNo = new System.Windows.Forms.TextBox();
@@ -58,7 +36,7 @@
             this.txtBankName = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
-            this.txtPaidAmout = new System.Windows.Forms.TextBox();
+            this.txtAmountPaid = new System.Windows.Forms.TextBox();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label23 = new System.Windows.Forms.Label();
             this.dtpChequeDate = new System.Windows.Forms.DateTimePicker();
@@ -74,256 +52,16 @@
             this.rdoDD = new System.Windows.Forms.RadioButton();
             this.rdoCheque = new System.Windows.Forms.RadioButton();
             this.rdoMO = new System.Windows.Forms.RadioButton();
-            this.grpPerson.SuspendLayout();
-            this.panel17.SuspendLayout();
-            this.grpButtons.SuspendLayout();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.grpButtons = new System.Windows.Forms.GroupBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             this.grpPayment.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.grpButtons.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // grpPerson
-            // 
-            this.grpPerson.Controls.Add(this.lblAgent);
-            this.grpPerson.Controls.Add(this.lblEmail);
-            this.grpPerson.Controls.Add(this.lblContact);
-            this.grpPerson.Controls.Add(this.label5);
-            this.grpPerson.Controls.Add(this.lblCountry);
-            this.grpPerson.Controls.Add(this.lblPin);
-            this.grpPerson.Controls.Add(this.lblState);
-            this.grpPerson.Controls.Add(this.lblDistrict);
-            this.grpPerson.Controls.Add(this.lblCity);
-            this.grpPerson.Controls.Add(this.lblArea);
-            this.grpPerson.Controls.Add(this.lblAddress);
-            this.grpPerson.Controls.Add(this.lblCode);
-            this.grpPerson.Controls.Add(this.label13);
-            this.grpPerson.Controls.Add(this.label2);
-            this.grpPerson.Controls.Add(this.label4);
-            this.grpPerson.Controls.Add(this.label3);
-            this.grpPerson.ForeColor = System.Drawing.Color.Black;
-            this.grpPerson.Location = new System.Drawing.Point(12, 43);
-            this.grpPerson.Name = "grpPerson";
-            this.grpPerson.Size = new System.Drawing.Size(476, 242);
-            this.grpPerson.TabIndex = 3;
-            this.grpPerson.TabStop = false;
-            this.grpPerson.Text = "Person Details";
-            // 
-            // lblAgent
-            // 
-            this.lblAgent.AutoSize = true;
-            this.lblAgent.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgent.Location = new System.Drawing.Point(102, 211);
-            this.lblAgent.Name = "lblAgent";
-            this.lblAgent.Size = new System.Drawing.Size(50, 19);
-            this.lblAgent.TabIndex = 44;
-            this.lblAgent.Text = "Agent";
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.Location = new System.Drawing.Point(102, 180);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(49, 19);
-            this.lblEmail.TabIndex = 43;
-            this.lblEmail.Text = "Email";
-            // 
-            // lblContact
-            // 
-            this.lblContact.AutoSize = true;
-            this.lblContact.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContact.Location = new System.Drawing.Point(102, 149);
-            this.lblContact.Name = "lblContact";
-            this.lblContact.Size = new System.Drawing.Size(64, 19);
-            this.lblContact.TabIndex = 42;
-            this.lblContact.Text = "Contact";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(15, 149);
-            this.label5.Margin = new System.Windows.Forms.Padding(0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 15);
-            this.label5.TabIndex = 41;
-            this.label5.Text = "Contact No :";
-            // 
-            // lblCountry
-            // 
-            this.lblCountry.AutoSize = true;
-            this.lblCountry.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountry.Location = new System.Drawing.Point(391, 117);
-            this.lblCountry.Name = "lblCountry";
-            this.lblCountry.Size = new System.Drawing.Size(64, 19);
-            this.lblCountry.TabIndex = 40;
-            this.lblCountry.Text = "Country";
-            // 
-            // lblPin
-            // 
-            this.lblPin.AutoSize = true;
-            this.lblPin.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPin.Location = new System.Drawing.Point(391, 86);
-            this.lblPin.Name = "lblPin";
-            this.lblPin.Size = new System.Drawing.Size(34, 19);
-            this.lblPin.TabIndex = 39;
-            this.lblPin.Text = "PIN";
-            // 
-            // lblState
-            // 
-            this.lblState.AutoSize = true;
-            this.lblState.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblState.Location = new System.Drawing.Point(249, 117);
-            this.lblState.Name = "lblState";
-            this.lblState.Size = new System.Drawing.Size(46, 19);
-            this.lblState.TabIndex = 38;
-            this.lblState.Text = "State";
-            // 
-            // lblDistrict
-            // 
-            this.lblDistrict.AutoSize = true;
-            this.lblDistrict.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDistrict.Location = new System.Drawing.Point(102, 117);
-            this.lblDistrict.Name = "lblDistrict";
-            this.lblDistrict.Size = new System.Drawing.Size(59, 19);
-            this.lblDistrict.TabIndex = 37;
-            this.lblDistrict.Text = "District";
-            // 
-            // lblCity
-            // 
-            this.lblCity.AutoSize = true;
-            this.lblCity.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCity.Location = new System.Drawing.Point(249, 86);
-            this.lblCity.Name = "lblCity";
-            this.lblCity.Size = new System.Drawing.Size(36, 19);
-            this.lblCity.TabIndex = 36;
-            this.lblCity.Text = "City";
-            // 
-            // lblArea
-            // 
-            this.lblArea.AutoSize = true;
-            this.lblArea.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblArea.Location = new System.Drawing.Point(102, 86);
-            this.lblArea.Name = "lblArea";
-            this.lblArea.Size = new System.Drawing.Size(41, 19);
-            this.lblArea.TabIndex = 35;
-            this.lblArea.Text = "Area";
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAddress.Location = new System.Drawing.Point(102, 55);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(66, 19);
-            this.lblAddress.TabIndex = 34;
-            this.lblAddress.Text = "Address";
-            // 
-            // lblCode
-            // 
-            this.lblCode.AutoSize = true;
-            this.lblCode.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCode.Location = new System.Drawing.Point(102, 24);
-            this.lblCode.Name = "lblCode";
-            this.lblCode.Size = new System.Drawing.Size(99, 19);
-            this.lblCode.TabIndex = 33;
-            this.lblCode.Text = "Code - Name";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(45, 211);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(46, 15);
-            this.label13.TabIndex = 31;
-            this.label13.Text = "Agent :";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(47, 180);
-            this.label2.Margin = new System.Windows.Forms.Padding(0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 15);
-            this.label2.TabIndex = 28;
-            this.label2.Text = "Email :";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(31, 55);
-            this.label4.Margin = new System.Windows.Forms.Padding(0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(60, 15);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Address :";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(44, 26);
-            this.label3.Margin = new System.Windows.Forms.Padding(0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(47, 15);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Name :";
-            // 
-            // panel17
-            // 
-            this.panel17.BackColor = System.Drawing.Color.Navy;
-            this.panel17.Controls.Add(this.label27);
-            this.panel17.Location = new System.Drawing.Point(0, 0);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(500, 37);
-            this.panel17.TabIndex = 40;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(7, 6);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(94, 25);
-            this.label27.TabIndex = 0;
-            this.label27.Text = "Payment";
-            // 
-            // grpButtons
-            // 
-            this.grpButtons.Controls.Add(this.btnClose);
-            this.grpButtons.Controls.Add(this.btnSave);
-            this.grpButtons.Location = new System.Drawing.Point(13, 544);
-            this.grpButtons.Name = "grpButtons";
-            this.grpButtons.Size = new System.Drawing.Size(475, 59);
-            this.grpButtons.TabIndex = 41;
-            this.grpButtons.TabStop = false;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(384, 19);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 30);
-            this.btnClose.TabIndex = 16;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(303, 19);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 30);
-            this.btnSave.TabIndex = 15;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // grpPayment
             // 
@@ -334,7 +72,7 @@
             this.grpPayment.Controls.Add(this.txtBankName);
             this.grpPayment.Controls.Add(this.label24);
             this.grpPayment.Controls.Add(this.panel15);
-            this.grpPayment.Controls.Add(this.txtPaidAmout);
+            this.grpPayment.Controls.Add(this.txtAmountPaid);
             this.grpPayment.Controls.Add(this.panel14);
             this.grpPayment.Controls.Add(this.label23);
             this.grpPayment.Controls.Add(this.dtpChequeDate);
@@ -346,10 +84,10 @@
             this.grpPayment.Controls.Add(this.panel12);
             this.grpPayment.Controls.Add(this.label20);
             this.grpPayment.Controls.Add(this.panel11);
-            this.grpPayment.Location = new System.Drawing.Point(13, 291);
+            this.grpPayment.Location = new System.Drawing.Point(12, 43);
             this.grpPayment.Name = "grpPayment";
             this.grpPayment.Size = new System.Drawing.Size(475, 252);
-            this.grpPayment.TabIndex = 42;
+            this.grpPayment.TabIndex = 43;
             this.grpPayment.TabStop = false;
             this.grpPayment.Text = "Payment Details";
             // 
@@ -418,7 +156,7 @@
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(85, 15);
             this.label24.TabIndex = 5;
-            this.label24.Text = "Paid Amount :";
+            this.label24.Text = "Amount Paid :";
             // 
             // panel15
             // 
@@ -430,17 +168,17 @@
             this.panel15.Size = new System.Drawing.Size(200, 1);
             this.panel15.TabIndex = 15;
             // 
-            // txtPaidAmout
+            // txtAmountPaid
             // 
-            this.txtPaidAmout.BackColor = System.Drawing.Color.SkyBlue;
-            this.txtPaidAmout.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPaidAmout.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaidAmout.Location = new System.Drawing.Point(261, 99);
-            this.txtPaidAmout.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.txtPaidAmout.MaxLength = 10;
-            this.txtPaidAmout.Name = "txtPaidAmout";
-            this.txtPaidAmout.Size = new System.Drawing.Size(198, 20);
-            this.txtPaidAmout.TabIndex = 10;
+            this.txtAmountPaid.BackColor = System.Drawing.Color.SkyBlue;
+            this.txtAmountPaid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAmountPaid.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmountPaid.Location = new System.Drawing.Point(261, 99);
+            this.txtAmountPaid.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtAmountPaid.MaxLength = 10;
+            this.txtAmountPaid.Name = "txtAmountPaid";
+            this.txtAmountPaid.Size = new System.Drawing.Size(198, 20);
+            this.txtAmountPaid.TabIndex = 10;
             // 
             // panel14
             // 
@@ -571,6 +309,7 @@
             this.rdoCash.TabIndex = 5;
             this.rdoCash.Text = "Cash";
             this.rdoCash.UseVisualStyleBackColor = true;
+            this.rdoCash.CheckedChanged += new System.EventHandler(this.rdoCash_CheckedChanged);
             // 
             // rdoDD
             // 
@@ -602,57 +341,88 @@
             this.rdoMO.Text = "Money Order";
             this.rdoMO.UseVisualStyleBackColor = true;
             // 
-            // frmPayment
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.Navy;
+            this.panel17.Controls.Add(this.label27);
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(500, 37);
+            this.panel17.TabIndex = 44;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(7, 6);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(135, 25);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Edit Payment";
+            // 
+            // grpButtons
+            // 
+            this.grpButtons.Controls.Add(this.btnClose);
+            this.grpButtons.Controls.Add(this.btnSave);
+            this.grpButtons.Location = new System.Drawing.Point(12, 295);
+            this.grpButtons.Name = "grpButtons";
+            this.grpButtons.Size = new System.Drawing.Size(475, 59);
+            this.grpButtons.TabIndex = 45;
+            this.grpButtons.TabStop = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(384, 19);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 30);
+            this.btnClose.TabIndex = 16;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Location = new System.Drawing.Point(303, 19);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 30);
+            this.btnSave.TabIndex = 15;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // frmEditPayment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(500, 616);
-            this.Controls.Add(this.grpPayment);
+            this.CancelButton = this.btnClose;
+            this.ClientSize = new System.Drawing.Size(500, 366);
             this.Controls.Add(this.grpButtons);
             this.Controls.Add(this.panel17);
-            this.Controls.Add(this.grpPerson);
-            this.Name = "frmPayment";
+            this.Controls.Add(this.grpPayment);
+            this.Name = "frmEditPayment";
             this.ShowInTaskbar = false;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPayment";
-            this.Load += new System.EventHandler(this.frmPayment_Load);
-            this.grpPerson.ResumeLayout(false);
-            this.grpPerson.PerformLayout();
-            this.panel17.ResumeLayout(false);
-            this.panel17.PerformLayout();
-            this.grpButtons.ResumeLayout(false);
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "frmEditPayment";
+            this.Load += new System.EventHandler(this.frmEditPayment_Load);
             this.grpPayment.ResumeLayout(false);
             this.grpPayment.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
+            this.grpButtons.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox grpPerson;
-        private System.Windows.Forms.Label lblAgent;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblContact;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label lblCountry;
-        private System.Windows.Forms.Label lblPin;
-        private System.Windows.Forms.Label lblState;
-        private System.Windows.Forms.Label lblDistrict;
-        private System.Windows.Forms.Label lblCity;
-        private System.Windows.Forms.Label lblArea;
-        private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.Label lblCode;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.GroupBox grpButtons;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox grpPayment;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox txtReceiptNo;
@@ -661,7 +431,7 @@
         private System.Windows.Forms.TextBox txtBankName;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.TextBox txtPaidAmout;
+        private System.Windows.Forms.TextBox txtAmountPaid;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.DateTimePicker dtpChequeDate;
@@ -677,5 +447,10 @@
         private System.Windows.Forms.RadioButton rdoDD;
         private System.Windows.Forms.RadioButton rdoCheque;
         private System.Windows.Forms.RadioButton rdoMO;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.GroupBox grpButtons;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnSave;
     }
 }
