@@ -15,10 +15,14 @@ namespace Shaheen.DAL
         {
 
         }
+        public SubscriptionModel GetSubscriptionWholeByCode(string code)
+        {
+            return SubscriptionListWhole().Where(w => w.subscriptionCode == code).FirstOrDefault();
+        }
         public Subscription GetSubscriptionById(int Id)
         {
             return context.Subscriptions.Where(w => w.subscriptionId == Id).FirstOrDefault();
-        }        
+        }
         public List<Subscription> GetDuplicateSubscriptionCode(int subscriptionId, string subscriptionCode)
         {
             return context.Subscriptions.Where(w => w.subscriptionCode == subscriptionCode && w.subscriptionId != subscriptionId).ToList();
@@ -46,7 +50,7 @@ namespace Shaheen.DAL
         }
 
         public List<SubscriptionModel> SubscriptionListWhole()
-        {   
+        {
             DataTable dt = new DataTable();
             string strQuery = @"Select P.personId, p.personName,
                 SUB.subscriptionId, SUB.subscriptionCode,SUB.subscriptionDate,SUB.pendingAmount,

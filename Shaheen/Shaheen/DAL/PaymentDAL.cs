@@ -12,7 +12,7 @@ namespace Shaheen.DAL
 
         public List<Payment> GetPaymentBySubscriptionId(int subscriptionId)
         {
-            return context.Payments.Where(w => w.subscriptionId == subscriptionId).ToList();
+            return context.Payments.Where(w => w.subscriptionId == subscriptionId).OrderByDescending(o => o.paymentId).ToList();
         }
 
         public int SavePayment(Payment payment)

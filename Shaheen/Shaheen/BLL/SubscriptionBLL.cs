@@ -32,6 +32,10 @@ namespace Shaheen.BLL
         {
             return subscriptionDal.SubscriptionListWhole();
         }
+        public SubscriptionModel GetSubscriptionWholeByCode(string code)
+        {
+            return subscriptionDal.GetSubscriptionWholeByCode(code);
+        }
         public Subscription GetSubscriptionById(int Id)
         {
             return subscriptionDal.GetSubscriptionById(Id);
