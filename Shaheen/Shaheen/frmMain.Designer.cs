@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnPaymentList = new System.Windows.Forms.Button();
             this.btnSubscriptionList = new System.Windows.Forms.Button();
@@ -39,12 +40,12 @@
             this.btnState = new System.Windows.Forms.Button();
             this.btnCountry = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
-            this.lblClient = new System.Windows.Forms.Label();
-            this.lblLogoText = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlForm = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.pnlLogo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -98,6 +99,7 @@
             // btnAgent
             // 
             this.btnAgent.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnAgent.FlatAppearance.BorderSize = 0;
             this.btnAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgent.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgent.Location = new System.Drawing.Point(11, 496);
@@ -112,6 +114,7 @@
             // btnArea
             // 
             this.btnArea.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnArea.FlatAppearance.BorderSize = 0;
             this.btnArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnArea.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnArea.Location = new System.Drawing.Point(11, 450);
@@ -126,6 +129,7 @@
             // btnCity
             // 
             this.btnCity.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnCity.FlatAppearance.BorderSize = 0;
             this.btnCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCity.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCity.Location = new System.Drawing.Point(11, 404);
@@ -140,6 +144,7 @@
             // btnDistrict
             // 
             this.btnDistrict.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnDistrict.FlatAppearance.BorderSize = 0;
             this.btnDistrict.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDistrict.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDistrict.Location = new System.Drawing.Point(11, 358);
@@ -168,6 +173,7 @@
             // btnState
             // 
             this.btnState.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnState.FlatAppearance.BorderSize = 0;
             this.btnState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnState.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnState.Location = new System.Drawing.Point(11, 312);
@@ -196,36 +202,13 @@
             // pnlLogo
             // 
             this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.pnlLogo.Controls.Add(this.lblClient);
-            this.pnlLogo.Controls.Add(this.lblLogoText);
+            this.pnlLogo.Controls.Add(this.pictureBox1);
             this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(286, 97);
             this.pnlLogo.TabIndex = 2;
-            // 
-            // lblClient
-            // 
-            this.lblClient.AutoSize = true;
-            this.lblClient.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClient.Location = new System.Drawing.Point(81, 58);
-            this.lblClient.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblClient.Name = "lblClient";
-            this.lblClient.Size = new System.Drawing.Size(111, 16);
-            this.lblClient.TabIndex = 1;
-            this.lblClient.Text = "Shaheen Weekly";
-            // 
-            // lblLogoText
-            // 
-            this.lblLogoText.AutoSize = true;
-            this.lblLogoText.Font = new System.Drawing.Font("Bookman Old Style", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogoText.Location = new System.Drawing.Point(71, 9);
-            this.lblLogoText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblLogoText.Name = "lblLogoText";
-            this.lblLogoText.Size = new System.Drawing.Size(126, 36);
-            this.lblLogoText.TabIndex = 0;
-            this.lblLogoText.Text = "Ishtiraq";
             // 
             // panel2
             // 
@@ -247,6 +230,16 @@
             this.pnlForm.Size = new System.Drawing.Size(1058, 726);
             this.pnlForm.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(51, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(185, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -263,7 +256,7 @@
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.panel1.ResumeLayout(false);
             this.pnlLogo.ResumeLayout(false);
-            this.pnlLogo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,8 +266,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlLogo;
-        private System.Windows.Forms.Label lblLogoText;
-        private System.Windows.Forms.Label lblClient;
         private System.Windows.Forms.Button btnCountry;
         private System.Windows.Forms.Panel pnlForm;
         private System.Windows.Forms.Button btnState;
@@ -285,5 +276,6 @@
         private System.Windows.Forms.Button btnAgent;
         private System.Windows.Forms.Button btnSubscriptionList;
         private System.Windows.Forms.Button btnPaymentList;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -72,10 +72,11 @@
             // 
             this.txtCity.BackColor = System.Drawing.Color.SkyBlue;
             this.txtCity.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtCity.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCity.Location = new System.Drawing.Point(19, 61);
             this.txtCity.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtCity.Name = "txtCity";
-            this.txtCity.Size = new System.Drawing.Size(245, 16);
+            this.txtCity.Size = new System.Drawing.Size(245, 20);
             this.txtCity.TabIndex = 19;
             // 
             // btnClose
@@ -119,7 +120,7 @@
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(19, 81);
+            this.panel1.Location = new System.Drawing.Point(19, 84);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 21;
@@ -128,19 +129,20 @@
             // 
             this.cmbDistrictName.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbDistrictName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbDistrictName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDistrictName.IntegralHeight = false;
             this.cmbDistrictName.Location = new System.Drawing.Point(19, 120);
             this.cmbDistrictName.Margin = new System.Windows.Forms.Padding(0);
             this.cmbDistrictName.MinimumSize = new System.Drawing.Size(250, 0);
             this.cmbDistrictName.Name = "cmbDistrictName";
-            this.cmbDistrictName.Size = new System.Drawing.Size(250, 23);
+            this.cmbDistrictName.Size = new System.Drawing.Size(250, 27);
             this.cmbDistrictName.TabIndex = 5;
             // 
             // lblStateName
             // 
             this.lblStateName.AutoSize = true;
             this.lblStateName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblStateName.Location = new System.Drawing.Point(18, 41);
+            this.lblStateName.Location = new System.Drawing.Point(19, 40);
             this.lblStateName.Margin = new System.Windows.Forms.Padding(0);
             this.lblStateName.Name = "lblStateName";
             this.lblStateName.Size = new System.Drawing.Size(74, 15);
@@ -151,7 +153,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(18, 102);
+            this.label2.Location = new System.Drawing.Point(19, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(54, 15);
             this.label2.TabIndex = 4;

@@ -15,10 +15,10 @@ namespace Shaheen.DAL
         public SubscriptionDAL()
         {
             context = new ShaheenEntities();
-    }
+        }
         public SubscriptionModel GetSubscriptionWholeByCode(string code)
         {
-            return SubscriptionListWhole().Where(w => w.subscriptionCode == code).FirstOrDefault();
+            return SubscriptionListWhole(string.Empty).Where(w => w.subscriptionCode == code).FirstOrDefault();
         }
         public Subscription GetSubscriptionById(int Id)
         {
@@ -50,7 +50,7 @@ namespace Shaheen.DAL
             return subscription.subscriptionId;
         }
 
-        public List<SubscriptionModel> SubscriptionListWhole()
+        public List<SubscriptionModel> SubscriptionListWhole(string searchString)
         {
             DataTable dt = new DataTable();
             string strQuery = @"Select P.personId, p.personName,
@@ -65,8 +65,13 @@ namespace Shaheen.DAL
                 LEFT OUTER JOIN District D ON P.districtId = D.districtId
                 LEFT OUTER JOIN State S ON P.stateId = S.stateId
                 LEFT OUTER JOIN Agent AG ON SUB.agentId = AG.agentId
-                Where SUBD.status = 1
-                Order by PersonId asc";
+                Where SUBD.status = 1 ";
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                strQuery += searchString;
+            }
+            strQuery += "Order by PersonId asc";
+
             var list = new List<SubscriptionModel>();
             using (SqlCeConnection con = new SqlCeConnection(ConnectionString))
             {

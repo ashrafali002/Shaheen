@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtAreaName = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
@@ -72,10 +72,11 @@
             // 
             this.txtAreaName.BackColor = System.Drawing.Color.SkyBlue;
             this.txtAreaName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtAreaName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAreaName.Location = new System.Drawing.Point(19, 61);
             this.txtAreaName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAreaName.Name = "txtAreaName";
-            this.txtAreaName.Size = new System.Drawing.Size(245, 16);
+            this.txtAreaName.Size = new System.Drawing.Size(245, 20);
             this.txtAreaName.TabIndex = 19;
             // 
             // btnClose
@@ -119,7 +120,7 @@
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(19, 81);
+            this.panel1.Location = new System.Drawing.Point(19, 84);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 21;
@@ -128,19 +129,20 @@
             // 
             this.cmbCityName.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbCityName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCityName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCityName.IntegralHeight = false;
             this.cmbCityName.Location = new System.Drawing.Point(19, 120);
             this.cmbCityName.Margin = new System.Windows.Forms.Padding(0);
             this.cmbCityName.MinimumSize = new System.Drawing.Size(250, 0);
             this.cmbCityName.Name = "cmbCityName";
-            this.cmbCityName.Size = new System.Drawing.Size(250, 23);
+            this.cmbCityName.Size = new System.Drawing.Size(250, 27);
             this.cmbCityName.TabIndex = 5;
             // 
             // lblAreaName
             // 
             this.lblAreaName.AutoSize = true;
             this.lblAreaName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lblAreaName.Location = new System.Drawing.Point(18, 41);
+            this.lblAreaName.Location = new System.Drawing.Point(19, 40);
             this.lblAreaName.Margin = new System.Windows.Forms.Padding(0);
             this.lblAreaName.Name = "lblAreaName";
             this.lblAreaName.Size = new System.Drawing.Size(79, 15);
@@ -151,7 +153,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label2.Location = new System.Drawing.Point(18, 102);
+            this.label2.Location = new System.Drawing.Point(19, 100);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(34, 15);
             this.label2.TabIndex = 4;
@@ -178,14 +180,14 @@
             this.dgvArea.Location = new System.Drawing.Point(298, 44);
             this.dgvArea.MultiSelect = false;
             this.dgvArea.Name = "dgvArea";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArea.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArea.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvArea.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvArea.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArea.Size = new System.Drawing.Size(478, 339);

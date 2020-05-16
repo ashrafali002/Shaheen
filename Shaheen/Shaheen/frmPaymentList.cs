@@ -46,23 +46,28 @@ namespace Shaheen
         {
             if (e.KeyChar == 13)
             {
-                if (!string.IsNullOrEmpty(txtCode.Text))
+                LoadSearchResult();
+            }
+        }
+
+        private void LoadSearchResult()
+        {
+            if (!string.IsNullOrEmpty(txtCode.Text))
+            {
+                var subscriptionBll = new SubscriptionBLL();
+                var subscriptionModel = new SubscriptionModel();
+                subscriptionModel = subscriptionBll.GetSubscriptionWholeByCode(txtCode.Text);
+                if (subscriptionModel != null)
                 {
-                    var subscriptionBll = new SubscriptionBLL();
-                    var subscriptionModel = new SubscriptionModel();
-                    subscriptionModel = subscriptionBll.GetSubscriptionWholeByCode(txtCode.Text);
-                    if (subscriptionModel != null)
-                    {
-                        SubscriptionId = subscriptionModel.subscriptionId;
-                        FillDataGridView();
-                        lblAgent.Text = subscriptionModel.agentName;
-                        lblName.Text = subscriptionModel.personName;
-                        lblPendingAmount.Text = subscriptionModel.pendingAmount.ToString("C", CultureInfo.CurrentCulture);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid code", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    SubscriptionId = subscriptionModel.subscriptionId;
+                    FillDataGridView();
+                    lblAgent.Text = subscriptionModel.agentName;
+                    lblName.Text = subscriptionModel.personName;
+                    lblPendingAmount.Text = subscriptionModel.pendingAmount.ToString("C", CultureInfo.CurrentCulture);
+                }
+                else
+                {
+                    MessageBox.Show("Invalid code", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -74,7 +79,7 @@ namespace Shaheen
             
             if (editPayment.ShowDialog() == DialogResult.OK)
             {
-                FillDataGridView();
+                LoadSearchResult();
             }
         }
 

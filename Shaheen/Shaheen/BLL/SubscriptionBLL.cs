@@ -28,9 +28,9 @@ namespace Shaheen.BLL
             return isDuplicateFound;
         }
 
-        public List<SubscriptionModel> SubscriptionListWhole()
+        public List<SubscriptionModel> SubscriptionListWhole(string searchString)
         {
-            return subscriptionDal.SubscriptionListWhole();
+            return subscriptionDal.SubscriptionListWhole(searchString);
         }
         public SubscriptionModel GetSubscriptionWholeByCode(string code)
         {

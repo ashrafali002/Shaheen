@@ -1,11 +1,15 @@
 ﻿using Shaheen.BLL;
 using System;
+using System.IO;
+using System.Security.Authentication.ExtendedProtection;
 using System.Windows.Forms;
 
 namespace Shaheen
 {
     public partial class frmSubscriptionList : BaseForm
     {
+        public string SearchString { get; set; }
+
         public SubscriptionBLL subscriptionBll;
         private int rowIndex = 0;
         public frmSubscriptionList()
@@ -17,12 +21,13 @@ namespace Shaheen
         private void frmSubscriptionList_Load(object sender, EventArgs e)
         {
             FillDataGridView();
+            rdoCode.Focus();
         }
 
         private void FillDataGridView()
         {
             dgvSubscriptionList.AutoGenerateColumns = false;
-            dgvSubscriptionList.DataSource = subscriptionBll.SubscriptionListWhole();
+            dgvSubscriptionList.DataSource = subscriptionBll.SubscriptionListWhole(SearchString);
             dgvSubscriptionList.Columns["subscriptionDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["subscriptionStartDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["subscriptionEndDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
@@ -90,6 +95,36 @@ namespace Shaheen
                 FillDataGridView();
             }
             this.Show();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtSearch.Text))
+            {
+                string strSearch = string.Empty;
+                if (rdoCode.Checked)
+                {
+                    strSearch = " AND SUB.subscriptionCode = '" + txtSearch.Text + "'";
+                }
+                else if (rdoPerson.Checked)
+                {
+                    strSearch = " AND p.personName like '%" + txtSearch.Text + "%'";
+                }
+                else
+                {
+                    strSearch = string.Empty;
+                }
+                SearchString = strSearch;
+                FillDataGridView();
+            }
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtSearch.Text = string.Empty;
+            SearchString = string.Empty;
+            rdoCode.Checked = true;
+            FillDataGridView();
         }
     }
 }

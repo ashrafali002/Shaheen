@@ -82,7 +82,7 @@
             // 
             this.lblPendingAmount.AutoSize = true;
             this.lblPendingAmount.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPendingAmount.Location = new System.Drawing.Point(712, 58);
+            this.lblPendingAmount.Location = new System.Drawing.Point(712, 64);
             this.lblPendingAmount.Name = "lblPendingAmount";
             this.lblPendingAmount.Size = new System.Drawing.Size(0, 19);
             this.lblPendingAmount.TabIndex = 46;
@@ -91,7 +91,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(602, 60);
+            this.label4.Location = new System.Drawing.Point(602, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(99, 15);
             this.label4.TabIndex = 45;
@@ -102,7 +102,7 @@
             this.txtCode.BackColor = System.Drawing.Color.SkyBlue;
             this.txtCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCode.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCode.Location = new System.Drawing.Point(99, 21);
+            this.txtCode.Location = new System.Drawing.Point(99, 27);
             this.txtCode.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtCode.MaxLength = 10;
             this.txtCode.Name = "txtCode";
@@ -114,7 +114,7 @@
             // 
             this.lblAgent.AutoSize = true;
             this.lblAgent.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAgent.Location = new System.Drawing.Point(95, 58);
+            this.lblAgent.Location = new System.Drawing.Point(95, 64);
             this.lblAgent.Name = "lblAgent";
             this.lblAgent.Size = new System.Drawing.Size(0, 19);
             this.lblAgent.TabIndex = 44;
@@ -124,7 +124,7 @@
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(99, 44);
+            this.panel1.Location = new System.Drawing.Point(99, 50);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(102, 1);
             this.panel1.TabIndex = 19;
@@ -133,7 +133,7 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(318, 26);
+            this.lblName.Location = new System.Drawing.Point(318, 32);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(0, 19);
             this.lblName.TabIndex = 33;
@@ -142,7 +142,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(41, 60);
+            this.label13.Location = new System.Drawing.Point(41, 66);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 15);
             this.label13.TabIndex = 31;
@@ -152,7 +152,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(260, 28);
+            this.label1.Location = new System.Drawing.Point(260, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 15);
@@ -163,7 +163,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(49, 24);
+            this.label3.Location = new System.Drawing.Point(49, 30);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(42, 15);
