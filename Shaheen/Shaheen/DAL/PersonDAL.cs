@@ -31,9 +31,9 @@ namespace Shaheen.DAL
             personModel = PersonFull().Where(w => w.personId == personId).FirstOrDefault();
             return personModel;
         }
-        public List<PersonModel> PersonFull()
+
+        public DataTable GetPersonTable()
         {
-            var list = new List<PersonModel>();
             DataTable dt = new DataTable();
             string strQuery = @"Select P.personId,P.personName,P.personAddress,P.areaId,A.areaName,P.cityId,CT.cityName,
                 P.districtId,D.districtName,P.stateId,S.stateName,P.countryId,C.countryName,P.pin,P.phone,P.mobile,P.email
@@ -50,33 +50,40 @@ namespace Shaheen.DAL
                 cmd.CommandType = CommandType.Text;
                 SqlCeDataAdapter da = new SqlCeDataAdapter(cmd);
                 da.Fill(dt);
-
-                if (dt.Rows.Count > 0)
+            }
+            return dt;
+        }
+        public List<PersonModel> PersonFull()
+        {
+            var list = new List<PersonModel>();
+            DataTable dt = new DataTable();
+            dt = GetPersonTable();
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
                 {
-                    foreach (DataRow dr in dt.Rows)
+                    list.Add(new PersonModel()
                     {
-                        list.Add(new PersonModel()
-                        {
-                            personId = Convert.ToInt32(dr["personId"]),
-                            personName = Convert.ToString(dr["personName"]),
-                            personAddress = Convert.ToString(dr["personAddress"]),
-                            areaId = Convert.ToInt32(dr["areaId"]),
-                            areaName = Convert.ToString(dr["areaName"]),
-                            cityId = Convert.ToInt32(dr["cityId"]),
-                            cityName = Convert.ToString(dr["cityName"]),
-                            districtId = Convert.ToInt32(dr["districtId"]),
-                            districtName = Convert.ToString(dr["districtName"]),
-                            stateId = Convert.ToInt32(dr["stateId"]),
-                            stateName = Convert.ToString(dr["stateName"]),
-                            countryId = Convert.ToInt32(dr["countryId"]),
-                            countryName = Convert.ToString(dr["countryName"]),
-                            pin = Convert.ToString(dr["pin"]),
-                            phone = Convert.ToString(dr["phone"]),
-                            mobile = Convert.ToString(dr["mobile"]),
-                            email = Convert.ToString(dr["email"])
-                        });
-                    }
+                        personId = Convert.ToInt32(dr["personId"]),
+                        personName = Convert.ToString(dr["personName"]),
+                        personAddress = Convert.ToString(dr["personAddress"]),
+                        areaId = Convert.ToInt32(dr["areaId"]),
+                        areaName = Convert.ToString(dr["areaName"]),
+                        cityId = Convert.ToInt32(dr["cityId"]),
+                        cityName = Convert.ToString(dr["cityName"]),
+                        districtId = Convert.ToInt32(dr["districtId"]),
+                        districtName = Convert.ToString(dr["districtName"]),
+                        stateId = Convert.ToInt32(dr["stateId"]),
+                        stateName = Convert.ToString(dr["stateName"]),
+                        countryId = Convert.ToInt32(dr["countryId"]),
+                        countryName = Convert.ToString(dr["countryName"]),
+                        pin = Convert.ToString(dr["pin"]),
+                        phone = Convert.ToString(dr["phone"]),
+                        mobile = Convert.ToString(dr["mobile"]),
+                        email = Convert.ToString(dr["email"])
+                    });
                 }
+
             }
             return list;
             //list = context.People.Join(context.Countries, ag => ag.countryId, cn => cn.countryId, (ag, cn) => new { ag, cn })

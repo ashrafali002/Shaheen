@@ -197,14 +197,16 @@
             this.dgvPayment.AllowUserToOrderColumns = true;
             this.dgvPayment.AllowUserToResizeColumns = false;
             this.dgvPayment.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Gainsboro;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(210)))), ((int)(((byte)(248)))));
             this.dgvPayment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvPayment.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPayment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvPayment.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            this.dgvPayment.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPayment.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -236,7 +238,7 @@
             this.dgvPayment.Name = "dgvPayment";
             this.dgvPayment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
@@ -248,6 +250,7 @@
             this.dgvPayment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPayment.Size = new System.Drawing.Size(848, 420);
             this.dgvPayment.TabIndex = 46;
+            this.dgvPayment.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvPayment_CellFormatting);
             this.dgvPayment.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvPayment_RowHeaderMouseDoubleClick);
             // 
             // paymentId
@@ -263,7 +266,6 @@
             this.paymentType.HeaderText = "Payment Type";
             this.paymentType.Name = "paymentType";
             this.paymentType.ReadOnly = true;
-            this.paymentType.Width = 115;
             // 
             // paymentDate
             // 
@@ -271,7 +273,6 @@
             this.paymentDate.HeaderText = "Payment Date";
             this.paymentDate.Name = "paymentDate";
             this.paymentDate.ReadOnly = true;
-            this.paymentDate.Width = 115;
             // 
             // chequeNo
             // 
@@ -279,7 +280,6 @@
             this.chequeNo.HeaderText = "Cheq/DD No";
             this.chequeNo.Name = "chequeNo";
             this.chequeNo.ReadOnly = true;
-            this.chequeNo.Width = 115;
             // 
             // chequeDate
             // 
@@ -287,7 +287,6 @@
             this.chequeDate.HeaderText = "Cheq/DD Date";
             this.chequeDate.Name = "chequeDate";
             this.chequeDate.ReadOnly = true;
-            this.chequeDate.Width = 115;
             // 
             // amountPaid
             // 
@@ -295,7 +294,6 @@
             this.amountPaid.HeaderText = "Amount Paid";
             this.amountPaid.Name = "amountPaid";
             this.amountPaid.ReadOnly = true;
-            this.amountPaid.Width = 115;
             // 
             // receiptNo
             // 
@@ -303,7 +301,6 @@
             this.receiptNo.HeaderText = "Receipt No";
             this.receiptNo.Name = "receiptNo";
             this.receiptNo.ReadOnly = true;
-            this.receiptNo.Width = 115;
             // 
             // bankName
             // 
@@ -311,7 +308,6 @@
             this.bankName.HeaderText = "Bank Name";
             this.bankName.Name = "bankName";
             this.bankName.ReadOnly = true;
-            this.bankName.Width = 115;
             // 
             // btnClose
             // 

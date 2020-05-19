@@ -54,7 +54,7 @@ namespace Shaheen.DAL
         {
             DataTable dt = new DataTable();
             string strQuery = @"Select P.personId, p.personName,
-                SUB.subscriptionId, SUB.subscriptionCode,SUB.subscriptionDate,SUB.pendingAmount,
+                SUB.subscriptionId, SUB.subscriptionCode,SUB.subscriptionDate,SUB.pendingAmount,SUB.status,
                 SUBD.subscriptionDetailId,SUBD.subscriptionStartDate, SUBD.subscriptionEndDate,
                 A.AreaName, C.cityName,D.districtName, S.stateName, AG.agentName
                 from Person P
@@ -100,7 +100,8 @@ namespace Shaheen.DAL
                             cityName = Convert.ToString(dr["cityName"]),
                             districtName = Convert.ToString(dr["districtName"]),
                             stateName = Convert.ToString(dr["stateName"]),
-                            agentName = Convert.ToString(dr["agentName"])
+                            agentName = Convert.ToString(dr["agentName"]),
+                            status = Convert.ToInt32(dr["status"])
                         });
                     }
                 }

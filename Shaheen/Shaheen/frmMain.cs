@@ -227,5 +227,10 @@ namespace Shaheen
             paymentList.Show();
             paymentList.Focus();
         }
+
+        private void btnLabelPrint_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

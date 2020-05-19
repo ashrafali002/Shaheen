@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpAgent = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
@@ -62,6 +64,9 @@
             this.btnNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.dgvAgent = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.colAgentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAgentAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,9 +81,6 @@
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.grpAgent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgent)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -150,7 +152,7 @@
             this.panel8.BackColor = System.Drawing.Color.SkyBlue;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel8.Location = new System.Drawing.Point(20, 393);
+            this.panel8.Location = new System.Drawing.Point(20, 396);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(455, 1);
             this.panel8.TabIndex = 30;
@@ -182,7 +184,7 @@
             this.panel6.BackColor = System.Drawing.Color.SkyBlue;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel6.Location = new System.Drawing.Point(275, 340);
+            this.panel6.Location = new System.Drawing.Point(275, 343);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(200, 1);
             this.panel6.TabIndex = 27;
@@ -203,7 +205,7 @@
             this.panel7.BackColor = System.Drawing.Color.SkyBlue;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel7.Location = new System.Drawing.Point(20, 340);
+            this.panel7.Location = new System.Drawing.Point(20, 343);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(200, 1);
             this.panel7.TabIndex = 24;
@@ -224,7 +226,7 @@
             this.txtPIN.BackColor = System.Drawing.Color.SkyBlue;
             this.txtPIN.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPIN.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPIN.Location = new System.Drawing.Point(275, 267);
+            this.txtPIN.Location = new System.Drawing.Point(275, 268);
             this.txtPIN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPIN.MaxLength = 6;
             this.txtPIN.Name = "txtPIN";
@@ -236,7 +238,7 @@
             this.panel5.BackColor = System.Drawing.Color.SkyBlue;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel5.Location = new System.Drawing.Point(275, 287);
+            this.panel5.Location = new System.Drawing.Point(275, 291);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 1);
             this.panel5.TabIndex = 21;
@@ -389,7 +391,7 @@
             this.panel4.BackColor = System.Drawing.Color.SkyBlue;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel4.Location = new System.Drawing.Point(20, 126);
+            this.panel4.Location = new System.Drawing.Point(20, 129);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(455, 1);
             this.panel4.TabIndex = 8;
@@ -410,7 +412,7 @@
             this.panel2.BackColor = System.Drawing.Color.SkyBlue;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(23, 65);
+            this.panel2.Location = new System.Drawing.Point(23, 68);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(452, 1);
             this.panel2.TabIndex = 5;
@@ -469,8 +471,19 @@
             this.dgvAgent.AllowUserToOrderColumns = true;
             this.dgvAgent.AllowUserToResizeColumns = false;
             this.dgvAgent.AllowUserToResizeRows = false;
-            this.dgvAgent.BackgroundColor = System.Drawing.Color.White;
-            this.dgvAgent.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(210)))), ((int)(((byte)(248)))));
+            this.dgvAgent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvAgent.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            this.dgvAgent.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvAgent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAgent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvAgent.ColumnHeadersHeight = 35;
             this.dgvAgent.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colAgentName,
@@ -488,35 +501,70 @@
             this.mobile,
             this.email});
             this.dgvAgent.EnableHeadersVisualStyles = false;
+            this.dgvAgent.GridColor = System.Drawing.SystemColors.Control;
             this.dgvAgent.Location = new System.Drawing.Point(513, 43);
             this.dgvAgent.MultiSelect = false;
             this.dgvAgent.Name = "dgvAgent";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvAgent.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvAgent.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvAgent.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvAgent.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAgent.Size = new System.Drawing.Size(646, 456);
             this.dgvAgent.TabIndex = 6;
             this.dgvAgent.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgent_CellContentClick);
+            this.dgvAgent.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAgent_CellFormatting);
             this.dgvAgent.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAgent_RowHeaderMouseDoubleClick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnSave);
+            this.groupBox1.Controls.Add(this.btnClose);
+            this.groupBox1.Controls.Add(this.btnNew);
+            this.groupBox1.Location = new System.Drawing.Point(12, 449);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(495, 50);
+            this.groupBox1.TabIndex = 34;
+            this.groupBox1.TabStop = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1171, 37);
+            this.panel1.TabIndex = 35;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(7, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(68, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Agent";
             // 
             // colAgentName
             // 
             this.colAgentName.DataPropertyName = "agentName";
+            this.colAgentName.FillWeight = 132.2314F;
             this.colAgentName.HeaderText = "Name";
             this.colAgentName.Name = "colAgentName";
             this.colAgentName.ReadOnly = true;
-            this.colAgentName.Width = 200;
+            this.colAgentName.Width = 225;
             // 
             // colAgentAddress
             // 
             this.colAgentAddress.DataPropertyName = "agentAddress";
+            this.colAgentAddress.FillWeight = 129.717F;
             this.colAgentAddress.HeaderText = "Address";
             this.colAgentAddress.Name = "colAgentAddress";
             this.colAgentAddress.ReadOnly = true;
@@ -527,18 +575,22 @@
             // colCityName
             // 
             this.colCityName.DataPropertyName = "cityName";
+            this.colCityName.FillWeight = 64.01687F;
             this.colCityName.HeaderText = "City";
             this.colCityName.Name = "colCityName";
             this.colCityName.ReadOnly = true;
             this.colCityName.ToolTipText = "City";
+            this.colCityName.Width = 105;
             // 
             // colDelete
             // 
+            this.colDelete.FillWeight = 74.03477F;
             this.colDelete.HeaderText = "Delete";
             this.colDelete.Name = "colDelete";
             this.colDelete.Text = "Delete";
             this.colDelete.ToolTipText = "Delete";
             this.colDelete.UseColumnTextForButtonValue = true;
+            this.colDelete.Width = 75;
             // 
             // agentId
             // 
@@ -610,37 +662,6 @@
             this.email.Name = "email";
             this.email.Visible = false;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.btnSave);
-            this.groupBox1.Controls.Add(this.btnClose);
-            this.groupBox1.Controls.Add(this.btnNew);
-            this.groupBox1.Location = new System.Drawing.Point(12, 449);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(495, 50);
-            this.groupBox1.TabIndex = 34;
-            this.groupBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Navy;
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1171, 37);
-            this.panel1.TabIndex = 35;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(7, 6);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Agent";
-            // 
             // frmAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -699,6 +720,8 @@
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.DataGridView dgvAgent;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAgentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAgentAddress;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCityName;
@@ -713,7 +736,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn phone;
         private System.Windows.Forms.DataGridViewTextBoxColumn mobile;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
     }
 }

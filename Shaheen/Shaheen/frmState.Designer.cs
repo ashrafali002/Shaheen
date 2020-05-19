@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtState = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
@@ -39,6 +41,8 @@
             this.lblStateName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvState = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.colStateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCountryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +50,7 @@
             this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvState)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -58,7 +63,7 @@
             this.groupBox1.Controls.Add(this.cmbCountryName);
             this.groupBox1.Controls.Add(this.lblStateName);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(10, 10);
+            this.groupBox1.Location = new System.Drawing.Point(10, 43);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(282, 337);
             this.groupBox1.TabIndex = 4;
@@ -69,10 +74,11 @@
             // 
             this.txtState.BackColor = System.Drawing.Color.SkyBlue;
             this.txtState.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtState.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtState.Location = new System.Drawing.Point(19, 61);
             this.txtState.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtState.Name = "txtState";
-            this.txtState.Size = new System.Drawing.Size(245, 16);
+            this.txtState.Size = new System.Drawing.Size(245, 20);
             this.txtState.TabIndex = 19;
             // 
             // btnClose
@@ -116,7 +122,7 @@
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(19, 81);
+            this.panel1.Location = new System.Drawing.Point(19, 84);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 21;
@@ -125,12 +131,13 @@
             // 
             this.cmbCountryName.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbCountryName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbCountryName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCountryName.IntegralHeight = false;
             this.cmbCountryName.Location = new System.Drawing.Point(19, 120);
             this.cmbCountryName.Margin = new System.Windows.Forms.Padding(0);
             this.cmbCountryName.MinimumSize = new System.Drawing.Size(250, 0);
             this.cmbCountryName.Name = "cmbCountryName";
-            this.cmbCountryName.Size = new System.Drawing.Size(250, 23);
+            this.cmbCountryName.Size = new System.Drawing.Size(250, 27);
             this.cmbCountryName.TabIndex = 5;
             // 
             // lblStateName
@@ -161,8 +168,19 @@
             this.dgvState.AllowUserToOrderColumns = true;
             this.dgvState.AllowUserToResizeColumns = false;
             this.dgvState.AllowUserToResizeRows = false;
-            this.dgvState.BackgroundColor = System.Drawing.Color.White;
-            this.dgvState.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(210)))), ((int)(((byte)(248)))));
+            this.dgvState.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvState.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            this.dgvState.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvState.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvState.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvState.ColumnHeadersHeight = 35;
             this.dgvState.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colStateName,
@@ -171,23 +189,44 @@
             this.countryId,
             this.colDelete});
             this.dgvState.EnableHeadersVisualStyles = false;
-            this.dgvState.Location = new System.Drawing.Point(298, 11);
+            this.dgvState.Location = new System.Drawing.Point(298, 43);
             this.dgvState.MultiSelect = false;
             this.dgvState.Name = "dgvState";
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvState.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvState.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvState.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvState.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvState.Size = new System.Drawing.Size(478, 339);
             this.dgvState.TabIndex = 5;
             this.dgvState.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvState_CellContentClick);
+            this.dgvState.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvState_CellFormatting);
             this.dgvState.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvState_RowHeaderMouseDoubleClick);
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(786, 37);
+            this.panel2.TabIndex = 39;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(7, 6);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "State";
             // 
             // colStateName
             // 
@@ -195,7 +234,7 @@
             this.colStateName.HeaderText = "State";
             this.colStateName.Name = "colStateName";
             this.colStateName.ReadOnly = true;
-            this.colStateName.Width = 190;
+            this.colStateName.Width = 217;
             // 
             // colCountryName
             // 
@@ -227,13 +266,15 @@
             this.colDelete.Text = "Delete";
             this.colDelete.ToolTipText = "Delete";
             this.colDelete.UseColumnTextForButtonValue = true;
+            this.colDelete.Width = 75;
             // 
             // frmState
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(786, 360);
+            this.ClientSize = new System.Drawing.Size(786, 392);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvState);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmState";
@@ -243,6 +284,8 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvState)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -258,6 +301,8 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn colStateName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCountryName;
         private System.Windows.Forms.DataGridViewTextBoxColumn stateId;

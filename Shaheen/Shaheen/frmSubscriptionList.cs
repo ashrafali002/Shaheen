@@ -1,5 +1,7 @@
 ﻿using Shaheen.BLL;
 using System;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
+using System.Drawing;
 using System.IO;
 using System.Security.Authentication.ExtendedProtection;
 using System.Windows.Forms;
@@ -26,12 +28,16 @@ namespace Shaheen
 
         private void FillDataGridView()
         {
+            foreach (DataGridViewColumn aColumn in dgvSubscriptionList.Columns)
+            {
+                aColumn.HeaderCell.Style.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
             dgvSubscriptionList.AutoGenerateColumns = false;
             dgvSubscriptionList.DataSource = subscriptionBll.SubscriptionListWhole(SearchString);
             dgvSubscriptionList.Columns["subscriptionDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["subscriptionStartDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["subscriptionEndDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
-            dgvSubscriptionList.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvSubscriptionList.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;            
         }
 
         private void dgvSubscriptionList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -125,6 +131,23 @@ namespace Shaheen
             SearchString = string.Empty;
             rdoCode.Checked = true;
             FillDataGridView();
+        }
+
+        private void dgvSubscriptionList_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach (DataGridViewRow aRow in dgvSubscriptionList.Rows)
+            {
+                aRow.Height = 30;
+                aRow.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                if (aRow.Cells["status"].Value.ToString() == "2")
+                {
+                    aRow.DefaultCellStyle.BackColor = Color.LightCoral;
+                }
+                if (aRow.Cells["status"].Value.ToString() == "3")
+                {
+                    aRow.DefaultCellStyle.BackColor = Color.Turquoise;
+                }
+            }
         }
     }
 }

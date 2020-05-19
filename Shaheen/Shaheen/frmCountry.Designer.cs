@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.dgvCountry = new System.Windows.Forms.DataGridView();
@@ -73,23 +75,41 @@
             // 
             this.dgvCountry.AllowUserToAddRows = false;
             this.dgvCountry.AllowUserToDeleteRows = false;
-            this.dgvCountry.AllowUserToOrderColumns = true;
             this.dgvCountry.AllowUserToResizeColumns = false;
             this.dgvCountry.AllowUserToResizeRows = false;
-            this.dgvCountry.BackgroundColor = System.Drawing.Color.White;
+            this.dgvCountry.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvCountry.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            this.dgvCountry.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvCountry.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCountry.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvCountry.ColumnHeadersHeight = 35;
             this.dgvCountry.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvCountry.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colCountryName,
             this.colDelete});
             this.dgvCountry.EnableHeadersVisualStyles = false;
-            this.dgvCountry.Location = new System.Drawing.Point(298, 41);
+            this.dgvCountry.Location = new System.Drawing.Point(298, 42);
             this.dgvCountry.Name = "dgvCountry";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCountry.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvCountry.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvCountry.Size = new System.Drawing.Size(478, 339);
+            this.dgvCountry.Size = new System.Drawing.Size(478, 338);
             this.dgvCountry.TabIndex = 5;
             this.dgvCountry.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCountry_CellContentClick);
+            this.dgvCountry.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvCountry_CellFormatting);
             this.dgvCountry.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvCountry_RowHeaderMouseDoubleClick);
             // 
             // colCountryName
@@ -99,7 +119,6 @@
             this.colCountryName.HeaderText = "Country";
             this.colCountryName.Name = "colCountryName";
             this.colCountryName.ReadOnly = true;
-            this.colCountryName.Width = 330;
             // 
             // colDelete
             // 
@@ -109,7 +128,6 @@
             this.colDelete.Text = "Delete";
             this.colDelete.ToolTipText = "Delete";
             this.colDelete.UseColumnTextForButtonValue = true;
-            this.colDelete.Width = 105;
             // 
             // btnNew
             // 

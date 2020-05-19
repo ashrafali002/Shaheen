@@ -52,6 +52,10 @@ namespace Shaheen
         }
         private void FillDataGridView()
         {
+            foreach (DataGridViewColumn aColumn in dgvCity.Columns)
+            {
+                aColumn.HeaderCell.Style.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
             dgvCity.AutoGenerateColumns = false;
             dgvCity.DataSource = cityBll.CityDistrictList();
         }
@@ -160,6 +164,15 @@ namespace Shaheen
                     FillDataGridView();
                     ClearControls();
                 }
+            }
+        }
+
+        private void dgvCity_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach (DataGridViewRow aRow in dgvCity.Rows)
+            {
+                aRow.Height = 30;
+                aRow.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
     }

@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvSubscriptionList = new System.Windows.Forms.DataGridView();
             this.subscriptionCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +48,7 @@
             this.personId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subscriptionId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subscriptionDetailId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mnuContext = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ctxmEditPerson = new System.Windows.Forms.ToolStripMenuItem();
             this.ctxmSubscriptionDetails = new System.Windows.Forms.ToolStripMenuItem();
@@ -56,11 +57,11 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.rdoPerson = new System.Windows.Forms.RadioButton();
             this.rdoCode = new System.Windows.Forms.RadioButton();
-            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubscriptionList)).BeginInit();
             this.mnuContext.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,20 +73,19 @@
             this.dgvSubscriptionList.AllowUserToDeleteRows = false;
             this.dgvSubscriptionList.AllowUserToResizeColumns = false;
             this.dgvSubscriptionList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Gainsboro;
-            this.dgvSubscriptionList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
-            this.dgvSubscriptionList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(210)))), ((int)(((byte)(248)))));
+            this.dgvSubscriptionList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSubscriptionList.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvSubscriptionList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvSubscriptionList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSubscriptionList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubscriptionList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSubscriptionList.ColumnHeadersHeight = 50;
             this.dgvSubscriptionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSubscriptionList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -102,34 +102,36 @@
             this.agentName,
             this.personId,
             this.subscriptionId,
-            this.subscriptionDetailId});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.Format = "C2";
-            dataGridViewCellStyle15.NullValue = null;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSubscriptionList.DefaultCellStyle = dataGridViewCellStyle15;
+            this.subscriptionDetailId,
+            this.status});
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSubscriptionList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSubscriptionList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvSubscriptionList.EnableHeadersVisualStyles = false;
-            this.dgvSubscriptionList.Location = new System.Drawing.Point(0, 49);
+            this.dgvSubscriptionList.Location = new System.Drawing.Point(0, 48);
             this.dgvSubscriptionList.MultiSelect = false;
             this.dgvSubscriptionList.Name = "dgvSubscriptionList";
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.SkyBlue;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSubscriptionList.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubscriptionList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSubscriptionList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSubscriptionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSubscriptionList.Size = new System.Drawing.Size(1177, 673);
+            this.dgvSubscriptionList.Size = new System.Drawing.Size(1200, 652);
             this.dgvSubscriptionList.TabIndex = 7;
+            this.dgvSubscriptionList.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvSubscriptionList_CellFormatting);
             this.dgvSubscriptionList.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSubscriptionList_CellMouseDown);
             // 
             // subscriptionCode
@@ -140,6 +142,7 @@
             this.subscriptionCode.Name = "subscriptionCode";
             this.subscriptionCode.ReadOnly = true;
             this.subscriptionCode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.subscriptionCode.Width = 51;
             // 
             // personName
             // 
@@ -149,6 +152,7 @@
             this.personName.Name = "personName";
             this.personName.ReadOnly = true;
             this.personName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.personName.Width = 214;
             // 
             // subscriptionDate
             // 
@@ -158,6 +162,7 @@
             this.subscriptionDate.Name = "subscriptionDate";
             this.subscriptionDate.ReadOnly = true;
             this.subscriptionDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.subscriptionDate.Width = 98;
             // 
             // subscriptionStartDate
             // 
@@ -167,6 +172,7 @@
             this.subscriptionStartDate.Name = "subscriptionStartDate";
             this.subscriptionStartDate.ReadOnly = true;
             this.subscriptionStartDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.subscriptionStartDate.Width = 90;
             // 
             // subscriptionEndDate
             // 
@@ -176,6 +182,7 @@
             this.subscriptionEndDate.Name = "subscriptionEndDate";
             this.subscriptionEndDate.ReadOnly = true;
             this.subscriptionEndDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.subscriptionEndDate.Width = 90;
             // 
             // pendingAmount
             // 
@@ -185,6 +192,7 @@
             this.pendingAmount.Name = "pendingAmount";
             this.pendingAmount.ReadOnly = true;
             this.pendingAmount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.pendingAmount.Width = 78;
             // 
             // AreaName
             // 
@@ -194,6 +202,7 @@
             this.AreaName.Name = "AreaName";
             this.AreaName.ReadOnly = true;
             this.AreaName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.AreaName.Width = 95;
             // 
             // cityName
             // 
@@ -203,6 +212,7 @@
             this.cityName.Name = "cityName";
             this.cityName.ReadOnly = true;
             this.cityName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cityName.Width = 96;
             // 
             // districtName
             // 
@@ -212,6 +222,7 @@
             this.districtName.Name = "districtName";
             this.districtName.ReadOnly = true;
             this.districtName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.districtName.Width = 96;
             // 
             // stateName
             // 
@@ -220,6 +231,7 @@
             this.stateName.HeaderText = "State";
             this.stateName.Name = "stateName";
             this.stateName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.stateName.Width = 97;
             // 
             // agentName
             // 
@@ -229,6 +241,7 @@
             this.agentName.Name = "agentName";
             this.agentName.ReadOnly = true;
             this.agentName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.agentName.Width = 163;
             // 
             // personId
             // 
@@ -251,50 +264,62 @@
             this.subscriptionDetailId.Name = "subscriptionDetailId";
             this.subscriptionDetailId.Visible = false;
             // 
+            // status
+            // 
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "status";
+            this.status.Name = "status";
+            this.status.Visible = false;
+            // 
             // mnuContext
             // 
+            this.mnuContext.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ctxmEditPerson,
             this.ctxmSubscriptionDetails,
             this.ctxmRenewSubscription,
             this.ctxmPayment});
             this.mnuContext.Name = "mnuContext";
-            this.mnuContext.Size = new System.Drawing.Size(199, 92);
+            this.mnuContext.Size = new System.Drawing.Size(248, 140);
             // 
             // ctxmEditPerson
             // 
+            this.ctxmEditPerson.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.ctxmEditPerson.Name = "ctxmEditPerson";
-            this.ctxmEditPerson.Size = new System.Drawing.Size(198, 22);
+            this.ctxmEditPerson.Size = new System.Drawing.Size(247, 24);
             this.ctxmEditPerson.Text = "Edit Person";
             this.ctxmEditPerson.Click += new System.EventHandler(this.ctxmEditPerson_Click);
             // 
             // ctxmSubscriptionDetails
             // 
+            this.ctxmSubscriptionDetails.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.ctxmSubscriptionDetails.Name = "ctxmSubscriptionDetails";
-            this.ctxmSubscriptionDetails.Size = new System.Drawing.Size(198, 22);
+            this.ctxmSubscriptionDetails.Size = new System.Drawing.Size(247, 24);
             this.ctxmSubscriptionDetails.Text = "Edit SubscriptionDetails";
             this.ctxmSubscriptionDetails.Click += new System.EventHandler(this.ctxmSubscriptionDetails_Click);
             // 
             // ctxmRenewSubscription
             // 
+            this.ctxmRenewSubscription.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.ctxmRenewSubscription.Name = "ctxmRenewSubscription";
-            this.ctxmRenewSubscription.Size = new System.Drawing.Size(198, 22);
+            this.ctxmRenewSubscription.Size = new System.Drawing.Size(247, 24);
             this.ctxmRenewSubscription.Text = "Renew Subscription";
             this.ctxmRenewSubscription.Click += new System.EventHandler(this.ctxmRenewSubscription_Click);
             // 
             // ctxmPayment
             // 
+            this.ctxmPayment.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.ctxmPayment.Name = "ctxmPayment";
-            this.ctxmPayment.Size = new System.Drawing.Size(198, 22);
+            this.ctxmPayment.Size = new System.Drawing.Size(247, 24);
             this.ctxmPayment.Text = "Payment";
             this.ctxmPayment.Click += new System.EventHandler(this.ctxmPayment_Click);
             // 
             // txtSearch
             // 
-            this.txtSearch.BackColor = System.Drawing.Color.Navy;
+            this.txtSearch.BackColor = System.Drawing.Color.SkyBlue;
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtSearch.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.ForeColor = System.Drawing.Color.White;
+            this.txtSearch.ForeColor = System.Drawing.Color.Navy;
             this.txtSearch.Location = new System.Drawing.Point(408, 14);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtSearch.Name = "txtSearch";
@@ -313,7 +338,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.BackColor = System.Drawing.Color.SkyBlue;
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.btnReset);
             this.panel2.Controls.Add(this.btnSearch);
@@ -321,10 +346,22 @@
             this.panel2.Controls.Add(this.rdoCode);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.txtSearch);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1177, 48);
+            this.panel2.Size = new System.Drawing.Size(1200, 48);
             this.panel2.TabIndex = 25;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(54, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 25);
+            this.label3.TabIndex = 29;
+            this.label3.Text = "Search :";
             // 
             // btnReset
             // 
@@ -354,7 +391,7 @@
             // 
             this.rdoPerson.AutoSize = true;
             this.rdoPerson.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoPerson.ForeColor = System.Drawing.Color.White;
+            this.rdoPerson.ForeColor = System.Drawing.Color.Navy;
             this.rdoPerson.Location = new System.Drawing.Point(245, 13);
             this.rdoPerson.Name = "rdoPerson";
             this.rdoPerson.Size = new System.Drawing.Size(141, 23);
@@ -367,7 +404,7 @@
             // 
             this.rdoCode.AutoSize = true;
             this.rdoCode.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdoCode.ForeColor = System.Drawing.Color.White;
+            this.rdoCode.ForeColor = System.Drawing.Color.Navy;
             this.rdoCode.Location = new System.Drawing.Point(159, 13);
             this.rdoCode.Name = "rdoCode";
             this.rdoCode.Size = new System.Drawing.Size(63, 23);
@@ -376,22 +413,11 @@
             this.rdoCode.Text = "Code";
             this.rdoCode.UseVisualStyleBackColor = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(54, 12);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 25);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Search :";
-            // 
             // frmSubscriptionList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1177, 722);
+            this.ClientSize = new System.Drawing.Size(1200, 700);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvSubscriptionList);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -409,6 +435,19 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvSubscriptionList;
+        private System.Windows.Forms.ContextMenuStrip mnuContext;
+        private System.Windows.Forms.ToolStripMenuItem ctxmEditPerson;
+        private System.Windows.Forms.ToolStripMenuItem ctxmSubscriptionDetails;
+        private System.Windows.Forms.ToolStripMenuItem ctxmRenewSubscription;
+        private System.Windows.Forms.ToolStripMenuItem ctxmPayment;
+        private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.RadioButton rdoPerson;
+        private System.Windows.Forms.RadioButton rdoCode;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn subscriptionCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn personName;
         private System.Windows.Forms.DataGridViewTextBoxColumn subscriptionDate;
@@ -423,18 +462,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn personId;
         private System.Windows.Forms.DataGridViewTextBoxColumn subscriptionId;
         private System.Windows.Forms.DataGridViewTextBoxColumn subscriptionDetailId;
-        private System.Windows.Forms.ContextMenuStrip mnuContext;
-        private System.Windows.Forms.ToolStripMenuItem ctxmEditPerson;
-        private System.Windows.Forms.ToolStripMenuItem ctxmSubscriptionDetails;
-        private System.Windows.Forms.ToolStripMenuItem ctxmRenewSubscription;
-        private System.Windows.Forms.ToolStripMenuItem ctxmPayment;
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton rdoPerson;
-        private System.Windows.Forms.RadioButton rdoCode;
-        private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button btnReset;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
     }
 }

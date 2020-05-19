@@ -1,8 +1,10 @@
-﻿using Shaheen.DAL;
+﻿using Org.BouncyCastle.Asn1.X509.SigI;
+using Shaheen.DAL;
 using Shaheen.Models;
 using Shaheen.ShaheenDB;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +30,11 @@ namespace Shaheen.BLL
         public PersonModel GetPersonModelById(int personId)
         {
             return personDal.GetPersonModelById(personId);
+        }
+
+        public DataTable GetPersonTable()
+        {
+            return personDal.GetPersonTable();
         }
     }
 }

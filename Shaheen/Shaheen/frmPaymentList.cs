@@ -35,6 +35,10 @@ namespace Shaheen
 
         public void FillDataGridView()
         {
+            foreach (DataGridViewColumn aColumn in dgvPayment.Columns)
+            {
+                aColumn.HeaderCell.Style.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
             dgvPayment.AutoGenerateColumns = false;
             dgvPayment.DataSource = paymentBll.GetPaymentBySubscriptionId(SubscriptionId).ToList();
             dgvPayment.Columns["paymentDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
@@ -85,7 +89,17 @@ namespace Shaheen
 
         private void frmPaymentList_Load(object sender, EventArgs e)
         {
+            FillDataGridView();
             txtCode.Focus();
+        }
+
+        private void dgvPayment_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {            
+            foreach (DataGridViewRow aRow in dgvPayment.Rows)
+            {
+                aRow.Height = 30;
+                aRow.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
         }
     }
 }

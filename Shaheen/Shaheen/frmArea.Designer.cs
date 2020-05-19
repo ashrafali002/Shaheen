@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtAreaName = new System.Windows.Forms.TextBox();
             this.btnClose = new System.Windows.Forms.Button();
@@ -166,9 +169,20 @@
             this.dgvArea.AllowUserToOrderColumns = true;
             this.dgvArea.AllowUserToResizeColumns = false;
             this.dgvArea.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(210)))), ((int)(((byte)(248)))));
+            this.dgvArea.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvArea.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvArea.BackgroundColor = System.Drawing.Color.White;
+            this.dgvArea.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.dgvArea.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvArea.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArea.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvArea.ColumnHeadersHeight = 35;
             this.dgvArea.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colAreaName,
@@ -180,25 +194,28 @@
             this.dgvArea.Location = new System.Drawing.Point(298, 44);
             this.dgvArea.MultiSelect = false;
             this.dgvArea.Name = "dgvArea";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvArea.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvArea.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvArea.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvArea.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dgvArea.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvArea.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvArea.Size = new System.Drawing.Size(478, 339);
             this.dgvArea.TabIndex = 5;
             this.dgvArea.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArea_CellContentClick);
+            this.dgvArea.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvArea_CellFormatting);
             this.dgvArea.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvArea_RowHeaderMouseDoubleClick);
             // 
             // colAreaName
             // 
             this.colAreaName.DataPropertyName = "areaName";
-            this.colAreaName.FillWeight = 130.4348F;
+            this.colAreaName.FillWeight = 152.2843F;
             this.colAreaName.HeaderText = "Area";
             this.colAreaName.Name = "colAreaName";
             this.colAreaName.ReadOnly = true;
@@ -206,7 +223,7 @@
             // colCityName
             // 
             this.colCityName.DataPropertyName = "cityName";
-            this.colCityName.FillWeight = 96.89352F;
+            this.colCityName.FillWeight = 98.36416F;
             this.colCityName.HeaderText = "City";
             this.colCityName.Name = "colCityName";
             this.colCityName.ReadOnly = true;
@@ -229,7 +246,11 @@
             // 
             // colDelete
             // 
-            this.colDelete.FillWeight = 72.67169F;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.colDelete.DefaultCellStyle = dataGridViewCellStyle3;
+            this.colDelete.FillWeight = 49.35157F;
+            this.colDelete.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.colDelete.HeaderText = "Delete";
             this.colDelete.Name = "colDelete";
             this.colDelete.Text = "Delete";
@@ -289,12 +310,12 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnNew;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn colAreaName;
         private System.Windows.Forms.DataGridViewTextBoxColumn colCityName;
         private System.Windows.Forms.DataGridViewTextBoxColumn areaId;
         private System.Windows.Forms.DataGridViewTextBoxColumn cityId;
         private System.Windows.Forms.DataGridViewButtonColumn colDelete;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label3;
     }
 }

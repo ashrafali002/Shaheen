@@ -22,5 +22,6 @@ namespace Shaheen.Models
         public string stateName { get; set; }
         public string agentName { get; set; }
         public decimal pendingAmount { get; set; }
+        public int status { get; set; }
     }
 }

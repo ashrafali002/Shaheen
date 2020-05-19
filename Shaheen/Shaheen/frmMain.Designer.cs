@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnLabelPrint = new System.Windows.Forms.Button();
             this.btnPaymentList = new System.Windows.Forms.Button();
             this.btnSubscriptionList = new System.Windows.Forms.Button();
             this.btnAgent = new System.Windows.Forms.Button();
@@ -40,9 +41,9 @@
             this.btnState = new System.Windows.Forms.Button();
             this.btnCountry = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlForm = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -51,6 +52,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panel1.Controls.Add(this.btnLabelPrint);
             this.panel1.Controls.Add(this.btnPaymentList);
             this.panel1.Controls.Add(this.btnSubscriptionList);
             this.panel1.Controls.Add(this.btnAgent);
@@ -67,6 +69,21 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 823);
             this.panel1.TabIndex = 0;
+            // 
+            // btnLabelPrint
+            // 
+            this.btnLabelPrint.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnLabelPrint.FlatAppearance.BorderSize = 0;
+            this.btnLabelPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLabelPrint.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLabelPrint.Location = new System.Drawing.Point(13, 566);
+            this.btnLabelPrint.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLabelPrint.Name = "btnLabelPrint";
+            this.btnLabelPrint.Size = new System.Drawing.Size(265, 38);
+            this.btnLabelPrint.TabIndex = 12;
+            this.btnLabelPrint.Text = "Label Print";
+            this.btnLabelPrint.UseVisualStyleBackColor = false;
+            this.btnLabelPrint.Click += new System.EventHandler(this.btnLabelPrint_Click);
             // 
             // btnPaymentList
             // 
@@ -190,7 +207,7 @@
             this.btnCountry.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCountry.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCountry.Location = new System.Drawing.Point(11, 266);
+            this.btnCountry.Location = new System.Drawing.Point(11, 264);
             this.btnCountry.Margin = new System.Windows.Forms.Padding(4);
             this.btnCountry.Name = "btnCountry";
             this.btnCountry.Size = new System.Drawing.Size(265, 38);
@@ -209,6 +226,16 @@
             this.pnlLogo.Name = "pnlLogo";
             this.pnlLogo.Size = new System.Drawing.Size(286, 97);
             this.pnlLogo.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(51, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(185, 65);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
             // 
             // panel2
             // 
@@ -229,16 +256,6 @@
             this.pnlForm.Name = "pnlForm";
             this.pnlForm.Size = new System.Drawing.Size(1058, 726);
             this.pnlForm.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(51, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(185, 65);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
             // 
             // frmMain
             // 
@@ -277,5 +294,6 @@
         private System.Windows.Forms.Button btnSubscriptionList;
         private System.Windows.Forms.Button btnPaymentList;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btnLabelPrint;
     }
 }

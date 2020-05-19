@@ -37,11 +37,13 @@ namespace Shaheen
 
         private void FillDataGridView()
         {
+            foreach (DataGridViewColumn aColumn in dgvCountry.Columns)
+            {
+                aColumn.HeaderCell.Style.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
             var countryBll = new CountryBLL();
             dgvCountry.DataSource = countryBll.CountryList();
-            dgvCountry.Columns["countryId"].Visible = false;
-            //dgvCountry.ColumnHeadersDefaultCellStyle.BackColor = "";
-            //dgvCountry.EnableHeadersVisualStyles = false;
+            dgvCountry.Columns["countryId"].Visible = false;            
         }
 
         private void BtnClose_Click(object sender, EventArgs e)
@@ -146,6 +148,16 @@ namespace Shaheen
             btnNew.Enabled = false;
             btnSave.Enabled = true;
             dgvCountry.Enabled = false;
+        }
+
+        private void dgvCountry_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach (DataGridViewRow aRow in dgvCountry.Rows)
+            {
+                aRow.Height = 30;
+                aRow.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
+            }
         }
     }
 }

@@ -91,6 +91,10 @@ namespace Shaheen
         }
         private void FillDataGridView()
         {
+            foreach (DataGridViewColumn aColumn in dgvAgent.Columns)
+            {
+                aColumn.HeaderCell.Style.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
             dgvAgent.AutoGenerateColumns = false;
             dgvAgent.DataSource = agentBll.AgentFullList();
         }
@@ -266,6 +270,15 @@ namespace Shaheen
             txtEmail.Text = Convert.ToString(grdRow.Cells["email"].Value);
             btnNew.Text = "Edit";
             btnClose.Text = "Cancel";
+        }
+
+        private void dgvAgent_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach (DataGridViewRow aRow in dgvAgent.Rows)
+            {
+                aRow.Height = 30;
+                aRow.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
         }
     }
 }

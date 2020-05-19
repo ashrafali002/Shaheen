@@ -51,8 +51,11 @@ namespace Shaheen
 
         private void FillDataGridView()
         {
-            dgvState.AutoGenerateColumns = false;
-            stateBll = new StateBLL();
+            foreach (DataGridViewColumn aColumn in dgvState.Columns)
+            {
+                aColumn.HeaderCell.Style.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
+            dgvState.AutoGenerateColumns = false;            
             dgvState.DataSource = stateBll.StateCountryList();            
         }
 
@@ -164,6 +167,16 @@ namespace Shaheen
                     FillDataGridView();
                     ClearControls();
                 }
+            }
+        }
+
+        private void dgvState_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            foreach (DataGridViewRow aRow in dgvState.Rows)
+            {
+                aRow.Height = 30;
+                aRow.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+
             }
         }
     }
