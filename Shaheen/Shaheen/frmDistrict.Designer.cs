@@ -41,13 +41,13 @@
             this.lblStateName = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvDistrict = new System.Windows.Forms.DataGridView();
+            this.colDistrictName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colStateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.districtId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            this.colDelete = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.districtId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colStateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDistrictName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDistrict)).BeginInit();
             this.panel2.SuspendLayout();
@@ -74,10 +74,11 @@
             // 
             this.txtDistrictName.BackColor = System.Drawing.Color.SkyBlue;
             this.txtDistrictName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDistrictName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDistrictName.Location = new System.Drawing.Point(19, 61);
             this.txtDistrictName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtDistrictName.Name = "txtDistrictName";
-            this.txtDistrictName.Size = new System.Drawing.Size(245, 16);
+            this.txtDistrictName.Size = new System.Drawing.Size(245, 20);
             this.txtDistrictName.TabIndex = 19;
             // 
             // btnClose
@@ -121,7 +122,7 @@
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(19, 81);
+            this.panel1.Location = new System.Drawing.Point(19, 84);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(245, 1);
             this.panel1.TabIndex = 21;
@@ -130,12 +131,13 @@
             // 
             this.cmbStateName.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbStateName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbStateName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStateName.IntegralHeight = false;
             this.cmbStateName.Location = new System.Drawing.Point(19, 120);
             this.cmbStateName.Margin = new System.Windows.Forms.Padding(0);
             this.cmbStateName.MinimumSize = new System.Drawing.Size(250, 0);
             this.cmbStateName.Name = "cmbStateName";
-            this.cmbStateName.Size = new System.Drawing.Size(250, 23);
+            this.cmbStateName.Size = new System.Drawing.Size(250, 27);
             this.cmbStateName.TabIndex = 5;
             // 
             // lblStateName
@@ -206,6 +208,49 @@
             this.dgvDistrict.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDistrict_CellFormatting);
             this.dgvDistrict.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDistrict_RowHeaderMouseDoubleClick);
             // 
+            // colDistrictName
+            // 
+            this.colDistrictName.DataPropertyName = "districtName";
+            this.colDistrictName.FillWeight = 1F;
+            this.colDistrictName.HeaderText = "District";
+            this.colDistrictName.Name = "colDistrictName";
+            this.colDistrictName.ReadOnly = true;
+            this.colDistrictName.Width = 216;
+            // 
+            // colStateName
+            // 
+            this.colStateName.DataPropertyName = "stateName";
+            this.colStateName.FillWeight = 1F;
+            this.colStateName.HeaderText = "State";
+            this.colStateName.Name = "colStateName";
+            this.colStateName.ReadOnly = true;
+            this.colStateName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colStateName.Width = 145;
+            // 
+            // stateId
+            // 
+            this.stateId.DataPropertyName = "stateId";
+            this.stateId.HeaderText = "stateId";
+            this.stateId.Name = "stateId";
+            this.stateId.Visible = false;
+            // 
+            // districtId
+            // 
+            this.districtId.DataPropertyName = "districtId";
+            this.districtId.HeaderText = "districtId";
+            this.districtId.Name = "districtId";
+            this.districtId.Visible = false;
+            // 
+            // colDelete
+            // 
+            this.colDelete.FillWeight = 1F;
+            this.colDelete.HeaderText = "Delete";
+            this.colDelete.Name = "colDelete";
+            this.colDelete.Text = "Delete";
+            this.colDelete.ToolTipText = "Delete";
+            this.colDelete.UseColumnTextForButtonValue = true;
+            this.colDelete.Width = 75;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Navy;
@@ -225,49 +270,6 @@
             this.label3.Size = new System.Drawing.Size(79, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "District";
-            // 
-            // colDelete
-            // 
-            this.colDelete.FillWeight = 1F;
-            this.colDelete.HeaderText = "Delete";
-            this.colDelete.Name = "colDelete";
-            this.colDelete.Text = "Delete";
-            this.colDelete.ToolTipText = "Delete";
-            this.colDelete.UseColumnTextForButtonValue = true;
-            this.colDelete.Width = 75;
-            // 
-            // districtId
-            // 
-            this.districtId.DataPropertyName = "districtId";
-            this.districtId.HeaderText = "districtId";
-            this.districtId.Name = "districtId";
-            this.districtId.Visible = false;
-            // 
-            // stateId
-            // 
-            this.stateId.DataPropertyName = "stateId";
-            this.stateId.HeaderText = "stateId";
-            this.stateId.Name = "stateId";
-            this.stateId.Visible = false;
-            // 
-            // colStateName
-            // 
-            this.colStateName.DataPropertyName = "stateName";
-            this.colStateName.FillWeight = 1F;
-            this.colStateName.HeaderText = "State";
-            this.colStateName.Name = "colStateName";
-            this.colStateName.ReadOnly = true;
-            this.colStateName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colStateName.Width = 145;
-            // 
-            // colDistrictName
-            // 
-            this.colDistrictName.DataPropertyName = "districtName";
-            this.colDistrictName.FillWeight = 1F;
-            this.colDistrictName.HeaderText = "District";
-            this.colDistrictName.Name = "colDistrictName";
-            this.colDistrictName.ReadOnly = true;
-            this.colDistrictName.Width = 216;
             // 
             // frmDistrict
             // 
