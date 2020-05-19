@@ -36,5 +36,10 @@ namespace Shaheen.BLL
         {
             return personDal.GetPersonTable();
         }
+
+        public DataTable GetPersonForLablePrint()
+        {
+            return personDal.GetPersonForLablePrint();
+        }
     }
 }

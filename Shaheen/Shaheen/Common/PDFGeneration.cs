@@ -12,11 +12,11 @@ namespace Shaheen
 {
     public class PDFGeneration
     {
-        public void GeneratePDF(string filePath, DataTable dt)
+        public static void GeneratePDF(string filePath, DataTable dt)
         {
             const int pageMargin = 5;
-            const int pageRows = 5;
-            const int pageCols = 2;
+            const int pageRows = 9;
+            const int pageCols = 3;
 
             Document doc = new Document(PageSize.A4);
             doc.SetMargins(pageMargin, pageMargin, pageMargin, pageMargin);
@@ -29,42 +29,43 @@ namespace Shaheen
             table.WidthPercentage = 100f;
             table.DefaultCell.Border = 0;
 
-            var baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, false);
+            var baseFont = BaseFont.CreateFont("C:\\Windows\\Fonts\\Rasa-Regular.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
 
+            foreach (DataRow dr in dt.Rows)
+            {
+                PdfPCell cell = new PdfPCell();
+                cell.Border = 0;
+                cell.FixedHeight = (doc.PageSize.Height - (pageMargin * 2)) / pageRows;
+                cell.VerticalAlignment = Element.ALIGN_LEFT;
+                var contents = new Paragraph();
+                contents.Alignment = Element.ALIGN_LEFT;
+                contents.Add(new Chunk(Convert.ToString(dr["personName"]) + "\n", new Font(baseFont, 12f)));
+                contents.Add(new Chunk(Convert.ToString(dr["personAddress"]) + "\n", new Font(baseFont, 10f)));
+                if (!string.IsNullOrEmpty(Convert.ToString(dr["areaName"])))
+                {
+                    contents.Add(new Chunk(Convert.ToString(dr["areaName"]) + ", ", new Font(baseFont, 10f)));
+                }
 
-            PdfPCell cell = new PdfPCell();
-            cell.Border = 0;
-            cell.FixedHeight = (doc.PageSize.Height - (pageMargin * 2)) / pageRows;
-            cell.VerticalAlignment = Element.ALIGN_LEFT;
-            var contents = new Paragraph();
-            contents.Alignment = Element.ALIGN_LEFT;
-            contents.Add(new Chunk(string.Format("Thing #{0}\n", "MohammedAshrafali Ansari"), new Font(baseFont, 11f, Font.BOLD)));
-            contents.Add(new Chunk(string.Format("Thing Name: {0}\n", "Ahmedabad"), new Font(baseFont, 8f)));
-            cell.AddElement(contents);
-            table.AddCell(cell);
-
-            PdfPCell cell1 = new PdfPCell();
-            cell1.Border = 0;
-            cell1.FixedHeight = (doc.PageSize.Height - (pageMargin * 2)) / pageRows;
-            cell1.VerticalAlignment = Element.ALIGN_LEFT;
-            var contents1 = new Paragraph();
-            contents1.Alignment = Element.ALIGN_LEFT;
-            contents1.Add(new Chunk(string.Format("Thing #{0}\n", "Danish Afzal Asgharali Ansari"), new Font(baseFont, 11f, Font.BOLD)));
-            contents1.Add(new Chunk(string.Format("Thing Name: {0}\n", "Baroda"), new Font(baseFont, 8f)));
-            cell1.AddElement(contents1);
-            table.AddCell(cell1);
-
-            PdfPCell cell2 = new PdfPCell();
-            cell2.Border = 0;
-            cell2.FixedHeight = (doc.PageSize.Height - (pageMargin * 2)) / pageRows;
-            cell2.VerticalAlignment = Element.ALIGN_MIDDLE;
-            var contents2 = new Paragraph();
-            contents2.Alignment = Element.ALIGN_CENTER;
-            contents2.Add(new Chunk(string.Format("Thing #{0}\n", "Ab.Razzaq Shaikh"), new Font(baseFont, 11f, Font.BOLD)));
-            contents2.Add(new Chunk(string.Format("Thing Name: {0}\n", "Shahpur"), new Font(baseFont, 8f)));
-            cell.AddElement(contents);
-            table.AddCell(cell2);
-
+                contents.Add(new Chunk(Convert.ToString(dr["cityName"]), new Font(baseFont, 10f)));
+                if (!string.IsNullOrEmpty(Convert.ToString(dr["pin"])))
+                {
+                    contents.Add(new Chunk(" - " + Convert.ToString(dr["pin"]), new Font(baseFont, 10f)));
+                }
+                if (!string.IsNullOrEmpty(Convert.ToString(dr["districtName"])))
+                {
+                    contents.Add(new Chunk("\n" + Convert.ToString(dr["districtName"]) + ", ", new Font(baseFont, 10f)));
+                }
+                else
+                {
+                    contents.Add(new Chunk("\n", new Font(baseFont, 10f)));
+                }
+                if (!string.IsNullOrEmpty(Convert.ToString(dr["stateName"])))
+                {
+                    contents.Add(new Chunk(Convert.ToString(dr["stateName"]), new Font(baseFont, 10f)));
+                }
+                cell.AddElement(contents);
+                table.AddCell(cell);
+            }
             table.CompleteRow();
             doc.Add(table);
 

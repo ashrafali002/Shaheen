@@ -1,5 +1,7 @@
-﻿using Shaheen.ShaheenDB;
+﻿using Shaheen.BLL;
+using Shaheen.ShaheenDB;
 using System;
+using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -230,7 +232,19 @@ namespace Shaheen
 
         private void btnLabelPrint_Click(object sender, EventArgs e)
         {
-
+            DataTable dt = new DataTable();
+            var personBll = new PersonBLL();
+            dt = personBll.GetPersonForLablePrint();
+            if (dt.Rows.Count > 0)
+            {
+                using (SaveFileDialog sdf = new SaveFileDialog() { Filter = "PDF File|*.pdf", ValidateNames = true })
+                {
+                    if (sdf.ShowDialog() == DialogResult.OK)
+                    {
+                        PDFGeneration.GeneratePDF(sdf.FileName, dt);
+                    }
+                }
+            }
         }
     }
 }
