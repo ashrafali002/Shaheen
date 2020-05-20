@@ -16,7 +16,7 @@ namespace Shaheen
 
         private void frmSubscription_Load(object sender, EventArgs e)
         {
-            Dropdownlists();
+            BindDropdownlists();
             rdoCash.Checked = true;
             dtpChequeDate.Value = DateTime.Now;
             dtpEndDate.Value = DateTime.Now;
@@ -26,7 +26,7 @@ namespace Shaheen
             txtCode.Focus();
         }
 
-        private void Dropdownlists()
+        private void BindDropdownlists()
         {
             var agentBll = new AgentBLL();
             var agentList = agentBll.AgentList();

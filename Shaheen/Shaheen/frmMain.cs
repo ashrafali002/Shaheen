@@ -24,6 +24,7 @@ namespace Shaheen
         public frmAgent agent = null;
         public frmSubscriptionList subscriptionList = null;
         public frmPaymentList paymentList = null;
+        public frmCustomReport customReport = null;
 
         private bool CheckOpened(string name)
         {
@@ -245,6 +246,21 @@ namespace Shaheen
                     }
                 }
             }
+        }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            CloseAllOpenForm();
+            customReport = new frmCustomReport() { TopLevel = false };
+            customReport.Location = new Point()
+            {
+                X = pnlForm.Width / 2 - customReport.Width / 2,
+                Y = pnlForm.Height / 2 - customReport.Height / 2
+            };
+            this.pnlForm.Controls.Add(customReport);
+            customReport.BringToFront();
+            customReport.Show();
+            customReport.Focus();
         }
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReport = new System.Windows.Forms.Button();
             this.btnLabelPrint = new System.Windows.Forms.Button();
             this.btnPaymentList = new System.Windows.Forms.Button();
             this.btnSubscriptionList = new System.Windows.Forms.Button();
@@ -52,6 +53,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panel1.Controls.Add(this.btnReport);
             this.panel1.Controls.Add(this.btnLabelPrint);
             this.panel1.Controls.Add(this.btnPaymentList);
             this.panel1.Controls.Add(this.btnSubscriptionList);
@@ -70,18 +72,33 @@
             this.panel1.Size = new System.Drawing.Size(286, 823);
             this.panel1.TabIndex = 0;
             // 
+            // btnReport
+            // 
+            this.btnReport.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnReport.FlatAppearance.BorderSize = 0;
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnReport.Location = new System.Drawing.Point(11, 612);
+            this.btnReport.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.Size = new System.Drawing.Size(265, 38);
+            this.btnReport.TabIndex = 12;
+            this.btnReport.Text = "Agent-wise Reports";
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // btnLabelPrint
             // 
             this.btnLabelPrint.BackColor = System.Drawing.Color.LimeGreen;
             this.btnLabelPrint.FlatAppearance.BorderSize = 0;
             this.btnLabelPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLabelPrint.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLabelPrint.Location = new System.Drawing.Point(13, 566);
+            this.btnLabelPrint.Location = new System.Drawing.Point(11, 566);
             this.btnLabelPrint.Margin = new System.Windows.Forms.Padding(4);
             this.btnLabelPrint.Name = "btnLabelPrint";
             this.btnLabelPrint.Size = new System.Drawing.Size(265, 38);
             this.btnLabelPrint.TabIndex = 12;
-            this.btnLabelPrint.Text = "Label Print";
+            this.btnLabelPrint.Text = "Print Addresses";
             this.btnLabelPrint.UseVisualStyleBackColor = false;
             this.btnLabelPrint.Click += new System.EventHandler(this.btnLabelPrint_Click);
             // 
@@ -295,5 +312,6 @@
         private System.Windows.Forms.Button btnPaymentList;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnLabelPrint;
+        private System.Windows.Forms.Button btnReport;
     }
 }

@@ -366,6 +366,7 @@
             // btnReset
             // 
             this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Location = new System.Drawing.Point(1047, 9);
             this.btnReset.Name = "btnReset";
@@ -415,8 +416,10 @@
             // 
             // frmSubscriptionList
             // 
+            this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnReset;
             this.ClientSize = new System.Drawing.Size(1200, 700);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvSubscriptionList);

@@ -29,7 +29,8 @@ namespace Shaheen
             table.WidthPercentage = 100f;
             table.DefaultCell.Border = 0;
 
-            var baseFont = BaseFont.CreateFont("C:\\Windows\\Fonts\\Rasa-Regular.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+            var baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, false);
+            //var baseFont = BaseFont.CreateFont("C:\\Windows\\Fonts\\Rasa-Regular.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
 
             foreach (DataRow dr in dt.Rows)
             {
@@ -72,43 +73,50 @@ namespace Shaheen
             doc.Close();
         }
 
-        public PdfPTable AddContentToPDF(PdfPTable tableLayout)
+        public static void AddContentToPDF(string filePath, DataTable dt)
         {
-            float[] headers = { 20, 20, 30, 30 };  //Header Widths
+            const int pageMargin = 5;
+            const int pageCols = 6;
+
+            Document doc = new Document(PageSize.A4);
+            doc.SetMargins(pageMargin, pageMargin, pageMargin, pageMargin);
+            var memoryStream = new MemoryStream();
+
+            var pdfWriter = PdfWriter.GetInstance(doc, new FileStream(filePath, FileMode.Create));
+            doc.Open();
+
+            PdfPTable tableLayout = new PdfPTable(pageCols);
+            //tableLayout.WidthPercentage = 100f;
+            //tableLayout.DefaultCell.Border = 0;
+
+            float[] headers = { 8, 22, 40, 10, 10, 12 };  //Header Widths
             tableLayout.SetWidths(headers);        //Set the pdf headers
-            tableLayout.WidthPercentage = 80;       //Set the PDF File witdh percentage
+            tableLayout.WidthPercentage = 90;       //Set the PDF File witdh percentage
 
             //Add Title to the PDF file at the top
-            tableLayout.AddCell(new PdfPCell(new Phrase("Creating PDF file using iTextsharp", new Font(Font.FontFamily.HELVETICA, 13, 1, new iTextSharp.text.BaseColor(153, 51, 0)))) { Colspan = 4, Border = 0, PaddingBottom = 20, HorizontalAlignment = Element.ALIGN_CENTER });
+            tableLayout.AddCell(new PdfPCell(new Phrase("Agent-wise Report (Shaheen Weekly)", new Font(Font.FontFamily.HELVETICA, 13, 1, new iTextSharp.text.BaseColor(153, 51, 0)))) { Colspan = 6, Border = 0, PaddingTop = 5, PaddingBottom = 5, HorizontalAlignment = Element.ALIGN_CENTER });
+            tableLayout.AddCell(new PdfPCell(new Phrase("Agent Name : " + dt.Rows[0]["agentName"] + "", new Font(Font.FontFamily.HELVETICA, 13, 1, new iTextSharp.text.BaseColor(153, 51, 0)))) { Colspan = 6, Border = 0, PaddingTop = 5, PaddingBottom = 5, HorizontalAlignment = Element.ALIGN_CENTER });
 
             //Add header
-            AddCellToHeader(tableLayout, "Cricketer Name");
-            AddCellToHeader(tableLayout, "Height");
-            AddCellToHeader(tableLayout, "Born On");
-            AddCellToHeader(tableLayout, "Parents");
-
+            AddCellToHeader(tableLayout, "Code");
+            AddCellToHeader(tableLayout, "Name");
+            AddCellToHeader(tableLayout, "Address");
+            AddCellToHeader(tableLayout, "Last Date");
+            AddCellToHeader(tableLayout, "Pending Amount");
+            AddCellToHeader(tableLayout, "Contact");
             //Add body
-            AddCellToBody(tableLayout, "Sachin Tendulkar");
-            AddCellToBody(tableLayout, "1.65 m");
-            AddCellToBody(tableLayout, "April 24, 1973");
-            AddCellToBody(tableLayout, "Ramesh Tendulkar, Rajni Tendulkar");
 
-            AddCellToBody(tableLayout, "Mahendra Singh Dhoni");
-            AddCellToBody(tableLayout, "1.75 m");
-            AddCellToBody(tableLayout, "July 7, 1981");
-            AddCellToBody(tableLayout, "Devki Devi, Pan Singh");
-
-            AddCellToBody(tableLayout, "Virender Sehwag");
-            AddCellToBody(tableLayout, "1.70 m");
-            AddCellToBody(tableLayout, "October 20, 1978");
-            AddCellToBody(tableLayout, "Aryavir Sehwag, Vedant Sehwag");
-
-            AddCellToBody(tableLayout, "Virat Kohli");
-            AddCellToBody(tableLayout, "1.75 m");
-            AddCellToBody(tableLayout, "November 5, 1988");
-            AddCellToBody(tableLayout, "Saroj Kohli, Prem Kohli");
-
-            return tableLayout;
+            foreach (DataRow dr in dt.Rows)
+            {
+                AddCellToBody(tableLayout, Convert.ToString(dr["subscriptionCode"]), Element.ALIGN_CENTER);
+                AddCellToBody(tableLayout, Convert.ToString(dr["personName"]), Element.ALIGN_LEFT);
+                AddCellToBody(tableLayout, Convert.ToString(dr["personAddress"]), Element.ALIGN_LEFT);
+                AddCellToBody(tableLayout, Convert.ToDateTime(dr["subscriptionEndDate"]).ToShortDateString(), Element.ALIGN_LEFT);
+                AddCellToBody(tableLayout, Convert.ToString(dr["pendingAmount"]), Element.ALIGN_RIGHT);
+                AddCellToBody(tableLayout, Convert.ToString(dr["mobile"]), Element.ALIGN_LEFT);
+            }
+            doc.Add(tableLayout);
+            doc.Close();
         }
 
         // Method to add single cell to the header
@@ -118,9 +126,9 @@ namespace Shaheen
         }
 
         // Method to add single cell to the body
-        private static void AddCellToBody(PdfPTable tableLayout, string cellText)
+        private static void AddCellToBody(PdfPTable tableLayout, string cellText, int alignment)
         {
-            tableLayout.AddCell(new PdfPCell(new Phrase(cellText, new Font(Font.FontFamily.HELVETICA, 8, 1, iTextSharp.text.BaseColor.BLACK))) { HorizontalAlignment = Element.ALIGN_CENTER, Padding = 5, BackgroundColor = iTextSharp.text.BaseColor.WHITE });
+            tableLayout.AddCell(new PdfPCell(new Phrase(cellText, new Font(Font.FontFamily.HELVETICA, 8, 1, iTextSharp.text.BaseColor.BLACK))) { HorizontalAlignment = alignment, Padding = 5, BackgroundColor = iTextSharp.text.BaseColor.WHITE });
         }
     }
 }
