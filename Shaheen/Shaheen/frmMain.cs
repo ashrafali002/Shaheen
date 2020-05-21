@@ -261,5 +261,13 @@ namespace Shaheen
             customReport.Show();
             customReport.Focus();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Do you want to exit", "Shahee Weekly", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
+            {
+                Application.Exit();
+            }            
+        }
     }
 }

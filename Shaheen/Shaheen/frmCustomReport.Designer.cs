@@ -316,9 +316,9 @@
             this.label27.ForeColor = System.Drawing.Color.White;
             this.label27.Location = new System.Drawing.Point(7, 6);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(154, 25);
+            this.label27.Size = new System.Drawing.Size(185, 25);
             this.label27.TabIndex = 0;
-            this.label27.Text = "Custom Report";
+            this.label27.Text = "Agent-wise Report";
             // 
             // dgvCustomReport
             // 
