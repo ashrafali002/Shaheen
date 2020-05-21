@@ -7,15 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Shaheen.ShaheenDB
+namespace Shaheen.IshraqEntities
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class District
+    public partial class Agent
     {
+        public int agentId { get; set; }
+        public string agentName { get; set; }
+        public string agentAddress { get; set; }
+        public int areaId { get; set; }
+        public int cityId { get; set; }
         public int districtId { get; set; }
-        public string districtName { get; set; }
         public int stateId { get; set; }
+        public int countryId { get; set; }
+        public string pin { get; set; }
+        public string phone { get; set; }
+        public string mobile { get; set; }
+        public string email { get; set; }
     }
 }

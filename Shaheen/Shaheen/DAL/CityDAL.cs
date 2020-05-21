@@ -1,5 +1,5 @@
-﻿using Shaheen.Models;
-using Shaheen.ShaheenDB;
+﻿using Shaheen.IshraqEntities;
+using Shaheen.Models;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,10 +7,10 @@ namespace Shaheen.DAL
 {
     public class CityDAL : BaseDAL
     {
-        protected ShaheenEntities context;
+        protected IshraqContext context;
         public CityDAL()
         {
-            context = new ShaheenEntities();
+            context = new IshraqContext();
         }
         public List<City> CityList()
         {

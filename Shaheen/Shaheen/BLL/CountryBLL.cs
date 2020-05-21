@@ -1,5 +1,5 @@
 ﻿using Shaheen.DAL;
-using Shaheen.ShaheenDB;
+using Shaheen.IshraqEntities;
 using System.Collections.Generic;
 using System.Linq;
 

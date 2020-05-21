@@ -7,16 +7,16 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Shaheen.ShaheenDB
+namespace Shaheen.IshraqEntities
 {
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ShaheenEntities : DbContext
+    public partial class IshraqContext : DbContext
     {
-        public ShaheenEntities()
-            : base("name=ShaheenEntities")
+        public IshraqContext()
+            : base("name=IshraqContext")
         {
         }
     
@@ -25,14 +25,14 @@ namespace Shaheen.ShaheenDB
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Agent> Agents { get; set; }
         public virtual DbSet<Area> Areas { get; set; }
         public virtual DbSet<City> Cities { get; set; }
         public virtual DbSet<Country> Countries { get; set; }
         public virtual DbSet<District> Districts { get; set; }
-        public virtual DbSet<State> States { get; set; }
-        public virtual DbSet<Person> People { get; set; }
-        public virtual DbSet<Agent> Agents { get; set; }
         public virtual DbSet<Payment> Payments { get; set; }
+        public virtual DbSet<Person> People { get; set; }
+        public virtual DbSet<State> States { get; set; }
         public virtual DbSet<Subscription> Subscriptions { get; set; }
         public virtual DbSet<SubscriptionDetail> SubscriptionDetails { get; set; }
     }

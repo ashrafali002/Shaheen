@@ -1,13 +1,7 @@
-﻿using Org.BouncyCastle.Asn1.X509.SigI;
-using Shaheen.DAL;
+﻿using Shaheen.DAL;
+using Shaheen.IshraqEntities;
 using Shaheen.Models;
-using Shaheen.ShaheenDB;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Shaheen.BLL
 {

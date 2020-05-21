@@ -7,19 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Shaheen.ShaheenDB
+namespace Shaheen.IshraqEntities
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class Subscription
+    public partial class Payment
     {
+        public int paymentId { get; set; }
         public int subscriptionId { get; set; }
-        public string subscriptionCode { get; set; }
-        public int personId { get; set; }
-        public int agentId { get; set; }
-        public decimal pendingAmount { get; set; }
-        public System.DateTime subscriptionDate { get; set; }
-        public Nullable<int> status { get; set; }
+        public string paymentType { get; set; }
+        public System.DateTime paymentDate { get; set; }
+        public string chequeNo { get; set; }
+        public Nullable<System.DateTime> chequeDate { get; set; }
+        public decimal amountPaid { get; set; }
+        public string receiptNo { get; set; }
+        public string bankName { get; set; }
     }
 }

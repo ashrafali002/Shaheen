@@ -1,5 +1,4 @@
-﻿using Shaheen.ShaheenDB;
-using System.Configuration;
+﻿using System.Configuration;
 
 namespace Shaheen.DAL
 {
@@ -8,7 +7,7 @@ namespace Shaheen.DAL
         public string ConnectionString = string.Empty;
         public BaseDAL()
         {            
-            ConnectionString = ConfigurationManager.ConnectionStrings["ShaheenDB"].ConnectionString;
+            ConnectionString = ConfigurationManager.ConnectionStrings["IshraqConnectionString"].ConnectionString;
         }
     }
 }

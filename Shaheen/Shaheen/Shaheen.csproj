@@ -20,7 +20,7 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
+    <OutputPath>bin\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -204,6 +204,51 @@
     <Compile Include="frmSubscriptionList.Designer.cs">
       <DependentUpon>frmSubscriptionList.cs</DependentUpon>
     </Compile>
+    <Compile Include="IshraqEntities\Agent.cs">
+      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IshraqEntities\Area.cs">
+      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IshraqEntities\City.cs">
+      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IshraqEntities\Country.cs">
+      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IshraqEntities\District.cs">
+      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IshraqEntities\IshraqEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IshraqEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IshraqEntities\IshraqEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IshraqEntities\IshraqEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IshraqEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="IshraqEntities\Payment.cs">
+      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IshraqEntities\Person.cs">
+      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IshraqEntities\State.cs">
+      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IshraqEntities\Subscription.cs">
+      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="IshraqEntities\SubscriptionDetail.cs">
+      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    </Compile>
     <Compile Include="MDIMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -219,51 +264,6 @@
     <Compile Include="Models\SubscriptionModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShaheenDB\Agent.cs">
-      <DependentUpon>ShaheenEF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShaheenDB\Area.cs">
-      <DependentUpon>ShaheenEF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShaheenDB\City.cs">
-      <DependentUpon>ShaheenEF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShaheenDB\Country.cs">
-      <DependentUpon>ShaheenEF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShaheenDB\District.cs">
-      <DependentUpon>ShaheenEF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShaheenDB\Payment.cs">
-      <DependentUpon>ShaheenEF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShaheenDB\Person.cs">
-      <DependentUpon>ShaheenEF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShaheenDB\ShaheenEF.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShaheenEF.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShaheenDB\ShaheenEF.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShaheenEF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShaheenDB\ShaheenEF.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ShaheenEF.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="ShaheenDB\State.cs">
-      <DependentUpon>ShaheenEF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShaheenDB\Subscription.cs">
-      <DependentUpon>ShaheenEF.tt</DependentUpon>
-    </Compile>
-    <Compile Include="ShaheenDB\SubscriptionDetail.cs">
-      <DependentUpon>ShaheenEF.tt</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -334,6 +334,13 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="IshraqEntities\IshraqEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>IshraqEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="IshraqEntities\IshraqEntities.edmx.diagram">
+      <DependentUpon>IshraqEntities.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -344,13 +351,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EntityDeploy Include="ShaheenDB\ShaheenEF.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ShaheenEF.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="ShaheenDB\ShaheenEF.edmx.diagram">
-      <DependentUpon>ShaheenEF.edmx</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -361,18 +361,15 @@
   <ItemGroup />
   <ItemGroup>
     <Content Include="images\logo-shaheen.png" />
-    <Content Include="ShaheenDB\ShaheenDB.sdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="ShaheenDB\ShaheenEF.Context.tt">
+    <Content Include="IshraqEntities\IshraqEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ShaheenEF.edmx</DependentUpon>
-      <LastGenOutput>ShaheenEF.Context.cs</LastGenOutput>
+      <DependentUpon>IshraqEntities.edmx</DependentUpon>
+      <LastGenOutput>IshraqEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ShaheenDB\ShaheenEF.tt">
+    <Content Include="IshraqEntities\IshraqEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ShaheenEF.edmx</DependentUpon>
-      <LastGenOutput>ShaheenEF.cs</LastGenOutput>
+      <DependentUpon>IshraqEntities.edmx</DependentUpon>
+      <LastGenOutput>IshraqEntities.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

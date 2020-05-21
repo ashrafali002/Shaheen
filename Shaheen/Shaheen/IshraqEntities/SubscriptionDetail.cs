@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Shaheen.ShaheenDB
+namespace Shaheen.IshraqEntities
 {
     using System;
     using System.Collections.Generic;

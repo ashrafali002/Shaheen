@@ -1,5 +1,5 @@
-﻿using Shaheen.Models;
-using Shaheen.ShaheenDB;
+﻿using Shaheen.IshraqEntities;
+using Shaheen.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,10 +10,10 @@ namespace Shaheen.DAL
 {
     public class PersonDAL : BaseDAL
     {
-        protected ShaheenEntities context;
+        protected IshraqContext context;
         public PersonDAL()
         {
-            context = new ShaheenEntities();
+            context = new IshraqContext();
         }
         public List<Person> getPersonList()
         {

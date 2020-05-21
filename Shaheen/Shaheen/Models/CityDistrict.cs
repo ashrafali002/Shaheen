@@ -1,4 +1,4 @@
-﻿using Shaheen.ShaheenDB;
+﻿using Shaheen.IshraqEntities;
 
 namespace Shaheen.Models
 {

@@ -1,6 +1,6 @@
 ﻿using Shaheen.DAL;
+using Shaheen.IshraqEntities;
 using Shaheen.Models;
-using Shaheen.ShaheenDB;
 using System.Collections.Generic;
 using System.Linq;
 

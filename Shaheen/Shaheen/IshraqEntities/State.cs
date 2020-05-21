@@ -7,15 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Shaheen.ShaheenDB
+namespace Shaheen.IshraqEntities
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class City
+    public partial class State
     {
-        public int cityId { get; set; }
-        public string cityName { get; set; }
-        public int districtId { get; set; }
+        public int stateId { get; set; }
+        public string stateName { get; set; }
+        public int countryId { get; set; }
     }
 }

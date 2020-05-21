@@ -1,15 +1,8 @@
 ﻿using Shaheen.BLL;
+using Shaheen.IshraqEntities;
 using Shaheen.Models;
-using Shaheen.ShaheenDB;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Data.Entity;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shaheen
@@ -164,7 +157,7 @@ namespace Shaheen
         {
             if (isValid())
             {
-                using (ShaheenEntities context = new ShaheenEntities())
+                using (IshraqContext context = new IshraqContext())
                 {
                     using (var transaction = context.Database.BeginTransaction())
                     {
@@ -223,14 +216,14 @@ namespace Shaheen
                 }
             }
         }
-        public int UpdateSubscriptionPendingAmount(int subscriptionId, ShaheenEntities context)
+        public int UpdateSubscriptionPendingAmount(int subscriptionId, IshraqContext context)
         {
             subscription.pendingAmount = (PendingAmount + Convert.ToDecimal(txtAmount.Text)) - Convert.ToDecimal(txtPaidAmout.Text);
             context.Entry(subscription).State = EntityState.Modified;
             context.SaveChanges();
             return subscriptionId;
         }
-        public int UpdateCurrentSubscriptionDetailStatus(int subscriptionDetailId, ShaheenEntities context)
+        public int UpdateCurrentSubscriptionDetailStatus(int subscriptionDetailId, IshraqContext context)
         {
             var subscriptionDetail = new SubscriptionDetail();
             subscriptionDetail = subscriptionDetailBll.GetSubscriptionDetailById(subscriptionDetailId);
@@ -240,7 +233,7 @@ namespace Shaheen
             return subscriptionDetailId;
 
         }
-        public int SaveSubscriptionDetail(int subscriptionId, ShaheenEntities context)
+        public int SaveSubscriptionDetail(int subscriptionId, IshraqContext context)
         {
             var subscriptionDetail = new SubscriptionDetail();
             subscriptionDetail.subscriptionId = subscriptionId;
@@ -254,7 +247,7 @@ namespace Shaheen
             context.SaveChanges();
             return res.subscriptionId;
         }
-        private int SavePayment(int subscriptionId, ShaheenEntities context)
+        private int SavePayment(int subscriptionId, IshraqContext context)
         {
             var payment = new Payment();
             payment.subscriptionId = subscriptionId;

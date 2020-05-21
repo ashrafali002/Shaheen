@@ -1,5 +1,5 @@
 ﻿using Shaheen.BLL;
-using Shaheen.ShaheenDB;
+using Shaheen.IshraqEntities;
 using System;
 using System.Windows.Forms;
 
@@ -244,7 +244,7 @@ namespace Shaheen
         {
             if (isValid())
             {
-                using (ShaheenEntities context = new ShaheenEntities())
+                using (IshraqContext context = new IshraqContext())
                 {
                     using (var transaction = context.Database.BeginTransaction())
                     {
@@ -268,7 +268,7 @@ namespace Shaheen
 
             }
         }
-        public int SavePerson(ShaheenEntities context)
+        public int SavePerson(IshraqContext context)
         {
             var person = new Person();
             person.personName = txtName.Text;
@@ -286,7 +286,7 @@ namespace Shaheen
             context.SaveChanges();
             return person.personId;
         }
-        public int SaveSubscription(int personId, ShaheenEntities context)
+        public int SaveSubscription(int personId, IshraqContext context)
         {
             var subscription = new Subscription();
             subscription.agentId = Convert.ToInt32(cmbAgent.SelectedValue);
@@ -299,7 +299,7 @@ namespace Shaheen
             context.SaveChanges();
             return res.subscriptionId;
         }
-        public int SaveSubscriptionDetail(int subscriptionId, ShaheenEntities context)
+        public int SaveSubscriptionDetail(int subscriptionId, IshraqContext context)
         {
             var subscriptionDetail = new SubscriptionDetail();
             subscriptionDetail.subscriptionId = subscriptionId;
@@ -313,7 +313,7 @@ namespace Shaheen
             context.SaveChanges();
             return res.subscriptionId;
         }
-        private int SavePayment(int subscriptionId, ShaheenEntities context)
+        private int SavePayment(int subscriptionId, IshraqContext context)
         {
             var payment = new Payment();
             payment.subscriptionId = subscriptionId;

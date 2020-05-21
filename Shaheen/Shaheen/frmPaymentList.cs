@@ -1,17 +1,8 @@
 ﻿using Shaheen.BLL;
 using Shaheen.Models;
-using Shaheen.ShaheenDB;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Printing;
 using System.Globalization;
 using System.Linq;
-using System.Security.AccessControl;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shaheen
