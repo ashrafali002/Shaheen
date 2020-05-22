@@ -191,6 +191,7 @@
             this.cityId,
             this.colDelete});
             this.dgvArea.EnableHeadersVisualStyles = false;
+            this.dgvArea.GridColor = System.Drawing.Color.Black;
             this.dgvArea.Location = new System.Drawing.Point(298, 44);
             this.dgvArea.MultiSelect = false;
             this.dgvArea.Name = "dgvArea";

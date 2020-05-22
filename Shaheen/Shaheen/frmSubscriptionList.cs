@@ -37,7 +37,7 @@ namespace Shaheen
             dgvSubscriptionList.Columns["subscriptionDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["subscriptionStartDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["subscriptionEndDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
-            dgvSubscriptionList.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;            
+            dgvSubscriptionList.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;     
         }
 
         private void dgvSubscriptionList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -87,7 +87,6 @@ namespace Shaheen
             {
                 FillDataGridView();
             }
-            this.Show();
         }
 
         private void ctxmPayment_Click(object sender, EventArgs e)
@@ -100,7 +99,6 @@ namespace Shaheen
             {
                 FillDataGridView();
             }
-            this.Show();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -133,8 +131,8 @@ namespace Shaheen
             FillDataGridView();
         }
 
-        private void dgvSubscriptionList_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
+        private void dgvSubscriptionList_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {            
             foreach (DataGridViewRow aRow in dgvSubscriptionList.Rows)
             {
                 aRow.Height = 30;
@@ -146,6 +144,11 @@ namespace Shaheen
                 if (aRow.Cells["status"].Value.ToString() == "3")
                 {
                     aRow.DefaultCellStyle.BackColor = Color.Turquoise;
+                }
+                if (Convert.ToDateTime(aRow.Cells["subscriptionEndDate"].Value) < DateTime.Now && aRow.Cells["status"].Value.ToString() == "1")
+                {
+                    aRow.DefaultCellStyle.BackColor = Color.Red;
+                    aRow.DefaultCellStyle.ForeColor = Color.White;
                 }
             }
         }

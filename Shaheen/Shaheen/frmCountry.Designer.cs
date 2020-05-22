@@ -95,8 +95,10 @@
             this.colCountryName,
             this.colDelete});
             this.dgvCountry.EnableHeadersVisualStyles = false;
+            this.dgvCountry.GridColor = System.Drawing.Color.Black;
             this.dgvCountry.Location = new System.Drawing.Point(298, 42);
             this.dgvCountry.Name = "dgvCountry";
+            this.dgvCountry.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

@@ -363,9 +363,11 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvCustomReport.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCustomReport.EnableHeadersVisualStyles = false;
+            this.dgvCustomReport.GridColor = System.Drawing.Color.Black;
             this.dgvCustomReport.Location = new System.Drawing.Point(12, 170);
             this.dgvCustomReport.MultiSelect = false;
             this.dgvCustomReport.Name = "dgvCustomReport";
+            this.dgvCustomReport.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -379,6 +381,7 @@
             this.dgvCustomReport.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCustomReport.Size = new System.Drawing.Size(1068, 521);
             this.dgvCustomReport.TabIndex = 2;
+            this.dgvCustomReport.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvCustomReport_DataBindingComplete);
             // 
             // subscriptionCode
             // 

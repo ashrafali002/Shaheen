@@ -54,6 +54,7 @@
             this.receiptNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bankName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnClose = new System.Windows.Forms.Button();
+            this.btnPayment = new System.Windows.Forms.Button();
             this.grpPerson.SuspendLayout();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
@@ -133,16 +134,17 @@
             // 
             this.lblName.AutoSize = true;
             this.lblName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblName.Location = new System.Drawing.Point(318, 32);
+            this.lblName.Location = new System.Drawing.Point(318, 28);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(0, 19);
+            this.lblName.Size = new System.Drawing.Size(51, 19);
             this.lblName.TabIndex = 33;
+            this.lblName.Text = "Name";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(41, 66);
+            this.label13.Location = new System.Drawing.Point(45, 66);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 15);
             this.label13.TabIndex = 31;
@@ -152,7 +154,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(260, 34);
+            this.label1.Location = new System.Drawing.Point(260, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 15);
@@ -233,6 +235,7 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPayment.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvPayment.EnableHeadersVisualStyles = false;
+            this.dgvPayment.GridColor = System.Drawing.Color.Black;
             this.dgvPayment.Location = new System.Drawing.Point(12, 149);
             this.dgvPayment.MultiSelect = false;
             this.dgvPayment.Name = "dgvPayment";
@@ -321,11 +324,24 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // btnPayment
+            // 
+            this.btnPayment.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPayment.Location = new System.Drawing.Point(12, 575);
+            this.btnPayment.Name = "btnPayment";
+            this.btnPayment.Size = new System.Drawing.Size(108, 30);
+            this.btnPayment.TabIndex = 47;
+            this.btnPayment.Text = "Make Payment";
+            this.btnPayment.UseVisualStyleBackColor = false;
+            this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
+            // 
             // frmPaymentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(872, 617);
+            this.Controls.Add(this.btnPayment);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvPayment);
             this.Controls.Add(this.panel17);
@@ -366,5 +382,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn amountPaid;
         private System.Windows.Forms.DataGridViewTextBoxColumn receiptNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn bankName;
+        private System.Windows.Forms.Button btnPayment;
     }
 }

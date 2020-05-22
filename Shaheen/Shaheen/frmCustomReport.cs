@@ -25,21 +25,7 @@ namespace Shaheen
             dgvCustomReport.AutoGenerateColumns = false;
             dgvCustomReport.DataSource = SearchResult;
             dgvCustomReport.Columns["subscriptionEndDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
-            dgvCustomReport.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-
-            foreach (DataGridViewRow aRow in dgvCustomReport.Rows)
-            {
-                aRow.MinimumHeight = 30;
-                aRow.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                if (aRow.Cells["status"].Value.ToString() == "2")
-                {
-                    aRow.DefaultCellStyle.BackColor = Color.LightCoral;
-                }
-                if (aRow.Cells["status"].Value.ToString() == "3")
-                {
-                    aRow.DefaultCellStyle.BackColor = Color.Turquoise;
-                }
-            }
+            dgvCustomReport.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;            
         }
 
         private void frmCustomReport_Load(object sender, EventArgs e)
@@ -170,6 +156,23 @@ namespace Shaheen
                     {
                         PDFGeneration.AddContentToPDF(sdf.FileName, SearchResult);
                     }
+                }
+            }
+        }
+
+        private void dgvCustomReport_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
+        {
+            foreach (DataGridViewRow aRow in dgvCustomReport.Rows)
+            {
+                aRow.MinimumHeight = 30;
+                aRow.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                if (aRow.Cells["status"].Value.ToString() == "2")
+                {
+                    aRow.DefaultCellStyle.BackColor = Color.LightCoral;
+                }
+                if (aRow.Cells["status"].Value.ToString() == "3")
+                {
+                    aRow.DefaultCellStyle.BackColor = Color.Turquoise;
                 }
             }
         }

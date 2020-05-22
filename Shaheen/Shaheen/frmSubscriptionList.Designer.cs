@@ -116,9 +116,11 @@
             this.dgvSubscriptionList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSubscriptionList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvSubscriptionList.EnableHeadersVisualStyles = false;
+            this.dgvSubscriptionList.GridColor = System.Drawing.Color.Black;
             this.dgvSubscriptionList.Location = new System.Drawing.Point(0, 48);
             this.dgvSubscriptionList.MultiSelect = false;
             this.dgvSubscriptionList.Name = "dgvSubscriptionList";
+            this.dgvSubscriptionList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -131,8 +133,8 @@
             this.dgvSubscriptionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSubscriptionList.Size = new System.Drawing.Size(1200, 652);
             this.dgvSubscriptionList.TabIndex = 7;
-            this.dgvSubscriptionList.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvSubscriptionList_CellFormatting);
             this.dgvSubscriptionList.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSubscriptionList_CellMouseDown);
+            this.dgvSubscriptionList.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvSubscriptionList_DataBindingComplete);
             // 
             // subscriptionCode
             // 
@@ -311,7 +313,7 @@
             this.ctxmPayment.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.ctxmPayment.Name = "ctxmPayment";
             this.ctxmPayment.Size = new System.Drawing.Size(247, 24);
-            this.ctxmPayment.Text = "Payment";
+            this.ctxmPayment.Text = "Make Payment";
             this.ctxmPayment.Click += new System.EventHandler(this.ctxmPayment_Click);
             // 
             // txtSearch
