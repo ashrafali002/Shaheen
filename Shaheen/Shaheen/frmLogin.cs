@@ -16,7 +16,7 @@ namespace Shaheen
         private void frmLogin_Load(object sender, EventArgs e)
         {
             txtUsername.Focus();
-            //ClearControls();
+            ClearControls();
         }
 
         private void ClearControls()

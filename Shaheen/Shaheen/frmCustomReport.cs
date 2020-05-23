@@ -25,11 +25,11 @@ namespace Shaheen
             dgvCustomReport.AutoGenerateColumns = false;
             dgvCustomReport.DataSource = SearchResult;
             dgvCustomReport.Columns["subscriptionEndDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
-            dgvCustomReport.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;            
+            dgvCustomReport.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void frmCustomReport_Load(object sender, EventArgs e)
-        {            
+        {
             BindDropdownlists();
             ClearControls();
             FillDataGridView();
@@ -86,7 +86,7 @@ namespace Shaheen
             string whereCondition = string.Empty;
             if (cmbAgent.SelectedIndex <= 0)
             {
-                MessageBox.Show("Select agent first","Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Select agent first", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cmbAgent.Focus();
                 return;
             }
@@ -141,7 +141,7 @@ namespace Shaheen
             cmbAgent.SelectedIndex = 0;
             chkExpired.Checked = false;
             lblRecordCountValue.Text = "0";
-            SearchResult = null;
+            SearchResult = new DataTable();
             FillDataGridView();
             cmbAgent.Focus();
         }

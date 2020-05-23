@@ -71,7 +71,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(286, 823);
+            this.panel1.Size = new System.Drawing.Size(286, 749);
             this.panel1.TabIndex = 0;
             // 
             // btnExit
@@ -83,7 +83,7 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.White;
-            this.btnExit.Location = new System.Drawing.Point(11, 772);
+            this.btnExit.Location = new System.Drawing.Point(11, 698);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(265, 38);
@@ -261,15 +261,15 @@
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(286, 97);
+            this.pnlLogo.Size = new System.Drawing.Size(286, 65);
             this.pnlLogo.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(51, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(78, 9);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(185, 65);
+            this.pictureBox1.Size = new System.Drawing.Size(131, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
@@ -281,24 +281,24 @@
             this.panel2.Location = new System.Drawing.Point(286, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1058, 97);
+            this.panel2.Size = new System.Drawing.Size(1058, 65);
             this.panel2.TabIndex = 1;
             // 
             // pnlForm
             // 
             this.pnlForm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlForm.Location = new System.Drawing.Point(286, 97);
+            this.pnlForm.Location = new System.Drawing.Point(286, 65);
             this.pnlForm.Margin = new System.Windows.Forms.Padding(4);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(1058, 726);
+            this.pnlForm.Size = new System.Drawing.Size(1058, 684);
             this.pnlForm.TabIndex = 2;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1344, 823);
+            this.ClientSize = new System.Drawing.Size(1344, 749);
             this.Controls.Add(this.pnlForm);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

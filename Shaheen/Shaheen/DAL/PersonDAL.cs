@@ -147,17 +147,19 @@ namespace Shaheen.DAL
         public DataTable GetPersonForLablePrint()
         {
             DataTable dt = new DataTable();
+            DateTime todayDate = DateTime.Now;
             string strQuery = @"Select P.personId,P.personName,P.personAddress,P.areaId,A.areaName,P.cityId,CT.cityName,
                 P.districtId,D.districtName,P.stateId,S.stateName,P.countryId,C.countryName,P.pin,P.phone,P.mobile,P.email,
                 SUB.subscriptionCode
                 From Person P 
                 INNER JOIN Subscription SUB ON P.personId = SUB.personId
+                INNER JOIN SubscriptionDetail SUBD ON SUB.subscriptionId = SUBD.subscriptionId
                 LEFT OUTER JOIN Country C ON P.countryId = C.countryId
                 LEFT OUTER JOIN State S ON P.stateId = S.stateId
                 LEFT OUTER JOIN District D ON P.districtId = D.districtId
                 LEFT OUTER JOIN City CT ON P.cityId = CT.cityId
                 LEFT OUTER JOIN Area A ON P.areaId = A.areaId
-                Where SUB.status in (1,3)";
+                Where SUB.status in (1,3) AND SUBD.status = 1 AND SUBD.subscriptionEndDate >= '" + todayDate.ToLongDateString() + " 23:59:59'";
             using (SqlCeConnection con = new SqlCeConnection(ConnectionString))
             {
                 con.Open();

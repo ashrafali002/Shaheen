@@ -62,9 +62,13 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.rdoPerson = new System.Windows.Forms.RadioButton();
             this.rdoCode = new System.Windows.Forms.RadioButton();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label27 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubscriptionList)).BeginInit();
             this.mnuContext.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel17.SuspendLayout();
             this.SuspendLayout();
             // 
             // dgvSubscriptionList
@@ -75,8 +79,7 @@
             this.dgvSubscriptionList.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(210)))), ((int)(((byte)(248)))));
             this.dgvSubscriptionList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvSubscriptionList.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvSubscriptionList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvSubscriptionList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.dgvSubscriptionList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
@@ -114,10 +117,9 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvSubscriptionList.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvSubscriptionList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvSubscriptionList.EnableHeadersVisualStyles = false;
             this.dgvSubscriptionList.GridColor = System.Drawing.Color.Black;
-            this.dgvSubscriptionList.Location = new System.Drawing.Point(0, 48);
+            this.dgvSubscriptionList.Location = new System.Drawing.Point(0, 87);
             this.dgvSubscriptionList.MultiSelect = false;
             this.dgvSubscriptionList.Name = "dgvSubscriptionList";
             this.dgvSubscriptionList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -131,7 +133,7 @@
             this.dgvSubscriptionList.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSubscriptionList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSubscriptionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSubscriptionList.Size = new System.Drawing.Size(1200, 652);
+            this.dgvSubscriptionList.Size = new System.Drawing.Size(1200, 536);
             this.dgvSubscriptionList.TabIndex = 7;
             this.dgvSubscriptionList.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSubscriptionList_CellMouseDown);
             this.dgvSubscriptionList.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvSubscriptionList_DataBindingComplete);
@@ -348,8 +350,7 @@
             this.panel2.Controls.Add(this.rdoCode);
             this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.txtSearch);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(0, 38);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1200, 48);
             this.panel2.TabIndex = 25;
@@ -416,13 +417,48 @@
             this.rdoCode.Text = "Code";
             this.rdoCode.UseVisualStyleBackColor = true;
             // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.Navy;
+            this.panel17.Controls.Add(this.label27);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel17.Location = new System.Drawing.Point(0, 0);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(1200, 37);
+            this.panel17.TabIndex = 26;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.ForeColor = System.Drawing.Color.White;
+            this.label27.Location = new System.Drawing.Point(7, 6);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(169, 25);
+            this.label27.TabIndex = 0;
+            this.label27.Text = "Subscription List";
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Location = new System.Drawing.Point(1113, 629);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 30);
+            this.btnClose.TabIndex = 27;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // frmSubscriptionList
             // 
             this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnReset;
-            this.ClientSize = new System.Drawing.Size(1200, 700);
+            this.ClientSize = new System.Drawing.Size(1200, 667);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.panel17);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvSubscriptionList);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
@@ -433,6 +469,8 @@
             this.mnuContext.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel17.ResumeLayout(false);
+            this.panel17.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -468,5 +506,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn subscriptionId;
         private System.Windows.Forms.DataGridViewTextBoxColumn subscriptionDetailId;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Button btnClose;
     }
 }

@@ -2,6 +2,7 @@
 using Shaheen.IshraqEntities;
 using Shaheen.Models;
 using System;
+using System.Configuration;
 using System.Windows.Forms;
 
 namespace Shaheen
@@ -41,6 +42,8 @@ namespace Shaheen
             get { return _subscriptionDetailId; }
             set { _subscriptionDetailId = value; }
         }
+        public decimal PendingAmount { get; set; }
+        public decimal OldAmount { get; set; }
 
         public frmEditSubscription()
         {
@@ -72,12 +75,14 @@ namespace Shaheen
             subscription = subscriptionBll.GetSubscriptionById(_subscriptionId);
             dtpSubscriptionDate.Value = subscription.subscriptionDate;
             lblCode.Text = subscription.subscriptionCode + " - " + personModel.personName;
+            PendingAmount = subscription.pendingAmount;
 
             subscriptionDetail = subscriptionDetailBll.GetSubscriptionDetailById(_subscriptionDetailId);
             txtDuration.Text = subscriptionDetail.subscriptionDuration;
             dtpStartDate.Value = subscriptionDetail.subscriptionStartDate;
             dtpEndDate.Value = subscriptionDetail.subscriptionEndDate;
             txtAmount.Text = Convert.ToString(subscriptionDetail.subscriptionAmount);
+            OldAmount = Convert.ToDecimal(subscriptionDetail.subscriptionAmount);
             txtNote.Text = subscriptionDetail.note;
         }
 
@@ -119,6 +124,7 @@ namespace Shaheen
         private void btnSave_Click(object sender, EventArgs e)
         {
             subscription.subscriptionDate = dtpSubscriptionDate.Value;
+            subscription.pendingAmount = (Convert.ToDecimal(txtAmount.Text) - OldAmount) + PendingAmount;
             subscriptionBll.SaveSubscription(subscription);
 
             subscriptionDetail.subscriptionDuration = txtDuration.Text;

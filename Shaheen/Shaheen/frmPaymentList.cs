@@ -2,6 +2,7 @@
 using Shaheen.DAL;
 using Shaheen.Models;
 using System;
+using System.Drawing;
 using System.Globalization;
 using System.Linq;
 using System.Windows.Forms;
@@ -86,7 +87,7 @@ namespace Shaheen
             FillDataGridView();
             txtCode.Text = string.Empty;
             lblName.Text = string.Empty;
-            txtCode.Focus();            
+            txtCode.Focus();
         }
 
         private void dgvPayment_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

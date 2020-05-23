@@ -61,10 +61,11 @@ namespace Shaheen
 
         private void frmRenew_Load(object sender, EventArgs e)
         {
+            cmbPaymentType.DataSource = Enum.GetValues(typeof(PaymentType));
             #region Display
             personModel = personBll.GetPersonModelById(_personId);
 
-            lblAddress.Text = personModel.personAddress;
+            textBox1.Text = personModel.personAddress;
             lblCountry.Text = personModel.countryName;
             lblState.Text = personModel.stateName;
             lblDistrict.Text = personModel.districtName;
@@ -72,7 +73,7 @@ namespace Shaheen
             lblArea.Text = personModel.areaName;
             lblPin.Text = personModel.pin;
 
-            string contact = string.IsNullOrEmpty(personModel.phone) ? string.Empty : personModel.phone + " - ";
+            string contact = string.IsNullOrEmpty(personModel.phone) ? string.Empty : personModel.phone + "\n";
             lblContact.Text = contact + personModel.mobile;
             lblAgent.Text = AgentName;
             lblEmail.Text = personModel.email;
@@ -86,11 +87,12 @@ namespace Shaheen
             subscriptionDetail = subscriptionDetailBll.GetSubscriptionDetailById(_subscriptionDetailId);
             txtDuration.Focus();
             dtpStartDate.Value = subscriptionDetail.subscriptionEndDate;
-            
-            rdoCash.Checked = true;
+
+            cmbPaymentType.SelectedItem = PaymentType.Cash;
             dtpChequeDate.Value = DateTime.Now;
             dtpEndDate.Value = DateTime.Now;
-            dtpPaymentDate.Value = DateTime.Now;            
+            dtpPaymentDate.Value = DateTime.Now;
+            txtDuration.Focus();
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -131,7 +133,7 @@ namespace Shaheen
                 dtpStartDate.Focus();
                 isRes = false;
             }
-            else if (rdoDD.Checked || rdoCheque.Checked || rdoMO.Checked)
+            else if (Convert.ToString(cmbPaymentType.SelectedValue) != PaymentType.Cash.ToString())
             {
 
                 if (string.IsNullOrEmpty(txtChequeNo.Text))
@@ -252,24 +254,9 @@ namespace Shaheen
             var payment = new Payment();
             payment.subscriptionId = subscriptionId;
 
-            if (rdoCash.Checked)
-            {
-                payment.paymentType = PaymentType.Cash.ToString();
-            }
-            else if (rdoCheque.Checked)
-            {
-                payment.paymentType = PaymentType.Cheque.ToString();
-            }
-            else if (rdoDD.Checked)
-            {
-                payment.paymentType = PaymentType.DD.ToString();
-            }
-            else if (rdoMO.Checked)
-            {
-                payment.paymentType = PaymentType.MO.ToString();
-            }
+            payment.paymentType = cmbPaymentType.SelectedItem.ToString();
 
-            if (rdoCash.Checked)
+            if (Convert.ToString(cmbPaymentType.SelectedValue) == PaymentType.Cash.ToString())
             {
                 payment.chequeDate = null;
                 payment.chequeNo = string.Empty;
@@ -312,9 +299,9 @@ namespace Shaheen
             }
         }
 
-        private void rdoCash_CheckedChanged(object sender, EventArgs e)
+        private void cmbPaymentType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (rdoCash.Checked)
+            if (Convert.ToString(cmbPaymentType.SelectedValue) == PaymentType.Cash.ToString())
             {
                 txtChequeNo.Enabled = false;
                 dtpChequeDate.Enabled = false;

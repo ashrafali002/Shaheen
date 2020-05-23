@@ -25,42 +25,13 @@ namespace Shaheen
 
         private void frmEditPayment_Load(object sender, EventArgs e)
         {
+            cmbPaymentType.DataSource = Enum.GetValues(typeof(PaymentType));
+
             payment = paymentBll.GetPaymentById(PaymentId);
-            if (payment.paymentType == PaymentType.Cash.ToString())
-            {
-                rdoCash.Checked = true;
-                rdoCheque.Checked = false;
-                rdoDD.Checked = false;
-                rdoMO.Checked = false;
-            }
-            else if (payment.paymentType == PaymentType.Cheque.ToString())
-            {
-                rdoCash.Checked = false;
-                rdoCheque.Checked = true;
-                rdoDD.Checked = false;
-                rdoMO.Checked = false;
-            }
-            else if (payment.paymentType == PaymentType.DD.ToString())
-            {
-                rdoCash.Checked = false;
-                rdoCheque.Checked = false;
-                rdoDD.Checked = true;
-                rdoMO.Checked = false;
-            }
-            else if (payment.paymentType == PaymentType.MO.ToString())
-            {
-                rdoCash.Checked = false;
-                rdoCheque.Checked = false;
-                rdoDD.Checked = false;
-                rdoMO.Checked = true;
-            }
-            else
-            {
-                //Contingency plan
-            }
+            cmbPaymentType.SelectedItem = payment.paymentType;            
             if (payment.paymentDate != null)
                 dtpPaymentDate.Value = payment.paymentDate;
-            txtAmountPaid.Text = Convert.ToString(payment.amountPaid);
+            txtPaidAmout.Text = Convert.ToString(payment.amountPaid);
             oldPaidAmount = payment.amountPaid;
             txtChequeNo.Text = Convert.ToString(payment.chequeNo);
             if (payment.chequeDate != null)
@@ -71,23 +42,7 @@ namespace Shaheen
             subscription = subscriptionBll.GetSubscriptionById(payment.subscriptionId);
             PendingAmount = subscription.pendingAmount;
 
-        }
-
-        private void rdoCash_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rdoCash.Checked)
-            {
-                txtChequeNo.Enabled = false;
-                dtpChequeDate.Enabled = false;
-                txtBankName.Enabled = false;
-            }
-            else
-            {
-                txtChequeNo.Enabled = true;
-                dtpChequeDate.Enabled = true;
-                txtBankName.Enabled = true;
-            }
-        }
+        }    
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -97,10 +52,10 @@ namespace Shaheen
         private bool isValid()
         {
             bool isRes = true;
-            if (string.IsNullOrEmpty(txtAmountPaid.Text))
+            if (string.IsNullOrEmpty(txtPaidAmout.Text))
             {
                 MessageBox.Show("Amount paid is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtAmountPaid.Focus();
+                txtPaidAmout.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtReceiptNo.Text))
@@ -109,9 +64,8 @@ namespace Shaheen
                 txtReceiptNo.Focus();
                 isRes = false;
             }
-            else if (rdoDD.Checked || rdoCheque.Checked || rdoMO.Checked)
+            else if (Convert.ToString(cmbPaymentType.SelectedValue) != PaymentType.Cash.ToString())
             {
-
                 if (string.IsNullOrEmpty(txtChequeNo.Text))
                 {
                     MessageBox.Show("DD/Cheque/MO number is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -134,7 +88,7 @@ namespace Shaheen
 
         public int UpdateSubscriptionPendingAmount(int subscriptionId)
         {
-            subscription.pendingAmount = (PendingAmount + oldPaidAmount) - Convert.ToDecimal(txtAmountPaid.Text);
+            subscription.pendingAmount = (PendingAmount + oldPaidAmount) - Convert.ToDecimal(txtPaidAmout.Text);
             subscriptionBll.SaveSubscription(subscription);
             return subscriptionId;
         }
@@ -148,24 +102,9 @@ namespace Shaheen
             else
             {
                 UpdateSubscriptionPendingAmount(payment.subscriptionId);
-                if (rdoCash.Checked)
-                {
-                    payment.paymentType = PaymentType.Cash.ToString();
-                }
-                else if (rdoCheque.Checked)
-                {
-                    payment.paymentType = PaymentType.Cheque.ToString();
-                }
-                else if (rdoDD.Checked)
-                {
-                    payment.paymentType = PaymentType.DD.ToString();
-                }
-                else if (rdoMO.Checked)
-                {
-                    payment.paymentType = PaymentType.MO.ToString();
-                }
+                payment.paymentType = cmbPaymentType.SelectedItem.ToString();
 
-                if (rdoCash.Checked)
+                if (Convert.ToString(cmbPaymentType.SelectedValue) == PaymentType.Cash.ToString())
                 {
                     payment.chequeDate = null;
                     payment.chequeNo = string.Empty;
@@ -176,7 +115,7 @@ namespace Shaheen
                     payment.chequeNo = txtChequeNo.Text;
                 }
                 payment.receiptNo = txtReceiptNo.Text;
-                payment.amountPaid = Convert.ToDecimal(txtAmountPaid.Text);
+                payment.amountPaid = Convert.ToDecimal(txtPaidAmout.Text);
                 payment.bankName = txtBankName.Text;
                 payment.paymentDate = dtpPaymentDate.Value;
                 int res = paymentBll.SavePayment(payment);
@@ -185,6 +124,28 @@ namespace Shaheen
                     MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK);
                     this.DialogResult = DialogResult.OK;
                 }
+            }
+        }
+
+        private void cmbPaymentType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Convert.ToString(cmbPaymentType.SelectedValue) == PaymentType.Cash.ToString())
+            {
+                txtChequeNo.Enabled = false;
+                lblChequeNo.Enabled = false;
+                dtpChequeDate.Enabled = false;
+                lblChequeDate.Enabled = false;
+                txtBankName.Enabled = false;
+                label25.Enabled = false;
+            }
+            else
+            {
+                txtChequeNo.Enabled = true;
+                lblChequeNo.Enabled = true;
+                dtpChequeDate.Enabled = true;
+                lblChequeDate.Enabled = true;
+                txtBankName.Enabled = true;
+                label25.Enabled = true;
             }
         }
     }
