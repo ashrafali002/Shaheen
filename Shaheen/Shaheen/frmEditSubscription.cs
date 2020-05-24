@@ -2,18 +2,12 @@
 using Shaheen.IshraqEntities;
 using Shaheen.Models;
 using System;
-using System.Configuration;
 using System.Windows.Forms;
 
 namespace Shaheen
 {
     public partial class frmEditSubscription : BaseForm
     {
-        private int _subscriptionId;
-        private int _subscriptionDetailId;
-        private int _personId;
-        private string _agentName;
-
         private SubscriptionBLL subscriptionBll;
         private SubscriptionDetailBLL subscriptionDetailBll;
         private PersonBLL personBll;
@@ -22,26 +16,10 @@ namespace Shaheen
         dynamic subscriptionDetail = new SubscriptionDetail();
         dynamic personModel = new PersonModel();
 
-        public int PersonId
-        {
-            get { return _personId; }
-            set { _personId = value; }
-        }
-        public string AgentName
-        {
-            get { return _agentName; }
-            set { _agentName = value; }
-        }
-        public int SubscriptionId
-        {
-            get { return _subscriptionId; }
-            set { _subscriptionId = value; }
-        }
-        public int SubscriptionDetailId
-        {
-            get { return _subscriptionDetailId; }
-            set { _subscriptionDetailId = value; }
-        }
+        public int PersonId { get; set; }
+        public string AgentName { get; set; }
+        public int SubscriptionId { get; set; }
+        public int SubscriptionDetailId { get; set; }
         public decimal PendingAmount { get; set; }
         public decimal OldAmount { get; set; }
 
@@ -56,7 +34,7 @@ namespace Shaheen
         private void frmEditSubscription_Load(object sender, EventArgs e)
         {
             #region Display
-            personModel = personBll.GetPersonModelById(_personId);
+            personModel = personBll.GetPersonModelById(PersonId);
 
             lblAddress.Text = personModel.personAddress;
             lblCountry.Text = personModel.countryName;
@@ -72,12 +50,12 @@ namespace Shaheen
             lblEmail.Text = personModel.email;
             #endregion
 
-            subscription = subscriptionBll.GetSubscriptionById(_subscriptionId);
+            subscription = subscriptionBll.GetSubscriptionById(SubscriptionId);
             dtpSubscriptionDate.Value = subscription.subscriptionDate;
             lblCode.Text = subscription.subscriptionCode + " - " + personModel.personName;
             PendingAmount = subscription.pendingAmount;
 
-            subscriptionDetail = subscriptionDetailBll.GetSubscriptionDetailById(_subscriptionDetailId);
+            subscriptionDetail = subscriptionDetailBll.GetSubscriptionDetailById(SubscriptionDetailId);
             txtDuration.Text = subscriptionDetail.subscriptionDuration;
             dtpStartDate.Value = subscriptionDetail.subscriptionStartDate;
             dtpEndDate.Value = subscriptionDetail.subscriptionEndDate;

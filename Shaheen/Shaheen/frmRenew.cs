@@ -9,12 +9,6 @@ namespace Shaheen
 {
     public partial class frmRenew : BaseForm
     {
-        private int _subscriptionId;
-        private int _subscriptionDetailId;
-        private int _personId;
-        private string _agentName;
-        private decimal _pendingAmount;
-
         private SubscriptionBLL subscriptionBll;
         private SubscriptionDetailBLL subscriptionDetailBll;
         private PersonBLL personBll;
@@ -23,32 +17,12 @@ namespace Shaheen
         dynamic subscriptionDetail = new SubscriptionDetail();
         dynamic personModel = new PersonModel();
 
-        public int PersonId
-        {
-            get { return _personId; }
-            set { _personId = value; }
-        }
-        public string AgentName
-        {
-            get { return _agentName; }
-            set { _agentName = value; }
-        }
-        public int SubscriptionId
-        {
-            get { return _subscriptionId; }
-            set { _subscriptionId = value; }
-        }
-        public int SubscriptionDetailId
-        {
-            get { return _subscriptionDetailId; }
-            set { _subscriptionDetailId = value; }
-        }
+        public int PersonId { get; set; }
+        public string AgentName { get; set; }
+        public int SubscriptionId { get; set; }
+        public int SubscriptionDetailId { get; set; }
 
-        public decimal PendingAmount
-        {
-            get { return _pendingAmount; }
-            set { _pendingAmount = value; }
-        }
+        public decimal PendingAmount { get; set; }
         public frmRenew()
         {
             InitializeComponent();
@@ -63,7 +37,7 @@ namespace Shaheen
         {
             cmbPaymentType.DataSource = Enum.GetValues(typeof(PaymentType));
             #region Display
-            personModel = personBll.GetPersonModelById(_personId);
+            personModel = personBll.GetPersonModelById(PersonId);
 
             textBox1.Text = personModel.personAddress;
             lblCountry.Text = personModel.countryName;
@@ -79,12 +53,12 @@ namespace Shaheen
             lblEmail.Text = personModel.email;
             #endregion
 
-            subscription = subscriptionBll.GetSubscriptionById(_subscriptionId);
+            subscription = subscriptionBll.GetSubscriptionById(SubscriptionId);
             lblSubscriptionDate.Text = Convert.ToDateTime(subscription.subscriptionDate).ToShortDateString();
             lblCode.Text = subscription.subscriptionCode + " - " + personModel.personName;
             PendingAmount = subscription.pendingAmount;
 
-            subscriptionDetail = subscriptionDetailBll.GetSubscriptionDetailById(_subscriptionDetailId);
+            subscriptionDetail = subscriptionDetailBll.GetSubscriptionDetailById(SubscriptionDetailId);
             txtDuration.Focus();
             dtpStartDate.Value = subscriptionDetail.subscriptionEndDate;
 
@@ -165,10 +139,10 @@ namespace Shaheen
                     {
                         try
                         {
-                            int subscriptionId = UpdateSubscriptionPendingAmount(_subscriptionId, context);
-                            int oldSubscriptionDetailId = UpdateCurrentSubscriptionDetailStatus(_subscriptionDetailId, context);
-                            int subscriptionDetailId = SaveSubscriptionDetail(_subscriptionId, context);
-                            int paymentId = SavePayment(_subscriptionId, context);
+                            int subscriptionId = UpdateSubscriptionPendingAmount(SubscriptionId, context);
+                            int oldSubscriptionDetailId = UpdateCurrentSubscriptionDetailStatus(SubscriptionDetailId, context);
+                            int subscriptionDetailId = SaveSubscriptionDetail(SubscriptionId, context);
+                            int paymentId = SavePayment(SubscriptionId, context);
                             transaction.Commit();
                             MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             ClearControls();

@@ -7,25 +7,14 @@ namespace Shaheen
 {
     public partial class frmEditPerson : BaseForm
     {
-        private int _personId;
-        private int _subscriptionId;
-
         private PersonBLL personBll;
         private SubscriptionBLL subscriptionBll;
 
         dynamic subscription = new Subscription();
         dynamic person = new Person();
 
-        public int PersonId
-        {
-            get { return _personId; }
-            set { _personId = value; }
-        }
-        public int SubscriptionId
-        {
-            get { return _subscriptionId; }
-            set { _subscriptionId = value; }
-        }
+        public int PersonId { get; set; }
+        public int SubscriptionId { get; set; }
 
         public frmEditPerson()
         {
@@ -87,7 +76,7 @@ namespace Shaheen
         private void frmEditPerson_Load(object sender, EventArgs e)
         {
             Dropdownlists();
-            person = personBll.GetPersonById(_personId);
+            person = personBll.GetPersonById(PersonId);
             txtName.Text = person.personName;
             txtAddress.Text = person.personAddress;
             cmbCountry.SelectedValue = person.countryId;
@@ -100,7 +89,7 @@ namespace Shaheen
             txtMobile.Text = person.mobile;
             txtEmail.Text = person.email;
 
-            subscription = subscriptionBll.GetSubscriptionById(_subscriptionId);
+            subscription = subscriptionBll.GetSubscriptionById(SubscriptionId);
             txtCode.Text = subscription.subscriptionCode;
             cmbAgent.SelectedValue = subscription.agentId;
         }
@@ -120,7 +109,7 @@ namespace Shaheen
                 txtCode.Focus();
                 isRes = false;
             }
-            else if (subscriptionBll.IsDuplicateSubscriptionCode(_subscriptionId, txtCode.Text))
+            else if (subscriptionBll.IsDuplicateSubscriptionCode(SubscriptionId, txtCode.Text))
             {
                 MessageBox.Show("Duplicate customer code found.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
@@ -167,7 +156,7 @@ namespace Shaheen
                 MessageBox.Show("Agent is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbAgent.Focus();
                 isRes = false;
-            }            
+            }
             else
             {
                 isRes = true;
@@ -176,8 +165,8 @@ namespace Shaheen
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!isValid()) return;            
-            person.personId = _personId;
+            if (!isValid()) return;
+            person.personId = PersonId;
             person.personName = txtName.Text;
             person.personAddress = txtAddress.Text;
             person.countryId = Convert.ToInt32(cmbCountry.SelectedValue);
@@ -190,11 +179,11 @@ namespace Shaheen
             person.mobile = txtMobile.Text;
             person.email = txtEmail.Text;
             personBll.SavePerson(person);
-            
-            subscription.subscriptionId = _subscriptionId;
+
+            subscription.subscriptionId = SubscriptionId;
             subscription.agentId = Convert.ToInt32(cmbAgent.SelectedValue);
             subscription.subscriptionCode = txtCode.Text;
-            subscription.personId = _personId;
+            subscription.personId = PersonId;
             subscriptionBll.SaveSubscription(subscription);
             MessageBox.Show("Person details updated successfully.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.DialogResult = DialogResult.OK;

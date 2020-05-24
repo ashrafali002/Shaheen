@@ -8,12 +8,6 @@ namespace Shaheen
 {
     public partial class frmPayment : BaseForm
     {
-
-        private int _subscriptionId;
-        private int _personId;
-        private string _agentName;
-        private decimal _pendingAmount;
-
         private SubscriptionBLL subscriptionBll;
         private PersonBLL personBll;
         private PaymentBLL paymentBll;
@@ -21,26 +15,10 @@ namespace Shaheen
         dynamic subscription = new Subscription();
         dynamic personModel = new PersonModel();
 
-        public int PersonId
-        {
-            get { return _personId; }
-            set { _personId = value; }
-        }
-        public string AgentName
-        {
-            get { return _agentName; }
-            set { _agentName = value; }
-        }
-        public int SubscriptionId
-        {
-            get { return _subscriptionId; }
-            set { _subscriptionId = value; }
-        }
-        public decimal PendingAmount
-        {
-            get { return _pendingAmount; }
-            set { _pendingAmount = value; }
-        }
+        public int PersonId { get; set; }
+        public string AgentName { get; set; }
+        public int SubscriptionId { get; set; }
+        public decimal PendingAmount { get; set; }
         public frmPayment()
         {
             InitializeComponent();
@@ -53,7 +31,7 @@ namespace Shaheen
         {
             cmbPaymentType.DataSource = Enum.GetValues(typeof(PaymentType));
             #region Display
-            personModel = personBll.GetPersonModelById(_personId);
+            personModel = personBll.GetPersonModelById(PersonId);
 
             lblAddress.Text = personModel.personAddress;
             lblCountry.Text = personModel.countryName;
@@ -69,7 +47,7 @@ namespace Shaheen
             lblEmail.Text = personModel.email;
             #endregion
 
-            subscription = subscriptionBll.GetSubscriptionById(_subscriptionId);
+            subscription = subscriptionBll.GetSubscriptionById(SubscriptionId);
             lblCode.Text = subscription.subscriptionCode + " - " + personModel.personName;
             PendingAmount = subscription.pendingAmount;
 
@@ -134,9 +112,9 @@ namespace Shaheen
             }
             else
             {
-                UpdateSubscriptionPendingAmount(_subscriptionId);
+                UpdateSubscriptionPendingAmount(SubscriptionId);
                 var payment = new Payment();
-                payment.subscriptionId = _subscriptionId;
+                payment.subscriptionId = SubscriptionId;
 
                 payment.paymentType = cmbPaymentType.SelectedItem.ToString();
 
@@ -161,7 +139,7 @@ namespace Shaheen
                     this.DialogResult = DialogResult.OK;
                 }
             }
-        }        
+        }
 
         private void cmbPaymentType_SelectedIndexChanged(object sender, EventArgs e)
         {
