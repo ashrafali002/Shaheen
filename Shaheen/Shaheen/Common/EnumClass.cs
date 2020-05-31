@@ -14,6 +14,14 @@ namespace Shaheen
         Cheque,
         MO
     }
+
+    public enum SubscriptionType
+    {
+        Paid = 1,
+        Free = 2,
+        Complementary = 3
+
+    }
     public enum SubscriptionStatus
     {
         Active = 1,     //Active Subscription

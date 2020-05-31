@@ -31,23 +31,42 @@ namespace Shaheen
             personBll = new PersonBLL();
         }
 
-
-
-        private void frmRenew_Load(object sender, EventArgs e)
+        private void BindDropdownlists()
         {
             cmbPaymentType.DataSource = Enum.GetValues(typeof(PaymentType));
+        }
+
+        private void frmRenew_Load(object sender, EventArgs e)
+        {            
+            BindDropdownlists();
             #region Display
             personModel = personBll.GetPersonModelById(PersonId);
 
-            textBox1.Text = personModel.personAddress;
-            lblCountry.Text = personModel.countryName;
-            lblState.Text = personModel.stateName;
-            lblDistrict.Text = personModel.districtName;
-            lblCity.Text = personModel.cityName;
-            lblArea.Text = personModel.areaName;
-            lblPin.Text = personModel.pin;
+            string strAddress = string.Empty;
+            if (!string.IsNullOrEmpty(personModel.personAddress))
+                strAddress += personModel.personAddress + ", "; ;
 
-            string contact = string.IsNullOrEmpty(personModel.phone) ? string.Empty : personModel.phone + "\n";
+            if (!string.IsNullOrEmpty(personModel.areaName))
+                strAddress += personModel.areaName + ", ";
+
+            if (!string.IsNullOrEmpty(personModel.cityName))
+                strAddress += personModel.cityName;
+
+            if (!string.IsNullOrEmpty(personModel.pin))
+                strAddress += "-" + personModel.pin + ", "; ;
+
+            if (!string.IsNullOrEmpty(personModel.districtName))
+                strAddress += personModel.districtName + ", ";
+
+            if (!string.IsNullOrEmpty(personModel.stateName))
+                strAddress += personModel.stateName + ", ";
+
+            if (!string.IsNullOrEmpty(personModel.countryName))
+                strAddress += personModel.countryName;
+
+            txtAddress.Text = strAddress;
+
+            string contact = string.IsNullOrEmpty(personModel.phone) ? string.Empty : personModel.phone + " - ";
             lblContact.Text = contact + personModel.mobile;
             lblAgent.Text = AgentName;
             lblEmail.Text = personModel.email;
@@ -57,9 +76,9 @@ namespace Shaheen
             lblSubscriptionDate.Text = Convert.ToDateTime(subscription.subscriptionDate).ToShortDateString();
             lblCode.Text = subscription.subscriptionCode + " - " + personModel.personName;
             PendingAmount = subscription.pendingAmount;
+            lblSubscriptionType.Text = Enum.GetName(typeof(SubscriptionType), subscription.subscriptionType);
 
             subscriptionDetail = subscriptionDetailBll.GetSubscriptionDetailById(SubscriptionDetailId);
-            txtDuration.Focus();
             dtpStartDate.Value = subscriptionDetail.subscriptionEndDate;
 
             cmbPaymentType.SelectedItem = PaymentType.Cash;

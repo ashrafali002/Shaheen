@@ -16,8 +16,7 @@ namespace Shaheen
         dynamic subscriptionDetail = new SubscriptionDetail();
         dynamic personModel = new PersonModel();
 
-        public int PersonId { get; set; }
-        public string AgentName { get; set; }
+        public int PersonId { get; set; }        
         public int SubscriptionId { get; set; }
         public int SubscriptionDetailId { get; set; }
         public decimal PendingAmount { get; set; }
@@ -31,28 +30,57 @@ namespace Shaheen
             personBll = new PersonBLL();
         }
 
+        private void BindDropdownlists()
+        {
+            cmbSubscriptionType.DataSource = Enum.GetValues(typeof(SubscriptionType));
+
+            var agentBll = new AgentBLL();
+            var agentList = agentBll.AgentList();
+            agentList.Insert(0, new Agent { agentId = 0, agentName = "---Select Agent---" });
+            cmbAgent.DataSource = agentList;
+            cmbAgent.DisplayMember = "agentName";
+            cmbAgent.ValueMember = "agentId";
+        }
         private void frmEditSubscription_Load(object sender, EventArgs e)
         {
+            BindDropdownlists();
             #region Display
             personModel = personBll.GetPersonModelById(PersonId);
 
-            lblAddress.Text = personModel.personAddress;
-            lblCountry.Text = personModel.countryName;
-            lblState.Text = personModel.stateName;
-            lblDistrict.Text = personModel.districtName;
-            lblCity.Text = personModel.cityName;
-            lblArea.Text = personModel.areaName;
-            lblPin.Text = personModel.pin;
+            string strAddress = string.Empty;
+            if (!string.IsNullOrEmpty(personModel.personAddress))
+                strAddress += personModel.personAddress + ", "; ;
+
+            if (!string.IsNullOrEmpty(personModel.areaName))
+                strAddress += personModel.areaName + ", ";
+
+            if (!string.IsNullOrEmpty(personModel.cityName))
+                strAddress += personModel.cityName;
+
+            if (!string.IsNullOrEmpty(personModel.pin))
+                strAddress += "-" + personModel.pin + ", "; ;
+
+            if (!string.IsNullOrEmpty(personModel.districtName))
+                strAddress += personModel.districtName + ", ";
+
+            if (!string.IsNullOrEmpty(personModel.stateName))
+                strAddress += personModel.stateName + ", ";
+
+            if (!string.IsNullOrEmpty(personModel.countryName))
+                strAddress += personModel.countryName;
+
+            txtAddress.Text = strAddress;
 
             string contact = string.IsNullOrEmpty(personModel.phone) ? string.Empty : personModel.phone + " - ";
-            lblContact.Text = contact + personModel.mobile;
-            lblAgent.Text = AgentName;
+            lblContact.Text = contact + personModel.mobile;            
             lblEmail.Text = personModel.email;
             #endregion
 
             subscription = subscriptionBll.GetSubscriptionById(SubscriptionId);
             dtpSubscriptionDate.Value = subscription.subscriptionDate;
             lblCode.Text = subscription.subscriptionCode + " - " + personModel.personName;
+            cmbAgent.SelectedValue = subscription.agentId;
+            cmbSubscriptionType.SelectedItem = (SubscriptionType)subscription.subscriptionType;
             PendingAmount = subscription.pendingAmount;
 
             subscriptionDetail = subscriptionDetailBll.GetSubscriptionDetailById(SubscriptionDetailId);
@@ -103,6 +131,8 @@ namespace Shaheen
         {
             subscription.subscriptionDate = dtpSubscriptionDate.Value;
             subscription.pendingAmount = (Convert.ToDecimal(txtAmount.Text) - OldAmount) + PendingAmount;
+            subscription.agentId = Convert.ToInt32(cmbAgent.SelectedValue);
+            subscription.subscriptionType = Convert.ToInt32(cmbSubscriptionType.SelectedItem);
             subscriptionBll.SaveSubscription(subscription);
 
             subscriptionDetail.subscriptionDuration = txtDuration.Text;

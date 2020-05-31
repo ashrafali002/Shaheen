@@ -28,11 +28,11 @@ namespace Shaheen
         public void ClearControls()
         {
             country_id = 0;
-            txtCountry.Text = string.Empty;
+            txtCountryName.Text = string.Empty;
         }
         public void DisableEnableControls(bool isEnable)
         {
-            txtCountry.Enabled = isEnable;
+            txtCountryName.Enabled = isEnable;
         }
 
         private void FillDataGridView()
@@ -46,7 +46,7 @@ namespace Shaheen
             dgvCountry.Columns["countryId"].Visible = false;            
         }
 
-        private void BtnClose_Click(object sender, EventArgs e)
+        private void btnClose_Click(object sender, EventArgs e)
         {
             if (btnClose.Text == "Close")
             {
@@ -66,16 +66,16 @@ namespace Shaheen
         public bool isValidated()
         {
             bool isSuccess = true;
-            if (string.IsNullOrEmpty(txtCountry.Text))
+            if (string.IsNullOrEmpty(txtCountryName.Text))
             {
                 MessageBox.Show("Country name is required", "Shaheen Weekly", MessageBoxButtons.OK);
-                txtCountry.Focus();
+                txtCountryName.Focus();
                 isSuccess = false;
             }
-            else if (countryBll.IsDuplicateCountryName(country_id, txtCountry.Text))
+            else if (countryBll.IsDuplicateCountryName(country_id, txtCountryName.Text))
             {
                 MessageBox.Show("Duplicate record found", "Shaheen Weekly", MessageBoxButtons.OK);
-                txtCountry.Focus();
+                txtCountryName.Focus();
                 isSuccess = false;
             }
             else
@@ -86,7 +86,7 @@ namespace Shaheen
             return isSuccess;
         }
 
-        private void BtnSave_Click(object sender, EventArgs e)
+        private void btnSave_Click(object sender, EventArgs e)
         {
             if (!isValidated())
             {
@@ -96,7 +96,7 @@ namespace Shaheen
             {
                 var country = new Country();
                 country.countryId = country_id;
-                country.countryName = txtCountry.Text;
+                country.countryName = txtCountryName.Text;
                 int res = countryBll.SaveCountry(country);
                 if (res > 0)
                 {
@@ -118,7 +118,7 @@ namespace Shaheen
             int rowIndex = e.RowIndex;
             DataGridViewRow grdRow = dgvCountry.Rows[rowIndex];
             country_id = Convert.ToInt32(grdRow.Cells["countryId"].Value);
-            txtCountry.Text = Convert.ToString(grdRow.Cells["colCountryName"].Value);
+            txtCountryName.Text = Convert.ToString(grdRow.Cells["colCountryName"].Value);
             btnNew.Text = "Edit";
             btnClose.Text = "Cancel";
         }
@@ -158,6 +158,6 @@ namespace Shaheen
                 aRow.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
             }
-        }
+        }        
     }
 }

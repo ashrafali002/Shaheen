@@ -81,7 +81,7 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.lblPassword.Location = new System.Drawing.Point(41, 191);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(0);
             this.lblPassword.Name = "lblPassword";
@@ -128,7 +128,7 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
-            this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.lblUsername.Location = new System.Drawing.Point(41, 128);
             this.lblUsername.Margin = new System.Windows.Forms.Padding(0);
             this.lblUsername.Name = "lblUsername";

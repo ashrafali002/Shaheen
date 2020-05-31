@@ -25,13 +25,6 @@ namespace Shaheen
 
         private void Dropdownlists()
         {
-            var agentBll = new AgentBLL();
-            var agentList = agentBll.AgentList();
-            agentList.Insert(0, new Agent { agentId = 0, agentName = "---Select Agent---" });
-            cmbAgent.DataSource = agentList;
-            cmbAgent.DisplayMember = "agentName";
-            cmbAgent.ValueMember = "agentId";
-
             var areaBll = new AreaBLL();
             var areaList = areaBll.AreaList();
             areaList.Insert(0, new Area { areaId = 0, areaName = "---Select Area---", cityId = 0 });
@@ -91,7 +84,6 @@ namespace Shaheen
 
             subscription = subscriptionBll.GetSubscriptionById(SubscriptionId);
             txtCode.Text = subscription.subscriptionCode;
-            cmbAgent.SelectedValue = subscription.agentId;
         }
 
         private bool isValid()
@@ -150,13 +142,7 @@ namespace Shaheen
                 MessageBox.Show("Invalid email format.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 isRes = false;
-            }
-            else if (cmbAgent.SelectedIndex <= 0)
-            {
-                MessageBox.Show("Agent is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                cmbAgent.Focus();
-                isRes = false;
-            }
+            }            
             else
             {
                 isRes = true;
@@ -180,8 +166,7 @@ namespace Shaheen
             person.email = txtEmail.Text;
             personBll.SavePerson(person);
 
-            subscription.subscriptionId = SubscriptionId;
-            subscription.agentId = Convert.ToInt32(cmbAgent.SelectedValue);
+            subscription.subscriptionId = SubscriptionId;            
             subscription.subscriptionCode = txtCode.Text;
             subscription.personId = PersonId;
             subscriptionBll.SaveSubscription(subscription);

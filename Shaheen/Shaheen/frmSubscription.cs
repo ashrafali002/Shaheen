@@ -11,24 +11,27 @@ namespace Shaheen
         public frmSubscription()
         {
             InitializeComponent();
-            subscriptionBll = new SubscriptionBLL();
+            subscriptionBll = new SubscriptionBLL();            
         }
 
         private void frmSubscription_Load(object sender, EventArgs e)
         {
+            this.Enabled = false;
             BindDropdownlists();
             cmbPaymentType.SelectedItem = PaymentType.Cash;
             dtpChequeDate.Value = DateTime.Now;
             dtpEndDate.Value = DateTime.Now;
             dtpPaymentDate.Value = DateTime.Now;
             dtpStartDate.Value = DateTime.Now;
-            dtpSubscriptionDate.Value = DateTime.Now;            
-            txtCode.Focus();
+            dtpSubscriptionDate.Value = DateTime.Now;
+            this.Enabled = true;
+            txtCode.Focus();            
         }
 
         private void BindDropdownlists()
         {
             cmbPaymentType.DataSource = Enum.GetValues(typeof(PaymentType));
+            cmbSubscriptionType.DataSource = Enum.GetValues(typeof(SubscriptionType));
 
             var agentBll = new AgentBLL();
             var agentList = agentBll.AgentList();
@@ -292,6 +295,7 @@ namespace Shaheen
         {
             var subscription = new Subscription();
             subscription.agentId = Convert.ToInt32(cmbAgent.SelectedValue);
+            subscription.subscriptionType = Convert.ToInt32(cmbSubscriptionType.SelectedItem);
             subscription.subscriptionDate = dtpSubscriptionDate.Value;
             subscription.subscriptionCode = txtCode.Text;
             subscription.status = Convert.ToInt32(SubscriptionStatus.Active);

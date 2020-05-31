@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlServerCe.4.0" ProviderManifestToken="4.0" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Agent">
           <Key>
             <PropertyRef Name="agentId" />
@@ -103,6 +103,7 @@
           <Property Name="pendingAmount" Type="money" Nullable="false" />
           <Property Name="subscriptionDate" Type="datetime" Nullable="false" />
           <Property Name="status" Type="int" />
+          <Property Name="subscriptionType" Type="int" />
         </EntityType>
         <EntityType Name="SubscriptionDetail">
           <Key>
@@ -129,8 +130,7 @@
           <EntitySet Name="Subscription" EntityType="Self.Subscription" store:Type="Tables" />
           <EntitySet Name="SubscriptionDetail" EntityType="Self.SubscriptionDetail" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -221,18 +221,6 @@
           <Property Name="stateName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="countryId" Type="Int32" Nullable="false" />
         </EntityType>
-        <EntityType Name="Subscription">
-          <Key>
-            <PropertyRef Name="subscriptionId" />
-          </Key>
-          <Property Name="subscriptionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="subscriptionCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="personId" Type="Int32" Nullable="false" />
-          <Property Name="agentId" Type="Int32" Nullable="false" />
-          <Property Name="pendingAmount" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="subscriptionDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="status" Type="Int32" />
-        </EntityType>
         <EntityType Name="SubscriptionDetail">
           <Key>
             <PropertyRef Name="subscriptionDetailId" />
@@ -255,9 +243,22 @@
           <EntitySet Name="Payments" EntityType="Self.Payment" />
           <EntitySet Name="People" EntityType="Self.Person" />
           <EntitySet Name="States" EntityType="Self.State" />
-          <EntitySet Name="Subscriptions" EntityType="Self.Subscription" />
           <EntitySet Name="SubscriptionDetails" EntityType="Self.SubscriptionDetail" />
+          <EntitySet Name="Subscriptions" EntityType="Model.Subscription" />
         </EntityContainer>
+        <EntityType Name="Subscription">
+          <Key>
+            <PropertyRef Name="subscriptionId" />
+          </Key>
+          <Property Name="subscriptionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="subscriptionCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="personId" Type="Int32" Nullable="false" />
+          <Property Name="agentId" Type="Int32" Nullable="false" />
+          <Property Name="pendingAmount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="subscriptionDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="subscriptionType" Type="Int32" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -359,19 +360,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Subscriptions">
-            <EntityTypeMapping TypeName="Model.Subscription">
-              <MappingFragment StoreEntitySet="Subscription">
-                <ScalarProperty Name="subscriptionId" ColumnName="subscriptionId" />
-                <ScalarProperty Name="subscriptionCode" ColumnName="subscriptionCode" />
-                <ScalarProperty Name="personId" ColumnName="personId" />
-                <ScalarProperty Name="agentId" ColumnName="agentId" />
-                <ScalarProperty Name="pendingAmount" ColumnName="pendingAmount" />
-                <ScalarProperty Name="subscriptionDate" ColumnName="subscriptionDate" />
-                <ScalarProperty Name="status" ColumnName="status" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="SubscriptionDetails">
             <EntityTypeMapping TypeName="Model.SubscriptionDetail">
               <MappingFragment StoreEntitySet="SubscriptionDetail">
@@ -383,6 +371,20 @@
                 <ScalarProperty Name="subscriptionEndDate" ColumnName="subscriptionEndDate" />
                 <ScalarProperty Name="note" ColumnName="note" />
                 <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subscriptions">
+            <EntityTypeMapping TypeName="Model.Subscription">
+              <MappingFragment StoreEntitySet="Subscription">
+                <ScalarProperty Name="subscriptionType" ColumnName="subscriptionType" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="subscriptionDate" ColumnName="subscriptionDate" />
+                <ScalarProperty Name="pendingAmount" ColumnName="pendingAmount" />
+                <ScalarProperty Name="agentId" ColumnName="agentId" />
+                <ScalarProperty Name="personId" ColumnName="personId" />
+                <ScalarProperty Name="subscriptionCode" ColumnName="subscriptionCode" />
+                <ScalarProperty Name="subscriptionId" ColumnName="subscriptionId" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

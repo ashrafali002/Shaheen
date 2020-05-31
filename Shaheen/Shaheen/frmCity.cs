@@ -30,7 +30,7 @@ namespace Shaheen
         public void ClearControls()
         {
             city_id = 0;
-            txtCity.Text = string.Empty;
+            txtCityName.Text = string.Empty;
             cmbDistrictName.SelectedIndex = 0;
         }
 
@@ -46,7 +46,7 @@ namespace Shaheen
 
         public void DisableEnableControls(bool isEnable)
         {
-            txtCity.Enabled = isEnable;
+            txtCityName.Enabled = isEnable;
             cmbDistrictName.Enabled = isEnable;
             dgvCity.Enabled = !isEnable;
         }
@@ -63,16 +63,16 @@ namespace Shaheen
         public bool isValidated()
         {
             bool isSuccess = true;
-            if (string.IsNullOrEmpty(txtCity.Text))
+            if (string.IsNullOrEmpty(txtCityName.Text))
             {
                 MessageBox.Show("City name is required", "Shaheen Weekly", MessageBoxButtons.OK);
-                txtCity.Focus();
+                txtCityName.Focus();
                 isSuccess = false;
             }
-            else if (cityBll.IsDuplicateCityName(city_id, txtCity.Text))
+            else if (cityBll.IsDuplicateCityName(city_id, txtCityName.Text))
             {
                 MessageBox.Show("Duplicate record found", "Shaheen Weekly", MessageBoxButtons.OK);
-                txtCity.Focus();
+                txtCityName.Focus();
                 isSuccess = false;
             }
             else if (cmbDistrictName.SelectedIndex <= 0)
@@ -106,7 +106,7 @@ namespace Shaheen
             {
                 var city = new City();
                 city.cityId= city_id;
-                city.cityName= txtCity.Text;
+                city.cityName= txtCityName.Text;
                 city.districtId= Convert.ToInt32(cmbDistrictName.SelectedValue);
                 int res = cityBll.SaveCity(city);
                 if (res > 0)
@@ -146,7 +146,7 @@ namespace Shaheen
             DataGridViewRow grdRow = dgvCity.Rows[rowIndex];
             city_id = Convert.ToInt32(grdRow.Cells["cityId"].Value);
             cmbDistrictName.SelectedValue = grdRow.Cells["districtId"].Value;
-            txtCity.Text = Convert.ToString(grdRow.Cells["colCityName"].Value);
+            txtCityName.Text = Convert.ToString(grdRow.Cells["colCityName"].Value);
             btnNew.Text = "Edit";
             btnClose.Text = "Cancel";
         }
@@ -175,5 +175,6 @@ namespace Shaheen
                 aRow.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
         }
+
     }
 }

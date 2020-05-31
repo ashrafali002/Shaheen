@@ -29,7 +29,7 @@ namespace Shaheen
         public void ClearControls()
         {
             state_id = 0;
-            txtState.Text = string.Empty;
+            txtStateName.Text = string.Empty;
             cmbCountryName.SelectedIndex = 0;
         }
 
@@ -45,7 +45,7 @@ namespace Shaheen
 
         public void DisableEnableControls(bool isEnable)
         {
-            txtState.Enabled = isEnable;
+            txtStateName.Enabled = isEnable;
             cmbCountryName.Enabled = isEnable;
         }
 
@@ -62,16 +62,16 @@ namespace Shaheen
         public bool isValidated()
         {
             bool isSuccess = true;
-            if (string.IsNullOrEmpty(txtState.Text))
+            if (string.IsNullOrEmpty(txtStateName.Text))
             {
                 MessageBox.Show("State name is required", "Shaheen Weekly", MessageBoxButtons.OK);
-                txtState.Focus();
+                txtStateName.Focus();
                 isSuccess = false;
             }
-            else if (stateBll.IsDuplicateStateName(state_id, txtState.Text))
+            else if (stateBll.IsDuplicateStateName(state_id, txtStateName.Text))
             {
                 MessageBox.Show("Duplicate record found", "Shaheen Weekly", MessageBoxButtons.OK);
-                txtState.Focus();
+                txtStateName.Focus();
                 isSuccess = false;
             }
             else if (cmbCountryName.SelectedIndex <= 0)
@@ -107,7 +107,7 @@ namespace Shaheen
             {
                 var state = new State();
                 state.stateId = state_id;
-                state.stateName = txtState.Text;
+                state.stateName = txtStateName.Text;
                 state.countryId = Convert.ToInt32(cmbCountryName.SelectedValue);
                 int res = stateBll.SaveState(state);
                 if (res > 0)
@@ -149,7 +149,7 @@ namespace Shaheen
             DataGridViewRow grdRow = dgvState.Rows[rowIndex];
             state_id = Convert.ToInt32(grdRow.Cells["stateId"].Value);
             cmbCountryName.SelectedValue = grdRow.Cells["countryId"].Value;
-            txtState.Text = Convert.ToString(grdRow.Cells["colStateName"].Value);
+            txtStateName.Text = Convert.ToString(grdRow.Cells["colStateName"].Value);
             btnNew.Text = "Edit";
             btnClose.Text = "Cancel";
         }

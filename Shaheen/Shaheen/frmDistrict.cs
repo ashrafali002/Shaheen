@@ -172,6 +172,6 @@ namespace Shaheen
                 aRow.Height = 30;
                 aRow.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
-        }
+        }        
     }
 }

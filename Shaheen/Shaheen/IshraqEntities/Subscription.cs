@@ -21,5 +21,6 @@ namespace Shaheen.IshraqEntities
         public decimal pendingAmount { get; set; }
         public System.DateTime subscriptionDate { get; set; }
         public Nullable<int> status { get; set; }
+        public Nullable<int> subscriptionType { get; set; }
     }
 }

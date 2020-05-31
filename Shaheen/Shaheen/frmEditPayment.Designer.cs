@@ -64,7 +64,7 @@
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(547, 37);
+            this.panel17.Size = new System.Drawing.Size(544, 37);
             this.panel17.TabIndex = 44;
             // 
             // label27
@@ -82,9 +82,9 @@
             // 
             this.grpButtons.Controls.Add(this.btnClose);
             this.grpButtons.Controls.Add(this.btnSave);
-            this.grpButtons.Location = new System.Drawing.Point(11, 243);
+            this.grpButtons.Location = new System.Drawing.Point(10, 243);
             this.grpButtons.Name = "grpButtons";
-            this.grpButtons.Size = new System.Drawing.Size(524, 59);
+            this.grpButtons.Size = new System.Drawing.Size(524, 60);
             this.grpButtons.TabIndex = 45;
             this.grpButtons.TabStop = false;
             // 
@@ -133,7 +133,8 @@
             this.grpPayment.Controls.Add(this.label21);
             this.grpPayment.Controls.Add(this.dtpPaymentDate);
             this.grpPayment.Controls.Add(this.label20);
-            this.grpPayment.Location = new System.Drawing.Point(11, 43);
+            this.grpPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            this.grpPayment.Location = new System.Drawing.Point(10, 43);
             this.grpPayment.Name = "grpPayment";
             this.grpPayment.Size = new System.Drawing.Size(524, 200);
             this.grpPayment.TabIndex = 46;
@@ -156,7 +157,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.label26.Location = new System.Drawing.Point(357, 90);
             this.label26.Margin = new System.Windows.Forms.Padding(0);
             this.label26.Name = "label26";
@@ -189,7 +190,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.label25.Location = new System.Drawing.Point(17, 145);
             this.label25.Margin = new System.Windows.Forms.Padding(0);
             this.label25.Name = "label25";
@@ -212,8 +213,8 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label24.Location = new System.Drawing.Point(357, 33);
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            this.label24.Location = new System.Drawing.Point(357, 30);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(85, 15);
@@ -235,7 +236,7 @@
             this.txtPaidAmout.BackColor = System.Drawing.Color.SkyBlue;
             this.txtPaidAmout.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPaidAmout.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaidAmout.Location = new System.Drawing.Point(357, 53);
+            this.txtPaidAmout.Location = new System.Drawing.Point(357, 51);
             this.txtPaidAmout.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPaidAmout.MaxLength = 10;
             this.txtPaidAmout.Name = "txtPaidAmout";
@@ -247,7 +248,7 @@
             this.panel14.BackColor = System.Drawing.Color.SkyBlue;
             this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel14.Location = new System.Drawing.Point(357, 76);
+            this.panel14.Location = new System.Drawing.Point(357, 74);
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(150, 1);
             this.panel14.TabIndex = 6;
@@ -255,12 +256,12 @@
             // lblChequeDate
             // 
             this.lblChequeDate.AutoSize = true;
-            this.lblChequeDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblChequeDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.lblChequeDate.Location = new System.Drawing.Point(187, 90);
             this.lblChequeDate.Name = "lblChequeDate";
-            this.lblChequeDate.Size = new System.Drawing.Size(146, 15);
+            this.lblChequeDate.Size = new System.Drawing.Size(111, 15);
             this.lblChequeDate.TabIndex = 10;
-            this.lblChequeDate.Text = "DD / Cheque / MO Date :";
+            this.lblChequeDate.Text = "Transaction Date :";
             // 
             // dtpChequeDate
             // 
@@ -277,13 +278,13 @@
             // lblChequeNo
             // 
             this.lblChequeNo.AutoSize = true;
-            this.lblChequeNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblChequeNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.lblChequeNo.Location = new System.Drawing.Point(17, 90);
             this.lblChequeNo.Margin = new System.Windows.Forms.Padding(0);
             this.lblChequeNo.Name = "lblChequeNo";
-            this.lblChequeNo.Size = new System.Drawing.Size(135, 15);
+            this.lblChequeNo.Size = new System.Drawing.Size(100, 15);
             this.lblChequeNo.TabIndex = 7;
-            this.lblChequeNo.Text = "DD / Cheque / MO No :";
+            this.lblChequeNo.Text = "Transaction No :";
             // 
             // txtChequeNo
             // 
@@ -310,8 +311,8 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.label21.Location = new System.Drawing.Point(187, 33);
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            this.label21.Location = new System.Drawing.Point(187, 30);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(93, 15);
             this.label21.TabIndex = 2;
@@ -323,7 +324,7 @@
             this.dtpPaymentDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
             this.dtpPaymentDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpPaymentDate.Location = new System.Drawing.Point(187, 51);
+            this.dtpPaymentDate.Location = new System.Drawing.Point(187, 48);
             this.dtpPaymentDate.Name = "dtpPaymentDate";
             this.dtpPaymentDate.Size = new System.Drawing.Size(150, 27);
             this.dtpPaymentDate.TabIndex = 3;
@@ -332,7 +333,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.label20.Location = new System.Drawing.Point(17, 30);
             this.label20.Margin = new System.Windows.Forms.Padding(0);
             this.label20.Name = "label20";
@@ -345,7 +346,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(547, 315);
+            this.ClientSize = new System.Drawing.Size(544, 315);
             this.Controls.Add(this.grpPayment);
             this.Controls.Add(this.grpButtons);
             this.Controls.Add(this.panel17);

@@ -93,7 +93,7 @@
             this.grpPerson.Controls.Add(this.label2);
             this.grpPerson.Controls.Add(this.label4);
             this.grpPerson.Controls.Add(this.label3);
-            this.grpPerson.ForeColor = System.Drawing.Color.Black;
+            this.grpPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.grpPerson.Location = new System.Drawing.Point(12, 43);
             this.grpPerson.Name = "grpPerson";
             this.grpPerson.Size = new System.Drawing.Size(524, 242);
@@ -105,6 +105,7 @@
             // 
             this.lblAgent.AutoSize = true;
             this.lblAgent.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAgent.ForeColor = System.Drawing.Color.Black;
             this.lblAgent.Location = new System.Drawing.Point(102, 211);
             this.lblAgent.Name = "lblAgent";
             this.lblAgent.Size = new System.Drawing.Size(50, 19);
@@ -115,6 +116,7 @@
             // 
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.Black;
             this.lblEmail.Location = new System.Drawing.Point(102, 180);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(49, 19);
@@ -125,6 +127,7 @@
             // 
             this.lblContact.AutoSize = true;
             this.lblContact.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblContact.ForeColor = System.Drawing.Color.Black;
             this.lblContact.Location = new System.Drawing.Point(102, 149);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(64, 19);
@@ -134,7 +137,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.label5.Location = new System.Drawing.Point(15, 149);
             this.label5.Margin = new System.Windows.Forms.Padding(0);
             this.label5.Name = "label5";
@@ -146,6 +149,7 @@
             // 
             this.lblCountry.AutoSize = true;
             this.lblCountry.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCountry.ForeColor = System.Drawing.Color.Black;
             this.lblCountry.Location = new System.Drawing.Point(391, 117);
             this.lblCountry.Name = "lblCountry";
             this.lblCountry.Size = new System.Drawing.Size(64, 19);
@@ -156,6 +160,7 @@
             // 
             this.lblPin.AutoSize = true;
             this.lblPin.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPin.ForeColor = System.Drawing.Color.Black;
             this.lblPin.Location = new System.Drawing.Point(391, 86);
             this.lblPin.Name = "lblPin";
             this.lblPin.Size = new System.Drawing.Size(34, 19);
@@ -166,6 +171,7 @@
             // 
             this.lblState.AutoSize = true;
             this.lblState.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblState.ForeColor = System.Drawing.Color.Black;
             this.lblState.Location = new System.Drawing.Point(249, 117);
             this.lblState.Name = "lblState";
             this.lblState.Size = new System.Drawing.Size(46, 19);
@@ -176,6 +182,7 @@
             // 
             this.lblDistrict.AutoSize = true;
             this.lblDistrict.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDistrict.ForeColor = System.Drawing.Color.Black;
             this.lblDistrict.Location = new System.Drawing.Point(102, 117);
             this.lblDistrict.Name = "lblDistrict";
             this.lblDistrict.Size = new System.Drawing.Size(59, 19);
@@ -186,6 +193,7 @@
             // 
             this.lblCity.AutoSize = true;
             this.lblCity.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCity.ForeColor = System.Drawing.Color.Black;
             this.lblCity.Location = new System.Drawing.Point(249, 86);
             this.lblCity.Name = "lblCity";
             this.lblCity.Size = new System.Drawing.Size(36, 19);
@@ -196,6 +204,7 @@
             // 
             this.lblArea.AutoSize = true;
             this.lblArea.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblArea.ForeColor = System.Drawing.Color.Black;
             this.lblArea.Location = new System.Drawing.Point(102, 86);
             this.lblArea.Name = "lblArea";
             this.lblArea.Size = new System.Drawing.Size(41, 19);
@@ -206,6 +215,7 @@
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAddress.ForeColor = System.Drawing.Color.Black;
             this.lblAddress.Location = new System.Drawing.Point(102, 55);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(66, 19);
@@ -216,6 +226,7 @@
             // 
             this.lblCode.AutoSize = true;
             this.lblCode.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCode.ForeColor = System.Drawing.Color.Black;
             this.lblCode.Location = new System.Drawing.Point(102, 24);
             this.lblCode.Name = "lblCode";
             this.lblCode.Size = new System.Drawing.Size(99, 19);
@@ -225,7 +236,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.label13.Location = new System.Drawing.Point(45, 211);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(46, 15);
@@ -235,7 +246,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.label2.Location = new System.Drawing.Point(47, 180);
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
@@ -246,7 +257,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.label4.Location = new System.Drawing.Point(31, 55);
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
@@ -257,7 +268,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.label3.Location = new System.Drawing.Point(44, 26);
             this.label3.Margin = new System.Windows.Forms.Padding(0);
             this.label3.Name = "label3";
@@ -292,7 +303,7 @@
             this.grpButtons.Controls.Add(this.btnSave);
             this.grpButtons.Location = new System.Drawing.Point(13, 491);
             this.grpButtons.Name = "grpButtons";
-            this.grpButtons.Size = new System.Drawing.Size(523, 59);
+            this.grpButtons.Size = new System.Drawing.Size(523, 60);
             this.grpButtons.TabIndex = 41;
             this.grpButtons.TabStop = false;
             // 
@@ -300,7 +311,7 @@
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(431, 19);
+            this.btnClose.Location = new System.Drawing.Point(431, 20);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 30);
             this.btnClose.TabIndex = 16;
@@ -312,7 +323,7 @@
             // 
             this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(350, 19);
+            this.btnSave.Location = new System.Drawing.Point(350, 20);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 30);
             this.btnSave.TabIndex = 15;
@@ -340,6 +351,7 @@
             this.grpPayment.Controls.Add(this.label21);
             this.grpPayment.Controls.Add(this.dtpPaymentDate);
             this.grpPayment.Controls.Add(this.label20);
+            this.grpPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.grpPayment.Location = new System.Drawing.Point(12, 291);
             this.grpPayment.Name = "grpPayment";
             this.grpPayment.Size = new System.Drawing.Size(524, 200);
@@ -363,7 +375,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.label26.Location = new System.Drawing.Point(357, 90);
             this.label26.Margin = new System.Windows.Forms.Padding(0);
             this.label26.Name = "label26";
@@ -396,7 +408,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.label25.Location = new System.Drawing.Point(17, 145);
             this.label25.Margin = new System.Windows.Forms.Padding(0);
             this.label25.Name = "label25";
@@ -419,7 +431,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.label24.Location = new System.Drawing.Point(357, 33);
             this.label24.Margin = new System.Windows.Forms.Padding(0);
             this.label24.Name = "label24";
@@ -462,12 +474,12 @@
             // lblChequeDate
             // 
             this.lblChequeDate.AutoSize = true;
-            this.lblChequeDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblChequeDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.lblChequeDate.Location = new System.Drawing.Point(187, 90);
             this.lblChequeDate.Name = "lblChequeDate";
-            this.lblChequeDate.Size = new System.Drawing.Size(146, 15);
+            this.lblChequeDate.Size = new System.Drawing.Size(111, 15);
             this.lblChequeDate.TabIndex = 10;
-            this.lblChequeDate.Text = "DD / Cheque / MO Date :";
+            this.lblChequeDate.Text = "Transaction Date :";
             // 
             // dtpChequeDate
             // 
@@ -484,13 +496,13 @@
             // lblChequeNo
             // 
             this.lblChequeNo.AutoSize = true;
-            this.lblChequeNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.lblChequeNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.lblChequeNo.Location = new System.Drawing.Point(17, 90);
             this.lblChequeNo.Margin = new System.Windows.Forms.Padding(0);
             this.lblChequeNo.Name = "lblChequeNo";
-            this.lblChequeNo.Size = new System.Drawing.Size(135, 15);
+            this.lblChequeNo.Size = new System.Drawing.Size(100, 15);
             this.lblChequeNo.TabIndex = 7;
-            this.lblChequeNo.Text = "DD / Cheque / MO No :";
+            this.lblChequeNo.Text = "Transaction No :";
             // 
             // txtChequeNo
             // 
@@ -517,7 +529,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.label21.Location = new System.Drawing.Point(187, 33);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(93, 15);
@@ -539,7 +551,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.label20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.label20.Location = new System.Drawing.Point(17, 30);
             this.label20.Margin = new System.Windows.Forms.Padding(0);
             this.label20.Name = "label20";

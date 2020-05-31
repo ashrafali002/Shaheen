@@ -37,7 +37,7 @@ namespace Shaheen
             dgvSubscriptionList.Columns["subscriptionDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["subscriptionStartDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["subscriptionEndDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
-            dgvSubscriptionList.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;     
+            dgvSubscriptionList.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
         }
 
         private void dgvSubscriptionList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -54,11 +54,13 @@ namespace Shaheen
         private void ctxmEditPerson_Click(object sender, EventArgs e)
         {
             frmEditPerson editPerson = new frmEditPerson();
+            this.Opacity = 10;
             editPerson.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["personId"].Value);
             editPerson.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
             if (editPerson.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
+                this.Opacity = 100;
             }
         }
 
@@ -69,7 +71,7 @@ namespace Shaheen
             editSubscription.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["personId"].Value);
             editSubscription.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
             editSubscription.SubscriptionDetailId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionDetailId"].Value);
-            editSubscription.AgentName = Convert.ToString(dgvSubscriptionList.Rows[rowIndex].Cells["agentName"].Value);
+            //editSubscription.AgentName = Convert.ToString(dgvSubscriptionList.Rows[rowIndex].Cells["agentName"].Value);
             if (editSubscription.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
@@ -132,7 +134,7 @@ namespace Shaheen
         }
 
         private void dgvSubscriptionList_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
-        {            
+        {
             foreach (DataGridViewRow aRow in dgvSubscriptionList.Rows)
             {
                 aRow.Height = 30;
