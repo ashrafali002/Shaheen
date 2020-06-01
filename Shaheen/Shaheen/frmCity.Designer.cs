@@ -38,6 +38,7 @@
             this.districtId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iconCity = new FontAwesome.Sharp.IconPictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtCityName = new System.Windows.Forms.TextBox();
@@ -51,6 +52,7 @@
             this.btnClose = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCity)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCity)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -145,7 +147,8 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Controls.Add(this.iconCity);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -153,12 +156,23 @@
             this.panel2.Size = new System.Drawing.Size(786, 37);
             this.panel2.TabIndex = 37;
             // 
+            // iconCity
+            // 
+            this.iconCity.BackColor = System.Drawing.Color.Navy;
+            this.iconCity.IconChar = FontAwesome.Sharp.IconChar.Building;
+            this.iconCity.IconColor = System.Drawing.Color.White;
+            this.iconCity.Location = new System.Drawing.Point(10, 6);
+            this.iconCity.Name = "iconCity";
+            this.iconCity.Size = new System.Drawing.Size(32, 32);
+            this.iconCity.TabIndex = 3;
+            this.iconCity.TabStop = false;
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(7, 6);
+            this.label3.Location = new System.Drawing.Point(48, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 25);
             this.label3.TabIndex = 0;
@@ -330,6 +344,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvCity)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCity)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -356,5 +371,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cityId;
         private System.Windows.Forms.DataGridViewTextBoxColumn districtId;
         private System.Windows.Forms.DataGridViewImageColumn colDelete;
+        private FontAwesome.Sharp.IconPictureBox iconCity;
     }
 }

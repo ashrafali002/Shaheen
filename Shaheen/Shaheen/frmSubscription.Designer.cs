@@ -985,7 +985,7 @@
             this.btnSave.IconColor = System.Drawing.Color.DarkBlue;
             this.btnSave.IconSize = 32;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(792, 16);
+            this.btnSave.Location = new System.Drawing.Point(792, 15);
             this.btnSave.Name = "btnSave";
             this.btnSave.Rotation = 0D;
             this.btnSave.Size = new System.Drawing.Size(90, 37);
@@ -1007,7 +1007,7 @@
             this.btnClose.IconColor = System.Drawing.Color.Maroon;
             this.btnClose.IconSize = 32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(888, 16);
+            this.btnClose.Location = new System.Drawing.Point(888, 15);
             this.btnClose.Name = "btnClose";
             this.btnClose.Rotation = 0D;
             this.btnClose.Size = new System.Drawing.Size(90, 37);

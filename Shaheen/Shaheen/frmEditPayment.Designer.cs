@@ -29,10 +29,11 @@
         private void InitializeComponent()
         {
             this.panel17 = new System.Windows.Forms.Panel();
+            this.iconEditPayment = new FontAwesome.Sharp.IconPictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.grpButtons = new System.Windows.Forms.GroupBox();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
+            this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.grpPayment = new System.Windows.Forms.GroupBox();
             this.cmbPaymentType = new System.Windows.Forms.ComboBox();
             this.label26 = new System.Windows.Forms.Label();
@@ -53,6 +54,7 @@
             this.dtpPaymentDate = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconEditPayment)).BeginInit();
             this.grpButtons.SuspendLayout();
             this.grpPayment.SuspendLayout();
             this.SuspendLayout();
@@ -60,6 +62,7 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Navy;
+            this.panel17.Controls.Add(this.iconEditPayment);
             this.panel17.Controls.Add(this.label27);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(0, 0);
@@ -67,12 +70,23 @@
             this.panel17.Size = new System.Drawing.Size(544, 37);
             this.panel17.TabIndex = 44;
             // 
+            // iconEditPayment
+            // 
+            this.iconEditPayment.BackColor = System.Drawing.Color.Navy;
+            this.iconEditPayment.IconChar = FontAwesome.Sharp.IconChar.MoneyBillAlt;
+            this.iconEditPayment.IconColor = System.Drawing.Color.White;
+            this.iconEditPayment.Location = new System.Drawing.Point(10, 6);
+            this.iconEditPayment.Name = "iconEditPayment";
+            this.iconEditPayment.Size = new System.Drawing.Size(32, 32);
+            this.iconEditPayment.TabIndex = 7;
+            this.iconEditPayment.TabStop = false;
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(7, 6);
+            this.label27.Location = new System.Drawing.Point(48, 6);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(135, 25);
             this.label27.TabIndex = 0;
@@ -80,38 +94,58 @@
             // 
             // grpButtons
             // 
-            this.grpButtons.Controls.Add(this.btnClose);
             this.grpButtons.Controls.Add(this.btnSave);
+            this.grpButtons.Controls.Add(this.btnClose);
             this.grpButtons.Location = new System.Drawing.Point(10, 243);
             this.grpButtons.Name = "grpButtons";
             this.grpButtons.Size = new System.Drawing.Size(524, 60);
             this.grpButtons.TabIndex = 45;
             this.grpButtons.TabStop = false;
             // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.btnClose.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(432, 19);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 30);
-            this.btnClose.TabIndex = 16;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
             // btnSave
             // 
+            this.btnSave.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Location = new System.Drawing.Point(351, 19);
+            this.btnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnSave.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnSave.IconColor = System.Drawing.Color.DarkBlue;
+            this.btnSave.IconSize = 32;
+            this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.Location = new System.Drawing.Point(321, 15);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 30);
-            this.btnSave.TabIndex = 15;
+            this.btnSave.Rotation = 0D;
+            this.btnSave.Size = new System.Drawing.Size(90, 37);
+            this.btnSave.TabIndex = 27;
             this.btnSave.Text = "Save";
+            this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // btnClose
+            // 
+            this.btnClose.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.btnClose.IconColor = System.Drawing.Color.Maroon;
+            this.btnClose.IconSize = 32;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(417, 15);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Rotation = 0D;
+            this.btnClose.Size = new System.Drawing.Size(90, 37);
+            this.btnClose.TabIndex = 26;
+            this.btnClose.Text = "Close";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // grpPayment
             // 
@@ -345,7 +379,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.CancelButton = this.btnClose;
             this.ClientSize = new System.Drawing.Size(544, 315);
             this.Controls.Add(this.grpPayment);
             this.Controls.Add(this.grpButtons);
@@ -357,6 +390,7 @@
             this.Load += new System.EventHandler(this.frmEditPayment_Load);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconEditPayment)).EndInit();
             this.grpButtons.ResumeLayout(false);
             this.grpPayment.ResumeLayout(false);
             this.grpPayment.PerformLayout();
@@ -368,8 +402,6 @@
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.GroupBox grpButtons;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.GroupBox grpPayment;
         private System.Windows.Forms.ComboBox cmbPaymentType;
         private System.Windows.Forms.Label label26;
@@ -389,5 +421,8 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.DateTimePicker dtpPaymentDate;
         private System.Windows.Forms.Label label20;
+        private FontAwesome.Sharp.IconPictureBox iconEditPayment;
+        private FontAwesome.Sharp.IconButton btnSave;
+        private FontAwesome.Sharp.IconButton btnClose;
     }
 }

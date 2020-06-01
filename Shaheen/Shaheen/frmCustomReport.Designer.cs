@@ -54,6 +54,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.btnExport = new FontAwesome.Sharp.IconButton();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.iconAgentWise = new FontAwesome.Sharp.IconPictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.dgvCustomReport = new System.Windows.Forms.DataGridView();
             this.subscriptionCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -69,6 +70,7 @@
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.groupBox1.SuspendLayout();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconAgentWise)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomReport)).BeginInit();
             this.SuspendLayout();
             // 
@@ -340,6 +342,7 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Navy;
+            this.panel17.Controls.Add(this.iconAgentWise);
             this.panel17.Controls.Add(this.label27);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(0, 0);
@@ -347,12 +350,23 @@
             this.panel17.Size = new System.Drawing.Size(973, 37);
             this.panel17.TabIndex = 0;
             // 
+            // iconAgentWise
+            // 
+            this.iconAgentWise.BackColor = System.Drawing.Color.Navy;
+            this.iconAgentWise.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.iconAgentWise.IconColor = System.Drawing.Color.White;
+            this.iconAgentWise.Location = new System.Drawing.Point(10, 6);
+            this.iconAgentWise.Name = "iconAgentWise";
+            this.iconAgentWise.Size = new System.Drawing.Size(32, 32);
+            this.iconAgentWise.TabIndex = 5;
+            this.iconAgentWise.TabStop = false;
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(7, 6);
+            this.label27.Location = new System.Drawing.Point(48, 6);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(185, 25);
             this.label27.TabIndex = 0;
@@ -547,6 +561,7 @@
             this.groupBox1.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconAgentWise)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCustomReport)).EndInit();
             this.ResumeLayout(false);
 
@@ -587,5 +602,6 @@
         private FontAwesome.Sharp.IconButton btnReset;
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnExport;
+        private FontAwesome.Sharp.IconPictureBox iconAgentWise;
     }
 }

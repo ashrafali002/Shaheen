@@ -71,7 +71,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(286, 749);
+            this.panel1.Size = new System.Drawing.Size(227, 749);
             this.panel1.TabIndex = 0;
             // 
             // btnExit
@@ -88,11 +88,11 @@
             this.btnExit.IconColor = System.Drawing.Color.Gainsboro;
             this.btnExit.IconSize = 32;
             this.btnExit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnExit.Location = new System.Drawing.Point(11, 699);
+            this.btnExit.Location = new System.Drawing.Point(0, 711);
             this.btnExit.Name = "btnExit";
             this.btnExit.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnExit.Rotation = 0D;
-            this.btnExit.Size = new System.Drawing.Size(265, 38);
+            this.btnExit.Size = new System.Drawing.Size(227, 38);
             this.btnExit.TabIndex = 25;
             this.btnExit.Text = "Exit";
             this.btnExit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -111,11 +111,11 @@
             this.btnLabelPrint.IconColor = System.Drawing.Color.Gainsboro;
             this.btnLabelPrint.IconSize = 32;
             this.btnLabelPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLabelPrint.Location = new System.Drawing.Point(11, 570);
+            this.btnLabelPrint.Location = new System.Drawing.Point(0, 570);
             this.btnLabelPrint.Name = "btnLabelPrint";
             this.btnLabelPrint.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnLabelPrint.Rotation = 0D;
-            this.btnLabelPrint.Size = new System.Drawing.Size(265, 38);
+            this.btnLabelPrint.Size = new System.Drawing.Size(227, 38);
             this.btnLabelPrint.TabIndex = 24;
             this.btnLabelPrint.Text = "Print Address";
             this.btnLabelPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -134,11 +134,11 @@
             this.btnReport.IconColor = System.Drawing.Color.Gainsboro;
             this.btnReport.IconSize = 32;
             this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.Location = new System.Drawing.Point(11, 526);
+            this.btnReport.Location = new System.Drawing.Point(0, 526);
             this.btnReport.Name = "btnReport";
             this.btnReport.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnReport.Rotation = 0D;
-            this.btnReport.Size = new System.Drawing.Size(265, 38);
+            this.btnReport.Size = new System.Drawing.Size(227, 38);
             this.btnReport.TabIndex = 23;
             this.btnReport.Text = "Agent-wise Report";
             this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,11 +157,11 @@
             this.btnArea.IconColor = System.Drawing.Color.Gainsboro;
             this.btnArea.IconSize = 32;
             this.btnArea.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnArea.Location = new System.Drawing.Point(11, 459);
+            this.btnArea.Location = new System.Drawing.Point(0, 459);
             this.btnArea.Name = "btnArea";
             this.btnArea.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnArea.Rotation = 0D;
-            this.btnArea.Size = new System.Drawing.Size(265, 38);
+            this.btnArea.Size = new System.Drawing.Size(227, 38);
             this.btnArea.TabIndex = 22;
             this.btnArea.Text = "Area";
             this.btnArea.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -180,11 +180,11 @@
             this.btnCity.IconColor = System.Drawing.Color.Gainsboro;
             this.btnCity.IconSize = 32;
             this.btnCity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCity.Location = new System.Drawing.Point(11, 415);
+            this.btnCity.Location = new System.Drawing.Point(0, 415);
             this.btnCity.Name = "btnCity";
             this.btnCity.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnCity.Rotation = 0D;
-            this.btnCity.Size = new System.Drawing.Size(265, 38);
+            this.btnCity.Size = new System.Drawing.Size(227, 38);
             this.btnCity.TabIndex = 21;
             this.btnCity.Text = "City";
             this.btnCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -203,11 +203,11 @@
             this.btnDistrict.IconColor = System.Drawing.Color.Gainsboro;
             this.btnDistrict.IconSize = 32;
             this.btnDistrict.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDistrict.Location = new System.Drawing.Point(11, 371);
+            this.btnDistrict.Location = new System.Drawing.Point(0, 371);
             this.btnDistrict.Name = "btnDistrict";
             this.btnDistrict.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnDistrict.Rotation = 0D;
-            this.btnDistrict.Size = new System.Drawing.Size(265, 38);
+            this.btnDistrict.Size = new System.Drawing.Size(227, 38);
             this.btnDistrict.TabIndex = 20;
             this.btnDistrict.Text = "District";
             this.btnDistrict.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -226,11 +226,11 @@
             this.btnState.IconColor = System.Drawing.Color.Gainsboro;
             this.btnState.IconSize = 32;
             this.btnState.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnState.Location = new System.Drawing.Point(11, 327);
+            this.btnState.Location = new System.Drawing.Point(0, 327);
             this.btnState.Name = "btnState";
             this.btnState.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnState.Rotation = 0D;
-            this.btnState.Size = new System.Drawing.Size(265, 38);
+            this.btnState.Size = new System.Drawing.Size(227, 38);
             this.btnState.TabIndex = 19;
             this.btnState.Text = "State";
             this.btnState.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -249,11 +249,11 @@
             this.btnCountry.IconColor = System.Drawing.Color.Gainsboro;
             this.btnCountry.IconSize = 32;
             this.btnCountry.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCountry.Location = new System.Drawing.Point(11, 283);
+            this.btnCountry.Location = new System.Drawing.Point(0, 283);
             this.btnCountry.Name = "btnCountry";
             this.btnCountry.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnCountry.Rotation = 0D;
-            this.btnCountry.Size = new System.Drawing.Size(265, 38);
+            this.btnCountry.Size = new System.Drawing.Size(227, 38);
             this.btnCountry.TabIndex = 18;
             this.btnCountry.Text = "Country";
             this.btnCountry.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -272,11 +272,11 @@
             this.btnAgent.IconColor = System.Drawing.Color.Gainsboro;
             this.btnAgent.IconSize = 32;
             this.btnAgent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgent.Location = new System.Drawing.Point(11, 239);
+            this.btnAgent.Location = new System.Drawing.Point(0, 239);
             this.btnAgent.Name = "btnAgent";
             this.btnAgent.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnAgent.Rotation = 0D;
-            this.btnAgent.Size = new System.Drawing.Size(265, 38);
+            this.btnAgent.Size = new System.Drawing.Size(227, 38);
             this.btnAgent.TabIndex = 17;
             this.btnAgent.Text = "Agent";
             this.btnAgent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -295,11 +295,11 @@
             this.btnSubscriptionList.IconColor = System.Drawing.Color.Gainsboro;
             this.btnSubscriptionList.IconSize = 32;
             this.btnSubscriptionList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubscriptionList.Location = new System.Drawing.Point(11, 138);
+            this.btnSubscriptionList.Location = new System.Drawing.Point(0, 138);
             this.btnSubscriptionList.Name = "btnSubscriptionList";
             this.btnSubscriptionList.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnSubscriptionList.Rotation = 0D;
-            this.btnSubscriptionList.Size = new System.Drawing.Size(265, 38);
+            this.btnSubscriptionList.Size = new System.Drawing.Size(227, 38);
             this.btnSubscriptionList.TabIndex = 16;
             this.btnSubscriptionList.Text = "Subscription List";
             this.btnSubscriptionList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -318,11 +318,11 @@
             this.btnPaymentList.IconColor = System.Drawing.Color.Gainsboro;
             this.btnPaymentList.IconSize = 32;
             this.btnPaymentList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPaymentList.Location = new System.Drawing.Point(11, 182);
+            this.btnPaymentList.Location = new System.Drawing.Point(0, 182);
             this.btnPaymentList.Name = "btnPaymentList";
             this.btnPaymentList.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnPaymentList.Rotation = 0D;
-            this.btnPaymentList.Size = new System.Drawing.Size(265, 38);
+            this.btnPaymentList.Size = new System.Drawing.Size(227, 38);
             this.btnPaymentList.TabIndex = 15;
             this.btnPaymentList.Text = "Payment List";
             this.btnPaymentList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -341,11 +341,11 @@
             this.btnSubscription.IconColor = System.Drawing.Color.Gainsboro;
             this.btnSubscription.IconSize = 32;
             this.btnSubscription.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubscription.Location = new System.Drawing.Point(11, 94);
+            this.btnSubscription.Location = new System.Drawing.Point(0, 94);
             this.btnSubscription.Name = "btnSubscription";
             this.btnSubscription.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnSubscription.Rotation = 0D;
-            this.btnSubscription.Size = new System.Drawing.Size(265, 38);
+            this.btnSubscription.Size = new System.Drawing.Size(227, 38);
             this.btnSubscription.TabIndex = 14;
             this.btnSubscription.Text = "New Subscription";
             this.btnSubscription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -361,13 +361,13 @@
             this.pnlLogo.Location = new System.Drawing.Point(0, 0);
             this.pnlLogo.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(286, 65);
+            this.pnlLogo.Size = new System.Drawing.Size(227, 65);
             this.pnlLogo.TabIndex = 2;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(78, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(48, 9);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(131, 46);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -378,20 +378,20 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(286, 0);
+            this.panel2.Location = new System.Drawing.Point(227, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1058, 65);
+            this.panel2.Size = new System.Drawing.Size(1117, 65);
             this.panel2.TabIndex = 1;
             // 
             // pnlForm
             // 
             this.pnlForm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlForm.Location = new System.Drawing.Point(286, 65);
+            this.pnlForm.Location = new System.Drawing.Point(227, 65);
             this.pnlForm.Margin = new System.Windows.Forms.Padding(4);
             this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(1058, 684);
+            this.pnlForm.Size = new System.Drawing.Size(1117, 684);
             this.pnlForm.TabIndex = 2;
             // 
             // frmMain
