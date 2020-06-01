@@ -21,6 +21,7 @@ namespace Shaheen
             BindDropdownLists();
             DisableEnableControls(false);
             btnNew.Text = "New";
+            btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             btnClose.Text = "Close";
             btnNew.Enabled = true;
             btnSave.Enabled = false;
@@ -114,6 +115,7 @@ namespace Shaheen
                     ClearControls();
                     DisableEnableControls(false);
                     btnNew.Text = "New";
+                    btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
                     btnSave.Enabled = false;
                     btnNew.Enabled = true;
                     btnClose.Text = "Close";
@@ -135,6 +137,7 @@ namespace Shaheen
                 btnNew.Enabled = true;
                 btnSave.Enabled = false;
                 btnNew.Text = "New";
+                btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             }
         }
 
@@ -146,6 +149,7 @@ namespace Shaheen
             cmbCityName.SelectedValue = grdRow.Cells["cityId"].Value;
             txtAreaName.Text = Convert.ToString(grdRow.Cells["colAreaName"].Value);
             btnNew.Text = "Edit";
+            btnNew.IconChar = FontAwesome.Sharp.IconChar.Edit;
             btnClose.Text = "Cancel";
         }
 
@@ -153,7 +157,7 @@ namespace Shaheen
         {
             int columnIndex = e.ColumnIndex;
             int rowIndex = e.RowIndex;
-            if (dgvArea.Columns[columnIndex] is DataGridViewButtonColumn && rowIndex >= 0)
+            if (dgvArea.Columns[columnIndex] is DataGridViewImageColumn && rowIndex >= 0)
             {
                 if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {

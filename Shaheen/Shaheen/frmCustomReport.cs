@@ -1,4 +1,5 @@
-﻿using Shaheen.BLL;
+﻿using Microsoft.SqlServer.Server;
+using Shaheen.BLL;
 using Shaheen.IshraqEntities;
 using System;
 using System.Data;
@@ -26,6 +27,7 @@ namespace Shaheen
             dgvCustomReport.DataSource = SearchResult;
             dgvCustomReport.Columns["subscriptionEndDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvCustomReport.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvCustomReport.Columns["pendingAmount"].DefaultCellStyle.Format = "C2";
         }
 
         private void frmCustomReport_Load(object sender, EventArgs e)
@@ -154,7 +156,14 @@ namespace Shaheen
                 {
                     if (sdf.ShowDialog() == DialogResult.OK)
                     {
-                        PDFGeneration.AddContentToPDF(sdf.FileName, SearchResult);
+                        bool isGenerated = PDFGeneration.AddContentToPDF(sdf.FileName, SearchResult);
+                        if (isGenerated)
+                        {
+                            MessageBox.Show("Agent-wise PDF file Successfully generated", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        } else                        
+                        {
+                            MessageBox.Show("Agent-wise PDF not generated", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -175,6 +184,11 @@ namespace Shaheen
                     aRow.DefaultCellStyle.BackColor = Color.Turquoise;
                 }
             }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

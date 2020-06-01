@@ -21,6 +21,7 @@ namespace Shaheen
             BindDropdownLists();
             DisableEnableControls(false);
             btnNew.Text = "New";
+            btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             btnClose.Text = "Close";
             btnNew.Enabled = true;
             btnSave.Enabled = false;
@@ -212,6 +213,7 @@ namespace Shaheen
                     ClearControls();
                     DisableEnableControls(false);
                     btnNew.Text = "New";
+                    btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
                     btnSave.Enabled = false;
                     btnNew.Enabled = true;
                     btnClose.Text = "Close";
@@ -233,6 +235,7 @@ namespace Shaheen
                 btnNew.Enabled = true;
                 btnSave.Enabled = false;
                 btnNew.Text = "New";
+                btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             }
         }
 
@@ -240,7 +243,7 @@ namespace Shaheen
         {
             int columnIndex = e.ColumnIndex;
             int rowIndex = e.RowIndex;
-            if (dgvAgent.Columns[columnIndex] is DataGridViewButtonColumn && rowIndex >= 0)
+            if (dgvAgent.Columns[columnIndex] is DataGridViewImageColumn && rowIndex >= 0)
             {
                 if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -269,6 +272,7 @@ namespace Shaheen
             txtMobile.Text = Convert.ToString(grdRow.Cells["mobile"].Value);
             txtEmail.Text = Convert.ToString(grdRow.Cells["email"].Value);
             btnNew.Text = "Edit";
+            btnNew.IconChar = FontAwesome.Sharp.IconChar.Edit;
             btnClose.Text = "Cancel";
         }
 

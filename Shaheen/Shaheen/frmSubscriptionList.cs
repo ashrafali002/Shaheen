@@ -24,6 +24,9 @@ namespace Shaheen
         {
             FillDataGridView();
             rdoCode.Focus();
+            btnSearch.TabStop = false;
+            btnSearch.FlatStyle = FlatStyle.Flat;
+            btnSearch.FlatAppearance.BorderSize = 0;
         }
 
         private void FillDataGridView()

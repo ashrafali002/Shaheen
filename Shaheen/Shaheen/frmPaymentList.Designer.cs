@@ -33,6 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grpPerson = new System.Windows.Forms.GroupBox();
+            this.iconSearch = new FontAwesome.Sharp.IconPictureBox();
             this.lblPendingAmount = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.txtCode = new System.Windows.Forms.TextBox();
@@ -53,15 +54,17 @@
             this.amountPaid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.receiptNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bankName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnPayment = new System.Windows.Forms.Button();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
+            this.btnPayment = new FontAwesome.Sharp.IconButton();
             this.grpPerson.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSearch)).BeginInit();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
             this.SuspendLayout();
             // 
             // grpPerson
             // 
+            this.grpPerson.Controls.Add(this.iconSearch);
             this.grpPerson.Controls.Add(this.lblPendingAmount);
             this.grpPerson.Controls.Add(this.label4);
             this.grpPerson.Controls.Add(this.txtCode);
@@ -72,12 +75,25 @@
             this.grpPerson.Controls.Add(this.label1);
             this.grpPerson.Controls.Add(this.label3);
             this.grpPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.grpPerson.Location = new System.Drawing.Point(12, 43);
+            this.grpPerson.Location = new System.Drawing.Point(10, 43);
             this.grpPerson.Name = "grpPerson";
             this.grpPerson.Size = new System.Drawing.Size(848, 100);
             this.grpPerson.TabIndex = 42;
             this.grpPerson.TabStop = false;
             this.grpPerson.Text = "Person Details";
+            // 
+            // iconSearch
+            // 
+            this.iconSearch.BackColor = System.Drawing.Color.SkyBlue;
+            this.iconSearch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            this.iconSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
+            this.iconSearch.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            this.iconSearch.IconSize = 24;
+            this.iconSearch.Location = new System.Drawing.Point(206, 25);
+            this.iconSearch.Name = "iconSearch";
+            this.iconSearch.Size = new System.Drawing.Size(24, 24);
+            this.iconSearch.TabIndex = 47;
+            this.iconSearch.TabStop = false;
             // 
             // lblPendingAmount
             // 
@@ -127,7 +143,7 @@
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel1.Location = new System.Drawing.Point(99, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(102, 1);
+            this.panel1.Size = new System.Drawing.Size(131, 1);
             this.panel1.TabIndex = 19;
             // 
             // lblName
@@ -236,7 +252,7 @@
             this.dgvPayment.DefaultCellStyle = dataGridViewCellStyle7;
             this.dgvPayment.EnableHeadersVisualStyles = false;
             this.dgvPayment.GridColor = System.Drawing.Color.Black;
-            this.dgvPayment.Location = new System.Drawing.Point(12, 149);
+            this.dgvPayment.Location = new System.Drawing.Point(10, 149);
             this.dgvPayment.MultiSelect = false;
             this.dgvPayment.Name = "dgvPayment";
             this.dgvPayment.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -315,24 +331,44 @@
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Location = new System.Drawing.Point(785, 559);
+            this.btnClose.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.btnClose.IconColor = System.Drawing.Color.Maroon;
+            this.btnClose.IconSize = 32;
+            this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.Location = new System.Drawing.Point(768, 559);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(75, 30);
-            this.btnClose.TabIndex = 2;
+            this.btnClose.Rotation = 0D;
+            this.btnClose.Size = new System.Drawing.Size(90, 37);
+            this.btnClose.TabIndex = 48;
             this.btnClose.Text = "Close";
+            this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnPayment
             // 
+            this.btnPayment.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnPayment.BackColor = System.Drawing.Color.DodgerBlue;
+            this.btnPayment.FlatAppearance.BorderSize = 0;
             this.btnPayment.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPayment.Location = new System.Drawing.Point(12, 559);
+            this.btnPayment.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.btnPayment.ForeColor = System.Drawing.Color.DarkBlue;
+            this.btnPayment.IconChar = FontAwesome.Sharp.IconChar.RupeeSign;
+            this.btnPayment.IconColor = System.Drawing.Color.DarkBlue;
+            this.btnPayment.IconSize = 32;
+            this.btnPayment.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayment.Location = new System.Drawing.Point(10, 559);
             this.btnPayment.Name = "btnPayment";
-            this.btnPayment.Size = new System.Drawing.Size(108, 30);
-            this.btnPayment.TabIndex = 47;
+            this.btnPayment.Rotation = 0D;
+            this.btnPayment.Size = new System.Drawing.Size(141, 37);
+            this.btnPayment.TabIndex = 49;
             this.btnPayment.Text = "Make Payment";
+            this.btnPayment.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnPayment.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnPayment.UseVisualStyleBackColor = false;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
@@ -340,7 +376,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(872, 596);
+            this.ClientSize = new System.Drawing.Size(868, 604);
             this.Controls.Add(this.btnPayment);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvPayment);
@@ -352,6 +388,7 @@
             this.Load += new System.EventHandler(this.frmPaymentList_Load);
             this.grpPerson.ResumeLayout(false);
             this.grpPerson.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSearch)).EndInit();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).EndInit();
@@ -373,7 +410,6 @@
         private System.Windows.Forms.DataGridView dgvPayment;
         private System.Windows.Forms.Label lblPendingAmount;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentId;
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentType;
         private System.Windows.Forms.DataGridViewTextBoxColumn paymentDate;
@@ -382,6 +418,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn amountPaid;
         private System.Windows.Forms.DataGridViewTextBoxColumn receiptNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn bankName;
-        private System.Windows.Forms.Button btnPayment;
+        private FontAwesome.Sharp.IconButton btnClose;
+        private FontAwesome.Sharp.IconButton btnPayment;
+        private FontAwesome.Sharp.IconPictureBox iconSearch;
     }
 }

@@ -21,6 +21,7 @@ namespace Shaheen
             BindDropdownLists();
             DisableEnableControls(false);
             btnNew.Text = "New";
+            btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             btnClose.Text = "Close";
             btnNew.Enabled = true;
             btnSave.Enabled = false;
@@ -114,6 +115,7 @@ namespace Shaheen
                     ClearControls();
                     DisableEnableControls(false);
                     btnNew.Text = "New";
+                    btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
                     btnSave.Enabled = false;
                     btnNew.Enabled = true;
                     btnClose.Text = "Close";
@@ -135,6 +137,7 @@ namespace Shaheen
                 btnNew.Enabled = true;
                 btnSave.Enabled = false;
                 btnNew.Text = "New";
+                btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             }
         }
 
@@ -146,6 +149,7 @@ namespace Shaheen
             cmbStateName.SelectedValue = grdRow.Cells["stateId"].Value;
             txtDistrictName.Text = Convert.ToString(grdRow.Cells["colDistrictName"].Value);
             btnNew.Text = "Edit";
+            btnNew.IconChar = FontAwesome.Sharp.IconChar.Edit;
             btnClose.Text = "Cancel";
         }
 
@@ -153,7 +157,7 @@ namespace Shaheen
         {
             int columnIndex = e.ColumnIndex;
             int rowIndex = e.RowIndex;
-            if (dgvDistrict.Columns[columnIndex] is DataGridViewButtonColumn && rowIndex >= 0)
+            if (dgvDistrict.Columns[columnIndex] is DataGridViewImageColumn && rowIndex >= 0)
             {
                 if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
@@ -172,6 +176,6 @@ namespace Shaheen
                 aRow.Height = 30;
                 aRow.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             }
-        }        
+        }
     }
 }

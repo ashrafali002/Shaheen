@@ -43,8 +43,8 @@ namespace Shaheen
             FormCollection fc = Application.OpenForms;
             for (int i = 0; i < fc.Count; i++)
             {
-                string formName = fc[i].Text;
-                if (formName != "Main")
+                string formName = fc[i].Name;
+                if (formName != "frmMain")
                 {
                     fc[i].Close();
                 }
@@ -119,19 +119,7 @@ namespace Shaheen
 
         private void btnSubscription_Click(object sender, EventArgs e)
         {
-            CloseAllOpenForm();
-
-            subscription = new frmSubscription() { TopLevel = false };
-            subscription.Location = new Point()
-            {
-                X = pnlForm.Width / 2 - subscription.Width / 2,
-                Y = pnlForm.Height / 2 - subscription.Height / 2
-            };
-            //subscription.Location = new Point(0, 0);
-            this.pnlForm.Controls.Add(subscription);
-            subscription.BringToFront();
-            subscription.Show();
-            subscription.Focus();
+            
         }
 
         private void btnDistrict_Click(object sender, EventArgs e)
@@ -212,23 +200,7 @@ namespace Shaheen
             subscriptionList.BringToFront();
             subscriptionList.Show();
             subscriptionList.Focus();
-        }
-
-        private void btnPaymentList_Click(object sender, EventArgs e)
-        {
-            CloseAllOpenForm();
-            paymentList = new frmPaymentList() { TopLevel = false };
-            paymentList.Location = new Point()
-            {
-                X = pnlForm.Width / 2 - paymentList.Width / 2,
-                Y = pnlForm.Height / 2 - paymentList.Height / 2
-            };
-            //subscriptionList.Location = new Point(0, 0);
-            this.pnlForm.Controls.Add(paymentList);
-            paymentList.BringToFront();
-            paymentList.Show();
-            paymentList.Focus();
-        }
+        }        
 
         private void btnLabelPrint_Click(object sender, EventArgs e)
         {
@@ -241,7 +213,15 @@ namespace Shaheen
                 {
                     if (sdf.ShowDialog() == DialogResult.OK)
                     {
-                        PDFGeneration.GeneratePDF(sdf.FileName, dt);
+                        bool isGenerated = PDFGeneration.GeneratePDF(sdf.FileName, dt);
+                        if (isGenerated)
+                        {
+                            MessageBox.Show("Address PDF Successfully generated", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Address PDF not generated", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                 }
             }
@@ -268,6 +248,39 @@ namespace Shaheen
             {
                 Application.Exit();
             }            
+        }
+
+        private void btnIconSubscription_Click(object sender, EventArgs e)
+        {
+            CloseAllOpenForm();
+
+            subscription = new frmSubscription() { TopLevel = false };
+            subscription.Location = new Point()
+            {
+                X = pnlForm.Width / 2 - subscription.Width / 2,
+                Y = pnlForm.Height / 2 - subscription.Height / 2
+            };
+            //subscription.Location = new Point(0, 0);
+            this.pnlForm.Controls.Add(subscription);
+            subscription.BringToFront();
+            subscription.Show();
+            subscription.Focus();
+        }
+
+        private void btnPaymentList_Click(object sender, EventArgs e)
+        {
+            CloseAllOpenForm();
+            paymentList = new frmPaymentList() { TopLevel = false };
+            paymentList.Location = new Point()
+            {
+                X = pnlForm.Width / 2 - paymentList.Width / 2,
+                Y = pnlForm.Height / 2 - paymentList.Height / 2
+            };
+            //subscriptionList.Location = new Point(0, 0);
+            this.pnlForm.Controls.Add(paymentList);
+            paymentList.BringToFront();
+            paymentList.Show();
+            paymentList.Focus();
         }
     }
 }

@@ -20,6 +20,7 @@ namespace Shaheen
         {
             DisableEnableControls(false);
             btnNew.Text = "New";
+            btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             btnClose.Text = "Close";
             btnNew.Enabled = true;
             btnSave.Enabled = false;
@@ -60,6 +61,7 @@ namespace Shaheen
                 btnNew.Enabled = true;
                 btnSave.Enabled = false;
                 btnNew.Text = "New";
+                btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
                 dgvCountry.Enabled = true;
             }
         }
@@ -105,6 +107,7 @@ namespace Shaheen
                     ClearControls();
                     DisableEnableControls(false);
                     btnNew.Text = "New";
+                    btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
                     btnSave.Enabled = false;
                     btnNew.Enabled = true;
                     btnClose.Text = "Close";
@@ -120,6 +123,7 @@ namespace Shaheen
             country_id = Convert.ToInt32(grdRow.Cells["countryId"].Value);
             txtCountryName.Text = Convert.ToString(grdRow.Cells["colCountryName"].Value);
             btnNew.Text = "Edit";
+            btnNew.IconChar = FontAwesome.Sharp.IconChar.Edit;
             btnClose.Text = "Cancel";
         }
 
@@ -128,7 +132,7 @@ namespace Shaheen
 
             int columnIndex = e.ColumnIndex;
             int rowIndex = e.RowIndex;
-            if (dgvCountry.Columns[columnIndex] is DataGridViewButtonColumn && rowIndex >= 0)
+            if (dgvCountry.Columns[columnIndex] is DataGridViewImageColumn && rowIndex >= 0)
             {
                 if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {

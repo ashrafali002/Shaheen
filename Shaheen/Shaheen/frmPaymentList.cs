@@ -117,6 +117,6 @@ namespace Shaheen
                     LoadSearchResult();
                 }
             }
-        }        
+        }
     }
 }
