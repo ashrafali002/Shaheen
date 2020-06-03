@@ -77,119 +77,119 @@ namespace Shaheen
             bool isRes = true;
             if (string.IsNullOrEmpty(txtName.Text))
             {
-                MessageBox.Show("Name is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Name is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtName.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtCode.Text))
             {
-                MessageBox.Show("Customer Code is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Customer Code is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtCode.Focus();
                 isRes = false;
             }
             else if (CheckDuplicateSubscription(txtCode.Text))
             {
-                MessageBox.Show("Duplicate customer code found.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Duplicate customer code found.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtAddress.Text))
             {
-                MessageBox.Show("Address is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Address is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtAddress.Focus();
                 isRes = false;
             }
             else if (cmbCountry.SelectedIndex <= 0)
             {
-                MessageBox.Show("Country is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Country is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbCountry.Focus();
                 isRes = false;
             }
             else if (cmbState.SelectedIndex <= 0)
             {
-                MessageBox.Show("State is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("State is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbState.Focus();
                 isRes = false;
             }
             else if (cmbDistrict.SelectedIndex <= 0)
             {
-                MessageBox.Show("District is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("District is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbDistrict.Focus();
                 isRes = false;
             }
             else if (cmbCity.SelectedIndex <= 0)
             {
-                MessageBox.Show("City is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("City is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbCity.Focus();
                 isRes = false;
             }
             else if (cmbArea.SelectedIndex <= 0)
             {
-                MessageBox.Show("Area is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Area is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbArea.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtPIN.Text))
             {
-                MessageBox.Show("PIN is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("PIN is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPIN.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtMobile.Text))
             {
-                MessageBox.Show("Mobile is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mobile is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMobile.Focus();
                 isRes = false;
             }
             else if (!this.checkEmail(txtEmail.Text))
             {
-                MessageBox.Show("Invalid email format.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid email format.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtEmail.Text))
             {
-                MessageBox.Show("Email is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Email is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 isRes = false;
             }
             else if (cmbAgent.SelectedIndex <= 0)
             {
-                MessageBox.Show("Agent is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Agent is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbAgent.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtAmount.Text))
             {
-                MessageBox.Show("Amount is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Amount is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtAmount.Focus();
                 isRes = false;
             }
 
             else if (string.IsNullOrEmpty(txtDuration.Text))
             {
-                MessageBox.Show("Duration is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Duration is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtDuration.Focus();
                 isRes = false;
             }
 
             else if (string.IsNullOrEmpty(txtAmountPaid.Text))
             {
-                MessageBox.Show("Paid Amount is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Paid Amount is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtAmountPaid.Focus();
                 isRes = false;
             }
 
             else if (string.IsNullOrEmpty(txtReceiptNo.Text))
             {
-                MessageBox.Show("Receipt no is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Receipt no is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtReceiptNo.Focus();
                 isRes = false;
             }
 
             else if (dtpStartDate.Value >= dtpEndDate.Value)
             {
-                MessageBox.Show("Enddate should be greater than Startdate.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Enddate should be greater than Startdate.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtReceiptNo.Focus();
                 isRes = false;
             }
@@ -199,13 +199,13 @@ namespace Shaheen
 
                 if (string.IsNullOrEmpty(txtChequeNo.Text))
                 {
-                    MessageBox.Show("DD no is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("DD no is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtReceiptNo.Focus();
                     isRes = false;
                 }
                 else if (string.IsNullOrEmpty(txtBankname.Text))
                 {
-                    MessageBox.Show("Bank name is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Bank name is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtReceiptNo.Focus();
                     isRes = false;
                 }
@@ -214,13 +214,13 @@ namespace Shaheen
             {
                 if (string.IsNullOrEmpty(txtChequeNo.Text))
                 {
-                    MessageBox.Show("Cheque no is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Cheque no is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtReceiptNo.Focus();
                     isRes = false;
                 }
                 else if (string.IsNullOrEmpty(txtBankname.Text))
                 {
-                    MessageBox.Show("Bank name is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Bank name is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtReceiptNo.Focus();
                     isRes = false;
                 }
@@ -265,7 +265,7 @@ namespace Shaheen
                             int subscriptionDetailId = SaveSubscriptionDetail(subscriptionId, context);
                             int paymentId = SavePayment(subscriptionId, context);
                             transaction.Commit();
-                            MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(MessageText.SaveMessage, MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         catch (Exception)
                         {

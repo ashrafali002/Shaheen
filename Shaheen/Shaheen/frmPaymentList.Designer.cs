@@ -56,10 +56,12 @@
             this.bankName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.btnPayment = new FontAwesome.Sharp.IconButton();
+            this.iconPayment = new FontAwesome.Sharp.IconPictureBox();
             this.grpPerson.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconSearch)).BeginInit();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPayment)).BeginInit();
             this.SuspendLayout();
             // 
             // grpPerson
@@ -192,10 +194,12 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Navy;
+            this.panel17.Controls.Add(this.iconPayment);
             this.panel17.Controls.Add(this.label27);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(872, 37);
+            this.panel17.Size = new System.Drawing.Size(868, 37);
             this.panel17.TabIndex = 45;
             // 
             // label27
@@ -203,7 +207,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(7, 6);
+            this.label27.Location = new System.Drawing.Point(48, 6);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(133, 25);
             this.label27.TabIndex = 0;
@@ -372,6 +376,17 @@
             this.btnPayment.UseVisualStyleBackColor = false;
             this.btnPayment.Click += new System.EventHandler(this.btnPayment_Click);
             // 
+            // iconPayment
+            // 
+            this.iconPayment.BackColor = System.Drawing.Color.Navy;
+            this.iconPayment.IconChar = FontAwesome.Sharp.IconChar.MoneyBillAlt;
+            this.iconPayment.IconColor = System.Drawing.Color.White;
+            this.iconPayment.Location = new System.Drawing.Point(10, 6);
+            this.iconPayment.Name = "iconPayment";
+            this.iconPayment.Size = new System.Drawing.Size(32, 32);
+            this.iconPayment.TabIndex = 11;
+            this.iconPayment.TabStop = false;
+            // 
             // frmPaymentList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -392,6 +407,7 @@
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPayment)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPayment)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -421,5 +437,6 @@
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconButton btnPayment;
         private FontAwesome.Sharp.IconPictureBox iconSearch;
+        private FontAwesome.Sharp.IconPictureBox iconPayment;
     }
 }

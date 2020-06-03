@@ -66,13 +66,13 @@ namespace Shaheen
             bool isRes = true;
             if (string.IsNullOrEmpty(txtPaidAmout.Text))
             {
-                MessageBox.Show("Paid Amount is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Paid Amount is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPaidAmout.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtReceiptNo.Text))
             {
-                MessageBox.Show("Receipt no is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Receipt no is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtReceiptNo.Focus();
                 isRes = false;
             }
@@ -81,13 +81,13 @@ namespace Shaheen
 
                 if (string.IsNullOrEmpty(txtChequeNo.Text))
                 {
-                    MessageBox.Show("DD/Cheque/MO number is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("DD/Cheque/MO number is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtChequeNo.Focus();
                     isRes = false;
                 }
                 else if (string.IsNullOrEmpty(txtBankName.Text))
                 {
-                    MessageBox.Show("Bank name is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Bank name is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtBankName.Focus();
                     isRes = false;
                 }
@@ -135,7 +135,7 @@ namespace Shaheen
                 int res = paymentBll.SavePayment(payment);
                 if (res > 0)
                 {
-                    MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK);
+                    MessageBox.Show(MessageText.SaveMessage, MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                     this.DialogResult = DialogResult.OK;
                 }
             }

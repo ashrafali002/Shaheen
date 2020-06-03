@@ -7,6 +7,13 @@ namespace Shaheen
 
     }
 
+    public class MessageText
+    {
+        public const string MessageBoxCaption = "Ishtiraq - Shaheen Weekly";
+        public const string ConfirmEdit = "Are you sure want to edit the record?";
+        public const string ConfirmDelete = "Are you sure want to delete the record?";
+        public const string SaveMessage = "Record saved successfully";
+    }
     public enum PaymentType
     {
         Cash,

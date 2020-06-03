@@ -46,6 +46,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.iconPayment = new FontAwesome.Sharp.IconPictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.grpButtons = new System.Windows.Forms.GroupBox();
             this.btnSave = new FontAwesome.Sharp.IconButton();
@@ -71,6 +72,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.grpPerson.SuspendLayout();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPayment)).BeginInit();
             this.grpButtons.SuspendLayout();
             this.grpPayment.SuspendLayout();
             this.SuspendLayout();
@@ -279,6 +281,7 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Navy;
+            this.panel17.Controls.Add(this.iconPayment);
             this.panel17.Controls.Add(this.label27);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(0, 0);
@@ -286,12 +289,23 @@
             this.panel17.Size = new System.Drawing.Size(550, 37);
             this.panel17.TabIndex = 40;
             // 
+            // iconPayment
+            // 
+            this.iconPayment.BackColor = System.Drawing.Color.Navy;
+            this.iconPayment.IconChar = FontAwesome.Sharp.IconChar.MoneyBillAlt;
+            this.iconPayment.IconColor = System.Drawing.Color.White;
+            this.iconPayment.Location = new System.Drawing.Point(10, 6);
+            this.iconPayment.Name = "iconPayment";
+            this.iconPayment.Size = new System.Drawing.Size(32, 32);
+            this.iconPayment.TabIndex = 10;
+            this.iconPayment.TabStop = false;
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(7, 6);
+            this.label27.Location = new System.Drawing.Point(48, 6);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(94, 25);
             this.label27.TabIndex = 0;
@@ -598,6 +612,7 @@
             this.grpPerson.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPayment)).EndInit();
             this.grpButtons.ResumeLayout(false);
             this.grpPayment.ResumeLayout(false);
             this.grpPayment.PerformLayout();
@@ -648,5 +663,6 @@
         private System.Windows.Forms.Label label20;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnClose;
+        private FontAwesome.Sharp.IconPictureBox iconPayment;
     }
 }

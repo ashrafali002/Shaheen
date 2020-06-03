@@ -32,6 +32,7 @@
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.iconEditSubscription = new FontAwesome.Sharp.IconPictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.grpSubscription = new System.Windows.Forms.GroupBox();
             this.cmbSubscriptionType = new System.Windows.Forms.ComboBox();
@@ -64,6 +65,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.grpButtons.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconEditSubscription)).BeginInit();
             this.grpSubscription.SuspendLayout();
             this.grpPerson.SuspendLayout();
             this.SuspendLayout();
@@ -126,6 +128,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Controls.Add(this.iconEditSubscription);
             this.panel2.Controls.Add(this.label20);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -133,12 +136,23 @@
             this.panel2.Size = new System.Drawing.Size(544, 37);
             this.panel2.TabIndex = 0;
             // 
+            // iconEditSubscription
+            // 
+            this.iconEditSubscription.BackColor = System.Drawing.Color.Navy;
+            this.iconEditSubscription.IconChar = FontAwesome.Sharp.IconChar.IdBadge;
+            this.iconEditSubscription.IconColor = System.Drawing.Color.White;
+            this.iconEditSubscription.Location = new System.Drawing.Point(10, 6);
+            this.iconEditSubscription.Name = "iconEditSubscription";
+            this.iconEditSubscription.Size = new System.Drawing.Size(32, 32);
+            this.iconEditSubscription.TabIndex = 8;
+            this.iconEditSubscription.TabStop = false;
+            // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.White;
-            this.label20.Location = new System.Drawing.Point(7, 6);
+            this.label20.Location = new System.Drawing.Point(48, 6);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(240, 25);
             this.label20.TabIndex = 0;
@@ -509,6 +523,7 @@
             this.grpButtons.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconEditSubscription)).EndInit();
             this.grpSubscription.ResumeLayout(false);
             this.grpSubscription.PerformLayout();
             this.grpPerson.ResumeLayout(false);
@@ -552,5 +567,6 @@
         private System.Windows.Forms.Label label3;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnClose;
+        private FontAwesome.Sharp.IconPictureBox iconEditSubscription;
     }
 }

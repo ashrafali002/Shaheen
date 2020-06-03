@@ -64,19 +64,19 @@ namespace Shaheen
             bool isSuccess = true;
             if (string.IsNullOrEmpty(txtAreaName.Text))
             {
-                MessageBox.Show("Area name is required", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("Area name is required", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 txtAreaName.Focus();
                 isSuccess = false;
             }
             else if (areaBll.IsDuplicateAreaName(area_id, txtAreaName.Text))
             {
-                MessageBox.Show("Duplicate record found", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("Duplicate record found", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 txtAreaName.Focus();
                 isSuccess = false;
             }
             else if (cmbCityName.SelectedIndex <= 0)
             {
-                MessageBox.Show("Select city", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("Select city", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 cmbCityName.Focus();
                 isSuccess = false;
             }
@@ -111,7 +111,7 @@ namespace Shaheen
                 if (res > 0)
                 {
                     FillDataGridView();
-                    MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK);
+                    MessageBox.Show(MessageText.SaveMessage, MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                     ClearControls();
                     DisableEnableControls(false);
                     btnNew.Text = "New";
@@ -159,7 +159,7 @@ namespace Shaheen
             int rowIndex = e.RowIndex;
             if (dgvArea.Columns[columnIndex] is DataGridViewImageColumn && rowIndex >= 0)
             {
-                if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show(MessageText.ConfirmDelete, MessageText.MessageBoxCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     area_id= Convert.ToInt32(dgvArea.Rows[rowIndex].Cells["areaId"].Value);
                     areaBll.DeleteArea(area_id);

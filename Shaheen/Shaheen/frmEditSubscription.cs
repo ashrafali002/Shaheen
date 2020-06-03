@@ -16,7 +16,7 @@ namespace Shaheen
         dynamic subscriptionDetail = new SubscriptionDetail();
         dynamic personModel = new PersonModel();
 
-        public int PersonId { get; set; }        
+        public int PersonId { get; set; }
         public int SubscriptionId { get; set; }
         public int SubscriptionDetailId { get; set; }
         public decimal PendingAmount { get; set; }
@@ -72,7 +72,7 @@ namespace Shaheen
             txtAddress.Text = strAddress;
 
             string contact = string.IsNullOrEmpty(personModel.phone) ? string.Empty : personModel.phone + " - ";
-            lblContact.Text = contact + personModel.mobile;            
+            lblContact.Text = contact + personModel.mobile;
             lblEmail.Text = personModel.email;
             #endregion
 
@@ -103,20 +103,25 @@ namespace Shaheen
 
             if (string.IsNullOrEmpty(txtAmount.Text))
             {
-                MessageBox.Show("Amount is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Amount is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtAmount.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtDuration.Text))
             {
-                MessageBox.Show("Duration is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Duration is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtDuration.Focus();
                 isRes = false;
             }
-
+            else if (cmbAgent.SelectedIndex <= 0)
+            {
+                MessageBox.Show("Select agent first.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                cmbAgent.Focus();
+                isRes = false;
+            }
             else if (dtpStartDate.Value >= dtpEndDate.Value)
             {
-                MessageBox.Show("Enddate should be greater than Startdate.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Enddate should be greater than Startdate.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dtpStartDate.Focus();
                 isRes = false;
             }
@@ -129,20 +134,24 @@ namespace Shaheen
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            subscription.subscriptionDate = dtpSubscriptionDate.Value;
-            subscription.pendingAmount = (Convert.ToDecimal(txtAmount.Text) - OldAmount) + PendingAmount;
-            subscription.agentId = Convert.ToInt32(cmbAgent.SelectedValue);
-            subscription.subscriptionType = Convert.ToInt32(cmbSubscriptionType.SelectedItem);
-            subscriptionBll.SaveSubscription(subscription);
+            if (MessageBox.Show(MessageText.ConfirmEdit, MessageText.MessageBoxCaption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (!isValid()) return;
+                subscription.subscriptionDate = dtpSubscriptionDate.Value;
+                subscription.pendingAmount = (Convert.ToDecimal(txtAmount.Text) - OldAmount) + PendingAmount;
+                subscription.agentId = Convert.ToInt32(cmbAgent.SelectedValue);
+                subscription.subscriptionType = Convert.ToInt32(cmbSubscriptionType.SelectedItem);
+                subscriptionBll.SaveSubscription(subscription);
 
-            subscriptionDetail.subscriptionDuration = txtDuration.Text;
-            subscriptionDetail.subscriptionEndDate = dtpEndDate.Value;
-            subscriptionDetail.subscriptionStartDate = dtpStartDate.Value;
-            subscriptionDetail.subscriptionAmount = Convert.ToDecimal(txtAmount.Text);
-            subscriptionDetail.note = txtNote.Text;
-            subscriptionDetailBll.SaveSubscriptionDetail(subscriptionDetail);
-            MessageBox.Show("Subscription details updated successfully.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.DialogResult = DialogResult.OK;
+                subscriptionDetail.subscriptionDuration = txtDuration.Text;
+                subscriptionDetail.subscriptionEndDate = dtpEndDate.Value;
+                subscriptionDetail.subscriptionStartDate = dtpStartDate.Value;
+                subscriptionDetail.subscriptionAmount = Convert.ToDecimal(txtAmount.Text);
+                subscriptionDetail.note = txtNote.Text;
+                subscriptionDetailBll.SaveSubscriptionDetail(subscriptionDetail);
+                MessageBox.Show("Subscription details updated successfully.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK; 
+            }
 
         }
     }

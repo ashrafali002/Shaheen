@@ -103,12 +103,14 @@
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.panel17 = new System.Windows.Forms.Panel();
+            this.iconEditSubscription = new FontAwesome.Sharp.IconPictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.grpPerson.SuspendLayout();
             this.grpSubscription.SuspendLayout();
             this.grpPayment.SuspendLayout();
             this.grpButtons.SuspendLayout();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconEditSubscription)).BeginInit();
             this.SuspendLayout();
             // 
             // grpPerson
@@ -665,6 +667,7 @@
             this.dtpStartDate.Size = new System.Drawing.Size(125, 27);
             this.dtpStartDate.TabIndex = 13;
             this.dtpStartDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
+            this.dtpStartDate.Leave += new System.EventHandler(this.dtpStartDate_Leave);
             // 
             // label15
             // 
@@ -989,7 +992,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Rotation = 0D;
             this.btnSave.Size = new System.Drawing.Size(90, 37);
-            this.btnSave.TabIndex = 25;
+            this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1011,7 +1014,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Rotation = 0D;
             this.btnClose.Size = new System.Drawing.Size(90, 37);
-            this.btnClose.TabIndex = 24;
+            this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -1021,6 +1024,7 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Navy;
+            this.panel17.Controls.Add(this.iconEditSubscription);
             this.panel17.Controls.Add(this.label27);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(0, 0);
@@ -1028,12 +1032,23 @@
             this.panel17.Size = new System.Drawing.Size(1015, 37);
             this.panel17.TabIndex = 0;
             // 
+            // iconEditSubscription
+            // 
+            this.iconEditSubscription.BackColor = System.Drawing.Color.Navy;
+            this.iconEditSubscription.IconChar = FontAwesome.Sharp.IconChar.IdBadge;
+            this.iconEditSubscription.IconColor = System.Drawing.Color.White;
+            this.iconEditSubscription.Location = new System.Drawing.Point(10, 6);
+            this.iconEditSubscription.Name = "iconEditSubscription";
+            this.iconEditSubscription.Size = new System.Drawing.Size(32, 32);
+            this.iconEditSubscription.TabIndex = 9;
+            this.iconEditSubscription.TabStop = false;
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(7, 6);
+            this.label27.Location = new System.Drawing.Point(48, 6);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(177, 25);
             this.label27.TabIndex = 0;
@@ -1063,6 +1078,7 @@
             this.grpButtons.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconEditSubscription)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1144,5 +1160,6 @@
         private System.Windows.Forms.Label label22;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnClose;
+        private FontAwesome.Sharp.IconPictureBox iconEditSubscription;
     }
 }

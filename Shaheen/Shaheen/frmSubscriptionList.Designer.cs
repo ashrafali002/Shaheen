@@ -29,11 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvSubscriptionList = new System.Windows.Forms.DataGridView();
+            this.mnuContext = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ctxmEditPerson = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxmSubscriptionDetails = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxmRenewSubscription = new System.Windows.Forms.ToolStripMenuItem();
+            this.ctxmPayment = new System.Windows.Forms.ToolStripMenuItem();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnReset = new FontAwesome.Sharp.IconButton();
+            this.label3 = new System.Windows.Forms.Label();
+            this.rdoPerson = new System.Windows.Forms.RadioButton();
+            this.rdoCode = new System.Windows.Forms.RadioButton();
+            this.btnSearch = new FontAwesome.Sharp.IconButton();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.iconSubscriptionList = new FontAwesome.Sharp.IconPictureBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.subscriptionCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subscriptionDate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,26 +67,11 @@
             this.subscriptionId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subscriptionDetailId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mnuContext = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.ctxmEditPerson = new System.Windows.Forms.ToolStripMenuItem();
-            this.ctxmSubscriptionDetails = new System.Windows.Forms.ToolStripMenuItem();
-            this.ctxmRenewSubscription = new System.Windows.Forms.ToolStripMenuItem();
-            this.ctxmPayment = new System.Windows.Forms.ToolStripMenuItem();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnReset = new FontAwesome.Sharp.IconButton();
-            this.label3 = new System.Windows.Forms.Label();
-            this.rdoPerson = new System.Windows.Forms.RadioButton();
-            this.rdoCode = new System.Windows.Forms.RadioButton();
-            this.btnSearch = new FontAwesome.Sharp.IconButton();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.label27 = new System.Windows.Forms.Label();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubscriptionList)).BeginInit();
             this.mnuContext.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSubscriptionList)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvSubscriptionList
@@ -77,18 +80,18 @@
             this.dgvSubscriptionList.AllowUserToDeleteRows = false;
             this.dgvSubscriptionList.AllowUserToResizeColumns = false;
             this.dgvSubscriptionList.AllowUserToResizeRows = false;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(210)))), ((int)(((byte)(248)))));
-            this.dgvSubscriptionList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(210)))), ((int)(((byte)(248)))));
+            this.dgvSubscriptionList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSubscriptionList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.dgvSubscriptionList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSubscriptionList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubscriptionList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSubscriptionList.ColumnHeadersHeight = 50;
             this.dgvSubscriptionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSubscriptionList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -107,173 +110,36 @@
             this.subscriptionId,
             this.subscriptionDetailId,
             this.status});
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle15.Format = "C2";
-            dataGridViewCellStyle15.NullValue = null;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSubscriptionList.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSubscriptionList.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSubscriptionList.EnableHeadersVisualStyles = false;
             this.dgvSubscriptionList.GridColor = System.Drawing.Color.Black;
             this.dgvSubscriptionList.Location = new System.Drawing.Point(10, 87);
             this.dgvSubscriptionList.MultiSelect = false;
             this.dgvSubscriptionList.Name = "dgvSubscriptionList";
             this.dgvSubscriptionList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSubscriptionList.RowHeadersDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubscriptionList.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSubscriptionList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSubscriptionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSubscriptionList.Size = new System.Drawing.Size(1200, 536);
             this.dgvSubscriptionList.TabIndex = 7;
             this.dgvSubscriptionList.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSubscriptionList_CellMouseDown);
             this.dgvSubscriptionList.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvSubscriptionList_DataBindingComplete);
-            // 
-            // subscriptionCode
-            // 
-            this.subscriptionCode.DataPropertyName = "subscriptionCode";
-            this.subscriptionCode.FillWeight = 49.54955F;
-            this.subscriptionCode.HeaderText = "Code";
-            this.subscriptionCode.Name = "subscriptionCode";
-            this.subscriptionCode.ReadOnly = true;
-            this.subscriptionCode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.subscriptionCode.Width = 51;
-            // 
-            // personName
-            // 
-            this.personName.DataPropertyName = "personName";
-            this.personName.FillWeight = 207.4462F;
-            this.personName.HeaderText = "Customer";
-            this.personName.Name = "personName";
-            this.personName.ReadOnly = true;
-            this.personName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.personName.Width = 214;
-            // 
-            // subscriptionDate
-            // 
-            this.subscriptionDate.DataPropertyName = "subscriptionDate";
-            this.subscriptionDate.FillWeight = 94.12218F;
-            this.subscriptionDate.HeaderText = "Subscription Date";
-            this.subscriptionDate.Name = "subscriptionDate";
-            this.subscriptionDate.ReadOnly = true;
-            this.subscriptionDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.subscriptionDate.Width = 98;
-            // 
-            // subscriptionStartDate
-            // 
-            this.subscriptionStartDate.DataPropertyName = "subscriptionStartDate";
-            this.subscriptionStartDate.FillWeight = 71.04799F;
-            this.subscriptionStartDate.HeaderText = "Start Date";
-            this.subscriptionStartDate.Name = "subscriptionStartDate";
-            this.subscriptionStartDate.ReadOnly = true;
-            this.subscriptionStartDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.subscriptionStartDate.Width = 90;
-            // 
-            // subscriptionEndDate
-            // 
-            this.subscriptionEndDate.DataPropertyName = "subscriptionEndDate";
-            this.subscriptionEndDate.FillWeight = 73.06339F;
-            this.subscriptionEndDate.HeaderText = "End Date";
-            this.subscriptionEndDate.Name = "subscriptionEndDate";
-            this.subscriptionEndDate.ReadOnly = true;
-            this.subscriptionEndDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.subscriptionEndDate.Width = 90;
-            // 
-            // pendingAmount
-            // 
-            this.pendingAmount.DataPropertyName = "pendingAmount";
-            this.pendingAmount.FillWeight = 74.94263F;
-            this.pendingAmount.HeaderText = "Pending Amount";
-            this.pendingAmount.Name = "pendingAmount";
-            this.pendingAmount.ReadOnly = true;
-            this.pendingAmount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.pendingAmount.Width = 78;
-            // 
-            // AreaName
-            // 
-            this.AreaName.DataPropertyName = "AreaName";
-            this.AreaName.FillWeight = 92.03385F;
-            this.AreaName.HeaderText = "Area";
-            this.AreaName.Name = "AreaName";
-            this.AreaName.ReadOnly = true;
-            this.AreaName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.AreaName.Width = 95;
-            // 
-            // cityName
-            // 
-            this.cityName.DataPropertyName = "cityName";
-            this.cityName.FillWeight = 92.75078F;
-            this.cityName.HeaderText = "City";
-            this.cityName.Name = "cityName";
-            this.cityName.ReadOnly = true;
-            this.cityName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.cityName.Width = 96;
-            // 
-            // districtName
-            // 
-            this.districtName.DataPropertyName = "districtName";
-            this.districtName.FillWeight = 93.40959F;
-            this.districtName.HeaderText = "District";
-            this.districtName.Name = "districtName";
-            this.districtName.ReadOnly = true;
-            this.districtName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.districtName.Width = 96;
-            // 
-            // stateName
-            // 
-            this.stateName.DataPropertyName = "stateName";
-            this.stateName.FillWeight = 94.01498F;
-            this.stateName.HeaderText = "State";
-            this.stateName.Name = "stateName";
-            this.stateName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.stateName.Width = 97;
-            // 
-            // agentName
-            // 
-            this.agentName.DataPropertyName = "agentName";
-            this.agentName.FillWeight = 157.6188F;
-            this.agentName.HeaderText = "Agent";
-            this.agentName.Name = "agentName";
-            this.agentName.ReadOnly = true;
-            this.agentName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.agentName.Width = 163;
-            // 
-            // personId
-            // 
-            this.personId.DataPropertyName = "personId";
-            this.personId.HeaderText = "personId";
-            this.personId.Name = "personId";
-            this.personId.Visible = false;
-            // 
-            // subscriptionId
-            // 
-            this.subscriptionId.DataPropertyName = "subscriptionId";
-            this.subscriptionId.HeaderText = "subscriptionId";
-            this.subscriptionId.Name = "subscriptionId";
-            this.subscriptionId.Visible = false;
-            // 
-            // subscriptionDetailId
-            // 
-            this.subscriptionDetailId.DataPropertyName = "subscriptionDetailId";
-            this.subscriptionDetailId.HeaderText = "subscriptionDetailId";
-            this.subscriptionDetailId.Name = "subscriptionDetailId";
-            this.subscriptionDetailId.Visible = false;
-            // 
-            // status
-            // 
-            this.status.DataPropertyName = "status";
-            this.status.HeaderText = "status";
-            this.status.Name = "status";
-            this.status.Visible = false;
             // 
             // mnuContext
             // 
@@ -359,6 +225,7 @@
             // 
             this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReset.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
@@ -441,6 +308,7 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Navy;
+            this.panel17.Controls.Add(this.iconSubscriptionList);
             this.panel17.Controls.Add(this.label27);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(0, 0);
@@ -448,12 +316,23 @@
             this.panel17.Size = new System.Drawing.Size(1220, 37);
             this.panel17.TabIndex = 26;
             // 
+            // iconSubscriptionList
+            // 
+            this.iconSubscriptionList.BackColor = System.Drawing.Color.Navy;
+            this.iconSubscriptionList.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
+            this.iconSubscriptionList.IconColor = System.Drawing.Color.White;
+            this.iconSubscriptionList.Location = new System.Drawing.Point(10, 6);
+            this.iconSubscriptionList.Name = "iconSubscriptionList";
+            this.iconSubscriptionList.Size = new System.Drawing.Size(32, 32);
+            this.iconSubscriptionList.TabIndex = 11;
+            this.iconSubscriptionList.TabStop = false;
+            // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(7, 6);
+            this.label27.Location = new System.Drawing.Point(48, 6);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(169, 25);
             this.label27.TabIndex = 0;
@@ -482,13 +361,152 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // subscriptionCode
+            // 
+            this.subscriptionCode.DataPropertyName = "subscriptionCode";
+            this.subscriptionCode.FillWeight = 49.54955F;
+            this.subscriptionCode.HeaderText = "Code";
+            this.subscriptionCode.Name = "subscriptionCode";
+            this.subscriptionCode.ReadOnly = true;
+            this.subscriptionCode.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.subscriptionCode.Width = 51;
+            // 
+            // personName
+            // 
+            this.personName.DataPropertyName = "personName";
+            this.personName.FillWeight = 207.4462F;
+            this.personName.HeaderText = "Customer";
+            this.personName.Name = "personName";
+            this.personName.ReadOnly = true;
+            this.personName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.personName.Width = 214;
+            // 
+            // subscriptionDate
+            // 
+            this.subscriptionDate.DataPropertyName = "subscriptionDate";
+            this.subscriptionDate.FillWeight = 94.12218F;
+            this.subscriptionDate.HeaderText = "Subscription Date";
+            this.subscriptionDate.Name = "subscriptionDate";
+            this.subscriptionDate.ReadOnly = true;
+            this.subscriptionDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.subscriptionDate.Width = 98;
+            // 
+            // subscriptionStartDate
+            // 
+            this.subscriptionStartDate.DataPropertyName = "subscriptionStartDate";
+            this.subscriptionStartDate.FillWeight = 71.04799F;
+            this.subscriptionStartDate.HeaderText = "Start Date";
+            this.subscriptionStartDate.Name = "subscriptionStartDate";
+            this.subscriptionStartDate.ReadOnly = true;
+            this.subscriptionStartDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.subscriptionStartDate.Width = 90;
+            // 
+            // subscriptionEndDate
+            // 
+            this.subscriptionEndDate.DataPropertyName = "subscriptionEndDate";
+            this.subscriptionEndDate.FillWeight = 73.06339F;
+            this.subscriptionEndDate.HeaderText = "End Date";
+            this.subscriptionEndDate.Name = "subscriptionEndDate";
+            this.subscriptionEndDate.ReadOnly = true;
+            this.subscriptionEndDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.subscriptionEndDate.Width = 90;
+            // 
+            // pendingAmount
+            // 
+            this.pendingAmount.DataPropertyName = "pendingAmount";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.pendingAmount.DefaultCellStyle = dataGridViewCellStyle3;
+            this.pendingAmount.FillWeight = 74.94263F;
+            this.pendingAmount.HeaderText = "Pending Amount";
+            this.pendingAmount.Name = "pendingAmount";
+            this.pendingAmount.ReadOnly = true;
+            this.pendingAmount.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.pendingAmount.Width = 78;
+            // 
+            // AreaName
+            // 
+            this.AreaName.DataPropertyName = "AreaName";
+            this.AreaName.FillWeight = 92.03385F;
+            this.AreaName.HeaderText = "Area";
+            this.AreaName.Name = "AreaName";
+            this.AreaName.ReadOnly = true;
+            this.AreaName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.AreaName.Width = 95;
+            // 
+            // cityName
+            // 
+            this.cityName.DataPropertyName = "cityName";
+            this.cityName.FillWeight = 92.75078F;
+            this.cityName.HeaderText = "City";
+            this.cityName.Name = "cityName";
+            this.cityName.ReadOnly = true;
+            this.cityName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.cityName.Width = 96;
+            // 
+            // districtName
+            // 
+            this.districtName.DataPropertyName = "districtName";
+            this.districtName.FillWeight = 93.40959F;
+            this.districtName.HeaderText = "District";
+            this.districtName.Name = "districtName";
+            this.districtName.ReadOnly = true;
+            this.districtName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.districtName.Width = 92;
+            // 
+            // stateName
+            // 
+            this.stateName.DataPropertyName = "stateName";
+            this.stateName.FillWeight = 94.01498F;
+            this.stateName.HeaderText = "State";
+            this.stateName.Name = "stateName";
+            this.stateName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.stateName.Width = 92;
+            // 
+            // agentName
+            // 
+            this.agentName.DataPropertyName = "agentName";
+            this.agentName.FillWeight = 157.6188F;
+            this.agentName.HeaderText = "Agent";
+            this.agentName.Name = "agentName";
+            this.agentName.ReadOnly = true;
+            this.agentName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.agentName.Width = 160;
+            // 
+            // personId
+            // 
+            this.personId.DataPropertyName = "personId";
+            this.personId.HeaderText = "personId";
+            this.personId.Name = "personId";
+            this.personId.Visible = false;
+            // 
+            // subscriptionId
+            // 
+            this.subscriptionId.DataPropertyName = "subscriptionId";
+            this.subscriptionId.HeaderText = "subscriptionId";
+            this.subscriptionId.Name = "subscriptionId";
+            this.subscriptionId.Visible = false;
+            // 
+            // subscriptionDetailId
+            // 
+            this.subscriptionDetailId.DataPropertyName = "subscriptionDetailId";
+            this.subscriptionDetailId.HeaderText = "subscriptionDetailId";
+            this.subscriptionDetailId.Name = "subscriptionDetailId";
+            this.subscriptionDetailId.Visible = false;
+            // 
+            // status
+            // 
+            this.status.DataPropertyName = "status";
+            this.status.HeaderText = "status";
+            this.status.Name = "status";
+            this.status.Visible = false;
+            // 
             // frmSubscriptionList
             // 
             this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnReset;
-            this.ClientSize = new System.Drawing.Size(1220, 676);
+            this.ClientSize = new System.Drawing.Size(1220, 673);
             this.Controls.Add(this.panel17);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.dgvSubscriptionList);
@@ -503,6 +521,7 @@
             this.panel2.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconSubscriptionList)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -521,6 +540,12 @@
         private System.Windows.Forms.RadioButton rdoPerson;
         private System.Windows.Forms.RadioButton rdoCode;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label27;
+        private FontAwesome.Sharp.IconButton btnSearch;
+        private FontAwesome.Sharp.IconButton btnReset;
+        private FontAwesome.Sharp.IconButton btnClose;
+        private FontAwesome.Sharp.IconPictureBox iconSubscriptionList;
         private System.Windows.Forms.DataGridViewTextBoxColumn subscriptionCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn personName;
         private System.Windows.Forms.DataGridViewTextBoxColumn subscriptionDate;
@@ -536,10 +561,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn subscriptionId;
         private System.Windows.Forms.DataGridViewTextBoxColumn subscriptionDetailId;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Label label27;
-        private FontAwesome.Sharp.IconButton btnSearch;
-        private FontAwesome.Sharp.IconButton btnReset;
-        private FontAwesome.Sharp.IconButton btnClose;
     }
 }

@@ -32,6 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvState = new System.Windows.Forms.DataGridView();
+            this.colStateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCountryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -44,15 +49,12 @@
             this.btnNew = new FontAwesome.Sharp.IconButton();
             this.btnSave = new FontAwesome.Sharp.IconButton();
             this.btnClose = new FontAwesome.Sharp.IconButton();
-            this.colStateName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colCountryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.stateId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.countryId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDelete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.iconState = new FontAwesome.Sharp.IconPictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvState)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconState)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvState
@@ -103,9 +105,50 @@
             this.dgvState.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvState_CellFormatting);
             this.dgvState.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvState_RowHeaderMouseDoubleClick);
             // 
+            // colStateName
+            // 
+            this.colStateName.DataPropertyName = "stateName";
+            this.colStateName.HeaderText = "State";
+            this.colStateName.Name = "colStateName";
+            this.colStateName.ReadOnly = true;
+            this.colStateName.Width = 217;
+            // 
+            // colCountryName
+            // 
+            this.colCountryName.DataPropertyName = "countryName";
+            this.colCountryName.HeaderText = "Country";
+            this.colCountryName.Name = "colCountryName";
+            this.colCountryName.ReadOnly = true;
+            this.colCountryName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colCountryName.Width = 145;
+            // 
+            // stateId
+            // 
+            this.stateId.DataPropertyName = "stateId";
+            this.stateId.HeaderText = "stateId";
+            this.stateId.Name = "stateId";
+            this.stateId.Visible = false;
+            // 
+            // countryId
+            // 
+            this.countryId.DataPropertyName = "countryId";
+            this.countryId.HeaderText = "countryId";
+            this.countryId.Name = "countryId";
+            this.countryId.Visible = false;
+            // 
+            // colDelete
+            // 
+            this.colDelete.HeaderText = "Delete";
+            this.colDelete.Image = global::Shaheen.Properties.Resources.delete;
+            this.colDelete.Name = "colDelete";
+            this.colDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDelete.ToolTipText = "Delete";
+            this.colDelete.Width = 75;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.Controls.Add(this.iconState);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -117,7 +160,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(7, 6);
+            this.label3.Location = new System.Drawing.Point(48, 6);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 25);
             this.label3.TabIndex = 0;
@@ -272,45 +315,16 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // colStateName
+            // iconState
             // 
-            this.colStateName.DataPropertyName = "stateName";
-            this.colStateName.HeaderText = "State";
-            this.colStateName.Name = "colStateName";
-            this.colStateName.ReadOnly = true;
-            this.colStateName.Width = 217;
-            // 
-            // colCountryName
-            // 
-            this.colCountryName.DataPropertyName = "countryName";
-            this.colCountryName.HeaderText = "Country";
-            this.colCountryName.Name = "colCountryName";
-            this.colCountryName.ReadOnly = true;
-            this.colCountryName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colCountryName.Width = 145;
-            // 
-            // stateId
-            // 
-            this.stateId.DataPropertyName = "stateId";
-            this.stateId.HeaderText = "stateId";
-            this.stateId.Name = "stateId";
-            this.stateId.Visible = false;
-            // 
-            // countryId
-            // 
-            this.countryId.DataPropertyName = "countryId";
-            this.countryId.HeaderText = "countryId";
-            this.countryId.Name = "countryId";
-            this.countryId.Visible = false;
-            // 
-            // colDelete
-            // 
-            this.colDelete.HeaderText = "Delete";
-            this.colDelete.Image = global::Shaheen.Properties.Resources.delete;
-            this.colDelete.Name = "colDelete";
-            this.colDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colDelete.ToolTipText = "Delete";
-            this.colDelete.Width = 75;
+            this.iconState.BackColor = System.Drawing.Color.Navy;
+            this.iconState.IconChar = FontAwesome.Sharp.IconChar.Globe;
+            this.iconState.IconColor = System.Drawing.Color.White;
+            this.iconState.Location = new System.Drawing.Point(10, 6);
+            this.iconState.Name = "iconState";
+            this.iconState.Size = new System.Drawing.Size(32, 32);
+            this.iconState.TabIndex = 10;
+            this.iconState.TabStop = false;
             // 
             // frmState
             // 
@@ -332,6 +346,7 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.iconState)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -355,5 +370,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn stateId;
         private System.Windows.Forms.DataGridViewTextBoxColumn countryId;
         private System.Windows.Forms.DataGridViewImageColumn colDelete;
+        private FontAwesome.Sharp.IconPictureBox iconState;
     }
 }

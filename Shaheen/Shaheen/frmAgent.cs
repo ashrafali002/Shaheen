@@ -105,67 +105,67 @@ namespace Shaheen
             bool isRes = true;
             if (string.IsNullOrEmpty(txtName.Text))
             {
-                MessageBox.Show("Name is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Name is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtName.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtAddress.Text))
             {
-                MessageBox.Show("Address is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Address is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtAddress.Focus();
                 isRes = false;
             }
             else if (cmbCountry.SelectedIndex <= 0)
             {
-                MessageBox.Show("Country is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Country is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbCountry.Focus();
                 isRes = false;
             }
             else if (cmbState.SelectedIndex <= 0)
             {
-                MessageBox.Show("State is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("State is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbState.Focus();
                 isRes = false;
             }
             else if (cmbDistrict.SelectedIndex <= 0)
             {
-                MessageBox.Show("District is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("District is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbDistrict.Focus();
                 isRes = false;
             }
             else if (cmbCity.SelectedIndex <= 0)
             {
-                MessageBox.Show("City is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("City is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbCity.Focus();
                 isRes = false;
             }
             else if (cmbArea.SelectedIndex <= 0)
             {
-                MessageBox.Show("Area is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Area is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbArea.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtPIN.Text))
             {
-                MessageBox.Show("PIN is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("PIN is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPIN.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtMobile.Text))
             {
-                MessageBox.Show("Mobile is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Mobile is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtMobile.Focus();
                 isRes = false;
             }
             else if (!CommonFunctions.checkEmail(txtEmail.Text))
             {
-                MessageBox.Show("Invalid email format.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid email format.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtEmail.Text))
             {
-                MessageBox.Show("Email is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Email is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 isRes = false;
             }
@@ -209,7 +209,7 @@ namespace Shaheen
                 if (res > 0)
                 {
                     FillDataGridView();
-                    MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK);
+                    MessageBox.Show(MessageText.SaveMessage, MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                     ClearControls();
                     DisableEnableControls(false);
                     btnNew.Text = "New";
@@ -245,7 +245,7 @@ namespace Shaheen
             int rowIndex = e.RowIndex;
             if (dgvAgent.Columns[columnIndex] is DataGridViewImageColumn && rowIndex >= 0)
             {
-                if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show(MessageText.ConfirmDelete, MessageText.MessageBoxCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     agent_id = Convert.ToInt32(dgvAgent.Rows[rowIndex].Cells["agentId"].Value);
                     agentBll.DeleteAgent(agent_id);

@@ -41,6 +41,7 @@ namespace Shaheen
             dgvSubscriptionList.Columns["subscriptionStartDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["subscriptionEndDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvSubscriptionList.Columns["pendingAmount"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;            
         }
 
         private void dgvSubscriptionList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)

@@ -98,31 +98,31 @@ namespace Shaheen
             bool isRes = true;
             if (string.IsNullOrEmpty(txtAmount.Text))
             {
-                MessageBox.Show("Amount is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Amount is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtAmount.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtDuration.Text))
             {
-                MessageBox.Show("Duration is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Duration is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtDuration.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtPaidAmout.Text))
             {
-                MessageBox.Show("Paid Amount is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Paid Amount is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtPaidAmout.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtReceiptNo.Text))
             {
-                MessageBox.Show("Receipt no is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Receipt no is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtReceiptNo.Focus();
                 isRes = false;
             }
             else if (dtpStartDate.Value >= dtpEndDate.Value)
             {
-                MessageBox.Show("Enddate should be greater than Startdate.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Enddate should be greater than Startdate.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 dtpStartDate.Focus();
                 isRes = false;
             }
@@ -131,13 +131,13 @@ namespace Shaheen
 
                 if (string.IsNullOrEmpty(txtChequeNo.Text))
                 {
-                    MessageBox.Show("DD/Cheque/MO number is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("DD/Cheque/MO number is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtChequeNo.Focus();
                     isRes = false;
                 }
                 else if (string.IsNullOrEmpty(txtBankName.Text))
                 {
-                    MessageBox.Show("Bank name is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Bank name is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                     txtBankName.Focus();
                     isRes = false;
                 }
@@ -163,7 +163,7 @@ namespace Shaheen
                             int subscriptionDetailId = SaveSubscriptionDetail(SubscriptionId, context);
                             int paymentId = SavePayment(SubscriptionId, context);
                             transaction.Commit();
-                            MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show(MessageText.SaveMessage, MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                             ClearControls();
                             this.DialogResult = DialogResult.OK;
                         }

@@ -66,7 +66,7 @@ namespace Shaheen
                 }
                 else
                 {
-                    MessageBox.Show("Invalid code", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Invalid code", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -103,7 +103,7 @@ namespace Shaheen
         {
             if (PersonId == 0)
             {
-                MessageBox.Show("Select Customer", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Select Customer", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtCode.Focus();
             }
             else

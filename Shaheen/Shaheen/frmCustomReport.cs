@@ -88,7 +88,7 @@ namespace Shaheen
             string whereCondition = string.Empty;
             if (cmbAgent.SelectedIndex <= 0)
             {
-                MessageBox.Show("Select agent first", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Select agent first", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 cmbAgent.Focus();
                 return;
             }
@@ -159,10 +159,10 @@ namespace Shaheen
                         bool isGenerated = PDFGeneration.AddContentToPDF(sdf.FileName, SearchResult);
                         if (isGenerated)
                         {
-                            MessageBox.Show("Agent-wise PDF file Successfully generated", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Agent-wise PDF file Successfully generated", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         } else                        
                         {
-                            MessageBox.Show("Agent-wise PDF not generated", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Agent-wise PDF not generated", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

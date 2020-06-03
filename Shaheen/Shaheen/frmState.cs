@@ -65,19 +65,19 @@ namespace Shaheen
             bool isSuccess = true;
             if (string.IsNullOrEmpty(txtStateName.Text))
             {
-                MessageBox.Show("State name is required", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("State name is required", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 txtStateName.Focus();
                 isSuccess = false;
             }
             else if (stateBll.IsDuplicateStateName(state_id, txtStateName.Text))
             {
-                MessageBox.Show("Duplicate record found", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("Duplicate record found", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 txtStateName.Focus();
                 isSuccess = false;
             }
             else if (cmbCountryName.SelectedIndex <= 0)
             {
-                MessageBox.Show("Select country", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("Select country", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 cmbCountryName.Focus();
                 isSuccess = false;
             }
@@ -114,7 +114,7 @@ namespace Shaheen
                 if (res > 0)
                 {
                     FillDataGridView();
-                    MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK);
+                    MessageBox.Show(MessageText.SaveMessage, MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                     ClearControls();
                     DisableEnableControls(false);
                     btnNew.Text = "New";
@@ -164,7 +164,7 @@ namespace Shaheen
             int rowIndex = e.RowIndex;
             if (dgvState.Columns[columnIndex] is DataGridViewImageColumn && rowIndex >= 0)
             {
-                if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show(MessageText.ConfirmDelete, MessageText.MessageBoxCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     state_id = Convert.ToInt32(dgvState.Rows[rowIndex].Cells["stateId"].Value);
                     stateBll.DeleteState(state_id);

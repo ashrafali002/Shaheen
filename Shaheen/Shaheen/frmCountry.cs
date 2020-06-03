@@ -70,13 +70,13 @@ namespace Shaheen
             bool isSuccess = true;
             if (string.IsNullOrEmpty(txtCountryName.Text))
             {
-                MessageBox.Show("Country name is required", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("Country name is required", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 txtCountryName.Focus();
                 isSuccess = false;
             }
             else if (countryBll.IsDuplicateCountryName(country_id, txtCountryName.Text))
             {
-                MessageBox.Show("Duplicate record found", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("Duplicate record found", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 txtCountryName.Focus();
                 isSuccess = false;
             }
@@ -103,7 +103,7 @@ namespace Shaheen
                 if (res > 0)
                 {
                     FillDataGridView();
-                    MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK);
+                    MessageBox.Show(MessageText.SaveMessage, MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                     ClearControls();
                     DisableEnableControls(false);
                     btnNew.Text = "New";
@@ -134,7 +134,7 @@ namespace Shaheen
             int rowIndex = e.RowIndex;
             if (dgvCountry.Columns[columnIndex] is DataGridViewImageColumn && rowIndex >= 0)
             {
-                if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show(MessageText.ConfirmDelete, MessageText.MessageBoxCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     country_id = Convert.ToInt32(dgvCountry.Rows[rowIndex].Cells["countryId"].Value);
                     countryBll.DeleteCountry(country_id);

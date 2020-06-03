@@ -63,19 +63,19 @@ namespace Shaheen
             bool isSuccess = true;
             if (string.IsNullOrEmpty(txtDistrictName.Text))
             {
-                MessageBox.Show("District name is required", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("District name is required", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 txtDistrictName.Focus();
                 isSuccess = false;
             }
             else if (districtBll.IsDuplicateDistrictName(district_id, txtDistrictName.Text))
             {
-                MessageBox.Show("Duplicate record found", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("Duplicate record found", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 txtDistrictName.Focus();
                 isSuccess = false;
             }
             else if (cmbStateName.SelectedIndex <= 0)
             {
-                MessageBox.Show("Select state", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("Select state", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 cmbStateName.Focus();
                 isSuccess = false;
             }
@@ -111,7 +111,7 @@ namespace Shaheen
                 if (res > 0)
                 {
                     FillDataGridView();
-                    MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK);
+                    MessageBox.Show(MessageText.SaveMessage, MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                     ClearControls();
                     DisableEnableControls(false);
                     btnNew.Text = "New";
@@ -159,7 +159,7 @@ namespace Shaheen
             int rowIndex = e.RowIndex;
             if (dgvDistrict.Columns[columnIndex] is DataGridViewImageColumn && rowIndex >= 0)
             {
-                if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show(MessageText.ConfirmDelete, MessageText.MessageBoxCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     district_id = Convert.ToInt32(dgvDistrict.Rows[rowIndex].Cells["districtId"].Value);
                     districtBll.DeleteDistrict(district_id);

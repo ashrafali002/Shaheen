@@ -66,19 +66,19 @@ namespace Shaheen
             bool isSuccess = true;
             if (string.IsNullOrEmpty(txtCityName.Text))
             {
-                MessageBox.Show("City name is required", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("City name is required", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 txtCityName.Focus();
                 isSuccess = false;
             }
             else if (cityBll.IsDuplicateCityName(city_id, txtCityName.Text))
             {
-                MessageBox.Show("Duplicate record found", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("Duplicate record found", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 txtCityName.Focus();
                 isSuccess = false;
             }
             else if (cmbDistrictName.SelectedIndex <= 0)
             {
-                MessageBox.Show("Select district", "Shaheen Weekly", MessageBoxButtons.OK);
+                MessageBox.Show("Select district", MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                 cmbDistrictName.Focus();
                 isSuccess = false;
             }
@@ -113,7 +113,7 @@ namespace Shaheen
                 if (res > 0)
                 {
                     FillDataGridView();
-                    MessageBox.Show("Record saved successfully", "Shaheen Weekly", MessageBoxButtons.OK);
+                    MessageBox.Show(MessageText.SaveMessage, MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                     ClearControls();
                     DisableEnableControls(false);
                     btnNew.Text = "New";
@@ -161,7 +161,7 @@ namespace Shaheen
             int rowIndex = e.RowIndex;
             if (dgvCity.Columns[columnIndex] is DataGridViewImageColumn && rowIndex >= 0)
             {
-                if (MessageBox.Show("Are you sure want to delete ?", "Ishtiraq - Shaheen Weekly", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                if (MessageBox.Show(MessageText.ConfirmDelete, MessageText.MessageBoxCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                     city_id = Convert.ToInt32(dgvCity.Rows[rowIndex].Cells["cityId"].Value);
                     cityBll.DeleteCity(city_id);

@@ -216,11 +216,11 @@ namespace Shaheen
                         bool isGenerated = PDFGeneration.GeneratePDF(sdf.FileName, dt);
                         if (isGenerated)
                         {
-                            MessageBox.Show("Address PDF Successfully generated", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Address PDF Successfully generated", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
                         else
                         {
-                            MessageBox.Show("Address PDF not generated", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Address PDF not generated", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

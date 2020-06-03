@@ -91,58 +91,58 @@ namespace Shaheen
             bool isRes = true;
             if (string.IsNullOrEmpty(txtName.Text))
             {
-                MessageBox.Show("Name is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Name is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtName.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtCode.Text))
             {
-                MessageBox.Show("Customer Code is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Customer Code is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtCode.Focus();
                 isRes = false;
             }
             else if (subscriptionBll.IsDuplicateSubscriptionCode(SubscriptionId, txtCode.Text))
             {
-                MessageBox.Show("Duplicate customer code found.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Duplicate customer code found.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 isRes = false;
             }
             else if (string.IsNullOrEmpty(txtAddress.Text))
             {
-                MessageBox.Show("Address is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Address is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtAddress.Focus();
                 isRes = false;
             }
             else if (cmbCountry.SelectedIndex <= 0)
             {
-                MessageBox.Show("Country is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Country is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbCountry.Focus();
                 isRes = false;
             }
             else if (cmbState.SelectedIndex <= 0)
             {
-                MessageBox.Show("State is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("State is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbState.Focus();
                 isRes = false;
             }
             else if (cmbDistrict.SelectedIndex <= 0)
             {
-                MessageBox.Show("District is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("District is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbDistrict.Focus();
                 isRes = false;
             }
             else if (cmbCity.SelectedIndex <= 0)
             {
-                MessageBox.Show("City is required.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("City is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbCity.Focus();
                 isRes = false;
             }
             else if (!CommonFunctions.checkEmail(txtEmail.Text))
             {
-                MessageBox.Show("Invalid email format.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid email format.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 isRes = false;
-            }            
+            }
             else
             {
                 isRes = true;
@@ -151,27 +151,30 @@ namespace Shaheen
         }
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if (!isValid()) return;
-            person.personId = PersonId;
-            person.personName = txtName.Text;
-            person.personAddress = txtAddress.Text;
-            person.countryId = Convert.ToInt32(cmbCountry.SelectedValue);
-            person.stateId = Convert.ToInt32(cmbState.SelectedValue);
-            person.districtId = Convert.ToInt32(cmbDistrict.SelectedValue);
-            person.cityId = Convert.ToInt32(cmbCity.SelectedValue);
-            person.areaId = Convert.ToInt32(cmbArea.SelectedValue);
-            person.pin = txtPIN.Text;
-            person.phone = txtPhone.Text;
-            person.mobile = txtMobile.Text;
-            person.email = txtEmail.Text;
-            personBll.SavePerson(person);
+            if (MessageBox.Show(MessageText.ConfirmEdit, MessageText.MessageBoxCaption, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                if (!isValid()) return;
+                person.personId = PersonId;
+                person.personName = txtName.Text;
+                person.personAddress = txtAddress.Text;
+                person.countryId = Convert.ToInt32(cmbCountry.SelectedValue);
+                person.stateId = Convert.ToInt32(cmbState.SelectedValue);
+                person.districtId = Convert.ToInt32(cmbDistrict.SelectedValue);
+                person.cityId = Convert.ToInt32(cmbCity.SelectedValue);
+                person.areaId = Convert.ToInt32(cmbArea.SelectedValue);
+                person.pin = txtPIN.Text;
+                person.phone = txtPhone.Text;
+                person.mobile = txtMobile.Text;
+                person.email = txtEmail.Text;
+                personBll.SavePerson(person);
 
-            subscription.subscriptionId = SubscriptionId;            
-            subscription.subscriptionCode = txtCode.Text;
-            subscription.personId = PersonId;
-            subscriptionBll.SaveSubscription(subscription);
-            MessageBox.Show("Person details updated successfully.", "Shaheen Weekly", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.DialogResult = DialogResult.OK;
+                subscription.subscriptionId = SubscriptionId;
+                subscription.subscriptionCode = txtCode.Text;
+                subscription.personId = PersonId;
+                subscriptionBll.SaveSubscription(subscription);
+                MessageBox.Show("Person details updated successfully.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.DialogResult = DialogResult.OK;
+            }
         }
     }
 }

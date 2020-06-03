@@ -84,16 +84,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.TextBox();
+            this.iconRenew = new FontAwesome.Sharp.IconPictureBox();
             this.panel17.SuspendLayout();
             this.grpPerson.SuspendLayout();
             this.grpButtons.SuspendLayout();
             this.grpPayment.SuspendLayout();
             this.grpSubscription.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconRenew)).BeginInit();
             this.SuspendLayout();
             // 
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Navy;
+            this.panel17.Controls.Add(this.iconRenew);
             this.panel17.Controls.Add(this.label27);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(0, 0);
@@ -106,7 +109,7 @@
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(7, 6);
+            this.label27.Location = new System.Drawing.Point(48, 6);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(198, 25);
             this.label27.TabIndex = 0;
@@ -774,6 +777,17 @@
             this.txtNote.Size = new System.Drawing.Size(490, 20);
             this.txtNote.TabIndex = 18;
             // 
+            // iconRenew
+            // 
+            this.iconRenew.BackColor = System.Drawing.Color.Navy;
+            this.iconRenew.IconChar = FontAwesome.Sharp.IconChar.IdBadge;
+            this.iconRenew.IconColor = System.Drawing.Color.White;
+            this.iconRenew.Location = new System.Drawing.Point(10, 6);
+            this.iconRenew.Name = "iconRenew";
+            this.iconRenew.Size = new System.Drawing.Size(32, 32);
+            this.iconRenew.TabIndex = 10;
+            this.iconRenew.TabStop = false;
+            // 
             // frmRenew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -799,6 +813,7 @@
             this.grpPayment.PerformLayout();
             this.grpSubscription.ResumeLayout(false);
             this.grpSubscription.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconRenew)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -860,5 +875,6 @@
         private System.Windows.Forms.Panel panel4;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnClose;
+        private FontAwesome.Sharp.IconPictureBox iconRenew;
     }
 }
