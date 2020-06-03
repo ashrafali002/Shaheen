@@ -41,7 +41,7 @@ namespace Shaheen
             dgvSubscriptionList.Columns["subscriptionStartDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["subscriptionEndDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
-            dgvSubscriptionList.Columns["pendingAmount"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;            
+            dgvSubscriptionList.Columns["pendingAmount"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
         private void dgvSubscriptionList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -107,6 +107,16 @@ namespace Shaheen
             }
         }
 
+        private void ctmxUpdateStatus_Click(object sender, EventArgs e)
+        {
+            frmStatus status = new frmStatus ();
+            status.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
+            if (status.ShowDialog() == DialogResult.OK)
+            {
+                FillDataGridView();
+            }
+        }
+
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(txtSearch.Text))
@@ -163,5 +173,7 @@ namespace Shaheen
         {
             this.Close();
         }
+
+
     }
 }
