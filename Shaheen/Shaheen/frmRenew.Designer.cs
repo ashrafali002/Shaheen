@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel17 = new System.Windows.Forms.Panel();
+            this.iconRenew = new FontAwesome.Sharp.IconPictureBox();
             this.label27 = new System.Windows.Forms.Label();
             this.grpPerson = new System.Windows.Forms.GroupBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -47,7 +48,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.txtReceiptNo = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lblBankName = new System.Windows.Forms.Label();
             this.txtBankName = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -84,13 +85,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.TextBox();
-            this.iconRenew = new FontAwesome.Sharp.IconPictureBox();
             this.panel17.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconRenew)).BeginInit();
             this.grpPerson.SuspendLayout();
             this.grpButtons.SuspendLayout();
             this.grpPayment.SuspendLayout();
             this.grpSubscription.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconRenew)).BeginInit();
             this.SuspendLayout();
             // 
             // panel17
@@ -103,6 +103,17 @@
             this.panel17.Name = "panel17";
             this.panel17.Size = new System.Drawing.Size(546, 37);
             this.panel17.TabIndex = 0;
+            // 
+            // iconRenew
+            // 
+            this.iconRenew.BackColor = System.Drawing.Color.Navy;
+            this.iconRenew.IconChar = FontAwesome.Sharp.IconChar.IdBadge;
+            this.iconRenew.IconColor = System.Drawing.Color.White;
+            this.iconRenew.Location = new System.Drawing.Point(10, 6);
+            this.iconRenew.Name = "iconRenew";
+            this.iconRenew.Size = new System.Drawing.Size(32, 32);
+            this.iconRenew.TabIndex = 10;
+            this.iconRenew.TabStop = false;
             // 
             // label27
             // 
@@ -286,7 +297,7 @@
             this.grpPayment.Controls.Add(this.label26);
             this.grpPayment.Controls.Add(this.txtReceiptNo);
             this.grpPayment.Controls.Add(this.panel16);
-            this.grpPayment.Controls.Add(this.label25);
+            this.grpPayment.Controls.Add(this.lblBankName);
             this.grpPayment.Controls.Add(this.txtBankName);
             this.grpPayment.Controls.Add(this.label24);
             this.grpPayment.Controls.Add(this.panel15);
@@ -354,16 +365,16 @@
             this.panel16.Size = new System.Drawing.Size(125, 1);
             this.panel16.TabIndex = 14;
             // 
-            // label25
+            // lblBankName
             // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.label25.Location = new System.Drawing.Point(16, 145);
-            this.label25.Margin = new System.Windows.Forms.Padding(0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(79, 15);
-            this.label25.TabIndex = 15;
-            this.label25.Text = "Bank Name :";
+            this.lblBankName.AutoSize = true;
+            this.lblBankName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            this.lblBankName.Location = new System.Drawing.Point(16, 145);
+            this.lblBankName.Margin = new System.Windows.Forms.Padding(0);
+            this.lblBankName.Name = "lblBankName";
+            this.lblBankName.Size = new System.Drawing.Size(79, 15);
+            this.lblBankName.TabIndex = 15;
+            this.lblBankName.Text = "Bank Name :";
             // 
             // txtBankName
             // 
@@ -721,6 +732,7 @@
             this.dtpStartDate.Size = new System.Drawing.Size(125, 27);
             this.dtpStartDate.TabIndex = 14;
             this.dtpStartDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
+            this.dtpStartDate.Leave += new System.EventHandler(this.dtpStartDate_Leave);
             // 
             // label15
             // 
@@ -777,17 +789,6 @@
             this.txtNote.Size = new System.Drawing.Size(490, 20);
             this.txtNote.TabIndex = 18;
             // 
-            // iconRenew
-            // 
-            this.iconRenew.BackColor = System.Drawing.Color.Navy;
-            this.iconRenew.IconChar = FontAwesome.Sharp.IconChar.IdBadge;
-            this.iconRenew.IconColor = System.Drawing.Color.White;
-            this.iconRenew.Location = new System.Drawing.Point(10, 6);
-            this.iconRenew.Name = "iconRenew";
-            this.iconRenew.Size = new System.Drawing.Size(32, 32);
-            this.iconRenew.TabIndex = 10;
-            this.iconRenew.TabStop = false;
-            // 
             // frmRenew
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -806,6 +807,7 @@
             this.Load += new System.EventHandler(this.frmRenew_Load);
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconRenew)).EndInit();
             this.grpPerson.ResumeLayout(false);
             this.grpPerson.PerformLayout();
             this.grpButtons.ResumeLayout(false);
@@ -813,7 +815,6 @@
             this.grpPayment.PerformLayout();
             this.grpSubscription.ResumeLayout(false);
             this.grpSubscription.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconRenew)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -835,7 +836,7 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox txtReceiptNo;
         private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lblBankName;
         private System.Windows.Forms.TextBox txtBankName;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel15;

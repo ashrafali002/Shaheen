@@ -12,7 +12,7 @@ namespace Shaheen
 {
     public class PDFGeneration
     {
-        public static bool GeneratePDF(string filePath, DataTable dt)
+        public static bool GenerateAddressLabelPDF(string filePath, DataTable dt)
         {
             bool isGenerated = false;
             try
@@ -66,6 +66,8 @@ namespace Shaheen
                     {
                         contents.Add(new Chunk(Convert.ToString(dr["stateName"]), new Font(baseFont, 10f)));
                     }
+                    contents.Add(new Chunk("\n Exp Date :" + Convert.ToDateTime(dr["subscriptionEndDate"]).ToShortDateString(), new Font(baseFont, 10f)));
+
                     cell.AddElement(contents);
                     table.AddCell(cell);
                 }

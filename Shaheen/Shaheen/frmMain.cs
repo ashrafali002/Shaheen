@@ -24,6 +24,7 @@ namespace Shaheen
         public frmSubscriptionList subscriptionList = null;
         public frmPaymentList paymentList = null;
         public frmCustomReport customReport = null;
+        public frmHome home = null;
 
         private bool CheckOpened(string name)
         {
@@ -119,7 +120,7 @@ namespace Shaheen
 
         private void btnSubscription_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void btnDistrict_Click(object sender, EventArgs e)
@@ -200,7 +201,7 @@ namespace Shaheen
             subscriptionList.BringToFront();
             subscriptionList.Show();
             subscriptionList.Focus();
-        }        
+        }
 
         private void btnLabelPrint_Click(object sender, EventArgs e)
         {
@@ -213,7 +214,7 @@ namespace Shaheen
                 {
                     if (sdf.ShowDialog() == DialogResult.OK)
                     {
-                        bool isGenerated = PDFGeneration.GeneratePDF(sdf.FileName, dt);
+                        bool isGenerated = PDFGeneration.GenerateAddressLabelPDF(sdf.FileName, dt);
                         if (isGenerated)
                         {
                             MessageBox.Show("Address PDF Successfully generated", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -247,7 +248,7 @@ namespace Shaheen
             if (MessageBox.Show("Do you want to exit", "Shahee Weekly", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
                 Application.Exit();
-            }            
+            }
         }
 
         private void btnIconSubscription_Click(object sender, EventArgs e)
@@ -281,6 +282,22 @@ namespace Shaheen
             paymentList.BringToFront();
             paymentList.Show();
             paymentList.Focus();
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            CloseAllOpenForm();
+            home = new frmHome() { TopLevel = false };
+            home.Location = new Point()
+            {
+                X = pnlForm.Width / 2 - home.Width / 2,
+                Y = pnlForm.Height / 2 - home.Height / 2
+            };
+            //home.Location = new Point(0, 0);
+            this.pnlForm.Controls.Add(home);
+            home.BringToFront();
+            home.Show();
+            home.Focus();
         }
     }
 }

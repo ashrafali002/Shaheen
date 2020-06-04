@@ -154,5 +154,29 @@ namespace Shaheen
             }
 
         }
+
+        private void dtpStartDate_Leave(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtDuration.Text))
+            {
+                dtpEndDate.Value = dtpStartDate.Value.AddYears(Convert.ToInt32(txtDuration.Text)).AddDays(-1);
+            }
+        }
+
+        private void txtDuration_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '\b'))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtAmount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '\b'))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

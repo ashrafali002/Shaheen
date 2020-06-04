@@ -27,7 +27,6 @@ namespace Shaheen
         Paid = 1,
         Free = 2,
         Complementary = 3
-
     }
     public enum SubscriptionStatus
     {
@@ -53,6 +52,4 @@ namespace Shaheen
             return isValid;
         }
     }
-
-
 }

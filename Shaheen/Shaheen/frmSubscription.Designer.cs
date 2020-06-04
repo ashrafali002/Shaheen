@@ -85,7 +85,7 @@
             this.label26 = new System.Windows.Forms.Label();
             this.txtReceiptNo = new System.Windows.Forms.TextBox();
             this.panel16 = new System.Windows.Forms.Panel();
-            this.label25 = new System.Windows.Forms.Label();
+            this.lblBankName = new System.Windows.Forms.Label();
             this.txtBankName = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
@@ -743,7 +743,7 @@
             this.grpPayment.Controls.Add(this.label26);
             this.grpPayment.Controls.Add(this.txtReceiptNo);
             this.grpPayment.Controls.Add(this.panel16);
-            this.grpPayment.Controls.Add(this.label25);
+            this.grpPayment.Controls.Add(this.lblBankName);
             this.grpPayment.Controls.Add(this.txtBankName);
             this.grpPayment.Controls.Add(this.label24);
             this.grpPayment.Controls.Add(this.panel15);
@@ -811,16 +811,16 @@
             this.panel16.Size = new System.Drawing.Size(125, 1);
             this.panel16.TabIndex = 13;
             // 
-            // label25
+            // lblBankName
             // 
-            this.label25.AutoSize = true;
-            this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.label25.Location = new System.Drawing.Point(17, 145);
-            this.label25.Margin = new System.Windows.Forms.Padding(0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(79, 15);
-            this.label25.TabIndex = 14;
-            this.label25.Text = "Bank Name :";
+            this.lblBankName.AutoSize = true;
+            this.lblBankName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            this.lblBankName.Location = new System.Drawing.Point(17, 145);
+            this.lblBankName.Margin = new System.Windows.Forms.Padding(0);
+            this.lblBankName.Name = "lblBankName";
+            this.lblBankName.Size = new System.Drawing.Size(79, 15);
+            this.lblBankName.TabIndex = 14;
+            this.lblBankName.Text = "Bank Name :";
             // 
             // txtBankName
             // 
@@ -1145,7 +1145,7 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txtPaidAmout;
         private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label lblBankName;
         private System.Windows.Forms.TextBox txtBankName;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label26;

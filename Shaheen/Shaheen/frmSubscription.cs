@@ -330,11 +330,13 @@ namespace Shaheen
             {
                 payment.chequeDate = null;
                 payment.chequeNo = string.Empty;
+                payment.bankName = string.Empty;
             }
             else
             {
                 payment.chequeDate = dtpChequeDate.Value;
                 payment.chequeNo = txtChequeNo.Text;
+                payment.bankName = txtBankName.Text;
             }
             payment.receiptNo = txtReceiptNo.Text;
             payment.amountPaid = Convert.ToDecimal(txtPaidAmout.Text);
@@ -371,7 +373,7 @@ namespace Shaheen
 
         private void txtDuration_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '\b'))
+            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '\b'))
             {
                 e.Handled = true;
             }
@@ -386,7 +388,7 @@ namespace Shaheen
                 dtpChequeDate.Enabled = false;
                 lblChequeDate.Enabled = false;
                 txtBankName.Enabled = false;
-                label25.Enabled = false;
+                lblBankName.Enabled = false;
             }
             else
             {
@@ -395,7 +397,7 @@ namespace Shaheen
                 dtpChequeDate.Enabled = true;
                 lblChequeDate.Enabled = true;
                 txtBankName.Enabled = true;
-                label25.Enabled = true;
+                lblBankName.Enabled = true;
             }
         }
 

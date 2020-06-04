@@ -112,6 +112,7 @@
     <Compile Include="BLL\LoginBLL.cs" />
     <Compile Include="BLL\PaymentBLL.cs" />
     <Compile Include="BLL\PersonBLL.cs" />
+    <Compile Include="BLL\ReportBLL.cs" />
     <Compile Include="BLL\StateBLL.cs" />
     <Compile Include="BLL\SubscriptionBLL.cs" />
     <Compile Include="BLL\SubscriptionDetailBLL.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="DAL\LoginDAL.cs" />
     <Compile Include="DAL\PaymentDAL.cs" />
     <Compile Include="DAL\PersonDAL.cs" />
+    <Compile Include="DAL\ReportDAL.cs" />
     <Compile Include="DAL\StateDAL.cs" />
     <Compile Include="DAL\SubscriptionDAL.cs" />
     <Compile Include="DAL\SubscriptionDetailDAL.cs" />
@@ -188,6 +190,12 @@
     </Compile>
     <Compile Include="frmEditSubscription.Designer.cs">
       <DependentUpon>frmEditSubscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -335,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditSubscription.resx">
       <DependentUpon>frmEditSubscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>

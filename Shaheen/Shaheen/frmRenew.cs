@@ -37,7 +37,7 @@ namespace Shaheen
         }
 
         private void frmRenew_Load(object sender, EventArgs e)
-        {            
+        {
             BindDropdownlists();
             #region Display
             personModel = personBll.GetPersonModelById(PersonId);
@@ -167,7 +167,7 @@ namespace Shaheen
                             ClearControls();
                             this.DialogResult = DialogResult.OK;
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
                             transaction.Rollback();
                             throw;
@@ -214,10 +214,13 @@ namespace Shaheen
         public int UpdateSubscriptionPendingAmount(int subscriptionId, IshraqContext context)
         {
             subscription.pendingAmount = (PendingAmount + Convert.ToDecimal(txtAmount.Text)) - Convert.ToDecimal(txtPaidAmout.Text);
+            subscription.status = Convert.ToInt32(SubscriptionStatus.Active);
             context.Entry(subscription).State = EntityState.Modified;
             context.SaveChanges();
             return subscriptionId;
         }
+
+        //Update Status of Previous active subscription details
         public int UpdateCurrentSubscriptionDetailStatus(int subscriptionDetailId, IshraqContext context)
         {
             var subscriptionDetail = new SubscriptionDetail();
@@ -253,11 +256,13 @@ namespace Shaheen
             {
                 payment.chequeDate = null;
                 payment.chequeNo = string.Empty;
+                payment.bankName = string.Empty;
             }
             else
             {
                 payment.chequeDate = dtpChequeDate.Value;
                 payment.chequeNo = txtChequeNo.Text;
+                payment.bankName = txtBankName.Text;
             }
             payment.receiptNo = txtReceiptNo.Text;
             payment.amountPaid = Convert.ToDecimal(txtPaidAmout.Text);
@@ -286,7 +291,7 @@ namespace Shaheen
 
         private void txtDuration_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '.') && (e.KeyChar != '\b'))
+            if (!char.IsDigit(e.KeyChar) && (e.KeyChar != '\b'))
             {
                 e.Handled = true;
             }
@@ -297,14 +302,28 @@ namespace Shaheen
             if (Convert.ToString(cmbPaymentType.SelectedValue) == PaymentType.Cash.ToString())
             {
                 txtChequeNo.Enabled = false;
+                lblChequeNo.Enabled = false;
                 dtpChequeDate.Enabled = false;
+                lblChequeDate.Enabled = false;
                 txtBankName.Enabled = false;
+                lblBankName.Enabled = false;
             }
             else
             {
                 txtChequeNo.Enabled = true;
+                lblChequeNo.Enabled = true;
                 dtpChequeDate.Enabled = true;
+                lblChequeDate.Enabled = true;
                 txtBankName.Enabled = true;
+                lblBankName.Enabled = true;
+            }
+        }
+
+        private void dtpStartDate_Leave(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtDuration.Text))
+            {
+                dtpEndDate.Value = dtpStartDate.Value.AddYears(Convert.ToInt32(txtDuration.Text)).AddDays(-1);
             }
         }
     }

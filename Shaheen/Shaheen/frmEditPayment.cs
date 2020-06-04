@@ -28,7 +28,7 @@ namespace Shaheen
             cmbPaymentType.DataSource = Enum.GetValues(typeof(PaymentType));
 
             payment = paymentBll.GetPaymentById(PaymentId);
-            cmbPaymentType.SelectedItem = payment.paymentType;
+            cmbPaymentType.SelectedItem = Enum.Parse(typeof(PaymentType), payment.paymentType);
             if (payment.paymentDate != null)
                 dtpPaymentDate.Value = payment.paymentDate;
             txtPaidAmout.Text = Convert.ToString(payment.amountPaid);
@@ -105,15 +105,16 @@ namespace Shaheen
                 {
                     payment.chequeDate = null;
                     payment.chequeNo = string.Empty;
+                    payment.bankName = string.Empty;
                 }
                 else
                 {
                     payment.chequeDate = dtpChequeDate.Value;
                     payment.chequeNo = txtChequeNo.Text;
+                    payment.bankName = txtBankName.Text;
                 }
                 payment.receiptNo = txtReceiptNo.Text;
-                payment.amountPaid = Convert.ToDecimal(txtPaidAmout.Text);
-                payment.bankName = txtBankName.Text;
+                payment.amountPaid = Convert.ToDecimal(txtPaidAmout.Text);                
                 payment.paymentDate = dtpPaymentDate.Value;
                 int res = paymentBll.SavePayment(payment);
                 if (res > 0)
@@ -133,7 +134,7 @@ namespace Shaheen
                 dtpChequeDate.Enabled = false;
                 lblChequeDate.Enabled = false;
                 txtBankName.Enabled = false;
-                label25.Enabled = false;
+                lblBankName.Enabled = false;
             }
             else
             {
@@ -142,7 +143,7 @@ namespace Shaheen
                 dtpChequeDate.Enabled = true;
                 lblChequeDate.Enabled = true;
                 txtBankName.Enabled = true;
-                label25.Enabled = true;
+                lblBankName.Enabled = true;
             }
         }
     }

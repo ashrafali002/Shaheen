@@ -274,6 +274,7 @@
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(90, 20);
             this.txtAmount.TabIndex = 10;
+            this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             // 
             // panel9
             // 
@@ -328,6 +329,7 @@
             this.dtpStartDate.Size = new System.Drawing.Size(125, 27);
             this.dtpStartDate.TabIndex = 13;
             this.dtpStartDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
+            this.dtpStartDate.Leave += new System.EventHandler(this.dtpStartDate_Leave);
             // 
             // label15
             // 
@@ -351,6 +353,7 @@
             this.txtDuration.Name = "txtDuration";
             this.txtDuration.Size = new System.Drawing.Size(90, 20);
             this.txtDuration.TabIndex = 7;
+            this.txtDuration.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDuration_KeyPress);
             // 
             // panel1
             // 

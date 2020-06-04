@@ -150,7 +150,7 @@ namespace Shaheen.DAL
             DateTime todayDate = DateTime.Now;
             string strQuery = @"Select P.personId,P.personName,P.personAddress,P.areaId,A.areaName,P.cityId,CT.cityName,
                 P.districtId,D.districtName,P.stateId,S.stateName,P.countryId,C.countryName,P.pin,P.phone,P.mobile,P.email,
-                SUB.subscriptionCode
+                SUB.subscriptionCode, SUBD.subscriptionEndDate
                 From Person P 
                 INNER JOIN Subscription SUB ON P.personId = SUB.personId
                 INNER JOIN SubscriptionDetail SUBD ON SUB.subscriptionId = SUBD.subscriptionId
