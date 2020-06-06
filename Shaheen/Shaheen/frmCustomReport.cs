@@ -122,8 +122,8 @@ namespace Shaheen
                 whereCondition += " AND SUBD.subscriptionEndDate <= '" + todayDate.ToLongDateString() + " 23:59:59'";
             }
 
-            PersonBLL personBll = new PersonBLL();
-            SearchResult = personBll.GetCustomizedPersonList(whereCondition);
+            var reportBll = new ReportBLL();
+            SearchResult = reportBll.GetCustomizedPersonList(whereCondition);
             lblRecordCountValue.Text = Convert.ToString(SearchResult.Rows.Count);
             FillDataGridView();
 

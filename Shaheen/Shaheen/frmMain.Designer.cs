@@ -30,9 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlLogo = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlForm = new System.Windows.Forms.Panel();
             this.btnHome = new FontAwesome.Sharp.IconButton();
             this.btnExit = new FontAwesome.Sharp.IconButton();
             this.btnLabelPrint = new FontAwesome.Sharp.IconButton();
@@ -46,7 +43,10 @@
             this.btnSubscriptionList = new FontAwesome.Sharp.IconButton();
             this.btnPaymentList = new FontAwesome.Sharp.IconButton();
             this.btnSubscription = new FontAwesome.Sharp.IconButton();
+            this.pnlLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlForm = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.pnlLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -76,37 +76,6 @@
             this.panel1.Size = new System.Drawing.Size(227, 749);
             this.panel1.TabIndex = 0;
             // 
-            // pnlLogo
-            // 
-            this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
-            this.pnlLogo.Controls.Add(this.pictureBox1);
-            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
-            this.pnlLogo.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlLogo.Name = "pnlLogo";
-            this.pnlLogo.Size = new System.Drawing.Size(227, 65);
-            this.pnlLogo.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(227, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1117, 65);
-            this.panel2.TabIndex = 1;
-            // 
-            // pnlForm
-            // 
-            this.pnlForm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlForm.Location = new System.Drawing.Point(227, 65);
-            this.pnlForm.Margin = new System.Windows.Forms.Padding(4);
-            this.pnlForm.Name = "pnlForm";
-            this.pnlForm.Size = new System.Drawing.Size(1117, 684);
-            this.pnlForm.TabIndex = 2;
-            // 
             // btnHome
             // 
             this.btnHome.FlatAppearance.BorderSize = 0;
@@ -118,11 +87,11 @@
             this.btnHome.IconColor = System.Drawing.Color.Gainsboro;
             this.btnHome.IconSize = 32;
             this.btnHome.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnHome.Location = new System.Drawing.Point(3, 81);
+            this.btnHome.Location = new System.Drawing.Point(0, 81);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnHome.Rotation = 0D;
-            this.btnHome.Size = new System.Drawing.Size(220, 38);
+            this.btnHome.Size = new System.Drawing.Size(227, 38);
             this.btnHome.TabIndex = 26;
             this.btnHome.Text = "Home / Dashboard";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -132,9 +101,8 @@
             // 
             // btnExit
             // 
-            this.btnExit.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExit.BackColor = System.Drawing.Color.Firebrick;
+            this.btnExit.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
@@ -167,11 +135,11 @@
             this.btnLabelPrint.IconColor = System.Drawing.Color.Gainsboro;
             this.btnLabelPrint.IconSize = 32;
             this.btnLabelPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLabelPrint.Location = new System.Drawing.Point(3, 592);
+            this.btnLabelPrint.Location = new System.Drawing.Point(0, 592);
             this.btnLabelPrint.Name = "btnLabelPrint";
             this.btnLabelPrint.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnLabelPrint.Rotation = 0D;
-            this.btnLabelPrint.Size = new System.Drawing.Size(220, 38);
+            this.btnLabelPrint.Size = new System.Drawing.Size(227, 38);
             this.btnLabelPrint.TabIndex = 24;
             this.btnLabelPrint.Text = "Print Address";
             this.btnLabelPrint.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -190,11 +158,11 @@
             this.btnReport.IconColor = System.Drawing.Color.Gainsboro;
             this.btnReport.IconSize = 32;
             this.btnReport.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReport.Location = new System.Drawing.Point(3, 548);
+            this.btnReport.Location = new System.Drawing.Point(0, 548);
             this.btnReport.Name = "btnReport";
             this.btnReport.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnReport.Rotation = 0D;
-            this.btnReport.Size = new System.Drawing.Size(220, 38);
+            this.btnReport.Size = new System.Drawing.Size(227, 38);
             this.btnReport.TabIndex = 23;
             this.btnReport.Text = "Agent-wise Report";
             this.btnReport.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -213,11 +181,11 @@
             this.btnArea.IconColor = System.Drawing.Color.Gainsboro;
             this.btnArea.IconSize = 32;
             this.btnArea.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnArea.Location = new System.Drawing.Point(3, 490);
+            this.btnArea.Location = new System.Drawing.Point(0, 490);
             this.btnArea.Name = "btnArea";
             this.btnArea.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnArea.Rotation = 0D;
-            this.btnArea.Size = new System.Drawing.Size(220, 38);
+            this.btnArea.Size = new System.Drawing.Size(227, 38);
             this.btnArea.TabIndex = 22;
             this.btnArea.Text = "Area";
             this.btnArea.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -236,11 +204,11 @@
             this.btnCity.IconColor = System.Drawing.Color.Gainsboro;
             this.btnCity.IconSize = 32;
             this.btnCity.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCity.Location = new System.Drawing.Point(3, 446);
+            this.btnCity.Location = new System.Drawing.Point(0, 446);
             this.btnCity.Name = "btnCity";
             this.btnCity.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnCity.Rotation = 0D;
-            this.btnCity.Size = new System.Drawing.Size(220, 38);
+            this.btnCity.Size = new System.Drawing.Size(227, 38);
             this.btnCity.TabIndex = 21;
             this.btnCity.Text = "City";
             this.btnCity.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -259,11 +227,11 @@
             this.btnDistrict.IconColor = System.Drawing.Color.Gainsboro;
             this.btnDistrict.IconSize = 32;
             this.btnDistrict.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDistrict.Location = new System.Drawing.Point(3, 402);
+            this.btnDistrict.Location = new System.Drawing.Point(0, 402);
             this.btnDistrict.Name = "btnDistrict";
             this.btnDistrict.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnDistrict.Rotation = 0D;
-            this.btnDistrict.Size = new System.Drawing.Size(220, 38);
+            this.btnDistrict.Size = new System.Drawing.Size(227, 38);
             this.btnDistrict.TabIndex = 20;
             this.btnDistrict.Text = "District";
             this.btnDistrict.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -282,11 +250,11 @@
             this.btnState.IconColor = System.Drawing.Color.Gainsboro;
             this.btnState.IconSize = 32;
             this.btnState.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnState.Location = new System.Drawing.Point(3, 358);
+            this.btnState.Location = new System.Drawing.Point(0, 358);
             this.btnState.Name = "btnState";
             this.btnState.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnState.Rotation = 0D;
-            this.btnState.Size = new System.Drawing.Size(220, 38);
+            this.btnState.Size = new System.Drawing.Size(227, 38);
             this.btnState.TabIndex = 19;
             this.btnState.Text = "State";
             this.btnState.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -305,11 +273,11 @@
             this.btnCountry.IconColor = System.Drawing.Color.Gainsboro;
             this.btnCountry.IconSize = 32;
             this.btnCountry.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCountry.Location = new System.Drawing.Point(3, 314);
+            this.btnCountry.Location = new System.Drawing.Point(0, 314);
             this.btnCountry.Name = "btnCountry";
             this.btnCountry.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnCountry.Rotation = 0D;
-            this.btnCountry.Size = new System.Drawing.Size(220, 38);
+            this.btnCountry.Size = new System.Drawing.Size(227, 38);
             this.btnCountry.TabIndex = 18;
             this.btnCountry.Text = "Country";
             this.btnCountry.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -328,11 +296,11 @@
             this.btnAgent.IconColor = System.Drawing.Color.Gainsboro;
             this.btnAgent.IconSize = 32;
             this.btnAgent.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAgent.Location = new System.Drawing.Point(3, 270);
+            this.btnAgent.Location = new System.Drawing.Point(0, 270);
             this.btnAgent.Name = "btnAgent";
             this.btnAgent.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnAgent.Rotation = 0D;
-            this.btnAgent.Size = new System.Drawing.Size(220, 38);
+            this.btnAgent.Size = new System.Drawing.Size(227, 38);
             this.btnAgent.TabIndex = 17;
             this.btnAgent.Text = "Agent";
             this.btnAgent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -351,11 +319,11 @@
             this.btnSubscriptionList.IconColor = System.Drawing.Color.Gainsboro;
             this.btnSubscriptionList.IconSize = 32;
             this.btnSubscriptionList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubscriptionList.Location = new System.Drawing.Point(3, 169);
+            this.btnSubscriptionList.Location = new System.Drawing.Point(0, 169);
             this.btnSubscriptionList.Name = "btnSubscriptionList";
             this.btnSubscriptionList.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnSubscriptionList.Rotation = 0D;
-            this.btnSubscriptionList.Size = new System.Drawing.Size(220, 38);
+            this.btnSubscriptionList.Size = new System.Drawing.Size(227, 38);
             this.btnSubscriptionList.TabIndex = 16;
             this.btnSubscriptionList.Text = "Subscription List";
             this.btnSubscriptionList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -374,11 +342,11 @@
             this.btnPaymentList.IconColor = System.Drawing.Color.Gainsboro;
             this.btnPaymentList.IconSize = 32;
             this.btnPaymentList.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPaymentList.Location = new System.Drawing.Point(3, 213);
+            this.btnPaymentList.Location = new System.Drawing.Point(0, 213);
             this.btnPaymentList.Name = "btnPaymentList";
             this.btnPaymentList.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnPaymentList.Rotation = 0D;
-            this.btnPaymentList.Size = new System.Drawing.Size(220, 38);
+            this.btnPaymentList.Size = new System.Drawing.Size(227, 38);
             this.btnPaymentList.TabIndex = 15;
             this.btnPaymentList.Text = "Payment List";
             this.btnPaymentList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -397,17 +365,28 @@
             this.btnSubscription.IconColor = System.Drawing.Color.Gainsboro;
             this.btnSubscription.IconSize = 32;
             this.btnSubscription.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSubscription.Location = new System.Drawing.Point(3, 125);
+            this.btnSubscription.Location = new System.Drawing.Point(0, 125);
             this.btnSubscription.Name = "btnSubscription";
             this.btnSubscription.Padding = new System.Windows.Forms.Padding(10, 0, 20, 0);
             this.btnSubscription.Rotation = 0D;
-            this.btnSubscription.Size = new System.Drawing.Size(220, 38);
+            this.btnSubscription.Size = new System.Drawing.Size(227, 38);
             this.btnSubscription.TabIndex = 14;
             this.btnSubscription.Text = "New Subscription";
             this.btnSubscription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSubscription.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSubscription.UseVisualStyleBackColor = true;
-            this.btnSubscription.Click += new System.EventHandler(this.btnIconSubscription_Click);
+            this.btnSubscription.Click += new System.EventHandler(this.btnSubscription_Click);
+            // 
+            // pnlLogo
+            // 
+            this.pnlLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
+            this.pnlLogo.Controls.Add(this.pictureBox1);
+            this.pnlLogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlLogo.Location = new System.Drawing.Point(0, 0);
+            this.pnlLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlLogo.Name = "pnlLogo";
+            this.pnlLogo.Size = new System.Drawing.Size(227, 65);
+            this.pnlLogo.TabIndex = 2;
             // 
             // pictureBox1
             // 
@@ -418,6 +397,26 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(227, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1117, 65);
+            this.panel2.TabIndex = 1;
+            // 
+            // pnlForm
+            // 
+            this.pnlForm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pnlForm.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlForm.Location = new System.Drawing.Point(227, 65);
+            this.pnlForm.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlForm.Name = "pnlForm";
+            this.pnlForm.Size = new System.Drawing.Size(1117, 684);
+            this.pnlForm.TabIndex = 2;
             // 
             // frmMain
             // 

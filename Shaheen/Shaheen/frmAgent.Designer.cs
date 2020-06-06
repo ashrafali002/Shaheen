@@ -135,7 +135,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 15);
-            this.label2.TabIndex = 28;
+            this.label2.TabIndex = 25;
             this.label2.Text = "Email :";
             // 
             // txtEmail
@@ -147,7 +147,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(428, 20);
-            this.txtEmail.TabIndex = 29;
+            this.txtEmail.TabIndex = 26;
             // 
             // panel8
             // 
@@ -157,7 +157,7 @@
             this.panel8.Location = new System.Drawing.Point(14, 395);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(428, 1);
-            this.panel8.TabIndex = 30;
+            this.panel8.TabIndex = 27;
             // 
             // txtMobile
             // 
@@ -168,7 +168,7 @@
             this.txtMobile.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMobile.Name = "txtMobile";
             this.txtMobile.Size = new System.Drawing.Size(200, 20);
-            this.txtMobile.TabIndex = 26;
+            this.txtMobile.TabIndex = 23;
             // 
             // label11
             // 
@@ -178,7 +178,7 @@
             this.label11.Margin = new System.Windows.Forms.Padding(0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(49, 15);
-            this.label11.TabIndex = 22;
+            this.label11.TabIndex = 19;
             this.label11.Text = "Phone :";
             // 
             // panel6
@@ -189,7 +189,7 @@
             this.panel6.Location = new System.Drawing.Point(242, 342);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(200, 1);
-            this.panel6.TabIndex = 27;
+            this.panel6.TabIndex = 24;
             // 
             // txtPhone
             // 
@@ -200,7 +200,7 @@
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(200, 20);
-            this.txtPhone.TabIndex = 23;
+            this.txtPhone.TabIndex = 20;
             // 
             // panel7
             // 
@@ -210,7 +210,7 @@
             this.panel7.Location = new System.Drawing.Point(14, 342);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(200, 1);
-            this.panel7.TabIndex = 24;
+            this.panel7.TabIndex = 21;
             // 
             // label12
             // 
@@ -220,7 +220,7 @@
             this.label12.Margin = new System.Windows.Forms.Padding(0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(51, 15);
-            this.label12.TabIndex = 25;
+            this.label12.TabIndex = 22;
             this.label12.Text = "Mobile :";
             // 
             // txtPIN
@@ -233,7 +233,7 @@
             this.txtPIN.MaxLength = 6;
             this.txtPIN.Name = "txtPIN";
             this.txtPIN.Size = new System.Drawing.Size(200, 20);
-            this.txtPIN.TabIndex = 20;
+            this.txtPIN.TabIndex = 17;
             // 
             // panel5
             // 
@@ -243,7 +243,7 @@
             this.panel5.Location = new System.Drawing.Point(242, 289);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(200, 1);
-            this.panel5.TabIndex = 21;
+            this.panel5.TabIndex = 18;
             // 
             // label10
             // 
@@ -253,7 +253,7 @@
             this.label10.Margin = new System.Windows.Forms.Padding(0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(34, 15);
-            this.label10.TabIndex = 19;
+            this.label10.TabIndex = 16;
             this.label10.Text = "PIN :";
             // 
             // cmbArea
@@ -266,7 +266,7 @@
             this.cmbArea.Margin = new System.Windows.Forms.Padding(0);
             this.cmbArea.Name = "cmbArea";
             this.cmbArea.Size = new System.Drawing.Size(200, 27);
-            this.cmbArea.TabIndex = 18;
+            this.cmbArea.TabIndex = 15;
             // 
             // label9
             // 
@@ -275,7 +275,7 @@
             this.label9.Location = new System.Drawing.Point(14, 245);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(39, 15);
-            this.label9.TabIndex = 17;
+            this.label9.TabIndex = 14;
             this.label9.Text = "Area :";
             // 
             // cmbCity
@@ -288,7 +288,7 @@
             this.cmbCity.Margin = new System.Windows.Forms.Padding(0);
             this.cmbCity.Name = "cmbCity";
             this.cmbCity.Size = new System.Drawing.Size(200, 27);
-            this.cmbCity.TabIndex = 16;
+            this.cmbCity.TabIndex = 13;
             // 
             // label7
             // 
@@ -297,7 +297,7 @@
             this.label7.Location = new System.Drawing.Point(242, 190);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 15);
-            this.label7.TabIndex = 15;
+            this.label7.TabIndex = 12;
             this.label7.Text = "City :";
             // 
             // cmbDistrict
@@ -310,7 +310,7 @@
             this.cmbDistrict.Margin = new System.Windows.Forms.Padding(0);
             this.cmbDistrict.Name = "cmbDistrict";
             this.cmbDistrict.Size = new System.Drawing.Size(200, 27);
-            this.cmbDistrict.TabIndex = 14;
+            this.cmbDistrict.TabIndex = 11;
             // 
             // label8
             // 
@@ -319,7 +319,7 @@
             this.label8.Location = new System.Drawing.Point(14, 190);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(54, 15);
-            this.label8.TabIndex = 13;
+            this.label8.TabIndex = 10;
             this.label8.Text = "District :";
             // 
             // cmbState
@@ -332,7 +332,7 @@
             this.cmbState.Margin = new System.Windows.Forms.Padding(0);
             this.cmbState.Name = "cmbState";
             this.cmbState.Size = new System.Drawing.Size(200, 27);
-            this.cmbState.TabIndex = 12;
+            this.cmbState.TabIndex = 9;
             // 
             // label6
             // 
@@ -341,7 +341,7 @@
             this.label6.Location = new System.Drawing.Point(242, 133);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(43, 15);
-            this.label6.TabIndex = 11;
+            this.label6.TabIndex = 8;
             this.label6.Text = "State :";
             // 
             // cmbCountry
@@ -354,7 +354,7 @@
             this.cmbCountry.Margin = new System.Windows.Forms.Padding(0);
             this.cmbCountry.Name = "cmbCountry";
             this.cmbCountry.Size = new System.Drawing.Size(200, 27);
-            this.cmbCountry.TabIndex = 10;
+            this.cmbCountry.TabIndex = 7;
             // 
             // label5
             // 
@@ -363,7 +363,7 @@
             this.label5.Location = new System.Drawing.Point(14, 133);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(56, 15);
-            this.label5.TabIndex = 9;
+            this.label5.TabIndex = 6;
             this.label5.Text = "Country :";
             // 
             // label4
@@ -374,7 +374,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 15);
-            this.label4.TabIndex = 6;
+            this.label4.TabIndex = 3;
             this.label4.Text = "Address :";
             // 
             // txtAddress
@@ -386,7 +386,7 @@
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(428, 20);
-            this.txtAddress.TabIndex = 7;
+            this.txtAddress.TabIndex = 4;
             // 
             // panel4
             // 
@@ -396,7 +396,7 @@
             this.panel4.Location = new System.Drawing.Point(14, 121);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(428, 1);
-            this.panel4.TabIndex = 8;
+            this.panel4.TabIndex = 5;
             // 
             // txtName
             // 
@@ -407,7 +407,7 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(425, 20);
-            this.txtName.TabIndex = 4;
+            this.txtName.TabIndex = 1;
             // 
             // panel2
             // 
@@ -417,7 +417,7 @@
             this.panel2.Location = new System.Drawing.Point(17, 66);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(425, 1);
-            this.panel2.TabIndex = 5;
+            this.panel2.TabIndex = 2;
             // 
             // label1
             // 
@@ -427,7 +427,7 @@
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 15);
-            this.label1.TabIndex = 3;
+            this.label1.TabIndex = 0;
             this.label1.Text = "Name :";
             // 
             // dgvAgent
@@ -606,7 +606,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1129, 37);
-            this.panel1.TabIndex = 35;
+            this.panel1.TabIndex = 0;
             // 
             // iconAgent
             // 
@@ -638,7 +638,7 @@
             this.groupBox2.Location = new System.Drawing.Point(10, 451);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(457, 60);
-            this.groupBox2.TabIndex = 41;
+            this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             // 
             // btnNew
@@ -657,7 +657,7 @@
             this.btnNew.Name = "btnNew";
             this.btnNew.Rotation = 0D;
             this.btnNew.Size = new System.Drawing.Size(90, 37);
-            this.btnNew.TabIndex = 24;
+            this.btnNew.TabIndex = 2;
             this.btnNew.Text = "New";
             this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -680,7 +680,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Rotation = 0D;
             this.btnSave.Size = new System.Drawing.Size(90, 37);
-            this.btnSave.TabIndex = 23;
+            this.btnSave.TabIndex = 0;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -702,7 +702,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Rotation = 0D;
             this.btnClose.Size = new System.Drawing.Size(90, 37);
-            this.btnClose.TabIndex = 22;
+            this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;

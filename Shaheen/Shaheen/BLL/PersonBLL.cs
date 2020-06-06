@@ -30,15 +30,6 @@ namespace Shaheen.BLL
         {
             return personDal.GetPersonTable();
         }
-
-        public DataTable GetPersonForLablePrint()
-        {
-            return personDal.GetPersonForLablePrint();
-        }
-
-        public DataTable GetCustomizedPersonList(string whereCondition)
-        {
-            return personDal.GetCustomizedPersonList(whereCondition);
-        }
+        
     }
 }

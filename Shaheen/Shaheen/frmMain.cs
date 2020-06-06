@@ -1,7 +1,9 @@
-﻿using Shaheen.BLL;
+﻿using FontAwesome.Sharp;
+using Shaheen.BLL;
 using System;
 using System.Data;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Shaheen
@@ -12,6 +14,8 @@ namespace Shaheen
         {
             InitializeComponent();
         }
+
+        private IconButton iconButton;
 
         public frmCustomer customer = null;
         public frmCountry country = null;
@@ -54,10 +58,34 @@ namespace Shaheen
 
         private void frmMain_Load(object sender, EventArgs e)
         {
-
+            ActiveButton(btnHome);
+            LoadHomePage();
         }
+
+        private void LoadHomePage()
+        {
+            CloseAllOpenForm();
+            home = new frmHome() { TopLevel = false };
+            home.Location = new Point()
+            {
+                X = pnlForm.Width / 2 - home.Width / 2,
+                Y = pnlForm.Height / 2 - home.Height / 2
+            };
+            //home.Location = new Point(0, 0);
+            this.pnlForm.Controls.Add(home);
+            home.BringToFront();
+            home.Show();
+            home.Focus();
+        }
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender);
+            LoadHomePage();
+        }
+
         private void btnCountry_Click(object sender, EventArgs e)
         {
+            ActiveButton(sender);
             CloseAllOpenForm();
             country = new frmCountry() { TopLevel = false };
             country.Location = new Point()
@@ -104,6 +132,7 @@ namespace Shaheen
 
         private void btnState_Click(object sender, EventArgs e)
         {
+            ActiveButton(sender);
             CloseAllOpenForm();
             state = new frmState() { TopLevel = false };
             state.Location = new Point()
@@ -120,11 +149,24 @@ namespace Shaheen
 
         private void btnSubscription_Click(object sender, EventArgs e)
         {
-
+            ActiveButton(sender);
+            CloseAllOpenForm();
+            subscription = new frmSubscription() { TopLevel = false };
+            subscription.Location = new Point()
+            {
+                X = pnlForm.Width / 2 - subscription.Width / 2,
+                Y = pnlForm.Height / 2 - subscription.Height / 2
+            };
+            //subscription.Location = new Point(0, 0);
+            this.pnlForm.Controls.Add(subscription);
+            subscription.BringToFront();
+            subscription.Show();
+            subscription.Focus();
         }
 
         private void btnDistrict_Click(object sender, EventArgs e)
         {
+            ActiveButton(sender);
             CloseAllOpenForm();
             district = new frmDistrict() { TopLevel = false };
             district.Location = new Point()
@@ -141,6 +183,7 @@ namespace Shaheen
 
         private void btnCity_Click(object sender, EventArgs e)
         {
+            ActiveButton(sender);
             CloseAllOpenForm();
             city = new frmCity() { TopLevel = false };
             city.Location = new Point()
@@ -157,6 +200,7 @@ namespace Shaheen
 
         private void btnArea_Click(object sender, EventArgs e)
         {
+            ActiveButton(sender);
             CloseAllOpenForm();
             area = new frmArea() { TopLevel = false };
             area.Location = new Point()
@@ -173,6 +217,7 @@ namespace Shaheen
 
         private void btnAgent_Click(object sender, EventArgs e)
         {
+            ActiveButton(sender);
             CloseAllOpenForm();
             agent = new frmAgent() { TopLevel = false };
             agent.Location = new Point()
@@ -189,6 +234,7 @@ namespace Shaheen
 
         private void btnSubscriptionList_Click(object sender, EventArgs e)
         {
+            ActiveButton(sender);
             CloseAllOpenForm();
             subscriptionList = new frmSubscriptionList() { TopLevel = false };
             subscriptionList.Location = new Point()
@@ -205,9 +251,11 @@ namespace Shaheen
 
         private void btnLabelPrint_Click(object sender, EventArgs e)
         {
+            ActiveButton(sender);
+            CloseAllOpenForm();
             DataTable dt = new DataTable();
-            var personBll = new PersonBLL();
-            dt = personBll.GetPersonForLablePrint();
+            var reportBll = new ReportBLL();
+            dt = reportBll.GetPersonForLablePrint();
             if (dt.Rows.Count > 0)
             {
                 using (SaveFileDialog sdf = new SaveFileDialog() { Filter = "PDF File|*.pdf", ValidateNames = true })
@@ -230,6 +278,7 @@ namespace Shaheen
 
         private void btnReport_Click(object sender, EventArgs e)
         {
+            ActiveButton(sender);
             CloseAllOpenForm();
             customReport = new frmCustomReport() { TopLevel = false };
             customReport.Location = new Point()
@@ -251,25 +300,10 @@ namespace Shaheen
             }
         }
 
-        private void btnIconSubscription_Click(object sender, EventArgs e)
-        {
-            CloseAllOpenForm();
-
-            subscription = new frmSubscription() { TopLevel = false };
-            subscription.Location = new Point()
-            {
-                X = pnlForm.Width / 2 - subscription.Width / 2,
-                Y = pnlForm.Height / 2 - subscription.Height / 2
-            };
-            //subscription.Location = new Point(0, 0);
-            this.pnlForm.Controls.Add(subscription);
-            subscription.BringToFront();
-            subscription.Show();
-            subscription.Focus();
-        }
 
         private void btnPaymentList_Click(object sender, EventArgs e)
         {
+            ActiveButton(sender);
             CloseAllOpenForm();
             paymentList = new frmPaymentList() { TopLevel = false };
             paymentList.Location = new Point()
@@ -284,20 +318,26 @@ namespace Shaheen
             paymentList.Focus();
         }
 
-        private void btnHome_Click(object sender, EventArgs e)
+        private void ActiveButton(object senderBtn)
         {
-            CloseAllOpenForm();
-            home = new frmHome() { TopLevel = false };
-            home.Location = new Point()
+            if (senderBtn != null)
             {
-                X = pnlForm.Width / 2 - home.Width / 2,
-                Y = pnlForm.Height / 2 - home.Height / 2
-            };
-            //home.Location = new Point(0, 0);
-            this.pnlForm.Controls.Add(home);
-            home.BringToFront();
-            home.Show();
-            home.Focus();
+                UnActiveButton();
+                iconButton = (IconButton)senderBtn;
+                iconButton.BackColor = Color.FromArgb(229, 126, 49);
+                iconButton.ForeColor = Color.Black;
+                iconButton.IconColor = Color.Black;
+            }
+        }
+
+        private void UnActiveButton()
+        {
+            if (iconButton != null)
+            {
+                iconButton.BackColor = Color.FromArgb(41, 53, 65);
+                iconButton.ForeColor = Color.Gainsboro;
+                iconButton.IconColor = Color.Gainsboro;
+            }
         }
     }
 }

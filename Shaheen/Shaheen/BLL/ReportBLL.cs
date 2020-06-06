@@ -10,6 +10,15 @@ namespace Shaheen.BLL
         {
             reportDal = new ReportDAL();
         }
+        public DataTable GetPersonForLablePrint()
+        {
+            return reportDal.GetPersonForLablePrint();
+        }
+
+        public DataTable GetCustomizedPersonList(string whereCondition)
+        {
+            return reportDal.GetCustomizedPersonList(whereCondition);
+        }
         public DataTable GetAgentWiseStatusCount()
         {
             return reportDal.GetAgentWiseStatusCount();

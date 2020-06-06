@@ -202,7 +202,7 @@
             this.txtCityName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtCityName.Name = "txtCityName";
             this.txtCityName.Size = new System.Drawing.Size(245, 20);
-            this.txtCityName.TabIndex = 19;
+            this.txtCityName.TabIndex = 0;
             // 
             // panel1
             // 
@@ -225,7 +225,7 @@
             this.cmbDistrictName.MinimumSize = new System.Drawing.Size(250, 0);
             this.cmbDistrictName.Name = "cmbDistrictName";
             this.cmbDistrictName.Size = new System.Drawing.Size(250, 27);
-            this.cmbDistrictName.TabIndex = 5;
+            this.cmbDistrictName.TabIndex = 1;
             // 
             // lblCityName
             // 
@@ -275,7 +275,7 @@
             this.btnNew.Name = "btnNew";
             this.btnNew.Rotation = 0D;
             this.btnNew.Size = new System.Drawing.Size(90, 37);
-            this.btnNew.TabIndex = 24;
+            this.btnNew.TabIndex = 3;
             this.btnNew.Text = "New";
             this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNew.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -298,7 +298,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Rotation = 0D;
             this.btnSave.Size = new System.Drawing.Size(90, 37);
-            this.btnSave.TabIndex = 23;
+            this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSave.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -320,7 +320,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Rotation = 0D;
             this.btnClose.Size = new System.Drawing.Size(90, 37);
-            this.btnClose.TabIndex = 22;
+            this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnClose.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
