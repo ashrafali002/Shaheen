@@ -9,6 +9,7 @@ namespace Shaheen
     {
         public StateBLL stateBll;
         private int state_id = 0;
+        private int gridRowIndex = 0;
         public frmState()
         {
             InitializeComponent();            
@@ -114,6 +115,10 @@ namespace Shaheen
                 if (res > 0)
                 {
                     FillDataGridView();
+                    if (gridRowIndex > 0)
+                    {
+                        dgvState.Rows[gridRowIndex].Selected = true;
+                    }
                     MessageBox.Show(MessageText.SaveMessage, MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                     ClearControls();
                     DisableEnableControls(false);
@@ -148,8 +153,8 @@ namespace Shaheen
 
         private void dgvState_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int rowIndex = e.RowIndex;
-            DataGridViewRow grdRow = dgvState.Rows[rowIndex];
+            gridRowIndex = e.RowIndex;
+            DataGridViewRow grdRow = dgvState.Rows[gridRowIndex];
             state_id = Convert.ToInt32(grdRow.Cells["stateId"].Value);
             cmbCountryName.SelectedValue = grdRow.Cells["countryId"].Value;
             txtStateName.Text = Convert.ToString(grdRow.Cells["colStateName"].Value);

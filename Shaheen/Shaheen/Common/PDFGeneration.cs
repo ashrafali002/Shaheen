@@ -17,8 +17,8 @@ namespace Shaheen
             bool isGenerated = false;
             try
             {
-                const int pageMargin = 5;
-                const int pageRows = 9;
+                const int pageMargin = 15;
+                const int pageRows = 8;
                 const int pageCols = 3;
 
                 Document doc = new Document(PageSize.A4);

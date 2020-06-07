@@ -15,20 +15,32 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_2AE44B15554A440297F3A42129507D20"
+        "MsmKey" = "8:_15C1622C4F5146208CD0E655FA36BD2C"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_57F6B1A7BD0699D1E416C366DE27169C"
+        "OwnerKey" = "8:_15C1622C4F5146208CD0E655FA36BD2C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_65F5D4FFECCE63679D457BE2F8455047"
-        "OwnerKey" = "8:_B7583AFB2E50493B867A9A1A92E84B07"
+        "OwnerKey" = "8:_15C1622C4F5146208CD0E655FA36BD2C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_83A314B460B2410AB594077A5DA13B2A"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_9250D31B411EC5368E819B45AD137189"
-        "OwnerKey" = "8:_B7583AFB2E50493B867A9A1A92E84B07"
+        "OwnerKey" = "8:_15C1622C4F5146208CD0E655FA36BD2C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -40,25 +52,25 @@
         "Entry"
         {
         "MsmKey" = "8:_96EA3CA479534183F0ED93569EAA1A58"
-        "OwnerKey" = "8:_B7583AFB2E50493B867A9A1A92E84B07"
+        "OwnerKey" = "8:_15C1622C4F5146208CD0E655FA36BD2C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_B7583AFB2E50493B867A9A1A92E84B07"
+        "MsmKey" = "8:_BC7F7BD7C358477ABE9D52E1389D2004"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_C3D16917043832A1C38691F185D4D0C2"
-        "OwnerKey" = "8:_B7583AFB2E50493B867A9A1A92E84B07"
+        "OwnerKey" = "8:_15C1622C4F5146208CD0E655FA36BD2C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_C89BF44DD8D241960774A5E06C20D279"
-        "OwnerKey" = "8:_B7583AFB2E50493B867A9A1A92E84B07"
+        "OwnerKey" = "8:_15C1622C4F5146208CD0E655FA36BD2C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -76,7 +88,7 @@
         "Entry"
         {
         "MsmKey" = "8:_FE81ACC8F948C5D19C3849C715F3FCF3"
-        "OwnerKey" = "8:_B7583AFB2E50493B867A9A1A92E84B07"
+        "OwnerKey" = "8:_15C1622C4F5146208CD0E655FA36BD2C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -88,13 +100,19 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_B7583AFB2E50493B867A9A1A92E84B07"
+        "OwnerKey" = "8:_15C1622C4F5146208CD0E655FA36BD2C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_C3D16917043832A1C38691F185D4D0C2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_57F6B1A7BD0699D1E416C366DE27169C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -216,12 +234,23 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2AE44B15554A440297F3A42129507D20"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_57F6B1A7BD0699D1E416C366DE27169C"
             {
-            "SourcePath" = "8:..\\Shaheen\\bin\\ShaheenDB\\ShaheenDB.sdf"
-            "TargetName" = "8:ShaheenDB.sdf"
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:FontAwesome.Sharp, Version=5.12.1.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_57F6B1A7BD0699D1E416C366DE27169C"
+                    {
+                    "Name" = "8:FontAwesome.Sharp.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:FontAwesome.Sharp.dll"
+            "TargetName" = "8:"
             "Tag" = "8:"
-            "Folder" = "8:_FDB5142FB03544E7A284BAF2998550E9"
+            "Folder" = "8:_E88C63879059469E8146A582B5C671C8"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Vital" = "11:TRUE"
@@ -233,7 +262,7 @@
             "PackageAs" = "3:1"
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_65F5D4FFECCE63679D457BE2F8455047"
@@ -265,6 +294,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_83A314B460B2410AB594077A5DA13B2A"
+            {
+            "SourcePath" = "8:..\\Shaheen\\images\\shaheen-icon.ico"
+            "TargetName" = "8:shaheen-icon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_588FFC078023456F9FC27DDBFB37DCC4"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9250D31B411EC5368E819B45AD137189"
@@ -327,6 +376,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_BC7F7BD7C358477ABE9D52E1389D2004"
+            {
+            "SourcePath" = "8:..\\Shaheen\\bin\\ShaheenDB\\ShaheenDB.sdf"
+            "TargetName" = "8:ShaheenDB.sdf"
+            "Tag" = "8:"
+            "Folder" = "8:_FDB5142FB03544E7A284BAF2998550E9"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_C3D16917043832A1C38691F185D4D0C2"
@@ -501,24 +570,24 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Shaheen"
         "ProductCode" = "8:{7B5E7CF5-65B4-4B47-BF32-4AD43F7D600C}"
-        "PackageCode" = "8:{3281CB7E-D6E2-4C32-8880-EB7E9861A84D}"
+        "PackageCode" = "8:{9877200F-4CCE-4D89-96DF-045B4CE4F469}"
         "UpgradeCode" = "8:{9345BBF8-054D-4C87-8DCC-0D48059E0C43}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:ShaheenWeekly"
+        "Manufacturer" = "8:Shaheen Weekly"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Shaheen"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:ShaheenWeekly"
+        "ARPCONTACT" = "8:Shaheen Weekly"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_83A314B460B2410AB594077A5DA13B2A"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -621,7 +690,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_2C227435314A4BC98799246B2DB5133A"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_A3ED52B0D2144FE792688F3288D7416C"
             {
             "Name" = "8:Shaheen"
             "Arguments" = "8:"
@@ -629,24 +698,24 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_B7583AFB2E50493B867A9A1A92E84B07"
-            "Folder" = "8:_4F91BF3E09EE4E57B0CC1CC1A3C76031"
-            "WorkingFolder" = "8:_E88C63879059469E8146A582B5C671C8"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_B6BA9AC28B90468FA1FD9F690E7045EC"
-            {
-            "Name" = "8:Shaheen"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_B7583AFB2E50493B867A9A1A92E84B07"
+            "Target" = "8:_15C1622C4F5146208CD0E655FA36BD2C"
             "Folder" = "8:_E9E37B570D2D4A13852B9DA908166B74"
             "WorkingFolder" = "8:_E88C63879059469E8146A582B5C671C8"
-            "Icon" = "8:"
+            "Icon" = "8:_83A314B460B2410AB594077A5DA13B2A"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_DD192C6B22B945D4989A3BDDC6B174A0"
+            {
+            "Name" = "8:Shaheen"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_15C1622C4F5146208CD0E655FA36BD2C"
+            "Folder" = "8:_4F91BF3E09EE4E57B0CC1CC1A3C76031"
+            "WorkingFolder" = "8:_E88C63879059469E8146A582B5C671C8"
+            "Icon" = "8:_83A314B460B2410AB594077A5DA13B2A"
             "Feature" = "8:"
             }
         }
@@ -1048,9 +1117,9 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_B7583AFB2E50493B867A9A1A92E84B07"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_15C1622C4F5146208CD0E655FA36BD2C"
             {
-            "SourcePath" = "8:..\\Shaheen\\obj\\Release\\Shaheen.exe"
+            "SourcePath" = "8:..\\Shaheen\\obj\\Debug\\Shaheen.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_E88C63879059469E8146A582B5C671C8"

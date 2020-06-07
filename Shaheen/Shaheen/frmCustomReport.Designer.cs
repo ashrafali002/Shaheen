@@ -35,9 +35,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
-            this.btnReset = new FontAwesome.Sharp.IconButton();
             this.lblRecordCountValue = new System.Windows.Forms.Label();
             this.cmbAgent = new System.Windows.Forms.ComboBox();
+            this.btnReset = new FontAwesome.Sharp.IconButton();
             this.label13 = new System.Windows.Forms.Label();
             this.cmbArea = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -124,6 +124,29 @@
             this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // lblRecordCountValue
+            // 
+            this.lblRecordCountValue.AutoSize = true;
+            this.lblRecordCountValue.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecordCountValue.ForeColor = System.Drawing.Color.Red;
+            this.lblRecordCountValue.Location = new System.Drawing.Point(837, 25);
+            this.lblRecordCountValue.Name = "lblRecordCountValue";
+            this.lblRecordCountValue.Size = new System.Drawing.Size(71, 23);
+            this.lblRecordCountValue.TabIndex = 17;
+            this.lblRecordCountValue.Text = "Record";
+            // 
+            // cmbAgent
+            // 
+            this.cmbAgent.BackColor = System.Drawing.Color.SkyBlue;
+            this.cmbAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cmbAgent.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAgent.IntegralHeight = false;
+            this.cmbAgent.Location = new System.Drawing.Point(78, 22);
+            this.cmbAgent.Margin = new System.Windows.Forms.Padding(0);
+            this.cmbAgent.Name = "cmbAgent";
+            this.cmbAgent.Size = new System.Drawing.Size(210, 27);
+            this.cmbAgent.TabIndex = 1;
+            // 
             // btnReset
             // 
             this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -147,29 +170,6 @@
             this.btnReset.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
-            // 
-            // lblRecordCountValue
-            // 
-            this.lblRecordCountValue.AutoSize = true;
-            this.lblRecordCountValue.Font = new System.Drawing.Font("Roboto", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRecordCountValue.ForeColor = System.Drawing.Color.Red;
-            this.lblRecordCountValue.Location = new System.Drawing.Point(837, 25);
-            this.lblRecordCountValue.Name = "lblRecordCountValue";
-            this.lblRecordCountValue.Size = new System.Drawing.Size(71, 23);
-            this.lblRecordCountValue.TabIndex = 17;
-            this.lblRecordCountValue.Text = "Record";
-            // 
-            // cmbAgent
-            // 
-            this.cmbAgent.BackColor = System.Drawing.Color.SkyBlue;
-            this.cmbAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbAgent.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmbAgent.IntegralHeight = false;
-            this.cmbAgent.Location = new System.Drawing.Point(78, 22);
-            this.cmbAgent.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbAgent.Name = "cmbAgent";
-            this.cmbAgent.Size = new System.Drawing.Size(210, 27);
-            this.cmbAgent.TabIndex = 1;
             // 
             // label13
             // 
@@ -542,8 +542,10 @@
             // 
             // frmCustomReport
             // 
+            this.AcceptButton = this.btnSearch;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnReset;
             this.ClientSize = new System.Drawing.Size(973, 653);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.dgvCustomReport);

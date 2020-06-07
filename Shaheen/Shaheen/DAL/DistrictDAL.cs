@@ -26,7 +26,7 @@ namespace Shaheen.DAL
                 districtName = s.districtName,
                 stateId = s.stateId,
                 stateName = c.stateName
-            }).OrderBy(o => o.districtId).ToList();
+            }).OrderBy(o => o.stateName).ToList();
             return list;
         }
         public int SaveDistrict(District district)

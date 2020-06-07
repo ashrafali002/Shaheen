@@ -9,6 +9,7 @@ namespace Shaheen
     {
         public DistrictBLL districtBll;
         private int district_id = 0;
+        public int gridRowIndex { get; set; }
         public frmDistrict()
         {
             InitializeComponent();
@@ -111,6 +112,10 @@ namespace Shaheen
                 if (res > 0)
                 {
                     FillDataGridView();
+                    if (gridRowIndex > 0)
+                    {
+                        dgvDistrict.Rows[gridRowIndex].Selected = true;
+                    }
                     MessageBox.Show(MessageText.SaveMessage, MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                     ClearControls();
                     DisableEnableControls(false);
@@ -143,8 +148,8 @@ namespace Shaheen
 
         private void dgvDistrict_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int rowIndex = e.RowIndex;
-            DataGridViewRow grdRow = dgvDistrict.Rows[rowIndex];
+            gridRowIndex = e.RowIndex;
+            DataGridViewRow grdRow = dgvDistrict.Rows[gridRowIndex];
             district_id = Convert.ToInt32(grdRow.Cells["districtId"].Value);
             cmbStateName.SelectedValue = grdRow.Cells["stateId"].Value;
             txtDistrictName.Text = Convert.ToString(grdRow.Cells["colDistrictName"].Value);

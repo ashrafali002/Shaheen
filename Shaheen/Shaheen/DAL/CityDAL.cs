@@ -26,7 +26,7 @@ namespace Shaheen.DAL
                 cityName = s.cityName,
                 districtId = s.districtId,
                 districtName = c.districtName
-            }).OrderBy(o => o.cityId).ToList();
+            }).OrderBy(o => o.cityName).ToList();
             return list;
         }
         public int SaveCity(City city)

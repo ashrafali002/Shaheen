@@ -9,6 +9,7 @@ namespace Shaheen
     {
         public CityBLL cityBll;
         private int city_id = 0;
+        public int gridRowIndex { get; set; }
 
         public frmCity()
         {
@@ -113,6 +114,10 @@ namespace Shaheen
                 if (res > 0)
                 {
                     FillDataGridView();
+                    if (gridRowIndex > 0)
+                    {
+                        dgvCity.Rows[gridRowIndex].Selected = true;
+                    }
                     MessageBox.Show(MessageText.SaveMessage, MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                     ClearControls();
                     DisableEnableControls(false);
@@ -145,8 +150,8 @@ namespace Shaheen
 
         private void dgvCity_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int rowIndex = e.RowIndex;
-            DataGridViewRow grdRow = dgvCity.Rows[rowIndex];
+            gridRowIndex = e.RowIndex;
+            DataGridViewRow grdRow = dgvCity.Rows[gridRowIndex];
             city_id = Convert.ToInt32(grdRow.Cells["cityId"].Value);
             cmbDistrictName.SelectedValue = grdRow.Cells["districtId"].Value;
             txtCityName.Text = Convert.ToString(grdRow.Cells["colCityName"].Value);

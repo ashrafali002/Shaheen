@@ -79,6 +79,7 @@ namespace Shaheen
             if (editPayment.ShowDialog() == DialogResult.OK)
             {
                 LoadSearchResult();
+                dgvPayment.Rows[e.RowIndex].Selected = true;
             }
         }
 

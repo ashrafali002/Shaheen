@@ -427,6 +427,7 @@
   <ItemGroup>
     <Content Include="images\delete.png" />
     <Content Include="images\logo-shaheen.png" />
+    <Content Include="images\shaheen-icon.ico" />
     <Content Include="IshraqEntities\IshraqEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>IshraqEntities.edmx</DependentUpon>

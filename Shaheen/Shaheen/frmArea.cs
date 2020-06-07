@@ -9,6 +9,7 @@ namespace Shaheen
     {
         public AreaBLL areaBll;
         public int area_id = 0;
+        public int gridRowIndex { get; set; }
         public frmArea()
         {
             InitializeComponent();
@@ -105,12 +106,16 @@ namespace Shaheen
             {
                 var area = new Area();
                 area.areaId = area_id;
-                area.areaName= txtAreaName.Text;
-                area.cityId= Convert.ToInt32(cmbCityName.SelectedValue);
+                area.areaName = txtAreaName.Text;
+                area.cityId = Convert.ToInt32(cmbCityName.SelectedValue);
                 int res = areaBll.SaveArea(area);
                 if (res > 0)
                 {
                     FillDataGridView();
+                    if (gridRowIndex > 0)
+                    {
+                        dgvArea.Rows[gridRowIndex].Selected = true;
+                    }
                     MessageBox.Show(MessageText.SaveMessage, MessageText.MessageBoxCaption, MessageBoxButtons.OK);
                     ClearControls();
                     DisableEnableControls(false);
@@ -118,7 +123,7 @@ namespace Shaheen
                     btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
                     btnSave.Enabled = false;
                     btnNew.Enabled = true;
-                    btnClose.Text = "Close";
+                    btnClose.Text = "Close";                    
                 }
             }
         }
@@ -143,8 +148,8 @@ namespace Shaheen
 
         private void dgvArea_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int rowIndex = e.RowIndex;
-            DataGridViewRow grdRow = dgvArea.Rows[rowIndex];
+            gridRowIndex = e.RowIndex;
+            DataGridViewRow grdRow = dgvArea.Rows[gridRowIndex];
             area_id = Convert.ToInt32(grdRow.Cells["areaId"].Value);
             cmbCityName.SelectedValue = grdRow.Cells["cityId"].Value;
             txtAreaName.Text = Convert.ToString(grdRow.Cells["colAreaName"].Value);
@@ -161,7 +166,7 @@ namespace Shaheen
             {
                 if (MessageBox.Show(MessageText.ConfirmDelete, MessageText.MessageBoxCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    area_id= Convert.ToInt32(dgvArea.Rows[rowIndex].Cells["areaId"].Value);
+                    area_id = Convert.ToInt32(dgvArea.Rows[rowIndex].Cells["areaId"].Value);
                     areaBll.DeleteArea(area_id);
                     FillDataGridView();
                     ClearControls();

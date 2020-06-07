@@ -142,6 +142,7 @@
             // 
             // btnCancel
             // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancel.Location = new System.Drawing.Point(45, 338);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
@@ -216,6 +217,7 @@
             this.AcceptButton = this.btnLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(313, 398);
             this.Controls.Add(this.iconPassword);
             this.Controls.Add(this.iconUserName);

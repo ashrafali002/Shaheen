@@ -13,7 +13,7 @@ namespace Shaheen
         public string SearchString { get; set; }
 
         public SubscriptionBLL subscriptionBll;
-        private int rowIndex = 0;
+        private int gridRowIndex { get; set; }
         public frmSubscriptionList()
         {
             InitializeComponent();
@@ -48,8 +48,8 @@ namespace Shaheen
         {
             if (e.RowIndex != -1 && e.Button == MouseButtons.Right)
             {
-                rowIndex = e.RowIndex;
-                dgvSubscriptionList.Rows[rowIndex].Selected = true;
+                gridRowIndex = e.RowIndex;
+                dgvSubscriptionList.Rows[gridRowIndex].Selected = true;
                 this.mnuContext.Show(this.dgvSubscriptionList, e.Location);
                 mnuContext.Show(Cursor.Position);
             }
@@ -59,12 +59,12 @@ namespace Shaheen
         {
             frmEditPerson editPerson = new frmEditPerson();
             this.Opacity = 10;
-            editPerson.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["personId"].Value);
-            editPerson.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
+            editPerson.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["personId"].Value);
+            editPerson.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["subscriptionId"].Value);
             if (editPerson.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
-                this.Opacity = 100;
+                dgvSubscriptionList.Rows[gridRowIndex].Selected = true;
             }
         }
 
@@ -72,48 +72,52 @@ namespace Shaheen
         private void ctxmSubscriptionDetails_Click(object sender, EventArgs e)
         {
             frmEditSubscription editSubscription = new frmEditSubscription();
-            editSubscription.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["personId"].Value);
-            editSubscription.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
-            editSubscription.SubscriptionDetailId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionDetailId"].Value);
+            editSubscription.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["personId"].Value);
+            editSubscription.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["subscriptionId"].Value);
+            editSubscription.SubscriptionDetailId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["subscriptionDetailId"].Value);
             //editSubscription.AgentName = Convert.ToString(dgvSubscriptionList.Rows[rowIndex].Cells["agentName"].Value);
             if (editSubscription.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
+                dgvSubscriptionList.Rows[gridRowIndex].Selected = true;
             }
         }
 
         private void ctxmRenewSubscription_Click(object sender, EventArgs e)
         {
             frmRenew renew = new frmRenew();
-            renew.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["personId"].Value);
-            renew.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
-            renew.SubscriptionDetailId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionDetailId"].Value);
-            renew.AgentName = Convert.ToString(dgvSubscriptionList.Rows[rowIndex].Cells["agentName"].Value);
+            renew.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["personId"].Value);
+            renew.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["subscriptionId"].Value);
+            renew.SubscriptionDetailId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["subscriptionDetailId"].Value);
+            renew.AgentName = Convert.ToString(dgvSubscriptionList.Rows[gridRowIndex].Cells["agentName"].Value);
             if (renew.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
+                dgvSubscriptionList.Rows[gridRowIndex].Selected = true;
             }
         }
 
         private void ctxmPayment_Click(object sender, EventArgs e)
         {
             frmPayment payment = new frmPayment();
-            payment.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["personId"].Value);
-            payment.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
-            payment.AgentName = Convert.ToString(dgvSubscriptionList.Rows[rowIndex].Cells["agentName"].Value);
+            payment.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["personId"].Value);
+            payment.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["subscriptionId"].Value);
+            payment.AgentName = Convert.ToString(dgvSubscriptionList.Rows[gridRowIndex].Cells["agentName"].Value);
             if (payment.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
+                dgvSubscriptionList.Rows[gridRowIndex].Selected = true;
             }
         }
 
         private void ctmxUpdateStatus_Click(object sender, EventArgs e)
         {
-            frmStatus status = new frmStatus ();
-            status.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[rowIndex].Cells["subscriptionId"].Value);
+            frmStatus status = new frmStatus();
+            status.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["subscriptionId"].Value);
             if (status.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
+                dgvSubscriptionList.Rows[gridRowIndex].Selected = true;
             }
         }
 
