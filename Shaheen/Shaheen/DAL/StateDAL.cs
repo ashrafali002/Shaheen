@@ -17,6 +17,10 @@ namespace Shaheen.DAL
             return context.States.OrderBy(o => o.stateName).ToList();
         }
 
+        public List<State> StateByCountryId(int countryId)
+        {
+            return context.States.Where(w => w.countryId == countryId).OrderBy(o => o.stateName).ToList();
+        }
         public List<StateCountry> StateCountryList()
         {
             var list = new List<StateCountry>();

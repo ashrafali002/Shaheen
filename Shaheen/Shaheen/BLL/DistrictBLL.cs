@@ -19,6 +19,11 @@ namespace Shaheen.BLL
             return list;
         }
 
+        public List<District> DistrictByStateId(int stateId)
+        {
+            return districtDal.DistrictByStateId(stateId);
+        }
+
         public List<DistrictState> DistrictStateList()
         {
             return districtDal.DistrictStateList();

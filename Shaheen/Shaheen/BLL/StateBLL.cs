@@ -19,6 +19,11 @@ namespace Shaheen.BLL
             return list;
         }
 
+        public List<State> StateByCountryId(int countryId)
+        {
+            return stateDal.StateByCountryId(countryId);
+        }
+
         public List<StateCountry> StateCountryList()
         {
             return stateDal.StateCountryList();

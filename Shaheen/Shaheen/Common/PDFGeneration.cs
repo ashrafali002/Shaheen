@@ -1,5 +1,6 @@
 ﻿using iTextSharp.text;
 using iTextSharp.text.pdf;
+using iTextSharp.text.pdf.draw;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -22,7 +23,7 @@ namespace Shaheen
                 const int pageCols = 3;
 
                 Document doc = new Document(PageSize.A4);
-                doc.SetMargins(pageMargin, pageMargin, pageMargin, pageMargin);
+                doc.SetMargins(15, 15, 10, 10);
                 var memoryStream = new MemoryStream();
 
                 var pdfWriter = PdfWriter.GetInstance(doc, new FileStream(filePath, FileMode.Create));
@@ -43,6 +44,19 @@ namespace Shaheen
                     cell.VerticalAlignment = Element.ALIGN_LEFT;
                     var contents = new Paragraph();
                     contents.Alignment = Element.ALIGN_LEFT;
+                    cell.PaddingRight = 5;
+
+                    Chunk glue = new Chunk(new VerticalPositionMark());
+                    Phrase ph1 = new Phrase();
+                    ph1.Add(new Chunk(Environment.NewLine));
+                    string subscriptionCode = Convert.ToString(dr["subscriptionCode"]);
+                    string expDate = Convert.ToDateTime(dr["subscriptionEndDate"]).ToShortDateString() + "\n";
+                    ph1.Add(new Chunk(subscriptionCode, new Font(baseFont, 10f)));
+                    ph1.Add(glue);
+                    ph1.Add(new Chunk(expDate, new Font(baseFont, 10f)));
+                    contents.Add(ph1);
+
+                    //contents.Add(new Chunk(Convert.ToString(dr["subscriptionCode"]) + "- Exp Date :" + Convert.ToDateTime(dr["subscriptionEndDate"]).ToShortDateString() + "\n", new Font(baseFont, 10f)));
                     contents.Add(new Chunk(Convert.ToString(dr["personName"]) + "\n", new Font(baseFont, 12f)));
                     contents.Add(new Chunk(Convert.ToString(dr["personAddress"]) + "\n", new Font(baseFont, 10f)));
                     if (!string.IsNullOrEmpty(Convert.ToString(dr["areaName"])))
@@ -66,7 +80,6 @@ namespace Shaheen
                     {
                         contents.Add(new Chunk(Convert.ToString(dr["stateName"]), new Font(baseFont, 10f)));
                     }
-                    contents.Add(new Chunk("\n Exp Date :" + Convert.ToDateTime(dr["subscriptionEndDate"]).ToShortDateString(), new Font(baseFont, 10f)));
 
                     cell.AddElement(contents);
                     table.AddCell(cell);

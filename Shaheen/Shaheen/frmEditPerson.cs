@@ -25,34 +25,6 @@ namespace Shaheen
 
         private void Dropdownlists()
         {
-            var areaBll = new AreaBLL();
-            var areaList = areaBll.AreaList();
-            areaList.Insert(0, new Area { areaId = 0, areaName = "---Select Area---", cityId = 0 });
-            cmbArea.DataSource = areaList;
-            cmbArea.DisplayMember = "areaName";
-            cmbArea.ValueMember = "areaId";
-
-            var cityBll = new CityBLL();
-            var cityList = cityBll.CityList();
-            cityList.Insert(0, new City { cityId = 0, cityName = "---Select City---", districtId = 0 });
-            cmbCity.DataSource = cityList;
-            cmbCity.DisplayMember = "cityName";
-            cmbCity.ValueMember = "cityId";
-
-            var districtBll = new DistrictBLL();
-            var districtList = districtBll.DistrictList();
-            districtList.Insert(0, new District { districtId = 0, districtName = "---Select District---", stateId = 0 });
-            cmbDistrict.DataSource = districtList;
-            cmbDistrict.DisplayMember = "districtName";
-            cmbDistrict.ValueMember = "districtId";
-
-            var stateBll = new StateBLL();
-            var stateList = stateBll.StateList();
-            stateList.Insert(0, new State { stateId = 0, stateName = "---Select State---", countryId = 0 });
-            cmbState.DataSource = stateList;
-            cmbState.DisplayMember = "stateName";
-            cmbState.ValueMember = "stateId";
-
             var countryBll = new CountryBLL();
             var countryList = countryBll.CountryList();
             countryList.Insert(0, new Country { countryId = 0, countryName = "---Select Country---" });
@@ -61,6 +33,45 @@ namespace Shaheen
             cmbCountry.ValueMember = "countryId";
         }
 
+        private void BindStateByCountryId(int countryId)
+        {
+            var stateBll = new StateBLL();
+            var stateList = stateBll.StateByCountryId(countryId);
+            stateList.Insert(0, new State { stateId = 0, stateName = "---Select State---", countryId = 0 });
+            cmbState.DataSource = stateList;
+            cmbState.DisplayMember = "stateName";
+            cmbState.ValueMember = "stateId";
+        }
+
+        private void BindDistrictByStateId(int stateId)
+        {
+            var districtBll = new DistrictBLL();
+            var districtList = districtBll.DistrictByStateId(stateId);
+            districtList.Insert(0, new District { districtId = 0, districtName = "---Select District---", stateId = 0 });
+            cmbDistrict.DataSource = districtList;
+            cmbDistrict.DisplayMember = "districtName";
+            cmbDistrict.ValueMember = "districtId";
+        }
+
+        private void BindCityByDistrictId(int districtId)
+        {
+            var cityBll = new CityBLL();
+            var cityList = cityBll.CityByDistrictId(districtId);
+            cityList.Insert(0, new City { cityId = 0, cityName = "---Select City---", districtId = 0 });
+            cmbCity.DataSource = cityList;
+            cmbCity.DisplayMember = "cityName";
+            cmbCity.ValueMember = "cityId";
+        }
+
+        private void BindAreaByCityId(int cityId)
+        {
+            var areaBll = new AreaBLL();
+            var areaList = areaBll.AreaByCityId(cityId);
+            areaList.Insert(0, new Area { areaId = 0, areaName = "---Select Area---", cityId = 0 });
+            cmbArea.DataSource = areaList;
+            cmbArea.DisplayMember = "areaName";
+            cmbArea.ValueMember = "areaId";
+        }
         private void btnClose_Click(object sender, EventArgs e)
         {
             this.DialogResult = DialogResult.Cancel;
@@ -73,9 +84,13 @@ namespace Shaheen
             txtName.Text = person.personName;
             txtAddress.Text = person.personAddress;
             cmbCountry.SelectedValue = person.countryId;
+            BindStateByCountryId(person.countryId);
             cmbState.SelectedValue = person.stateId;
+            BindDistrictByStateId(person.stateId);
             cmbDistrict.SelectedValue = person.districtId;
+            BindCityByDistrictId(person.districtId);
             cmbCity.SelectedValue = person.cityId;
+            BindAreaByCityId(person.cityId);
             cmbArea.SelectedValue = person.areaId;
             txtPIN.Text = person.pin;
             txtPhone.Text = person.phone;
@@ -175,6 +190,26 @@ namespace Shaheen
                 MessageBox.Show("Person details updated successfully.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
             }
+        }
+
+        private void cmbCountry_Leave(object sender, EventArgs e)
+        {
+            BindStateByCountryId(Convert.ToInt32(cmbCountry.SelectedValue));
+        }
+
+        private void cmbState_Leave(object sender, EventArgs e)
+        {
+            BindDistrictByStateId(Convert.ToInt32(cmbState.SelectedValue));
+        }
+
+        private void cmbDistrict_Leave(object sender, EventArgs e)
+        {
+            BindCityByDistrictId(Convert.ToInt32(cmbDistrict.SelectedValue));
+        }
+
+        private void cmbCity_Leave(object sender, EventArgs e)
+        {
+            BindAreaByCityId(Convert.ToInt32(cmbCity.SelectedValue));
         }
     }
 }

@@ -320,6 +320,7 @@
             this.cmbCity.Name = "cmbCity";
             this.cmbCity.Size = new System.Drawing.Size(200, 27);
             this.cmbCity.TabIndex = 16;
+            this.cmbCity.Leave += new System.EventHandler(this.cmbCity_Leave);
             // 
             // label7
             // 
@@ -342,6 +343,7 @@
             this.cmbDistrict.Name = "cmbDistrict";
             this.cmbDistrict.Size = new System.Drawing.Size(200, 27);
             this.cmbDistrict.TabIndex = 14;
+            this.cmbDistrict.Leave += new System.EventHandler(this.cmbDistrict_Leave);
             // 
             // label8
             // 
@@ -364,6 +366,7 @@
             this.cmbState.Name = "cmbState";
             this.cmbState.Size = new System.Drawing.Size(200, 27);
             this.cmbState.TabIndex = 12;
+            this.cmbState.Leave += new System.EventHandler(this.cmbState_Leave);
             // 
             // label6
             // 
@@ -386,6 +389,7 @@
             this.cmbCountry.Name = "cmbCountry";
             this.cmbCountry.Size = new System.Drawing.Size(200, 27);
             this.cmbCountry.TabIndex = 10;
+            this.cmbCountry.Leave += new System.EventHandler(this.cmbCountry_Leave);
             // 
             // label5
             // 

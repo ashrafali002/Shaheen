@@ -18,6 +18,11 @@ namespace Shaheen.DAL
             return context.Areas.OrderBy(o => o.areaName).ToList();
         }
 
+        public List<Area> AreaByCityId(int cityId)
+        {
+            return context.Areas.Where(w=>w.cityId == cityId).OrderBy(o => o.areaName).ToList();
+        }
+
         public List<AreaCity> AreaCityList()
         {
             var list = new List<AreaCity>();
@@ -68,5 +73,6 @@ namespace Shaheen.DAL
             context.Areas.Remove(c);
             context.SaveChanges();
         }
+
     }
 }

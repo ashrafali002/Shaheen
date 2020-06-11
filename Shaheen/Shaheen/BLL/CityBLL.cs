@@ -19,6 +19,11 @@ namespace Shaheen.BLL
             return list;
         }
 
+        public List<City> CityByDistrictId(int districtId)
+        {
+            return cityDal.CityByDistrictId(districtId);
+        }
+
         public List<CityDistrict> CityDistrictList()
         {
             return cityDal.CityDistrictList();

@@ -19,6 +19,11 @@ namespace Shaheen.BLL
             return list;
         }
 
+        public List<Area> AreaByCityId(int cityId)
+        {
+            return areaDal.AreaByCityId(cityId);
+        }
+
         public List<AreaCity> AreaCityList()
         {
             return areaDal.AreaCityList();

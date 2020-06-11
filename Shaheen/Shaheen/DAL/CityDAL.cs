@@ -17,6 +17,10 @@ namespace Shaheen.DAL
             return context.Cities.OrderBy(o => o.cityName).ToList();
         }
 
+        public List<City> CityByDistrictId(int districtId)
+        {
+            return context.Cities.Where(w => w.districtId == districtId).OrderBy(o => o.cityName).ToList();
+        }
         public List<CityDistrict> CityDistrictList()
         {
             var list = new List<CityDistrict>();
