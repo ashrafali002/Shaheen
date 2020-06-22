@@ -34,6 +34,8 @@ namespace Shaheen
                 DataRow[] drArray = loginBll.LoginTable(txtUsername.Text, txtPassword.Text);
                 if (drArray.Length > 0)
                 {
+                    GlobalVariables.userName = Convert.ToString(drArray[0]["UserName"]);
+                    GlobalVariables.userType = Convert.ToInt32(drArray[0]["Type"]);
                     this.DialogResult = DialogResult.OK;
                 }
                 else

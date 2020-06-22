@@ -26,7 +26,9 @@ namespace Shaheen
     {
         Paid = 1,
         Free = 2,
-        Complementary = 3
+        Donar = 3,
+        Exchange = 4,
+        Advertisement = 5
     }
     public enum SubscriptionStatus
     {
@@ -51,5 +53,11 @@ namespace Shaheen
             }
             return isValid;
         }
+    }
+
+    public class GlobalVariables
+    {
+        public static string userName { get; set; }
+        public static int userType { get; set; }
     }
 }
