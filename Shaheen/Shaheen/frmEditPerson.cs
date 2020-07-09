@@ -91,7 +91,10 @@ namespace Shaheen
             BindCityByDistrictId(person.districtId);
             cmbCity.SelectedValue = person.cityId;
             BindAreaByCityId(person.cityId);
-            cmbArea.SelectedValue = person.areaId;
+            if (person.areaId == null)
+                cmbArea.SelectedIndex = 0;
+            else
+                cmbArea.SelectedValue = person.areaId;
             txtPIN.Text = person.pin;
             txtPhone.Text = person.phone;
             txtMobile.Text = person.mobile;

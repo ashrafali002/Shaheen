@@ -88,20 +88,20 @@ namespace Shaheen.DAL
                         list.Add(new SubscriptionModel()
                         {
                             personId = Convert.ToInt32(dr["personId"]),
-                            personName = Convert.ToString(dr["personName"]),
-                            subscriptionId = Convert.ToInt32(dr["subscriptionId"]),
-                            subscriptionCode = Convert.ToString(dr["subscriptionCode"]),
-                            subscriptionDate = Convert.ToDateTime(dr["subscriptionDate"]),
-                            pendingAmount = Convert.ToDecimal(dr["pendingAmount"]),
-                            subscriptionDetailId = Convert.ToInt32(dr["subscriptionDetailId"]),
-                            subscriptionStartDate = Convert.ToDateTime(dr["subscriptionStartDate"]),
-                            subscriptionEndDate = Convert.ToDateTime(dr["subscriptionEndDate"]),
-                            AreaName = Convert.ToString(dr["areaName"]),
-                            cityName = Convert.ToString(dr["cityName"]),
-                            districtName = Convert.ToString(dr["districtName"]),
-                            stateName = Convert.ToString(dr["stateName"]),
-                            agentName = Convert.ToString(dr["agentName"]),
-                            status = Convert.ToInt32(dr["status"])
+                            personName = CommonFunctions.NullToString(dr["personName"]),
+                            subscriptionId = CommonFunctions.NullToInt(dr["subscriptionId"]),
+                            subscriptionCode = CommonFunctions.NullToString(dr["subscriptionCode"]),
+                            subscriptionDate = Convert.ToDateTime(CommonFunctions.NullToDateTime(dr["subscriptionDate"])),
+                            pendingAmount = CommonFunctions.NullToDecimal(dr["pendingAmount"]),
+                            subscriptionDetailId = CommonFunctions.NullToInt(dr["subscriptionDetailId"]),
+                            subscriptionStartDate = Convert.ToDateTime(CommonFunctions.NullToDateTime(dr["subscriptionStartDate"])),
+                            subscriptionEndDate = Convert.ToDateTime(CommonFunctions.NullToDateTime(dr["subscriptionEndDate"])),
+                            AreaName = CommonFunctions.NullToString(dr["areaName"]),
+                            cityName = CommonFunctions.NullToString(dr["cityName"]),
+                            districtName = CommonFunctions.NullToString(dr["districtName"]),
+                            stateName = CommonFunctions.NullToString(dr["stateName"]),
+                            agentName = CommonFunctions.NullToString(dr["agentName"]),
+                            status = CommonFunctions.NullToInt(dr["status"])
                         });
                     }
                 }

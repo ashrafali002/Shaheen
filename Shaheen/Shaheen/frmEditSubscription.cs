@@ -77,7 +77,8 @@ namespace Shaheen
             #endregion
 
             subscription = subscriptionBll.GetSubscriptionById(SubscriptionId);
-            dtpSubscriptionDate.Value = subscription.subscriptionDate;
+            if (subscription.subscriptionDate != null)
+                dtpSubscriptionDate.Value = subscription.subscriptionDate;
             lblCode.Text = subscription.subscriptionCode + " - " + personModel.personName;
             cmbAgent.SelectedValue = subscription.agentId;
             cmbSubscriptionType.SelectedItem = (SubscriptionType)subscription.subscriptionType;
@@ -150,7 +151,7 @@ namespace Shaheen
                 subscriptionDetail.note = txtNote.Text;
                 subscriptionDetailBll.SaveSubscriptionDetail(subscriptionDetail);
                 MessageBox.Show("Subscription details updated successfully.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK; 
+                this.DialogResult = DialogResult.OK;
             }
 
         }

@@ -16,10 +16,10 @@ namespace Shaheen.IshraqEntities
     {
         public int subscriptionId { get; set; }
         public string subscriptionCode { get; set; }
-        public int personId { get; set; }
-        public int agentId { get; set; }
-        public decimal pendingAmount { get; set; }
-        public System.DateTime subscriptionDate { get; set; }
+        public Nullable<int> personId { get; set; }
+        public Nullable<int> agentId { get; set; }
+        public Nullable<decimal> pendingAmount { get; set; }
+        public Nullable<System.DateTime> subscriptionDate { get; set; }
         public Nullable<int> status { get; set; }
         public Nullable<int> subscriptionType { get; set; }
     }

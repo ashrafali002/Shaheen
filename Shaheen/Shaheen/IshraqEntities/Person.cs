@@ -17,11 +17,11 @@ namespace Shaheen.IshraqEntities
         public int personId { get; set; }
         public string personName { get; set; }
         public string personAddress { get; set; }
-        public int areaId { get; set; }
-        public int cityId { get; set; }
-        public int districtId { get; set; }
-        public int stateId { get; set; }
-        public int countryId { get; set; }
+        public Nullable<int> areaId { get; set; }
+        public Nullable<int> cityId { get; set; }
+        public Nullable<int> districtId { get; set; }
+        public Nullable<int> stateId { get; set; }
+        public Nullable<int> countryId { get; set; }
         public string pin { get; set; }
         public string phone { get; set; }
         public string mobile { get; set; }

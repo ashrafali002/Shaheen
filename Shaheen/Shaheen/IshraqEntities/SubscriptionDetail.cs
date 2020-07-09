@@ -17,9 +17,9 @@ namespace Shaheen.IshraqEntities
         public int subscriptionDetailId { get; set; }
         public int subscriptionId { get; set; }
         public string subscriptionDuration { get; set; }
-        public decimal subscriptionAmount { get; set; }
-        public System.DateTime subscriptionStartDate { get; set; }
-        public System.DateTime subscriptionEndDate { get; set; }
+        public Nullable<decimal> subscriptionAmount { get; set; }
+        public Nullable<System.DateTime> subscriptionStartDate { get; set; }
+        public Nullable<System.DateTime> subscriptionEndDate { get; set; }
         public string note { get; set; }
         public Nullable<bool> status { get; set; }
     }

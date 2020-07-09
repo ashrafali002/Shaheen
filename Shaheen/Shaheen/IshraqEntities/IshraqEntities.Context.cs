@@ -33,7 +33,7 @@ namespace Shaheen.IshraqEntities
         public virtual DbSet<Payment> Payments { get; set; }
         public virtual DbSet<Person> People { get; set; }
         public virtual DbSet<State> States { get; set; }
-        public virtual DbSet<SubscriptionDetail> SubscriptionDetails { get; set; }
         public virtual DbSet<Subscription> Subscriptions { get; set; }
+        public virtual DbSet<SubscriptionDetail> SubscriptionDetails { get; set; }
     }
 }

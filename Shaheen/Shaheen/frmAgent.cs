@@ -138,34 +138,10 @@ namespace Shaheen
                 MessageBox.Show("City is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbCity.Focus();
                 isRes = false;
-            }
-            else if (cmbArea.SelectedIndex <= 0)
-            {
-                MessageBox.Show("Area is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                cmbArea.Focus();
-                isRes = false;
-            }
-            else if (string.IsNullOrEmpty(txtPIN.Text))
-            {
-                MessageBox.Show("PIN is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtPIN.Focus();
-                isRes = false;
-            }
-            else if (string.IsNullOrEmpty(txtMobile.Text))
-            {
-                MessageBox.Show("Mobile is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtMobile.Focus();
-                isRes = false;
-            }
-            else if (!CommonFunctions.checkEmail(txtEmail.Text))
+            }            
+            else if (!string.IsNullOrEmpty(txtEmail.Text) && !CommonFunctions.checkEmail(txtEmail.Text))
             {
                 MessageBox.Show("Invalid email format.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtEmail.Focus();
-                isRes = false;
-            }
-            else if (string.IsNullOrEmpty(txtEmail.Text))
-            {
-                MessageBox.Show("Email is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtEmail.Focus();
                 isRes = false;
             }

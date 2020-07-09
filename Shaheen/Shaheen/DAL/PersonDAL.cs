@@ -65,22 +65,22 @@ namespace Shaheen.DAL
                     list.Add(new PersonModel()
                     {
                         personId = Convert.ToInt32(dr["personId"]),
-                        personName = Convert.ToString(dr["personName"]),
-                        personAddress = Convert.ToString(dr["personAddress"]),
-                        areaId = Convert.ToInt32(dr["areaId"]),
-                        areaName = Convert.ToString(dr["areaName"]),
-                        cityId = Convert.ToInt32(dr["cityId"]),
-                        cityName = Convert.ToString(dr["cityName"]),
-                        districtId = Convert.ToInt32(dr["districtId"]),
-                        districtName = Convert.ToString(dr["districtName"]),
-                        stateId = Convert.ToInt32(dr["stateId"]),
-                        stateName = Convert.ToString(dr["stateName"]),
-                        countryId = Convert.ToInt32(dr["countryId"]),
-                        countryName = Convert.ToString(dr["countryName"]),
-                        pin = Convert.ToString(dr["pin"]),
-                        phone = Convert.ToString(dr["phone"]),
-                        mobile = Convert.ToString(dr["mobile"]),
-                        email = Convert.ToString(dr["email"])
+                        personName = CommonFunctions.NullToString(dr["personName"]),
+                        personAddress = CommonFunctions.NullToString(dr["personAddress"]),
+                        areaId = CommonFunctions.NullToInt(dr["areaId"]),
+                        areaName = CommonFunctions.NullToString(dr["areaName"]),
+                        cityId = CommonFunctions.NullToInt(dr["cityId"]),
+                        cityName = CommonFunctions.NullToString(dr["cityName"]),
+                        districtId = CommonFunctions.NullToInt(dr["districtId"]),
+                        districtName = CommonFunctions.NullToString(dr["districtName"]),
+                        stateId = CommonFunctions.NullToInt(dr["stateId"]),
+                        stateName = CommonFunctions.NullToString(dr["stateName"]),
+                        countryId = CommonFunctions.NullToInt(dr["countryId"]),
+                        countryName = CommonFunctions.NullToString(dr["countryName"]),
+                        pin = CommonFunctions.NullToString(dr["pin"]),
+                        phone = CommonFunctions.NullToString(dr["phone"]),
+                        mobile = CommonFunctions.NullToString(dr["mobile"]),
+                        email = CommonFunctions.NullToString(dr["email"])
                     });
                 }
             }

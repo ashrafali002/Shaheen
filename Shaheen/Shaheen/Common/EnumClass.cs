@@ -53,6 +53,38 @@ namespace Shaheen
             }
             return isValid;
         }
+
+        public static string NullToString(object obj)
+        {
+            if (obj == System.DBNull.Value)
+                return string.Empty;
+            else
+                return Convert.ToString(obj);            
+        }
+
+        public static int NullToInt(object obj)
+        {
+            if (obj == System.DBNull.Value)
+                return 0;
+            else
+                return Convert.ToInt32(obj);
+        }
+
+        public static decimal NullToDecimal(object obj)
+        {
+            if (obj == System.DBNull.Value)
+                return 0;
+            else
+                return Convert.ToDecimal(obj);
+        }
+
+        public static DateTime? NullToDateTime(object obj)
+        {
+            if (obj == System.DBNull.Value)
+                return null;
+            else
+                return Convert.ToDateTime(obj);
+        }
     }
 
     public class GlobalVariables
@@ -60,4 +92,6 @@ namespace Shaheen
         public static string userName { get; set; }
         public static int userType { get; set; }
     }
+
+    
 }
