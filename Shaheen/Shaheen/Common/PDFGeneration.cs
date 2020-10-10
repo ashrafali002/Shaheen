@@ -12,13 +12,13 @@ namespace Shaheen
         public static bool GenerateAddressLabelPDF(string filePath, DataTable dt)
         {
             bool isGenerated = false;
+            Document doc = new Document(PageSize.A4);
             try
             {
                 const int pageMargin = 15;
                 const int pageRows = 8;
                 const int pageCols = 3;
 
-                Document doc = new Document(PageSize.A4);
                 doc.SetMargins(15, 15, 10, 10);
                 var memoryStream = new MemoryStream();
 
@@ -29,8 +29,9 @@ namespace Shaheen
                 table.WidthPercentage = 100f;
                 table.DefaultCell.Border = 0;
 
-                var baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, false);
-                //var baseFont = BaseFont.CreateFont("C:\\Windows\\Fonts\\Rasa-Regular.ttf", BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
+                //var baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, true);
+                //var baseFont = BaseFont.CreateFont("C:\\Windows\\Fonts\\Rasa-Regular.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                var baseFont = BaseFont.CreateFont("C:\\Users\\Ashrafali\\AppData\\Local\\Microsoft\\Windows\\Fonts\\ARIALUNI.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
 
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -83,13 +84,13 @@ namespace Shaheen
                 table.CompleteRow();
                 doc.Add(table);
 
-                doc.Close();
                 isGenerated = true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 isGenerated = false;
             }
+            doc.Close();
             return isGenerated;
         }
 
@@ -117,8 +118,9 @@ namespace Shaheen
                 tableLayout.WidthPercentage = 90;       //Set the PDF File witdh percentage
 
                 //Add Title to the PDF file at the top
-                tableLayout.AddCell(new PdfPCell(new Phrase("Agent-wise Report (Shaheen Weekly)", new Font(Font.FontFamily.HELVETICA, 13, 1, new iTextSharp.text.BaseColor(153, 51, 0)))) { Colspan = 6, Border = 0, PaddingTop = 5, PaddingBottom = 5, HorizontalAlignment = Element.ALIGN_CENTER });
-                tableLayout.AddCell(new PdfPCell(new Phrase("Agent Name : " + dt.Rows[0]["agentName"] + "", new Font(Font.FontFamily.HELVETICA, 13, 1, new iTextSharp.text.BaseColor(153, 51, 0)))) { Colspan = 6, Border = 0, PaddingTop = 5, PaddingBottom = 5, HorizontalAlignment = Element.ALIGN_CENTER });
+                var baseFont = BaseFont.CreateFont("C:\\Users\\Ashrafali\\AppData\\Local\\Microsoft\\Windows\\Fonts\\ARIALUNI.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                tableLayout.AddCell(new PdfPCell(new Phrase("Agent-wise Report (Shaheen Weekly)", new Font(baseFont, 13, 1, new iTextSharp.text.BaseColor(153, 51, 0)))) { Colspan = 6, Border = 0, PaddingTop = 5, PaddingBottom = 5, HorizontalAlignment = Element.ALIGN_CENTER });
+                tableLayout.AddCell(new PdfPCell(new Phrase("Agent Name : " + dt.Rows[0]["agentName"] + "", new Font(baseFont, 13, 1, new iTextSharp.text.BaseColor(153, 51, 0)))) { Colspan = 6, Border = 0, PaddingTop = 5, PaddingBottom = 5, HorizontalAlignment = Element.ALIGN_CENTER });
 
                 //Add header
                 AddCellToHeader(tableLayout, "Code");
@@ -152,13 +154,15 @@ namespace Shaheen
         // Method to add single cell to the header
         private static void AddCellToHeader(PdfPTable tableLayout, string cellText)
         {
-            tableLayout.AddCell(new PdfPCell(new Phrase(cellText, new Font(Font.FontFamily.HELVETICA, 8, 1, iTextSharp.text.BaseColor.WHITE))) { HorizontalAlignment = Element.ALIGN_CENTER, Padding = 5, BackgroundColor = new iTextSharp.text.BaseColor(0, 51, 102) });
+            var baseFont = BaseFont.CreateFont("C:\\Users\\Ashrafali\\AppData\\Local\\Microsoft\\Windows\\Fonts\\ARIALUNI.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+            tableLayout.AddCell(new PdfPCell(new Phrase(cellText, new Font(baseFont, 8, 1, iTextSharp.text.BaseColor.WHITE))) { HorizontalAlignment = Element.ALIGN_CENTER, Padding = 5, BackgroundColor = new iTextSharp.text.BaseColor(0, 51, 102) });
         }
 
         // Method to add single cell to the body
         private static void AddCellToBody(PdfPTable tableLayout, string cellText, int alignment)
         {
-            tableLayout.AddCell(new PdfPCell(new Phrase(cellText, new Font(Font.FontFamily.HELVETICA, 8, 1, iTextSharp.text.BaseColor.BLACK))) { HorizontalAlignment = alignment, Padding = 5, BackgroundColor = iTextSharp.text.BaseColor.WHITE });
+            var baseFont = BaseFont.CreateFont("C:\\Users\\Ashrafali\\AppData\\Local\\Microsoft\\Windows\\Fonts\\ARIALUNI.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+            tableLayout.AddCell(new PdfPCell(new Phrase(cellText, new Font(baseFont, 8, 1, iTextSharp.text.BaseColor.BLACK))) { HorizontalAlignment = alignment, Padding = 5, BackgroundColor = iTextSharp.text.BaseColor.WHITE });
         }
     }
 }

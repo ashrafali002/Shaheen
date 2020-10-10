@@ -131,6 +131,12 @@
     <Compile Include="DAL\SubscriptionDAL.cs" />
     <Compile Include="DAL\SubscriptionDetailDAL.cs" />
     <Compile Include="Common\EnumClass.cs" />
+    <Compile Include="frmAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdmin.Designer.cs">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAgent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -313,6 +319,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdmin.resx">
+      <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAgent.resx">
       <DependentUpon>frmAgent.cs</DependentUpon>

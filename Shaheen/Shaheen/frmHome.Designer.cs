@@ -185,7 +185,6 @@
             this.lblActiveSubscription.Name = "lblActiveSubscription";
             this.lblActiveSubscription.Size = new System.Drawing.Size(188, 77);
             this.lblActiveSubscription.TabIndex = 1;
-            this.lblActiveSubscription.Text = "10";
             this.lblActiveSubscription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -220,7 +219,6 @@
             this.lblContinueSubscription.Name = "lblContinueSubscription";
             this.lblContinueSubscription.Size = new System.Drawing.Size(188, 77);
             this.lblContinueSubscription.TabIndex = 1;
-            this.lblContinueSubscription.Text = "10";
             this.lblContinueSubscription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
@@ -255,7 +253,6 @@
             this.lblClosedSubscription.Name = "lblClosedSubscription";
             this.lblClosedSubscription.Size = new System.Drawing.Size(188, 77);
             this.lblClosedSubscription.TabIndex = 1;
-            this.lblClosedSubscription.Text = "10";
             this.lblClosedSubscription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel17

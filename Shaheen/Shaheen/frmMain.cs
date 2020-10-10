@@ -29,6 +29,9 @@ namespace Shaheen
         public frmPaymentList paymentList = null;
         public frmCustomReport customReport = null;
         public frmHome home = null;
+        public frmAdmin admin = null;
+
+
 
         private bool CheckOpened(string name)
         {
@@ -60,6 +63,10 @@ namespace Shaheen
         {
             ActiveButton(btnHome);
             LoadHomePage();
+            if (GlobalVariables.userType != 1)
+            {
+                btnAdmin.Visible = false;
+            }
         }
 
         private void LoadHomePage()
@@ -338,6 +345,23 @@ namespace Shaheen
                 iconButton.ForeColor = Color.Gainsboro;
                 iconButton.IconColor = Color.Gainsboro;
             }
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            ActiveButton(sender);
+            CloseAllOpenForm();
+            admin = new frmAdmin() { TopLevel = false };
+            admin.Location = new Point()
+            {
+                X = pnlForm.Width / 2 - admin.Width / 2,
+                Y = pnlForm.Height / 2 - admin.Height / 2
+            };
+            //subscriptionList.Location = new Point(0, 0);
+            this.pnlForm.Controls.Add(admin);
+            admin.BringToFront();
+            admin.Show();
+            admin.Focus();
         }
     }
 }

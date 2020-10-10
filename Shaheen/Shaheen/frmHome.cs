@@ -23,7 +23,7 @@ namespace Shaheen
         {
             lblActiveSubscription.Text = string.Empty;
             BindAgentWiseStatusCountGrid();
-            GetStatusWiseCount();            
+            GetStatusWiseCount();
         }
         public void BindAgentWiseStatusCountGrid()
         {
@@ -58,15 +58,27 @@ namespace Shaheen
                         lblActiveSubscription.Text = Convert.ToString(dr["totalCount"]);
                         //lblActiveSubscription.Text = "99999";
                     }
+                    else
+                    {
+                        lblActiveSubscription.Text = "0";
+                    }
                     if (Convert.ToInt32(dr["status"]) == 2)
                     {
                         lblClosedSubscription.Text = Convert.ToString(dr["totalCount"]);
                         //lblClosedSubscription.Text = "99999";
                     }
+                    else
+                    {
+                        lblClosedSubscription.Text = "0";
+                    }
                     if (Convert.ToInt32(dr["status"]) == 3)
                     {
                         lblContinueSubscription.Text = Convert.ToString(dr["totalCount"]);
                         //lblContinueSubscription.Text = "99999";
+                    }
+                    else
+                    {
+                        lblContinueSubscription.Text = "0";
                     }
                 }
             }
