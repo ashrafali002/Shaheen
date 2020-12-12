@@ -1,4 +1,4 @@
-﻿using Shaheen.IshraqEntities;
+﻿using Shaheen.IshtiraqEntities;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,15 +6,15 @@ namespace Shaheen.DAL
 {
     public class PaymentDAL : BaseDAL
     {
-        protected IshraqContext context;
+        protected IshtiraqContext context;
         public PaymentDAL()
         {
-            context = new IshraqContext();
+            context = new IshtiraqContext();
         }
 
         public List<Payment> GetPaymentBySubscriptionId(int subscriptionId)
         {
-            context = new IshraqContext();
+            context = new IshtiraqContext();
             return context.Payments.Where(w => w.subscriptionId == subscriptionId).OrderByDescending(o => o.paymentId).ToList();
         }
 

@@ -46,13 +46,12 @@ export class DashboardComponent implements OnInit {
   constructor() { }
 
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+  displayedColumns: string[] = ['code', 'name', 'area', 'city', 'state', 'mobile', 'agent', 'endDate', 'actions'];
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
-  }
-
-  displayedColumns: string[] = ['code', 'name', 'area', 'city', 'state', 'mobile', 'agent', 'endDate', 'actions'];
-  dataSource = new MatTableDataSource(ELEMENT_DATA);
+  }  
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

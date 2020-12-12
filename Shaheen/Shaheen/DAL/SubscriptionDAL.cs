@@ -1,4 +1,4 @@
-﻿using Shaheen.IshraqEntities;
+﻿using Shaheen.IshtiraqEntities;
 using Shaheen.Models;
 using System;
 using System.Collections.Generic;
@@ -11,10 +11,10 @@ namespace Shaheen.DAL
 {
     public class SubscriptionDAL : BaseDAL
     {
-        private readonly IshraqContext context;
+        private readonly IshtiraqContext context;
         public SubscriptionDAL()
         {
-            context = new IshraqContext();
+            context = new IshtiraqContext();
         }
         public SubscriptionModel GetSubscriptionWholeByCode(string code)
         {

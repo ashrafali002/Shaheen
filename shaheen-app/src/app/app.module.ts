@@ -38,7 +38,7 @@ import { AreaDialogComponent } from './area-dialog/area-dialog.component';
     CityComponent,
     CityDialogComponent,
     AreaComponent,
-    AreaDialogComponent
+    AreaDialogComponent,
   ],
   imports: [
     BrowserModule,

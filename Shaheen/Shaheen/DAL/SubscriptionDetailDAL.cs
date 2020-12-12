@@ -1,4 +1,4 @@
-﻿using Shaheen.IshraqEntities;
+﻿using Shaheen.IshtiraqEntities;
 using System.Data.Entity;
 using System.Linq;
 
@@ -6,10 +6,10 @@ namespace Shaheen.DAL
 {
     public class SubscriptionDetailDAL : BaseDAL
     {
-        protected IshraqContext context;
+        protected IshtiraqContext context;
         public SubscriptionDetailDAL()
         {
-            context = new IshraqContext();
+            context = new IshtiraqContext();
         }
         public SubscriptionDetail GetSubscriptionDetailById(int Id)
         {

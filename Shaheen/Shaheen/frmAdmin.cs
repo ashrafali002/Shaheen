@@ -21,8 +21,11 @@ namespace Shaheen
 
         private void btnClearDatabase_Click(object sender, EventArgs e)
         {
-            ClearDatabase();
-            ResetIds();
+            if (MessageBox.Show(MessageText.ConfirmDelete, MessageText.MessageBoxCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                ClearDatabase();
+                ResetIds();
+            }           
         }
 
         private void ClearDatabase()
@@ -143,7 +146,7 @@ namespace Shaheen
                 int res = cmd.ExecuteNonQuery();
             }
             //2-State
-            str = new StringBuilder();            
+            str = new StringBuilder();
             str.Append("ALTER TABLE State ALTER COLUMN stateId IDENTITY (1,1);");
             using (SqlCeConnection con = new SqlCeConnection(ConnectionString))
             {
@@ -163,7 +166,7 @@ namespace Shaheen
                 int res = cmd.ExecuteNonQuery();
             }
             //4-City
-            str = new StringBuilder();            
+            str = new StringBuilder();
             str.Append("ALTER TABLE City ALTER COLUMN cityId IDENTITY (1,1);");
             using (SqlCeConnection con = new SqlCeConnection(ConnectionString))
             {
@@ -213,7 +216,7 @@ namespace Shaheen
                 int res = cmd.ExecuteNonQuery();
             }
             //9-Subscription
-            str = new StringBuilder();            
+            str = new StringBuilder();
             str.Append("ALTER TABLE Subscription ALTER COLUMN subscriptionId IDENTITY (1,1);");
             using (SqlCeConnection con = new SqlCeConnection(ConnectionString))
             {
@@ -223,7 +226,7 @@ namespace Shaheen
                 int res = cmd.ExecuteNonQuery();
             }
             //10-Person
-            str = new StringBuilder();            
+            str = new StringBuilder();
             str.Append("ALTER TABLE Person ALTER COLUMN personId IDENTITY (1,1);");
             using (SqlCeConnection con = new SqlCeConnection(ConnectionString))
             {
@@ -232,6 +235,11 @@ namespace Shaheen
                 cmd.CommandType = CommandType.Text;
                 int res = cmd.ExecuteNonQuery();
             }
+        }
+
+        private void btnPrepareDatabase_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -13,6 +13,7 @@ namespace Shaheen
         public const string ConfirmEdit = "Are you sure want to edit the record?";
         public const string ConfirmDelete = "Are you sure want to delete the record?";
         public const string SaveMessage = "Record saved successfully";
+        public const string ClearDatabase = "Are you sure want clear Database, Data will not be ";
     }
     public enum PaymentType
     {

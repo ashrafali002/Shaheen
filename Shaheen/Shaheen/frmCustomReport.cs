@@ -1,6 +1,6 @@
 ﻿using Microsoft.SqlServer.Server;
 using Shaheen.BLL;
-using Shaheen.IshraqEntities;
+using Shaheen.IshtiraqEntities;
 using System;
 using System.Data;
 using System.Drawing;

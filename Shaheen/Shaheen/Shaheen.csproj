@@ -257,50 +257,50 @@
     <Compile Include="frmSubscriptionList.Designer.cs">
       <DependentUpon>frmSubscriptionList.cs</DependentUpon>
     </Compile>
-    <Compile Include="IshraqEntities\Agent.cs">
-      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    <Compile Include="IshtiraqEntities\Agent.cs">
+      <DependentUpon>IshtiraqEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="IshraqEntities\Area.cs">
-      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    <Compile Include="IshtiraqEntities\Area.cs">
+      <DependentUpon>IshtiraqEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="IshraqEntities\City.cs">
-      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    <Compile Include="IshtiraqEntities\City.cs">
+      <DependentUpon>IshtiraqEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="IshraqEntities\Country.cs">
-      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    <Compile Include="IshtiraqEntities\Country.cs">
+      <DependentUpon>IshtiraqEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="IshraqEntities\District.cs">
-      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    <Compile Include="IshtiraqEntities\District.cs">
+      <DependentUpon>IshtiraqEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="IshraqEntities\IshraqEntities.Context.cs">
+    <Compile Include="IshtiraqEntities\IshtiraqEntities.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IshraqEntities.Context.tt</DependentUpon>
+      <DependentUpon>IshtiraqEntities.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="IshraqEntities\IshraqEntities.cs">
+    <Compile Include="IshtiraqEntities\IshtiraqEntities.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IshraqEntities.tt</DependentUpon>
+      <DependentUpon>IshtiraqEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="IshraqEntities\IshraqEntities.Designer.cs">
+    <Compile Include="IshtiraqEntities\IshtiraqEntities.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>IshraqEntities.edmx</DependentUpon>
+      <DependentUpon>IshtiraqEntities.edmx</DependentUpon>
     </Compile>
-    <Compile Include="IshraqEntities\Payment.cs">
-      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    <Compile Include="IshtiraqEntities\Payment.cs">
+      <DependentUpon>IshtiraqEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="IshraqEntities\Person.cs">
-      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    <Compile Include="IshtiraqEntities\Person.cs">
+      <DependentUpon>IshtiraqEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="IshraqEntities\State.cs">
-      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    <Compile Include="IshtiraqEntities\State.cs">
+      <DependentUpon>IshtiraqEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="IshraqEntities\Subscription.cs">
-      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    <Compile Include="IshtiraqEntities\Subscription.cs">
+      <DependentUpon>IshtiraqEntities.tt</DependentUpon>
     </Compile>
-    <Compile Include="IshraqEntities\SubscriptionDetail.cs">
-      <DependentUpon>IshraqEntities.tt</DependentUpon>
+    <Compile Include="IshtiraqEntities\SubscriptionDetail.cs">
+      <DependentUpon>IshtiraqEntities.tt</DependentUpon>
     </Compile>
     <Compile Include="MDIMain.cs">
       <SubType>Form</SubType>
@@ -396,12 +396,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EntityDeploy Include="IshraqEntities\IshraqEntities.edmx">
+    <EntityDeploy Include="IshtiraqEntities\IshtiraqEntities.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>IshraqEntities.Designer.cs</LastGenOutput>
+      <LastGenOutput>IshtiraqEntities.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="IshraqEntities\IshraqEntities.edmx.diagram">
-      <DependentUpon>IshraqEntities.edmx</DependentUpon>
+    <None Include="IshtiraqEntities\IshtiraqEntities.edmx.diagram">
+      <DependentUpon>IshtiraqEntities.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -437,15 +437,15 @@
     <Content Include="images\delete.png" />
     <Content Include="images\logo-shaheen.png" />
     <Content Include="images\shaheen-icon.ico" />
-    <Content Include="IshraqEntities\IshraqEntities.Context.tt">
+    <Content Include="IshtiraqEntities\IshtiraqEntities.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IshraqEntities.edmx</DependentUpon>
-      <LastGenOutput>IshraqEntities.Context.cs</LastGenOutput>
+      <DependentUpon>IshtiraqEntities.edmx</DependentUpon>
+      <LastGenOutput>IshtiraqEntities.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="IshraqEntities\IshraqEntities.tt">
+    <Content Include="IshtiraqEntities\IshtiraqEntities.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>IshraqEntities.edmx</DependentUpon>
-      <LastGenOutput>IshraqEntities.cs</LastGenOutput>
+      <DependentUpon>IshtiraqEntities.edmx</DependentUpon>
+      <LastGenOutput>IshtiraqEntities.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,4 @@
-﻿using Shaheen.IshraqEntities;
+﻿using Shaheen.IshtiraqEntities;
 using Shaheen.Models;
 using System.Collections.Generic;
 using System.Configuration;
@@ -8,10 +8,10 @@ namespace Shaheen.DAL
 {
     public class AreaDAL : BaseDAL
     {
-        protected IshraqContext context;
+        protected IshtiraqContext context;
         public AreaDAL()
         {
-            context = new IshraqContext();
+            context = new IshtiraqContext();
         }
         public List<Area> AreaList()
         {

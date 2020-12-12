@@ -1,4 +1,4 @@
-﻿using Shaheen.IshraqEntities;
+﻿using Shaheen.IshtiraqEntities;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -6,10 +6,10 @@ namespace Shaheen.DAL
 {
     public class CountryDAL : BaseDAL
     {
-        protected IshraqContext context;
+        protected IshtiraqContext context;
         public CountryDAL()
         {
-            context = new IshraqContext();
+            context = new IshtiraqContext();
         }
         public List<Country> CountryList()
         {

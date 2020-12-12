@@ -94,12 +94,6 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FE81ACC8F948C5D19C3849C715F3FCF3"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_15C1622C4F5146208CD0E655FA36BD2C"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -137,6 +131,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_C89BF44DD8D241960774A5E06C20D279"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FE81ACC8F948C5D19C3849C715F3FCF3"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -568,9 +568,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Shaheen"
+        "ProductName" = "8:Ishtiraq-w"
         "ProductCode" = "8:{7B5E7CF5-65B4-4B47-BF32-4AD43F7D600C}"
-        "PackageCode" = "8:{9877200F-4CCE-4D89-96DF-045B4CE4F469}"
+        "PackageCode" = "8:{A4E0A024-DB27-415E-8518-C3FECE8B2C4E}"
         "UpgradeCode" = "8:{9345BBF8-054D-4C87-8DCC-0D48059E0C43}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -578,12 +578,12 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Shaheen Weekly"
+        "Manufacturer" = "8:GeneralSoftwares"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
-        "Title" = "8:Shaheen"
+        "Title" = "8:Shaheen Weekly"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Shaheen Weekly"
+        "ARPCONTACT" = "8:GeneralSoftwares"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"

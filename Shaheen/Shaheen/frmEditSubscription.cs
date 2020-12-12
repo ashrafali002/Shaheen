@@ -1,5 +1,5 @@
 ﻿using Shaheen.BLL;
-using Shaheen.IshraqEntities;
+using Shaheen.IshtiraqEntities;
 using Shaheen.Models;
 using System;
 using System.Windows.Forms;
