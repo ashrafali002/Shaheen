@@ -21,11 +21,12 @@ namespace Shaheen
 
         private void btnClearDatabase_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show(MessageText.ConfirmDelete, MessageText.MessageBoxCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show(MessageText.ResetDatabase, MessageText.MessageBoxCaption, MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 ClearDatabase();
                 ResetIds();
-            }           
+                MessageBox.Show(MessageText.ResetDBSuccessfully, MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void ClearDatabase()
