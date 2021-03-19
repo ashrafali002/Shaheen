@@ -173,16 +173,16 @@ namespace Shaheen
         private bool isValid()
         {
             bool isRes = true;
-            if (string.IsNullOrEmpty(txtName.Text))
-            {
-                MessageBox.Show("Name is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtName.Focus();
-                isRes = false;
-            }
-            else if (string.IsNullOrEmpty(txtCode.Text))
+            if (string.IsNullOrEmpty(txtCode.Text))
             {
                 MessageBox.Show("Customer Code is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtCode.Focus();
+                isRes = false;
+            }
+            else if (string.IsNullOrEmpty(txtName.Text))
+            {
+                MessageBox.Show("Name is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtName.Focus();
                 isRes = false;
             }
             else if (subscriptionBll.IsDuplicateSubscriptionCode(0, txtCode.Text))
@@ -449,7 +449,7 @@ namespace Shaheen
                 dtpEndDate.Value = dtpStartDate.Value.AddYears(Convert.ToInt32(txtDuration.Text)).AddDays(-1);
             }
         }
-      
+
         private void cmbCountry_Leave(object sender, EventArgs e)
         {
             BindStateByCountryId(Convert.ToInt32(cmbCountry.SelectedValue));

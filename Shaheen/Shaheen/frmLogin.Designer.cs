@@ -180,9 +180,8 @@
             this.lblError.Location = new System.Drawing.Point(42, 256);
             this.lblError.Margin = new System.Windows.Forms.Padding(0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(13, 15);
+            this.lblError.Size = new System.Drawing.Size(0, 15);
             this.lblError.TabIndex = 20;
-            this.lblError.Text = "*";
             // 
             // iconUserName
             // 

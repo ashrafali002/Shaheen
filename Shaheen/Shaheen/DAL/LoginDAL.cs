@@ -29,7 +29,7 @@ namespace Shaheen.DAL
 
             DataRow dr3 = dt.NewRow();
             dr3["Username"] = "sadmin";
-            dr3["Password"] = "Shaheen_002";
+            dr3["Password"] = "Shaheen#123";
             dr3["Type"] = 1;
             dt.Rows.Add(dr3);
 
