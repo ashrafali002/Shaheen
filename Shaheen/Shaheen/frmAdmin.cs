@@ -242,5 +242,14 @@ namespace Shaheen
         {
 
         }
+
+        private void frmAdmin_Load(object sender, EventArgs e)
+        {
+            string test = "n{ýkt Úkkuzkf Mk{Þ Ãknu÷kt MkkEfeykxÙe (";
+            byte[] utf8Bytes = Encoding.UTF8.GetBytes(test);
+
+            String str1 = Encoding.Unicode.GetString(utf8Bytes);
+            String str2 = Encoding.UTF8.GetString(utf8Bytes);
+        }
     }
 }

@@ -10,6 +10,16 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MasterComponent } from './master/master.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { AreaComponent } from './area/area.component';
+import { AreaDialogComponent } from './area-dialog/area-dialog.component';
+import { CityComponent } from './city/city.component';
+import { CityDialogComponent } from './city-dialog/city-dialog.component';
+import { CountryComponent } from './country/country.component';
+import { CountryDialogComponent } from './country-dialog/country-dialog.component';
+import { DistrictComponent } from './district/district.component';
+import { DistrictDialogComponent } from './district-dialog/district-dialog.component';
+import { StateDialogComponent } from './state-dialog/state-dialog.component';
+import { StateComponent } from './state/state.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +27,17 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     LoginComponent,
     HomeComponent,
     DashboardComponent,
-    MasterComponent
+    MasterComponent,
+    AreaComponent,
+    AreaDialogComponent,
+    CityComponent,
+    CityDialogComponent,
+    CountryComponent,
+    CountryDialogComponent,
+    DistrictComponent,
+    DistrictDialogComponent,
+    StateDialogComponent,
+    StateComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +46,13 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     MaterialModule,
     ReactiveFormsModule,
     FormsModule
+  ],
+  entryComponents: [
+    CountryDialogComponent,
+    StateDialogComponent,
+    DistrictDialogComponent,
+    CityDialogComponent,
+    AreaDialogComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

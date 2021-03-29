@@ -28,8 +28,8 @@ namespace Shaheen.DAL
             dt.Rows.Add(dr2);
 
             DataRow dr3 = dt.NewRow();
-            dr3["Username"] = "sadmin";
-            dr3["Password"] = "Shaheen#123";
+            dr3["Username"] = "admin";
+            dr3["Password"] = "admin";
             dr3["Type"] = 1;
             dt.Rows.Add(dr3);
 
