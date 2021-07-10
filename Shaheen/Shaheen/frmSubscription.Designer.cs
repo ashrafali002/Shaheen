@@ -169,12 +169,12 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.SkyBlue;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(12, 368);
+            this.txtEmail.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(12, 372);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtEmail.MaxLength = 300;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(366, 20);
+            this.txtEmail.Size = new System.Drawing.Size(366, 16);
             this.txtEmail.TabIndex = 29;
             // 
             // panel8
@@ -191,12 +191,12 @@
             // 
             this.txtMobile.BackColor = System.Drawing.Color.SkyBlue;
             this.txtMobile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMobile.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMobile.Location = new System.Drawing.Point(203, 315);
+            this.txtMobile.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMobile.Location = new System.Drawing.Point(203, 319);
             this.txtMobile.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMobile.MaxLength = 15;
             this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(175, 20);
+            this.txtMobile.Size = new System.Drawing.Size(175, 16);
             this.txtMobile.TabIndex = 26;
             // 
             // label11
@@ -224,12 +224,12 @@
             // 
             this.txtPhone.BackColor = System.Drawing.Color.SkyBlue;
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhone.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPhone.Location = new System.Drawing.Point(12, 315);
+            this.txtPhone.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(12, 319);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPhone.MaxLength = 15;
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(175, 20);
+            this.txtPhone.Size = new System.Drawing.Size(175, 16);
             this.txtPhone.TabIndex = 23;
             // 
             // panel7
@@ -257,12 +257,12 @@
             // 
             this.txtPIN.BackColor = System.Drawing.Color.SkyBlue;
             this.txtPIN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPIN.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPIN.Location = new System.Drawing.Point(203, 262);
+            this.txtPIN.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPIN.Location = new System.Drawing.Point(203, 266);
             this.txtPIN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPIN.MaxLength = 6;
             this.txtPIN.Name = "txtPIN";
-            this.txtPIN.Size = new System.Drawing.Size(175, 20);
+            this.txtPIN.Size = new System.Drawing.Size(175, 16);
             this.txtPIN.TabIndex = 20;
             this.txtPIN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPIN_KeyPress);
             // 
@@ -291,12 +291,12 @@
             // 
             this.cmbArea.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbArea.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbArea.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbArea.IntegralHeight = false;
             this.cmbArea.Location = new System.Drawing.Point(12, 260);
             this.cmbArea.Margin = new System.Windows.Forms.Padding(0);
             this.cmbArea.Name = "cmbArea";
-            this.cmbArea.Size = new System.Drawing.Size(175, 27);
+            this.cmbArea.Size = new System.Drawing.Size(175, 23);
             this.cmbArea.TabIndex = 18;
             // 
             // label9
@@ -313,12 +313,12 @@
             // 
             this.cmbCity.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbCity.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCity.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCity.IntegralHeight = false;
             this.cmbCity.Location = new System.Drawing.Point(203, 210);
             this.cmbCity.Margin = new System.Windows.Forms.Padding(0);
             this.cmbCity.Name = "cmbCity";
-            this.cmbCity.Size = new System.Drawing.Size(175, 27);
+            this.cmbCity.Size = new System.Drawing.Size(175, 23);
             this.cmbCity.TabIndex = 16;
             this.cmbCity.Leave += new System.EventHandler(this.cmbCity_Leave);
             // 
@@ -336,12 +336,12 @@
             // 
             this.cmbDistrict.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbDistrict.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbDistrict.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDistrict.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDistrict.IntegralHeight = false;
             this.cmbDistrict.Location = new System.Drawing.Point(12, 210);
             this.cmbDistrict.Margin = new System.Windows.Forms.Padding(0);
             this.cmbDistrict.Name = "cmbDistrict";
-            this.cmbDistrict.Size = new System.Drawing.Size(175, 27);
+            this.cmbDistrict.Size = new System.Drawing.Size(175, 23);
             this.cmbDistrict.TabIndex = 14;
             this.cmbDistrict.Leave += new System.EventHandler(this.cmbDistrict_Leave);
             // 
@@ -359,12 +359,12 @@
             // 
             this.cmbState.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbState.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbState.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbState.IntegralHeight = false;
-            this.cmbState.Location = new System.Drawing.Point(203, 156);
+            this.cmbState.Location = new System.Drawing.Point(203, 157);
             this.cmbState.Margin = new System.Windows.Forms.Padding(0);
             this.cmbState.Name = "cmbState";
-            this.cmbState.Size = new System.Drawing.Size(175, 27);
+            this.cmbState.Size = new System.Drawing.Size(175, 23);
             this.cmbState.TabIndex = 12;
             this.cmbState.Leave += new System.EventHandler(this.cmbState_Leave);
             // 
@@ -382,12 +382,12 @@
             // 
             this.cmbCountry.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbCountry.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbCountry.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCountry.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCountry.IntegralHeight = false;
-            this.cmbCountry.Location = new System.Drawing.Point(12, 156);
+            this.cmbCountry.Location = new System.Drawing.Point(12, 157);
             this.cmbCountry.Margin = new System.Windows.Forms.Padding(0);
             this.cmbCountry.Name = "cmbCountry";
-            this.cmbCountry.Size = new System.Drawing.Size(175, 27);
+            this.cmbCountry.Size = new System.Drawing.Size(175, 23);
             this.cmbCountry.TabIndex = 10;
             this.cmbCountry.Leave += new System.EventHandler(this.cmbCountry_Leave);
             // 
@@ -416,12 +416,12 @@
             // 
             this.txtAddress.BackColor = System.Drawing.Color.SkyBlue;
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddress.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAddress.Location = new System.Drawing.Point(12, 101);
+            this.txtAddress.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Location = new System.Drawing.Point(12, 105);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAddress.MaxLength = 500;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(366, 20);
+            this.txtAddress.Size = new System.Drawing.Size(366, 16);
             this.txtAddress.TabIndex = 7;
             // 
             // panel4
@@ -438,12 +438,12 @@
             // 
             this.txtName.BackColor = System.Drawing.Color.SkyBlue;
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(143, 43);
+            this.txtName.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(143, 47);
             this.txtName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtName.MaxLength = 100;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(235, 20);
+            this.txtName.Size = new System.Drawing.Size(235, 16);
             this.txtName.TabIndex = 4;
             // 
             // label3
@@ -471,12 +471,12 @@
             // 
             this.txtCode.BackColor = System.Drawing.Color.SkyBlue;
             this.txtCode.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtCode.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCode.Location = new System.Drawing.Point(12, 43);
+            this.txtCode.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCode.Location = new System.Drawing.Point(12, 47);
             this.txtCode.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtCode.MaxLength = 10;
             this.txtCode.Name = "txtCode";
-            this.txtCode.Size = new System.Drawing.Size(110, 20);
+            this.txtCode.Size = new System.Drawing.Size(110, 16);
             this.txtCode.TabIndex = 1;
             // 
             // panel3
@@ -504,12 +504,12 @@
             // 
             this.cmbSubscriptionType.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbSubscriptionType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbSubscriptionType.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbSubscriptionType.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbSubscriptionType.IntegralHeight = false;
             this.cmbSubscriptionType.Location = new System.Drawing.Point(201, 40);
             this.cmbSubscriptionType.Margin = new System.Windows.Forms.Padding(0);
             this.cmbSubscriptionType.Name = "cmbSubscriptionType";
-            this.cmbSubscriptionType.Size = new System.Drawing.Size(125, 27);
+            this.cmbSubscriptionType.Size = new System.Drawing.Size(125, 23);
             this.cmbSubscriptionType.TabIndex = 3;
             // 
             // label22
@@ -526,12 +526,12 @@
             // 
             this.cmbAgent.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbAgent.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbAgent.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAgent.IntegralHeight = false;
             this.cmbAgent.Location = new System.Drawing.Point(12, 40);
             this.cmbAgent.Margin = new System.Windows.Forms.Padding(0);
             this.cmbAgent.Name = "cmbAgent";
-            this.cmbAgent.Size = new System.Drawing.Size(175, 27);
+            this.cmbAgent.Size = new System.Drawing.Size(175, 23);
             this.cmbAgent.TabIndex = 1;
             // 
             // label13
@@ -609,12 +609,12 @@
             // 
             this.txtAmount.BackColor = System.Drawing.Color.SkyBlue;
             this.txtAmount.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAmount.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmount.Location = new System.Drawing.Point(107, 101);
+            this.txtAmount.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmount.Location = new System.Drawing.Point(107, 105);
             this.txtAmount.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAmount.MaxLength = 10;
             this.txtAmount.Name = "txtAmount";
-            this.txtAmount.Size = new System.Drawing.Size(80, 20);
+            this.txtAmount.Size = new System.Drawing.Size(80, 16);
             this.txtAmount.TabIndex = 10;
             this.txtAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_KeyPress);
             // 
@@ -642,11 +642,11 @@
             // 
             this.dtpEndDate.CustomFormat = "";
             this.dtpEndDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpEndDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpEndDate.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpEndDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpEndDate.Location = new System.Drawing.Point(347, 98);
+            this.dtpEndDate.Location = new System.Drawing.Point(347, 101);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(125, 27);
+            this.dtpEndDate.Size = new System.Drawing.Size(125, 23);
             this.dtpEndDate.TabIndex = 15;
             this.dtpEndDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
@@ -664,11 +664,11 @@
             // 
             this.dtpStartDate.CustomFormat = "";
             this.dtpStartDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpStartDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpStartDate.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpStartDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpStartDate.Location = new System.Drawing.Point(201, 98);
+            this.dtpStartDate.Location = new System.Drawing.Point(201, 101);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(125, 27);
+            this.dtpStartDate.Size = new System.Drawing.Size(125, 23);
             this.dtpStartDate.TabIndex = 13;
             this.dtpStartDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             this.dtpStartDate.Leave += new System.EventHandler(this.dtpStartDate_Leave);
@@ -688,12 +688,12 @@
             // 
             this.txtDuration.BackColor = System.Drawing.Color.SkyBlue;
             this.txtDuration.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDuration.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDuration.Location = new System.Drawing.Point(12, 101);
+            this.txtDuration.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDuration.Location = new System.Drawing.Point(12, 105);
             this.txtDuration.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtDuration.MaxLength = 3;
             this.txtDuration.Name = "txtDuration";
-            this.txtDuration.Size = new System.Drawing.Size(80, 20);
+            this.txtDuration.Size = new System.Drawing.Size(80, 16);
             this.txtDuration.TabIndex = 7;
             this.txtDuration.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDuration_KeyPress);
             // 
@@ -721,11 +721,11 @@
             // 
             this.dtpSubscriptionDate.CustomFormat = "";
             this.dtpSubscriptionDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpSubscriptionDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpSubscriptionDate.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpSubscriptionDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpSubscriptionDate.Location = new System.Drawing.Point(347, 40);
             this.dtpSubscriptionDate.Name = "dtpSubscriptionDate";
-            this.dtpSubscriptionDate.Size = new System.Drawing.Size(125, 27);
+            this.dtpSubscriptionDate.Size = new System.Drawing.Size(125, 23);
             this.dtpSubscriptionDate.TabIndex = 5;
             this.dtpSubscriptionDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
@@ -733,12 +733,12 @@
             // 
             this.txtNote.BackColor = System.Drawing.Color.SkyBlue;
             this.txtNote.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtNote.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNote.Location = new System.Drawing.Point(12, 159);
+            this.txtNote.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNote.Location = new System.Drawing.Point(12, 163);
             this.txtNote.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtNote.MaxLength = 1000;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(460, 20);
+            this.txtNote.Size = new System.Drawing.Size(460, 16);
             this.txtNote.TabIndex = 17;
             // 
             // grpPayment
@@ -773,12 +773,12 @@
             // 
             this.cmbPaymentType.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbPaymentType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbPaymentType.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbPaymentType.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPaymentType.IntegralHeight = false;
             this.cmbPaymentType.Location = new System.Drawing.Point(17, 48);
             this.cmbPaymentType.Margin = new System.Windows.Forms.Padding(0);
             this.cmbPaymentType.Name = "cmbPaymentType";
-            this.cmbPaymentType.Size = new System.Drawing.Size(170, 27);
+            this.cmbPaymentType.Size = new System.Drawing.Size(170, 23);
             this.cmbPaymentType.TabIndex = 1;
             this.cmbPaymentType.SelectedIndexChanged += new System.EventHandler(this.cmbPaymentType_SelectedIndexChanged);
             // 
@@ -797,12 +797,12 @@
             // 
             this.txtReceiptNo.BackColor = System.Drawing.Color.SkyBlue;
             this.txtReceiptNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtReceiptNo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtReceiptNo.Location = new System.Drawing.Point(347, 110);
+            this.txtReceiptNo.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReceiptNo.Location = new System.Drawing.Point(347, 114);
             this.txtReceiptNo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtReceiptNo.MaxLength = 20;
             this.txtReceiptNo.Name = "txtReceiptNo";
-            this.txtReceiptNo.Size = new System.Drawing.Size(125, 20);
+            this.txtReceiptNo.Size = new System.Drawing.Size(125, 16);
             this.txtReceiptNo.TabIndex = 12;
             // 
             // panel16
@@ -830,12 +830,12 @@
             // 
             this.txtBankName.BackColor = System.Drawing.Color.SkyBlue;
             this.txtBankName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBankName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBankName.Location = new System.Drawing.Point(17, 165);
+            this.txtBankName.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBankName.Location = new System.Drawing.Point(17, 169);
             this.txtBankName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtBankName.MaxLength = 200;
             this.txtBankName.Name = "txtBankName";
-            this.txtBankName.Size = new System.Drawing.Size(455, 20);
+            this.txtBankName.Size = new System.Drawing.Size(455, 16);
             this.txtBankName.TabIndex = 15;
             // 
             // label24
@@ -863,12 +863,12 @@
             // 
             this.txtPaidAmout.BackColor = System.Drawing.Color.SkyBlue;
             this.txtPaidAmout.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPaidAmout.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPaidAmout.Location = new System.Drawing.Point(347, 51);
+            this.txtPaidAmout.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPaidAmout.Location = new System.Drawing.Point(347, 55);
             this.txtPaidAmout.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPaidAmout.MaxLength = 10;
             this.txtPaidAmout.Name = "txtPaidAmout";
-            this.txtPaidAmout.Size = new System.Drawing.Size(125, 20);
+            this.txtPaidAmout.Size = new System.Drawing.Size(125, 16);
             this.txtPaidAmout.TabIndex = 5;
             this.txtPaidAmout.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPaidAmout_KeyPress);
             // 
@@ -896,11 +896,11 @@
             // 
             this.dtpChequeDate.CustomFormat = "";
             this.dtpChequeDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpChequeDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpChequeDate.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpChequeDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpChequeDate.Location = new System.Drawing.Point(198, 107);
+            this.dtpChequeDate.Location = new System.Drawing.Point(198, 110);
             this.dtpChequeDate.Name = "dtpChequeDate";
-            this.dtpChequeDate.Size = new System.Drawing.Size(125, 27);
+            this.dtpChequeDate.Size = new System.Drawing.Size(125, 23);
             this.dtpChequeDate.TabIndex = 10;
             this.dtpChequeDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 
@@ -919,12 +919,12 @@
             // 
             this.txtChequeNo.BackColor = System.Drawing.Color.SkyBlue;
             this.txtChequeNo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtChequeNo.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtChequeNo.Location = new System.Drawing.Point(17, 110);
+            this.txtChequeNo.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtChequeNo.Location = new System.Drawing.Point(17, 114);
             this.txtChequeNo.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtChequeNo.MaxLength = 20;
             this.txtChequeNo.Name = "txtChequeNo";
-            this.txtChequeNo.Size = new System.Drawing.Size(170, 20);
+            this.txtChequeNo.Size = new System.Drawing.Size(170, 16);
             this.txtChequeNo.TabIndex = 7;
             // 
             // panel13
@@ -951,11 +951,11 @@
             // 
             this.dtpPaymentDate.CustomFormat = "";
             this.dtpPaymentDate.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dtpPaymentDate.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpPaymentDate.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpPaymentDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpPaymentDate.Location = new System.Drawing.Point(198, 48);
             this.dtpPaymentDate.Name = "dtpPaymentDate";
-            this.dtpPaymentDate.Size = new System.Drawing.Size(125, 27);
+            this.dtpPaymentDate.Size = new System.Drawing.Size(125, 23);
             this.dtpPaymentDate.TabIndex = 3;
             this.dtpPaymentDate.Value = new System.DateTime(2018, 12, 22, 0, 0, 0, 0);
             // 

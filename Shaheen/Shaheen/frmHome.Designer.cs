@@ -324,6 +324,7 @@
             this.Controls.Add(this.dgvAgentWiseStatusCount);
             this.Name = "frmHome";
             this.Text = "frmHome";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHome_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgentWiseStatusCount)).EndInit();
             this.panel1.ResumeLayout(false);
