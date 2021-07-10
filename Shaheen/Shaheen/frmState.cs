@@ -97,6 +97,7 @@ namespace Shaheen
             btnNew.Enabled = false;
             btnSave.Enabled = true;
             dgvState.Enabled = false;
+            txtStateName.Focus();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

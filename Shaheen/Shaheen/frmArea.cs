@@ -94,6 +94,7 @@ namespace Shaheen
             btnClose.Text = "Cancel";
             btnNew.Enabled = false;
             btnSave.Enabled = true;
+            txtAreaName.Focus();
         }
 
         private void btnSave_Click(object sender, EventArgs e)

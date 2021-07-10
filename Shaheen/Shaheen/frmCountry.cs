@@ -152,6 +152,7 @@ namespace Shaheen
             btnNew.Enabled = false;
             btnSave.Enabled = true;
             dgvCountry.Enabled = false;
+            txtCountryName.Focus();
         }
 
         private void dgvCountry_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)

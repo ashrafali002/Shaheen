@@ -77,7 +77,6 @@
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(195, 20);
             this.txtPassword.TabIndex = 11;
-            this.txtPassword.Text = "admin";
             this.txtPassword.UseSystemPasswordChar = true;
             this.txtPassword.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtPassword_MouseClick);
             this.txtPassword.Leave += new System.EventHandler(this.txtPassword_Leave);
@@ -112,7 +111,6 @@
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(195, 20);
             this.txtUsername.TabIndex = 10;
-            this.txtUsername.Text = "admin";
             this.txtUsername.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtUsername_MouseClick);
             this.txtUsername.Leave += new System.EventHandler(this.txtUsername_Leave);
             // 
