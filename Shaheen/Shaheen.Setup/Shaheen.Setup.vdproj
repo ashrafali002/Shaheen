@@ -568,9 +568,9 @@
         "Product"
         {
         "Name" = "8:Microsoft Visual Studio"
-        "ProductName" = "8:Ishtiraq-w"
+        "ProductName" = "8:Ishtiraq"
         "ProductCode" = "8:{7B5E7CF5-65B4-4B47-BF32-4AD43F7D600C}"
-        "PackageCode" = "8:{A4E0A024-DB27-415E-8518-C3FECE8B2C4E}"
+        "PackageCode" = "8:{22A1360F-87D9-4942-A8BB-7D4CB87B6FFC}"
         "UpgradeCode" = "8:{9345BBF8-054D-4C87-8DCC-0D48059E0C43}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
