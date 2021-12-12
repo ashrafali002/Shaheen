@@ -56,13 +56,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.dgvAgent = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.iconAgent = new FontAwesome.Sharp.IconPictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnNew = new FontAwesome.Sharp.IconButton();
-            this.btnSave = new FontAwesome.Sharp.IconButton();
-            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.colAgentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colAgentAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colCityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -77,6 +70,13 @@
             this.phone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mobile = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.iconAgent = new FontAwesome.Sharp.IconPictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnNew = new FontAwesome.Sharp.IconButton();
+            this.btnSave = new FontAwesome.Sharp.IconButton();
+            this.btnClose = new FontAwesome.Sharp.IconButton();
             this.grpAgent.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgent)).BeginInit();
@@ -443,6 +443,116 @@
             this.dgvAgent.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvAgent_CellFormatting);
             this.dgvAgent.RowHeaderMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvAgent_RowHeaderMouseDoubleClick);
             // 
+            // colAgentName
+            // 
+            this.colAgentName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.colAgentName.DataPropertyName = "agentName";
+            this.colAgentName.FillWeight = 135F;
+            this.colAgentName.HeaderText = "Name";
+            this.colAgentName.Name = "colAgentName";
+            this.colAgentName.ReadOnly = true;
+            // 
+            // colAgentAddress
+            // 
+            this.colAgentAddress.DataPropertyName = "agentAddress";
+            this.colAgentAddress.FillWeight = 200F;
+            this.colAgentAddress.HeaderText = "Address";
+            this.colAgentAddress.Name = "colAgentAddress";
+            this.colAgentAddress.ReadOnly = true;
+            this.colAgentAddress.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colAgentAddress.ToolTipText = "Address";
+            this.colAgentAddress.Width = 400;
+            // 
+            // colCityName
+            // 
+            this.colCityName.DataPropertyName = "cityName";
+            this.colCityName.FillWeight = 64.01687F;
+            this.colCityName.HeaderText = "City";
+            this.colCityName.Name = "colCityName";
+            this.colCityName.ReadOnly = true;
+            this.colCityName.ToolTipText = "City";
+            this.colCityName.Width = 125;
+            // 
+            // colDelete
+            // 
+            this.colDelete.FillWeight = 74.03477F;
+            this.colDelete.HeaderText = "Delete";
+            this.colDelete.Image = global::Shaheen.Properties.Resources.delete;
+            this.colDelete.Name = "colDelete";
+            this.colDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.colDelete.ToolTipText = "Delete";
+            this.colDelete.Width = 75;
+            // 
+            // agentId
+            // 
+            this.agentId.DataPropertyName = "agentId";
+            this.agentId.HeaderText = "agentId";
+            this.agentId.Name = "agentId";
+            this.agentId.Visible = false;
+            // 
+            // countryId
+            // 
+            this.countryId.DataPropertyName = "countryId";
+            this.countryId.HeaderText = "countryId";
+            this.countryId.Name = "countryId";
+            this.countryId.Visible = false;
+            // 
+            // stateId
+            // 
+            this.stateId.DataPropertyName = "stateId";
+            this.stateId.HeaderText = "stateId";
+            this.stateId.Name = "stateId";
+            this.stateId.Visible = false;
+            // 
+            // districtId
+            // 
+            this.districtId.DataPropertyName = "districtId";
+            this.districtId.HeaderText = "districtId";
+            this.districtId.Name = "districtId";
+            this.districtId.Visible = false;
+            // 
+            // cityId
+            // 
+            this.cityId.DataPropertyName = "cityId";
+            this.cityId.HeaderText = "cityId";
+            this.cityId.Name = "cityId";
+            this.cityId.Visible = false;
+            // 
+            // areaId
+            // 
+            this.areaId.DataPropertyName = "areaId";
+            this.areaId.HeaderText = "areaId";
+            this.areaId.Name = "areaId";
+            this.areaId.Visible = false;
+            // 
+            // PIN
+            // 
+            this.PIN.DataPropertyName = "pin";
+            this.PIN.HeaderText = "PIN";
+            this.PIN.Name = "PIN";
+            this.PIN.Visible = false;
+            // 
+            // phone
+            // 
+            this.phone.DataPropertyName = "phone";
+            this.phone.HeaderText = "phone";
+            this.phone.Name = "phone";
+            this.phone.Visible = false;
+            // 
+            // mobile
+            // 
+            this.mobile.DataPropertyName = "mobile";
+            this.mobile.HeaderText = "mobile";
+            this.mobile.Name = "mobile";
+            this.mobile.Visible = false;
+            // 
+            // email
+            // 
+            this.email.DataPropertyName = "email";
+            this.email.HeaderText = "email";
+            this.email.Name = "email";
+            this.email.Visible = false;
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Navy;
@@ -555,116 +665,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // colAgentName
-            // 
-            this.colAgentName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.colAgentName.DataPropertyName = "agentName";
-            this.colAgentName.FillWeight = 135F;
-            this.colAgentName.HeaderText = "Name";
-            this.colAgentName.Name = "colAgentName";
-            this.colAgentName.ReadOnly = true;
-            // 
-            // colAgentAddress
-            // 
-            this.colAgentAddress.DataPropertyName = "agentAddress";
-            this.colAgentAddress.FillWeight = 200F;
-            this.colAgentAddress.HeaderText = "Address";
-            this.colAgentAddress.Name = "colAgentAddress";
-            this.colAgentAddress.ReadOnly = true;
-            this.colAgentAddress.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.colAgentAddress.ToolTipText = "Address";
-            this.colAgentAddress.Width = 400;
-            // 
-            // colCityName
-            // 
-            this.colCityName.DataPropertyName = "cityName";
-            this.colCityName.FillWeight = 64.01687F;
-            this.colCityName.HeaderText = "City";
-            this.colCityName.Name = "colCityName";
-            this.colCityName.ReadOnly = true;
-            this.colCityName.ToolTipText = "City";
-            this.colCityName.Width = 125;
-            // 
-            // colDelete
-            // 
-            this.colDelete.FillWeight = 74.03477F;
-            this.colDelete.HeaderText = "Delete";
-            this.colDelete.Image = global::Shaheen.Properties.Resources.delete;
-            this.colDelete.Name = "colDelete";
-            this.colDelete.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.colDelete.ToolTipText = "Delete";
-            this.colDelete.Width = 75;
-            // 
-            // agentId
-            // 
-            this.agentId.DataPropertyName = "agentId";
-            this.agentId.HeaderText = "agentId";
-            this.agentId.Name = "agentId";
-            this.agentId.Visible = false;
-            // 
-            // countryId
-            // 
-            this.countryId.DataPropertyName = "countryId";
-            this.countryId.HeaderText = "countryId";
-            this.countryId.Name = "countryId";
-            this.countryId.Visible = false;
-            // 
-            // stateId
-            // 
-            this.stateId.DataPropertyName = "stateId";
-            this.stateId.HeaderText = "stateId";
-            this.stateId.Name = "stateId";
-            this.stateId.Visible = false;
-            // 
-            // districtId
-            // 
-            this.districtId.DataPropertyName = "districtId";
-            this.districtId.HeaderText = "districtId";
-            this.districtId.Name = "districtId";
-            this.districtId.Visible = false;
-            // 
-            // cityId
-            // 
-            this.cityId.DataPropertyName = "cityId";
-            this.cityId.HeaderText = "cityId";
-            this.cityId.Name = "cityId";
-            this.cityId.Visible = false;
-            // 
-            // areaId
-            // 
-            this.areaId.DataPropertyName = "areaId";
-            this.areaId.HeaderText = "areaId";
-            this.areaId.Name = "areaId";
-            this.areaId.Visible = false;
-            // 
-            // PIN
-            // 
-            this.PIN.DataPropertyName = "pin";
-            this.PIN.HeaderText = "PIN";
-            this.PIN.Name = "PIN";
-            this.PIN.Visible = false;
-            // 
-            // phone
-            // 
-            this.phone.DataPropertyName = "phone";
-            this.phone.HeaderText = "phone";
-            this.phone.Name = "phone";
-            this.phone.Visible = false;
-            // 
-            // mobile
-            // 
-            this.mobile.DataPropertyName = "mobile";
-            this.mobile.HeaderText = "mobile";
-            this.mobile.Name = "mobile";
-            this.mobile.Visible = false;
-            // 
-            // email
-            // 
-            this.email.DataPropertyName = "email";
-            this.email.HeaderText = "email";
-            this.email.Name = "email";
-            this.email.Visible = false;
-            // 
             // frmAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -676,6 +676,7 @@
             this.Controls.Add(this.grpAgent);
             this.Name = "frmAgent";
             this.Text = "Agent";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAgent_Load);
             this.grpAgent.ResumeLayout(false);
             this.grpAgent.PerformLayout();

@@ -89,6 +89,7 @@
             this.Controls.Add(this.btnClearDatabase);
             this.Name = "frmAdmin";
             this.Text = "frmAdmin";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.ResumeLayout(false);
 

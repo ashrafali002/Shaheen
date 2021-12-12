@@ -340,6 +340,7 @@
             this.Name = "frmCity";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "City";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCity_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCity)).EndInit();
             this.panel2.ResumeLayout(false);

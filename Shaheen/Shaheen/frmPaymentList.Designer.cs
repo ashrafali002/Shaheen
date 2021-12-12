@@ -397,6 +397,7 @@
             this.Name = "frmPaymentList";
             this.ShowInTaskbar = false;
             this.Text = "PaymentList";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmPaymentList_Load);
             this.grpPerson.ResumeLayout(false);
             this.grpPerson.PerformLayout();

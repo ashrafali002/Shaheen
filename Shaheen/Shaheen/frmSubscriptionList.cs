@@ -57,17 +57,16 @@ namespace Shaheen
 
         private void ctxmEditPerson_Click(object sender, EventArgs e)
         {
-            frmEditPerson editPerson = new frmEditPerson();
-            this.Opacity = 10;
+            frmEditPerson editPerson = new frmEditPerson();            
             editPerson.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["personId"].Value);
             editPerson.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["subscriptionId"].Value);
+            
             if (editPerson.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();
                 dgvSubscriptionList.Rows[gridRowIndex].Selected = true;
             }
         }
-
 
         private void ctxmSubscriptionDetails_Click(object sender, EventArgs e)
         {
@@ -177,7 +176,5 @@ namespace Shaheen
         {
             this.Close();
         }
-
-
     }
 }

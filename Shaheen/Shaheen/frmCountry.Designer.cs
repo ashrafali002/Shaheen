@@ -280,6 +280,7 @@
             this.Name = "frmCountry";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Country";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmCountry_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCountry)).EndInit();
             this.panel2.ResumeLayout(false);

@@ -364,6 +364,7 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Area";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmArea_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArea)).EndInit();
             this.panel2.ResumeLayout(false);

@@ -1074,6 +1074,7 @@
             this.Controls.Add(this.grpButtons);
             this.Name = "frmSubscription";
             this.Text = "Subscription";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmSubscription_Load);
             this.grpPerson.ResumeLayout(false);
             this.grpPerson.PerformLayout();
