@@ -13,6 +13,7 @@ namespace Shaheen
         {
             InitializeComponent();
             agentBll = new AgentBLL();
+            Mode = ModeType.View.ToString();
         }
 
         private void frmAgent_Load(object sender, EventArgs e)
@@ -25,6 +26,7 @@ namespace Shaheen
             btnClose.Text = "Close";
             btnNew.Enabled = true;
             btnSave.Enabled = false;
+            Mode = ModeType.View.ToString();
         }
 
         public void ClearControls()
@@ -138,7 +140,7 @@ namespace Shaheen
                 MessageBox.Show("City is required.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 cmbCity.Focus();
                 isRes = false;
-            }            
+            }
             else if (!string.IsNullOrEmpty(txtEmail.Text) && !CommonFunctions.checkEmail(txtEmail.Text))
             {
                 MessageBox.Show("Invalid email format.", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -159,6 +161,15 @@ namespace Shaheen
             btnNew.Enabled = false;
             btnSave.Enabled = true;
             txtName.Focus();
+            if (btnNew.Text == "Edit")
+            {
+                Mode = ModeType.Edit.ToString();
+            }
+            else
+            {
+                Mode = ModeType.New.ToString();
+            }
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -214,6 +225,7 @@ namespace Shaheen
                 btnNew.Text = "New";
                 btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             }
+            Mode = string.Empty;
         }
 
         private void dgvAgent_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -251,6 +263,7 @@ namespace Shaheen
             btnNew.Text = "Edit";
             btnNew.IconChar = FontAwesome.Sharp.IconChar.Edit;
             btnClose.Text = "Cancel";
+            Mode = ModeType.Edit.ToString();
         }
 
         private void dgvAgent_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -259,6 +272,93 @@ namespace Shaheen
             {
                 aRow.Height = 30;
                 aRow.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            }
+        }
+
+        private void cmbCountry_Leave(object sender, EventArgs e)
+        {
+            BindStateByCountryId(Convert.ToInt32(cmbCountry.SelectedValue));
+        }
+        private void BindStateByCountryId(int countryId)
+        {
+            if (countryId > 0)
+            {
+                int oldStateSelectedValue = Convert.ToInt32(cmbState.SelectedValue);
+                var stateBll = new StateBLL();
+                var stateList = stateBll.StateByCountryId(countryId);
+                stateList.Insert(0, new State { stateId = 0, stateName = "---Select State---", countryId = 0 });
+                cmbState.DataSource = stateList;
+                cmbState.DisplayMember = "stateName";
+                cmbState.ValueMember = "stateId";
+                if (oldStateSelectedValue > 0)
+                {
+                    cmbState.SelectedValue = oldStateSelectedValue;
+                }
+            }
+        }
+
+        private void cmbState_Leave(object sender, EventArgs e)
+        {
+            BindDistrictByStateId(Convert.ToInt32(cmbState.SelectedValue));
+        }
+        private void BindDistrictByStateId(int stateId)
+        {
+            if (stateId > 0)
+            {
+                int oldDistrictSelectedValue = Convert.ToInt32(cmbDistrict.SelectedValue);
+                var districtBll = new DistrictBLL();
+                var districtList = districtBll.DistrictByStateId(stateId);
+                districtList.Insert(0, new District { districtId = 0, districtName = "---Select District---", stateId = 0 });
+                cmbDistrict.DataSource = districtList;
+                cmbDistrict.DisplayMember = "districtName";
+                cmbDistrict.ValueMember = "districtId";
+                if (oldDistrictSelectedValue > 0)
+                {
+                    cmbDistrict.SelectedValue = oldDistrictSelectedValue;
+                }
+            }
+        }
+        private void cmbDistrict_Leave(object sender, EventArgs e)
+        {
+            BindCityByDistrictId(Convert.ToInt32(cmbDistrict.SelectedValue));
+        }
+        private void BindCityByDistrictId(int districtId)
+        {
+            if (districtId > 0)
+            {
+                int oldCitySelectedValue = Convert.ToInt32(cmbCity.SelectedValue);
+                var cityBll = new CityBLL();
+                var cityList = cityBll.CityByDistrictId(districtId);
+                cityList.Insert(0, new City { cityId = 0, cityName = "---Select City---", districtId = 0 });
+                cmbCity.DataSource = cityList;
+                cmbCity.DisplayMember = "cityName";
+                cmbCity.ValueMember = "cityId";
+                if (oldCitySelectedValue > 0)
+                {
+                    cmbCity.SelectedValue = oldCitySelectedValue;
+                }
+            }
+        }
+
+        private void cmbCity_Leave(object sender, EventArgs e)
+        {
+            BindAreaByCityId(Convert.ToInt32(cmbCity.SelectedValue));
+        }
+        private void BindAreaByCityId(int cityId)
+        {
+            if (cityId > 0)
+            {
+                int oldAreaSelectedValue = Convert.ToInt32(cmbArea.SelectedValue);
+                var areaBll = new AreaBLL();
+                var areaList = areaBll.AreaByCityId(cityId);
+                areaList.Insert(0, new Area { areaId = 0, areaName = "---Select Area---", cityId = 0 });
+                cmbArea.DataSource = areaList;
+                cmbArea.DisplayMember = "areaName";
+                cmbArea.ValueMember = "areaId";
+                if (oldAreaSelectedValue > 0)
+                {
+                    cmbArea.SelectedValue = oldAreaSelectedValue;
+                }
             }
         }
     }

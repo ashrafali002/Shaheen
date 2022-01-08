@@ -35,42 +35,74 @@ namespace Shaheen
 
         private void BindStateByCountryId(int countryId)
         {
-            var stateBll = new StateBLL();
-            var stateList = stateBll.StateByCountryId(countryId);
-            stateList.Insert(0, new State { stateId = 0, stateName = "---Select State---", countryId = 0 });
-            cmbState.DataSource = stateList;
-            cmbState.DisplayMember = "stateName";
-            cmbState.ValueMember = "stateId";
+            if (countryId > 0)
+            {
+                int oldStateSelectedValue = Convert.ToInt32(cmbState.SelectedValue);
+                var stateBll = new StateBLL();
+                var stateList = stateBll.StateByCountryId(countryId);
+                stateList.Insert(0, new State { stateId = 0, stateName = "---Select State---", countryId = 0 });
+                cmbState.DataSource = stateList;
+                cmbState.DisplayMember = "stateName";
+                cmbState.ValueMember = "stateId";
+                if (oldStateSelectedValue > 0)
+                {
+                    cmbState.SelectedValue = oldStateSelectedValue;
+                }
+            }
         }
 
         private void BindDistrictByStateId(int stateId)
         {
-            var districtBll = new DistrictBLL();
-            var districtList = districtBll.DistrictByStateId(stateId);
-            districtList.Insert(0, new District { districtId = 0, districtName = "---Select District---", stateId = 0 });
-            cmbDistrict.DataSource = districtList;
-            cmbDistrict.DisplayMember = "districtName";
-            cmbDistrict.ValueMember = "districtId";
+            if (stateId > 0)
+            {
+                int oldDistrictSelectedValue = Convert.ToInt32(cmbDistrict.SelectedValue);
+                var districtBll = new DistrictBLL();
+                var districtList = districtBll.DistrictByStateId(stateId);
+                districtList.Insert(0, new District { districtId = 0, districtName = "---Select District---", stateId = 0 });
+                cmbDistrict.DataSource = districtList;
+                cmbDistrict.DisplayMember = "districtName";
+                cmbDistrict.ValueMember = "districtId";
+                if (oldDistrictSelectedValue > 0)
+                {
+                    cmbDistrict.SelectedValue = oldDistrictSelectedValue;
+                }
+            }
         }
 
         private void BindCityByDistrictId(int districtId)
         {
-            var cityBll = new CityBLL();
-            var cityList = cityBll.CityByDistrictId(districtId);
-            cityList.Insert(0, new City { cityId = 0, cityName = "---Select City---", districtId = 0 });
-            cmbCity.DataSource = cityList;
-            cmbCity.DisplayMember = "cityName";
-            cmbCity.ValueMember = "cityId";
+            if (districtId > 0)
+            {
+                int oldCitySelectedValue = Convert.ToInt32(cmbCity.SelectedValue);
+                var cityBll = new CityBLL();
+                var cityList = cityBll.CityByDistrictId(districtId);
+                cityList.Insert(0, new City { cityId = 0, cityName = "---Select City---", districtId = 0 });
+                cmbCity.DataSource = cityList;
+                cmbCity.DisplayMember = "cityName";
+                cmbCity.ValueMember = "cityId";
+                if (oldCitySelectedValue > 0)
+                {
+                    cmbCity.SelectedValue = oldCitySelectedValue;
+                }
+            }
         }
 
         private void BindAreaByCityId(int cityId)
         {
-            var areaBll = new AreaBLL();
-            var areaList = areaBll.AreaByCityId(cityId);
-            areaList.Insert(0, new Area { areaId = 0, areaName = "---Select Area---", cityId = 0 });
-            cmbArea.DataSource = areaList;
-            cmbArea.DisplayMember = "areaName";
-            cmbArea.ValueMember = "areaId";
+            if (cityId > 0)
+            {
+                int oldAreaSelectedValue = Convert.ToInt32(cmbArea.SelectedValue);
+                var areaBll = new AreaBLL();
+                var areaList = areaBll.AreaByCityId(cityId);
+                areaList.Insert(0, new Area { areaId = 0, areaName = "---Select Area---", cityId = 0 });
+                cmbArea.DataSource = areaList;
+                cmbArea.DisplayMember = "areaName";
+                cmbArea.ValueMember = "areaId";
+                if (oldAreaSelectedValue > 0)
+                {
+                    cmbArea.SelectedValue = oldAreaSelectedValue;
+                }
+            }
         }
         private void btnClose_Click(object sender, EventArgs e)
         {
