@@ -70,11 +70,13 @@
             this.label21 = new System.Windows.Forms.Label();
             this.dtpPaymentDate = new System.Windows.Forms.DateTimePicker();
             this.label20 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.grpPerson.SuspendLayout();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPayment)).BeginInit();
             this.grpButtons.SuspendLayout();
             this.grpPayment.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpPerson
@@ -96,7 +98,7 @@
             this.grpPerson.Controls.Add(this.label4);
             this.grpPerson.Controls.Add(this.label3);
             this.grpPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.grpPerson.Location = new System.Drawing.Point(12, 43);
+            this.grpPerson.Location = new System.Drawing.Point(10, 44);
             this.grpPerson.Name = "grpPerson";
             this.grpPerson.Size = new System.Drawing.Size(524, 242);
             this.grpPerson.TabIndex = 3;
@@ -286,7 +288,7 @@
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(550, 37);
+            this.panel17.Size = new System.Drawing.Size(544, 37);
             this.panel17.TabIndex = 40;
             // 
             // iconPayment
@@ -315,7 +317,7 @@
             // 
             this.grpButtons.Controls.Add(this.btnSave);
             this.grpButtons.Controls.Add(this.btnClose);
-            this.grpButtons.Location = new System.Drawing.Point(13, 491);
+            this.grpButtons.Location = new System.Drawing.Point(11, 486);
             this.grpButtons.Name = "grpButtons";
             this.grpButtons.Size = new System.Drawing.Size(523, 60);
             this.grpButtons.TabIndex = 41;
@@ -388,7 +390,7 @@
             this.grpPayment.Controls.Add(this.dtpPaymentDate);
             this.grpPayment.Controls.Add(this.label20);
             this.grpPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.grpPayment.Location = new System.Drawing.Point(12, 291);
+            this.grpPayment.Location = new System.Drawing.Point(10, 286);
             this.grpPayment.Name = "grpPayment";
             this.grpPayment.Size = new System.Drawing.Size(524, 200);
             this.grpPayment.TabIndex = 42;
@@ -595,17 +597,27 @@
             this.label20.TabIndex = 0;
             this.label20.Text = "Payment Type :";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.Controls.Add(this.grpButtons);
+            this.panel1.Controls.Add(this.panel17);
+            this.panel1.Controls.Add(this.grpPayment);
+            this.panel1.Controls.Add(this.grpPerson);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(544, 558);
+            this.panel1.TabIndex = 43;
+            // 
             // frmPayment
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(550, 560);
-            this.Controls.Add(this.grpPayment);
-            this.Controls.Add(this.grpButtons);
-            this.Controls.Add(this.panel17);
-            this.Controls.Add(this.grpPerson);
+            this.ClientSize = new System.Drawing.Size(567, 581);
+            this.Controls.Add(this.panel1);
             this.Name = "frmPayment";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -619,6 +631,7 @@
             this.grpButtons.ResumeLayout(false);
             this.grpPayment.ResumeLayout(false);
             this.grpPayment.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -667,5 +680,6 @@
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconPictureBox iconPayment;
+        private System.Windows.Forms.Panel panel1;
     }
 }

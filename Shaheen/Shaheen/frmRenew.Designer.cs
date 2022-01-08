@@ -85,12 +85,14 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconRenew)).BeginInit();
             this.grpPerson.SuspendLayout();
             this.grpButtons.SuspendLayout();
             this.grpPayment.SuspendLayout();
             this.grpSubscription.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel17
@@ -101,7 +103,7 @@
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel17.Location = new System.Drawing.Point(0, 0);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(546, 37);
+            this.panel17.Size = new System.Drawing.Size(545, 37);
             this.panel17.TabIndex = 0;
             // 
             // iconRenew
@@ -137,7 +139,7 @@
             this.grpPerson.Controls.Add(this.label4);
             this.grpPerson.Controls.Add(this.label3);
             this.grpPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.grpPerson.Location = new System.Drawing.Point(10, 43);
+            this.grpPerson.Location = new System.Drawing.Point(10, 44);
             this.grpPerson.Name = "grpPerson";
             this.grpPerson.Size = new System.Drawing.Size(524, 158);
             this.grpPerson.TabIndex = 4;
@@ -240,7 +242,7 @@
             this.grpButtons.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.grpButtons.Controls.Add(this.btnSave);
             this.grpButtons.Controls.Add(this.btnClose);
-            this.grpButtons.Location = new System.Drawing.Point(10, 595);
+            this.grpButtons.Location = new System.Drawing.Point(10, 596);
             this.grpButtons.Name = "grpButtons";
             this.grpButtons.Size = new System.Drawing.Size(526, 60);
             this.grpButtons.TabIndex = 3;
@@ -313,7 +315,7 @@
             this.grpPayment.Controls.Add(this.dtpPaymentDate);
             this.grpPayment.Controls.Add(this.label20);
             this.grpPayment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.grpPayment.Location = new System.Drawing.Point(10, 395);
+            this.grpPayment.Location = new System.Drawing.Point(10, 396);
             this.grpPayment.Name = "grpPayment";
             this.grpPayment.Size = new System.Drawing.Size(524, 200);
             this.grpPayment.TabIndex = 2;
@@ -546,7 +548,7 @@
             this.grpSubscription.Controls.Add(this.label14);
             this.grpSubscription.Controls.Add(this.txtNote);
             this.grpSubscription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.grpSubscription.Location = new System.Drawing.Point(10, 201);
+            this.grpSubscription.Location = new System.Drawing.Point(10, 202);
             this.grpSubscription.Name = "grpSubscription";
             this.grpSubscription.Size = new System.Drawing.Size(524, 194);
             this.grpSubscription.TabIndex = 1;
@@ -790,19 +792,28 @@
             this.txtNote.Size = new System.Drawing.Size(490, 20);
             this.txtNote.TabIndex = 18;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel5.Controls.Add(this.grpButtons);
+            this.panel5.Controls.Add(this.panel17);
+            this.panel5.Controls.Add(this.grpSubscription);
+            this.panel5.Controls.Add(this.grpPerson);
+            this.panel5.Controls.Add(this.grpPayment);
+            this.panel5.Location = new System.Drawing.Point(11, 12);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(545, 667);
+            this.panel5.TabIndex = 5;
+            // 
             // frmRenew
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.SkyBlue;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(546, 664);
-            this.Controls.Add(this.grpSubscription);
-            this.Controls.Add(this.grpPayment);
-            this.Controls.Add(this.panel17);
-            this.Controls.Add(this.grpPerson);
-            this.Controls.Add(this.grpButtons);
+            this.ClientSize = new System.Drawing.Size(566, 690);
+            this.Controls.Add(this.panel5);
             this.Name = "frmRenew";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -818,6 +829,7 @@
             this.grpPayment.PerformLayout();
             this.grpSubscription.ResumeLayout(false);
             this.grpSubscription.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -880,5 +892,6 @@
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconPictureBox iconRenew;
+        private System.Windows.Forms.Panel panel5;
     }
 }

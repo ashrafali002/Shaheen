@@ -66,10 +66,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.iconEditPerson = new FontAwesome.Sharp.IconPictureBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.grpPerson.SuspendLayout();
             this.grpButtons.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconEditPerson)).BeginInit();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpPerson
@@ -106,7 +108,7 @@
             this.grpPerson.Controls.Add(this.panel3);
             this.grpPerson.Controls.Add(this.label1);
             this.grpPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.grpPerson.Location = new System.Drawing.Point(10, 43);
+            this.grpPerson.Location = new System.Drawing.Point(8, 43);
             this.grpPerson.Name = "grpPerson";
             this.grpPerson.Size = new System.Drawing.Size(460, 414);
             this.grpPerson.TabIndex = 1;
@@ -462,7 +464,7 @@
             // 
             this.grpButtons.Controls.Add(this.btnSave);
             this.grpButtons.Controls.Add(this.btnClose);
-            this.grpButtons.Location = new System.Drawing.Point(10, 457);
+            this.grpButtons.Location = new System.Drawing.Point(8, 457);
             this.grpButtons.Name = "grpButtons";
             this.grpButtons.Size = new System.Drawing.Size(460, 60);
             this.grpButtons.TabIndex = 4;
@@ -516,21 +518,21 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Navy;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.panel1.Controls.Add(this.iconEditPerson);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(480, 37);
+            this.panel1.Size = new System.Drawing.Size(477, 37);
             this.panel1.TabIndex = 38;
             // 
             // iconEditPerson
             // 
-            this.iconEditPerson.BackColor = System.Drawing.Color.Navy;
+            this.iconEditPerson.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.iconEditPerson.IconChar = FontAwesome.Sharp.IconChar.UserTie;
             this.iconEditPerson.IconColor = System.Drawing.Color.White;
-            this.iconEditPerson.Location = new System.Drawing.Point(10, 6);
+            this.iconEditPerson.Location = new System.Drawing.Point(10, 3);
             this.iconEditPerson.Name = "iconEditPerson";
             this.iconEditPerson.Size = new System.Drawing.Size(32, 32);
             this.iconEditPerson.TabIndex = 7;
@@ -547,16 +549,26 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "Edit Person";
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel9.Controls.Add(this.grpPerson);
+            this.panel9.Controls.Add(this.panel1);
+            this.panel9.Controls.Add(this.grpButtons);
+            this.panel9.Location = new System.Drawing.Point(11, 12);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(477, 527);
+            this.panel9.TabIndex = 39;
+            // 
             // frmEditPerson
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(480, 528);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.grpButtons);
-            this.Controls.Add(this.grpPerson);
+            this.ClientSize = new System.Drawing.Size(498, 551);
+            this.Controls.Add(this.panel9);
             this.Name = "frmEditPerson";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -568,6 +580,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconEditPerson)).EndInit();
+            this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -612,5 +625,6 @@
         private FontAwesome.Sharp.IconPictureBox iconEditPerson;
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnClose;
+        private System.Windows.Forms.Panel panel9;
     }
 }

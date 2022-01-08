@@ -113,6 +113,7 @@ namespace Shaheen
                 payment.PersonId = PersonId;
                 payment.SubscriptionId = SubscriptionId;
                 payment.AgentName = lblAgent.Text;
+                payment.StartPosition = FormStartPosition.CenterScreen;
                 if (payment.ShowDialog() == DialogResult.OK)
                 {
                     LoadSearchResult();

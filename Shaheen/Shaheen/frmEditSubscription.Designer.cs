@@ -63,18 +63,20 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.grpButtons.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconEditSubscription)).BeginInit();
             this.grpSubscription.SuspendLayout();
             this.grpPerson.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpButtons
             // 
             this.grpButtons.Controls.Add(this.btnSave);
             this.grpButtons.Controls.Add(this.btnClose);
-            this.grpButtons.Location = new System.Drawing.Point(10, 396);
+            this.grpButtons.Location = new System.Drawing.Point(10, 395);
             this.grpButtons.Name = "grpButtons";
             this.grpButtons.Size = new System.Drawing.Size(524, 60);
             this.grpButtons.TabIndex = 2;
@@ -128,7 +130,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Navy;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.panel2.Controls.Add(this.iconEditSubscription);
             this.panel2.Controls.Add(this.label20);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
@@ -139,7 +141,7 @@
             // 
             // iconEditSubscription
             // 
-            this.iconEditSubscription.BackColor = System.Drawing.Color.Navy;
+            this.iconEditSubscription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.iconEditSubscription.IconChar = FontAwesome.Sharp.IconChar.IdBadge;
             this.iconEditSubscription.IconColor = System.Drawing.Color.White;
             this.iconEditSubscription.Location = new System.Drawing.Point(10, 6);
@@ -181,7 +183,7 @@
             this.grpSubscription.Controls.Add(this.dtpSubscriptionDate);
             this.grpSubscription.Controls.Add(this.txtNote);
             this.grpSubscription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.grpSubscription.Location = new System.Drawing.Point(10, 202);
+            this.grpSubscription.Location = new System.Drawing.Point(10, 201);
             this.grpSubscription.Name = "grpSubscription";
             this.grpSubscription.Size = new System.Drawing.Size(524, 194);
             this.grpSubscription.TabIndex = 1;
@@ -510,17 +512,27 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Name :";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel3.Controls.Add(this.panel2);
+            this.panel3.Controls.Add(this.grpPerson);
+            this.panel3.Controls.Add(this.grpButtons);
+            this.panel3.Controls.Add(this.grpSubscription);
+            this.panel3.Location = new System.Drawing.Point(11, 12);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(544, 466);
+            this.panel3.TabIndex = 6;
+            // 
             // frmEditSubscription
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(544, 467);
-            this.Controls.Add(this.grpPerson);
-            this.Controls.Add(this.grpSubscription);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.grpButtons);
+            this.ClientSize = new System.Drawing.Size(566, 490);
+            this.Controls.Add(this.panel3);
             this.Name = "frmEditSubscription";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -534,6 +546,7 @@
             this.grpSubscription.PerformLayout();
             this.grpPerson.ResumeLayout(false);
             this.grpPerson.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -574,5 +587,6 @@
         private FontAwesome.Sharp.IconButton btnSave;
         private FontAwesome.Sharp.IconButton btnClose;
         private FontAwesome.Sharp.IconPictureBox iconEditSubscription;
+        private System.Windows.Forms.Panel panel3;
     }
 }

@@ -37,17 +37,19 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.iconState = new FontAwesome.Sharp.IconPictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.grpButtons.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconState)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // grpButtons
             // 
             this.grpButtons.Controls.Add(this.btnSave);
             this.grpButtons.Controls.Add(this.btnClose);
-            this.grpButtons.Location = new System.Drawing.Point(10, 149);
+            this.grpButtons.Location = new System.Drawing.Point(7, 144);
             this.grpButtons.Name = "grpButtons";
             this.grpButtons.Size = new System.Drawing.Size(273, 60);
             this.grpButtons.TabIndex = 5;
@@ -103,7 +105,7 @@
             // 
             this.groupBox1.Controls.Add(this.cmbStatus);
             this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Location = new System.Drawing.Point(10, 44);
+            this.groupBox1.Location = new System.Drawing.Point(7, 44);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(273, 100);
             this.groupBox1.TabIndex = 6;
@@ -141,7 +143,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(293, 37);
+            this.panel2.Size = new System.Drawing.Size(290, 37);
             this.panel2.TabIndex = 40;
             // 
             // iconState
@@ -166,16 +168,26 @@
             this.label3.TabIndex = 0;
             this.label3.Text = "Update Status";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.SkyBlue;
+            this.panel1.Controls.Add(this.grpButtons);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Location = new System.Drawing.Point(10, 10);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(290, 213);
+            this.panel1.TabIndex = 41;
+            // 
             // frmStatus
             // 
             this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(126)))), ((int)(((byte)(49)))));
             this.CancelButton = this.btnClose;
-            this.ClientSize = new System.Drawing.Size(293, 221);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.grpButtons);
+            this.ClientSize = new System.Drawing.Size(311, 233);
+            this.Controls.Add(this.panel1);
             this.Name = "frmStatus";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmStatus";
@@ -186,6 +198,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconState)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -201,5 +214,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbStatus;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Panel panel1;
     }
 }
