@@ -303,7 +303,7 @@ namespace Shaheen
         {
             if (MessageBox.Show("Do you want to exit", "Shahee Weekly", MessageBoxButtons.OKCancel, MessageBoxIcon.Information) == DialogResult.OK)
             {
-                Application.Exit();
+                Environment.Exit(0);
             }
         }
 

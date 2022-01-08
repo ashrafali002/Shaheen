@@ -5,6 +5,12 @@ namespace Shaheen
 {
     public partial class BaseForm : Form
     {
+        public string _mode;
+        public string Mode
+        {
+            get { return _mode; }
+            set { _mode = value; }
+        }
         public BaseForm()
         {
             InitializeComponent();

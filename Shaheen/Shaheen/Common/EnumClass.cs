@@ -16,6 +16,13 @@ namespace Shaheen
         public const string ResetDatabase = "Are you sure want reset Database? Data will loss and will not be recoverable. ";
         public const string ResetDBSuccessfully = "Database reset successfully ";
     }
+    public enum ModeType
+    {
+        New,
+        Edit,
+        Delete,
+        View
+    }
     public enum PaymentType
     {
         Cash,
@@ -61,7 +68,7 @@ namespace Shaheen
             if (obj == System.DBNull.Value)
                 return string.Empty;
             else
-                return Convert.ToString(obj);            
+                return Convert.ToString(obj);
         }
 
         public static int NullToInt(object obj)
@@ -95,5 +102,5 @@ namespace Shaheen
         public static int userType { get; set; }
     }
 
-    
+
 }

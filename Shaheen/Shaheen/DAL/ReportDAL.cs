@@ -31,7 +31,7 @@ namespace Shaheen.DAL
                 LEFT OUTER JOIN Area A ON P.areaId = A.areaId
                 Where SUB.status in (1,3)                     
                     AND SUBD.status = 1 
-                    AND SUBD.subscriptionEndDate >= '" + todayDate.ToLongDateString() + " 23:59:59' Order by subscriptionType asc";
+                    AND SUBD.subscriptionEndDate >= '" + todayDate.ToShortDateString() + " 23:59:59' Order by subscriptionType asc";
             using (SqlCeConnection con = new SqlCeConnection(ConnectionString))
             {
                 con.Open();
