@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvSubscriptionList = new System.Windows.Forms.DataGridView();
             this.subscriptionCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.personName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,9 +58,7 @@
             this.ctxmPayment = new System.Windows.Forms.ToolStripMenuItem();
             this.ctmxUpdateStatus = new System.Windows.Forms.ToolStripMenuItem();
             this.txtSearch = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnReset = new FontAwesome.Sharp.IconButton();
-            this.label3 = new System.Windows.Forms.Label();
             this.rdoPerson = new System.Windows.Forms.RadioButton();
             this.rdoCode = new System.Windows.Forms.RadioButton();
             this.btnSearch = new FontAwesome.Sharp.IconButton();
@@ -69,9 +67,9 @@
             this.label27 = new System.Windows.Forms.Label();
             this.btnClose = new FontAwesome.Sharp.IconButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubscriptionList)).BeginInit();
             this.mnuContext.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel17.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconSubscriptionList)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
@@ -85,14 +83,14 @@
             this.dgvSubscriptionList.AllowUserToResizeRows = false;
             this.dgvSubscriptionList.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
             this.dgvSubscriptionList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSubscriptionList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubscriptionList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSubscriptionList.ColumnHeadersHeight = 50;
             this.dgvSubscriptionList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSubscriptionList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -111,34 +109,35 @@
             this.subscriptionId,
             this.subscriptionDetailId,
             this.status});
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.Format = "C2";
-            dataGridViewCellStyle11.NullValue = null;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSubscriptionList.DefaultCellStyle = dataGridViewCellStyle11;
+            this.tableLayoutPanel1.SetColumnSpan(this.dgvSubscriptionList, 7);
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.Format = "C2";
+            dataGridViewCellStyle5.NullValue = null;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSubscriptionList.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvSubscriptionList.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSubscriptionList.EnableHeadersVisualStyles = false;
             this.dgvSubscriptionList.GridColor = System.Drawing.Color.Black;
-            this.dgvSubscriptionList.Location = new System.Drawing.Point(3, 107);
+            this.dgvSubscriptionList.Location = new System.Drawing.Point(3, 93);
             this.dgvSubscriptionList.MultiSelect = false;
             this.dgvSubscriptionList.Name = "dgvSubscriptionList";
             this.dgvSubscriptionList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSubscriptionList.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSubscriptionList.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvSubscriptionList.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvSubscriptionList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvSubscriptionList.Size = new System.Drawing.Size(1112, 482);
+            this.dgvSubscriptionList.Size = new System.Drawing.Size(1125, 476);
             this.dgvSubscriptionList.TabIndex = 7;
             this.dgvSubscriptionList.CellMouseDown += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvSubscriptionList_CellMouseDown);
             this.dgvSubscriptionList.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.dgvSubscriptionList_DataBindingComplete);
@@ -146,7 +145,7 @@
             // subscriptionCode
             // 
             this.subscriptionCode.DataPropertyName = "subscriptionCode";
-            this.subscriptionCode.FillWeight = 49.54955F;
+            this.subscriptionCode.FillWeight = 1F;
             this.subscriptionCode.HeaderText = "Code";
             this.subscriptionCode.Name = "subscriptionCode";
             this.subscriptionCode.ReadOnly = true;
@@ -155,21 +154,21 @@
             // 
             // personName
             // 
-            this.personName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.personName.DataPropertyName = "personName";
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.personName.DefaultCellStyle = dataGridViewCellStyle8;
-            this.personName.FillWeight = 207.4462F;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.personName.DefaultCellStyle = dataGridViewCellStyle2;
+            this.personName.FillWeight = 150F;
             this.personName.HeaderText = "Customer";
             this.personName.Name = "personName";
             this.personName.ReadOnly = true;
             this.personName.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.personName.Width = 200;
             // 
             // subscriptionDate
             // 
             this.subscriptionDate.DataPropertyName = "subscriptionDate";
             this.subscriptionDate.FillWeight = 94.12218F;
-            this.subscriptionDate.HeaderText = "Subscription Date";
+            this.subscriptionDate.HeaderText = "Subs. Date";
             this.subscriptionDate.Name = "subscriptionDate";
             this.subscriptionDate.ReadOnly = true;
             this.subscriptionDate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
@@ -198,8 +197,8 @@
             // pendingAmount
             // 
             this.pendingAmount.DataPropertyName = "pendingAmount";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.pendingAmount.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.pendingAmount.DefaultCellStyle = dataGridViewCellStyle3;
             this.pendingAmount.FillWeight = 74.94263F;
             this.pendingAmount.HeaderText = "Pending Amount";
             this.pendingAmount.Name = "pendingAmount";
@@ -251,8 +250,8 @@
             // 
             this.agentName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.agentName.DataPropertyName = "agentName";
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.agentName.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.agentName.DefaultCellStyle = dataGridViewCellStyle4;
             this.agentName.FillWeight = 157.6188F;
             this.agentName.HeaderText = "Agent";
             this.agentName.Name = "agentName";
@@ -293,7 +292,7 @@
             // 
             // mnuContext
             // 
-            this.mnuContext.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mnuContext.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mnuContext.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ctxmEditPerson,
             this.ctxmSubscriptionDetails,
@@ -301,13 +300,13 @@
             this.ctxmPayment,
             this.ctmxUpdateStatus});
             this.mnuContext.Name = "mnuContext";
-            this.mnuContext.Size = new System.Drawing.Size(248, 164);
+            this.mnuContext.Size = new System.Drawing.Size(217, 154);
             // 
             // ctxmEditPerson
             // 
             this.ctxmEditPerson.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.ctxmEditPerson.Name = "ctxmEditPerson";
-            this.ctxmEditPerson.Size = new System.Drawing.Size(247, 24);
+            this.ctxmEditPerson.Size = new System.Drawing.Size(216, 22);
             this.ctxmEditPerson.Text = "Edit Person";
             this.ctxmEditPerson.Click += new System.EventHandler(this.ctxmEditPerson_Click);
             // 
@@ -315,7 +314,7 @@
             // 
             this.ctxmSubscriptionDetails.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.ctxmSubscriptionDetails.Name = "ctxmSubscriptionDetails";
-            this.ctxmSubscriptionDetails.Size = new System.Drawing.Size(247, 24);
+            this.ctxmSubscriptionDetails.Size = new System.Drawing.Size(216, 22);
             this.ctxmSubscriptionDetails.Text = "Edit SubscriptionDetails";
             this.ctxmSubscriptionDetails.Click += new System.EventHandler(this.ctxmSubscriptionDetails_Click);
             // 
@@ -323,7 +322,7 @@
             // 
             this.ctxmRenewSubscription.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.ctxmRenewSubscription.Name = "ctxmRenewSubscription";
-            this.ctxmRenewSubscription.Size = new System.Drawing.Size(247, 24);
+            this.ctxmRenewSubscription.Size = new System.Drawing.Size(216, 22);
             this.ctxmRenewSubscription.Text = "Renew Subscription";
             this.ctxmRenewSubscription.Click += new System.EventHandler(this.ctxmRenewSubscription_Click);
             // 
@@ -331,14 +330,14 @@
             // 
             this.ctxmPayment.Margin = new System.Windows.Forms.Padding(0, 5, 0, 5);
             this.ctxmPayment.Name = "ctxmPayment";
-            this.ctxmPayment.Size = new System.Drawing.Size(247, 24);
+            this.ctxmPayment.Size = new System.Drawing.Size(216, 22);
             this.ctxmPayment.Text = "Make Payment";
             this.ctxmPayment.Click += new System.EventHandler(this.ctxmPayment_Click);
             // 
             // ctmxUpdateStatus
             // 
             this.ctmxUpdateStatus.Name = "ctmxUpdateStatus";
-            this.ctmxUpdateStatus.Size = new System.Drawing.Size(247, 24);
+            this.ctmxUpdateStatus.Size = new System.Drawing.Size(216, 22);
             this.ctmxUpdateStatus.Text = "Update Status";
             this.ctmxUpdateStatus.Click += new System.EventHandler(this.ctmxUpdateStatus_Click);
             // 
@@ -346,28 +345,13 @@
             // 
             this.txtSearch.BackColor = System.Drawing.Color.SkyBlue;
             this.txtSearch.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtSearch.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.ForeColor = System.Drawing.Color.Navy;
-            this.txtSearch.Location = new System.Drawing.Point(482, 14);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.txtSearch.Location = new System.Drawing.Point(327, 55);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2, 10, 2, 3);
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(255, 27);
+            this.txtSearch.Size = new System.Drawing.Size(291, 26);
             this.txtSearch.TabIndex = 22;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.SkyBlue;
-            this.panel2.Controls.Add(this.btnReset);
-            this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.rdoPerson);
-            this.panel2.Controls.Add(this.rdoCode);
-            this.panel2.Controls.Add(this.txtSearch);
-            this.panel2.Controls.Add(this.btnSearch);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 46);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1112, 55);
-            this.panel2.TabIndex = 25;
             // 
             // btnReset
             // 
@@ -376,16 +360,15 @@
             this.btnReset.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnReset.FlatAppearance.BorderSize = 0;
             this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReset.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnReset.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnReset.IconChar = FontAwesome.Sharp.IconChar.Sync;
             this.btnReset.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.btnReset.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnReset.IconSize = 32;
             this.btnReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnReset.Location = new System.Drawing.Point(1015, 8);
+            this.btnReset.Location = new System.Drawing.Point(732, 48);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Rotation = 0D;
-            this.btnReset.Size = new System.Drawing.Size(90, 37);
+            this.btnReset.Size = new System.Drawing.Size(103, 39);
             this.btnReset.TabIndex = 30;
             this.btnReset.Text = "Reset";
             this.btnReset.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -393,25 +376,15 @@
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.label3.Location = new System.Drawing.Point(128, 15);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 25);
-            this.label3.TabIndex = 29;
-            this.label3.Text = "Search :";
-            // 
             // rdoPerson
             // 
             this.rdoPerson.AutoSize = true;
-            this.rdoPerson.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoPerson.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.rdoPerson.Location = new System.Drawing.Point(319, 16);
+            this.rdoPerson.Location = new System.Drawing.Point(180, 55);
+            this.rdoPerson.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.rdoPerson.Name = "rdoPerson";
-            this.rdoPerson.Size = new System.Drawing.Size(141, 23);
+            this.rdoPerson.Size = new System.Drawing.Size(142, 24);
             this.rdoPerson.TabIndex = 26;
             this.rdoPerson.TabStop = true;
             this.rdoPerson.Text = "Customer Name";
@@ -420,11 +393,12 @@
             // rdoCode
             // 
             this.rdoCode.AutoSize = true;
-            this.rdoCode.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdoCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdoCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.rdoCode.Location = new System.Drawing.Point(233, 16);
+            this.rdoCode.Location = new System.Drawing.Point(109, 55);
+            this.rdoCode.Margin = new System.Windows.Forms.Padding(3, 10, 3, 3);
             this.rdoCode.Name = "rdoCode";
-            this.rdoCode.Size = new System.Drawing.Size(63, 23);
+            this.rdoCode.Size = new System.Drawing.Size(65, 24);
             this.rdoCode.TabIndex = 25;
             this.rdoCode.TabStop = true;
             this.rdoCode.Text = "Code";
@@ -436,16 +410,15 @@
             this.btnSearch.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnSearch.FlatAppearance.BorderSize = 0;
             this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearch.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnSearch.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnSearch.IconChar = FontAwesome.Sharp.IconChar.Search;
             this.btnSearch.IconColor = System.Drawing.Color.DarkBlue;
+            this.btnSearch.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnSearch.IconSize = 32;
             this.btnSearch.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSearch.Location = new System.Drawing.Point(919, 8);
+            this.btnSearch.Location = new System.Drawing.Point(623, 48);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Rotation = 0D;
-            this.btnSearch.Size = new System.Drawing.Size(90, 37);
+            this.btnSearch.Size = new System.Drawing.Size(103, 39);
             this.btnSearch.TabIndex = 28;
             this.btnSearch.Text = "Search";
             this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -456,12 +429,13 @@
             // panel17
             // 
             this.panel17.BackColor = System.Drawing.Color.Navy;
+            this.tableLayoutPanel1.SetColumnSpan(this.panel17, 7);
             this.panel17.Controls.Add(this.iconSubscriptionList);
             this.panel17.Controls.Add(this.label27);
             this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel17.Location = new System.Drawing.Point(3, 3);
             this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(1112, 37);
+            this.panel17.Size = new System.Drawing.Size(1125, 39);
             this.panel17.TabIndex = 26;
             // 
             // iconSubscriptionList
@@ -469,20 +443,22 @@
             this.iconSubscriptionList.BackColor = System.Drawing.Color.Navy;
             this.iconSubscriptionList.IconChar = FontAwesome.Sharp.IconChar.ClipboardList;
             this.iconSubscriptionList.IconColor = System.Drawing.Color.White;
-            this.iconSubscriptionList.Location = new System.Drawing.Point(10, 6);
+            this.iconSubscriptionList.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconSubscriptionList.IconSize = 34;
+            this.iconSubscriptionList.Location = new System.Drawing.Point(11, 6);
             this.iconSubscriptionList.Name = "iconSubscriptionList";
-            this.iconSubscriptionList.Size = new System.Drawing.Size(32, 32);
+            this.iconSubscriptionList.Size = new System.Drawing.Size(37, 34);
             this.iconSubscriptionList.TabIndex = 11;
             this.iconSubscriptionList.TabStop = false;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.ForeColor = System.Drawing.Color.White;
-            this.label27.Location = new System.Drawing.Point(48, 6);
+            this.label27.Location = new System.Drawing.Point(55, 6);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(169, 25);
+            this.label27.Size = new System.Drawing.Size(171, 25);
             this.label27.TabIndex = 0;
             this.label27.Text = "Subscription List";
             // 
@@ -492,16 +468,15 @@
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnClose.ForeColor = System.Drawing.Color.Maroon;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
             this.btnClose.IconColor = System.Drawing.Color.Maroon;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnClose.IconSize = 32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(1025, 595);
+            this.btnClose.Location = new System.Drawing.Point(1025, 575);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Rotation = 0D;
-            this.btnClose.Size = new System.Drawing.Size(90, 37);
+            this.btnClose.Size = new System.Drawing.Size(103, 39);
             this.btnClose.TabIndex = 31;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -511,12 +486,23 @@
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.ColumnCount = 7;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel1.Controls.Add(this.btnReset, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.rdoCode, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.rdoPerson, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel17, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtSearch, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.dgvSubscriptionList, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.btnClose, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btnSearch, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.btnClose, 6, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -525,17 +511,30 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1118, 640);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1130, 621);
             this.tableLayoutPanel1.TabIndex = 32;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
+            this.label3.Location = new System.Drawing.Point(3, 55);
+            this.label3.Margin = new System.Windows.Forms.Padding(3, 10, 3, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 25);
+            this.label3.TabIndex = 32;
+            this.label3.Text = "Search :";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmSubscriptionList
             // 
             this.AcceptButton = this.btnSearch;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnReset;
-            this.ClientSize = new System.Drawing.Size(1118, 640);
+            this.ClientSize = new System.Drawing.Size(1130, 621);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.Name = "frmSubscriptionList";
@@ -544,12 +543,11 @@
             this.Load += new System.EventHandler(this.frmSubscriptionList_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubscriptionList)).EndInit();
             this.mnuContext.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel17.ResumeLayout(false);
             this.panel17.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconSubscriptionList)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -563,10 +561,8 @@
         private System.Windows.Forms.ToolStripMenuItem ctxmRenewSubscription;
         private System.Windows.Forms.ToolStripMenuItem ctxmPayment;
         private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton rdoPerson;
         private System.Windows.Forms.RadioButton rdoCode;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel17;
         private System.Windows.Forms.Label label27;
         private FontAwesome.Sharp.IconButton btnSearch;
@@ -575,6 +571,7 @@
         private FontAwesome.Sharp.IconPictureBox iconSubscriptionList;
         private System.Windows.Forms.ToolStripMenuItem ctmxUpdateStatus;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.DataGridViewTextBoxColumn subscriptionCode;
         private System.Windows.Forms.DataGridViewTextBoxColumn personName;
         private System.Windows.Forms.DataGridViewTextBoxColumn subscriptionDate;

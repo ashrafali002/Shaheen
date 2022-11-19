@@ -69,7 +69,7 @@
             this.dgvDistrict.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -85,13 +85,13 @@
             this.colDelete});
             this.dgvDistrict.EnableHeadersVisualStyles = false;
             this.dgvDistrict.GridColor = System.Drawing.Color.Black;
-            this.dgvDistrict.Location = new System.Drawing.Point(298, 44);
+            this.dgvDistrict.Location = new System.Drawing.Point(341, 47);
             this.dgvDistrict.MultiSelect = false;
             this.dgvDistrict.Name = "dgvDistrict";
             this.dgvDistrict.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Roboto", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -99,7 +99,7 @@
             this.dgvDistrict.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDistrict.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvDistrict.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDistrict.Size = new System.Drawing.Size(478, 279);
+            this.dgvDistrict.Size = new System.Drawing.Size(546, 298);
             this.dgvDistrict.TabIndex = 5;
             this.dgvDistrict.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDistrict_CellContentClick);
             this.dgvDistrict.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvDistrict_CellFormatting);
@@ -156,7 +156,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(786, 37);
+            this.panel2.Size = new System.Drawing.Size(898, 39);
             this.panel2.TabIndex = 38;
             // 
             // iconDistrict
@@ -164,20 +164,22 @@
             this.iconDistrict.BackColor = System.Drawing.Color.Navy;
             this.iconDistrict.IconChar = FontAwesome.Sharp.IconChar.Map;
             this.iconDistrict.IconColor = System.Drawing.Color.White;
-            this.iconDistrict.Location = new System.Drawing.Point(10, 6);
+            this.iconDistrict.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconDistrict.IconSize = 34;
+            this.iconDistrict.Location = new System.Drawing.Point(11, 6);
             this.iconDistrict.Name = "iconDistrict";
-            this.iconDistrict.Size = new System.Drawing.Size(32, 32);
+            this.iconDistrict.Size = new System.Drawing.Size(37, 34);
             this.iconDistrict.TabIndex = 6;
             this.iconDistrict.TabStop = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(48, 6);
+            this.label3.Location = new System.Drawing.Point(55, 6);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 25);
+            this.label3.Size = new System.Drawing.Size(78, 25);
             this.label3.TabIndex = 0;
             this.label3.Text = "District";
             // 
@@ -189,9 +191,9 @@
             this.groupBox1.Controls.Add(this.lblDistrictName);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.groupBox1.Location = new System.Drawing.Point(10, 43);
+            this.groupBox1.Location = new System.Drawing.Point(11, 46);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 280);
+            this.groupBox1.Size = new System.Drawing.Size(322, 299);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Add / Edit District";
@@ -200,11 +202,11 @@
             // 
             this.txtDistrictName.BackColor = System.Drawing.Color.SkyBlue;
             this.txtDistrictName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDistrictName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDistrictName.Location = new System.Drawing.Point(19, 61);
+            this.txtDistrictName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDistrictName.Location = new System.Drawing.Point(22, 71);
             this.txtDistrictName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtDistrictName.Name = "txtDistrictName";
-            this.txtDistrictName.Size = new System.Drawing.Size(245, 20);
+            this.txtDistrictName.Size = new System.Drawing.Size(280, 15);
             this.txtDistrictName.TabIndex = 0;
             // 
             // panel1
@@ -212,32 +214,32 @@
             this.panel1.BackColor = System.Drawing.Color.SkyBlue;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(19, 84);
+            this.panel1.Location = new System.Drawing.Point(22, 90);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(245, 1);
+            this.panel1.Size = new System.Drawing.Size(280, 1);
             this.panel1.TabIndex = 21;
             // 
             // cmbStateName
             // 
             this.cmbStateName.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbStateName.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbStateName.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbStateName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbStateName.IntegralHeight = false;
-            this.cmbStateName.Location = new System.Drawing.Point(19, 120);
+            this.cmbStateName.Location = new System.Drawing.Point(22, 128);
             this.cmbStateName.Margin = new System.Windows.Forms.Padding(0);
-            this.cmbStateName.MinimumSize = new System.Drawing.Size(250, 0);
+            this.cmbStateName.MinimumSize = new System.Drawing.Size(285, 0);
             this.cmbStateName.Name = "cmbStateName";
-            this.cmbStateName.Size = new System.Drawing.Size(250, 27);
+            this.cmbStateName.Size = new System.Drawing.Size(285, 24);
             this.cmbStateName.TabIndex = 1;
             // 
             // lblDistrictName
             // 
             this.lblDistrictName.AutoSize = true;
             this.lblDistrictName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.lblDistrictName.Location = new System.Drawing.Point(19, 40);
+            this.lblDistrictName.Location = new System.Drawing.Point(22, 43);
             this.lblDistrictName.Margin = new System.Windows.Forms.Padding(0);
             this.lblDistrictName.Name = "lblDistrictName";
-            this.lblDistrictName.Size = new System.Drawing.Size(94, 15);
+            this.lblDistrictName.Size = new System.Drawing.Size(96, 16);
             this.lblDistrictName.TabIndex = 20;
             this.lblDistrictName.Text = "District Name : ";
             // 
@@ -245,9 +247,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(61)))), ((int)(((byte)(82)))));
-            this.label2.Location = new System.Drawing.Point(19, 100);
+            this.label2.Location = new System.Drawing.Point(22, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 15);
+            this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 4;
             this.label2.Text = "State :";
             // 
@@ -256,9 +258,9 @@
             this.groupBox2.Controls.Add(this.btnNew);
             this.groupBox2.Controls.Add(this.btnSave);
             this.groupBox2.Controls.Add(this.btnClose);
-            this.groupBox2.Location = new System.Drawing.Point(10, 323);
+            this.groupBox2.Location = new System.Drawing.Point(11, 345);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(766, 60);
+            this.groupBox2.Size = new System.Drawing.Size(875, 64);
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
             // 
@@ -268,16 +270,15 @@
             this.btnNew.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnNew.FlatAppearance.BorderSize = 0;
             this.btnNew.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNew.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnNew.ForeColor = System.Drawing.Color.DarkBlue;
             this.btnNew.IconChar = FontAwesome.Sharp.IconChar.FileAlt;
             this.btnNew.IconColor = System.Drawing.Color.DarkBlue;
+            this.btnNew.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnNew.IconSize = 32;
             this.btnNew.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNew.Location = new System.Drawing.Point(478, 15);
+            this.btnNew.Location = new System.Drawing.Point(546, 16);
             this.btnNew.Name = "btnNew";
-            this.btnNew.Rotation = 0D;
-            this.btnNew.Size = new System.Drawing.Size(90, 37);
+            this.btnNew.Size = new System.Drawing.Size(103, 39);
             this.btnNew.TabIndex = 3;
             this.btnNew.Text = "New";
             this.btnNew.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -291,16 +292,15 @@
             this.btnSave.BackColor = System.Drawing.Color.DodgerBlue;
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
             this.btnSave.ForeColor = System.Drawing.Color.DarkBlue;
-            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.Save;
+            this.btnSave.IconChar = FontAwesome.Sharp.IconChar.FloppyDisk;
             this.btnSave.IconColor = System.Drawing.Color.DarkBlue;
+            this.btnSave.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnSave.IconSize = 32;
             this.btnSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSave.Location = new System.Drawing.Point(574, 15);
+            this.btnSave.Location = new System.Drawing.Point(656, 16);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Rotation = 0D;
-            this.btnSave.Size = new System.Drawing.Size(90, 37);
+            this.btnSave.Size = new System.Drawing.Size(103, 39);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -314,15 +314,14 @@
             this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClose.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.TimesCircle;
+            this.btnClose.IconChar = FontAwesome.Sharp.IconChar.XmarkCircle;
             this.btnClose.IconColor = System.Drawing.Color.Maroon;
+            this.btnClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.btnClose.IconSize = 32;
             this.btnClose.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnClose.Location = new System.Drawing.Point(670, 15);
+            this.btnClose.Location = new System.Drawing.Point(766, 16);
             this.btnClose.Name = "btnClose";
-            this.btnClose.Rotation = 0D;
-            this.btnClose.Size = new System.Drawing.Size(90, 37);
+            this.btnClose.Size = new System.Drawing.Size(103, 39);
             this.btnClose.TabIndex = 4;
             this.btnClose.Text = "Close";
             this.btnClose.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -332,10 +331,10 @@
             // 
             // frmDistrict
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SkyBlue;
-            this.ClientSize = new System.Drawing.Size(786, 392);
+            this.ClientSize = new System.Drawing.Size(898, 418);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel2);

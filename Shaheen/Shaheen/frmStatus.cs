@@ -21,7 +21,8 @@ namespace Shaheen
         {
             cmbStatus.DataSource = Enum.GetValues(typeof(SubscriptionStatus));
             subscription = subscriptionBll.GetSubscriptionById(SubscriptionId);
-            cmbStatus.SelectedIndex = -1;
+            cmbStatus.SelectedItem = Enum.GetName(typeof(SubscriptionStatus), subscription.status);
+            //cmbStatus.SelectedIndex = -1;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

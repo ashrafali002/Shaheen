@@ -50,15 +50,18 @@ namespace Shaheen
     {
         public static bool checkEmail(string email)
         {
-            bool isValid = false;
-            try
-            {
-                new System.Net.Mail.MailAddress(email);
-                isValid = true;
-            }
-            catch
-            {
-                isValid = false;
+            bool isValid = true;
+            if (!string.IsNullOrEmpty(email))
+            {                
+                try
+                {
+                    new System.Net.Mail.MailAddress(email);
+                    isValid = true;
+                }
+                catch
+                {
+                    isValid = false;
+                }
             }
             return isValid;
         }

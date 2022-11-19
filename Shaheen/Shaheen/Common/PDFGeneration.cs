@@ -22,6 +22,7 @@ namespace Shaheen
                 const int pageCols = 3;
 
                 doc.SetMargins(15, 15, 10, 10);
+                
                 var memoryStream = new MemoryStream();
 
                 var pdfWriter = PdfWriter.GetInstance(doc, new FileStream(filePath, FileMode.Create));
@@ -33,7 +34,7 @@ namespace Shaheen
 
                 //var baseFont = BaseFont.CreateFont(BaseFont.HELVETICA, BaseFont.CP1252, true);
                 //var baseFont = BaseFont.CreateFont("C:\\Windows\\Fonts\\Rasa-Regular.TTF", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-                var baseFont = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                var baseFont = BaseFont.CreateFont(fontPath, BaseFont.IDENTITY_H, BaseFont.NOT_EMBEDDED);
 
                 foreach (DataRow dr in dt.Rows)
                 {
@@ -49,7 +50,7 @@ namespace Shaheen
                     Phrase ph1 = new Phrase();
                     ph1.Add(new Chunk(Environment.NewLine));
                     string subscriptionCode = Convert.ToString(dr["subscriptionCode"]);
-                    string expDate = Convert.ToDateTime(dr["subscriptionEndDate"]).ToShortDateString() + "\n";
+                    string expDate = Convert.ToDateTime(dr["subscriptionEndDate"]).ToString("dd/MM/yyyy") + "\n";
                     ph1.Add(new Chunk(subscriptionCode, new Font(baseFont, 10f)));
                     ph1.Add(glue);
                     ph1.Add(new Chunk(expDate, new Font(baseFont, 10f)));
@@ -81,6 +82,8 @@ namespace Shaheen
                     }
 
                     cell.AddElement(contents);
+                    cell.BorderColor = new BaseColor(51, 102, 102);
+                    cell.BorderWidth = 2;   
                     table.AddCell(cell);
                 }
                 table.CompleteRow();
@@ -138,7 +141,7 @@ namespace Shaheen
                     AddCellToBody(tableLayout, Convert.ToString(dr["subscriptionCode"]), Element.ALIGN_CENTER);
                     AddCellToBody(tableLayout, Convert.ToString(dr["personName"]), Element.ALIGN_LEFT);
                     AddCellToBody(tableLayout, Convert.ToString(dr["personAddress"]), Element.ALIGN_LEFT);
-                    AddCellToBody(tableLayout, Convert.ToDateTime(dr["subscriptionEndDate"]).ToShortDateString(), Element.ALIGN_LEFT);
+                    AddCellToBody(tableLayout, Convert.ToDateTime(dr["subscriptionEndDate"]).ToString("dd/MM/yyyy"), Element.ALIGN_LEFT);
                     AddCellToBody(tableLayout, Convert.ToString(dr["pendingAmount"]), Element.ALIGN_RIGHT);
                     AddCellToBody(tableLayout, Convert.ToString(dr["mobile"]), Element.ALIGN_LEFT);
                 }

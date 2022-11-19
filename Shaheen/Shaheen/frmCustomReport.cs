@@ -118,8 +118,8 @@ namespace Shaheen
             }
             if (chkExpired.Checked)
             {
-                DateTime todayDate = DateTime.Now;
-                whereCondition += " AND SUBD.subscriptionEndDate <= '" + todayDate.ToLongDateString() + " 23:59:59'";
+                string todayDate = DateTime.Now.ToShortDateString();
+                whereCondition += " AND SUBD.subscriptionEndDate <= '" + todayDate + " 23:59:59'";
             }
 
             var reportBll = new ReportBLL();
@@ -160,7 +160,8 @@ namespace Shaheen
                         if (isGenerated)
                         {
                             MessageBox.Show("Agent-wise PDF file Successfully generated", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        } else                        
+                        }
+                        else
                         {
                             MessageBox.Show("Agent-wise PDF not generated", MessageText.MessageBoxCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
