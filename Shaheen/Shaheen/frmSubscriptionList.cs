@@ -2,6 +2,7 @@
 using System;
 using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Drawing;
+using System.Globalization;
 using System.IO;
 using System.Security.Authentication.ExtendedProtection;
 using System.Windows.Forms;
@@ -42,6 +43,7 @@ namespace Shaheen
             dgvSubscriptionList.Columns["subscriptionEndDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvSubscriptionList.Columns["pendingAmount"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
             dgvSubscriptionList.Columns["pendingAmount"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvSubscriptionList.Columns["pendingAmount"].DefaultCellStyle.FormatProvider = CultureInfo.GetCultureInfo("en-IN");
         }
 
         private void dgvSubscriptionList_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
@@ -57,10 +59,10 @@ namespace Shaheen
 
         private void ctxmEditPerson_Click(object sender, EventArgs e)
         {
-            frmEditPerson editPerson = new frmEditPerson();            
+            frmEditPerson editPerson = new frmEditPerson();
             editPerson.PersonId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["personId"].Value);
             editPerson.SubscriptionId = Convert.ToInt32(dgvSubscriptionList.Rows[gridRowIndex].Cells["subscriptionId"].Value);
-            
+
             if (editPerson.ShowDialog() == DialogResult.OK)
             {
                 FillDataGridView();

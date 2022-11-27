@@ -38,6 +38,7 @@ namespace Shaheen
             dgvPayment.Columns["paymentDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvPayment.Columns["chequeDate"].DefaultCellStyle.Format = "dd/MM/yyyy";
             dgvPayment.Columns["amountPaid"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            dgvPayment.Columns["amountPaid"].DefaultCellStyle.FormatProvider = CultureInfo.GetCultureInfo("en-IN");
         }
 
         private void txtCode_KeyPress(object sender, KeyPressEventArgs e)
@@ -62,7 +63,7 @@ namespace Shaheen
                     lblAgent.Text = subscriptionModel.agentName;
                     lblName.Text = subscriptionModel.personName;
                     PersonId = subscriptionModel.personId;
-                    lblPendingAmount.Text = subscriptionModel.pendingAmount.ToString("C", CultureInfo.CurrentCulture);
+                    lblPendingAmount.Text = subscriptionModel.pendingAmount.ToString("C", CultureInfo.GetCultureInfo("en-IN"));
                 }
                 else
                 {

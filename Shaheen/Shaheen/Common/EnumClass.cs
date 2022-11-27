@@ -28,6 +28,7 @@ namespace Shaheen
         Cash,
         DD,
         Cheque,
+        Online,
         MO
     }
 

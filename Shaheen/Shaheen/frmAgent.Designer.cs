@@ -144,11 +144,11 @@
             // 
             this.txtEmail.BackColor = System.Drawing.Color.SkyBlue;
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(16, 397);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(381, 19);
+            this.txtEmail.Size = new System.Drawing.Size(381, 15);
             this.txtEmail.TabIndex = 26;
             // 
             // panel8
@@ -156,7 +156,7 @@
             this.panel8.BackColor = System.Drawing.Color.SkyBlue;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel8.Location = new System.Drawing.Point(16, 421);
+            this.panel8.Location = new System.Drawing.Point(16, 416);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(381, 1);
             this.panel8.TabIndex = 27;
@@ -165,11 +165,11 @@
             // 
             this.txtMobile.BackColor = System.Drawing.Color.SkyBlue;
             this.txtMobile.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMobile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMobile.Location = new System.Drawing.Point(219, 340);
             this.txtMobile.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtMobile.Name = "txtMobile";
-            this.txtMobile.Size = new System.Drawing.Size(178, 19);
+            this.txtMobile.Size = new System.Drawing.Size(178, 15);
             this.txtMobile.TabIndex = 23;
             // 
             // label11
@@ -188,7 +188,7 @@
             this.panel6.BackColor = System.Drawing.Color.SkyBlue;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel6.Location = new System.Drawing.Point(219, 365);
+            this.panel6.Location = new System.Drawing.Point(219, 360);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(177, 1);
             this.panel6.TabIndex = 24;
@@ -197,11 +197,11 @@
             // 
             this.txtPhone.BackColor = System.Drawing.Color.SkyBlue;
             this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPhone.Location = new System.Drawing.Point(16, 340);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(178, 19);
+            this.txtPhone.Size = new System.Drawing.Size(178, 15);
             this.txtPhone.TabIndex = 20;
             // 
             // panel7
@@ -229,12 +229,12 @@
             // 
             this.txtPIN.BackColor = System.Drawing.Color.SkyBlue;
             this.txtPIN.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPIN.Location = new System.Drawing.Point(219, 284);
             this.txtPIN.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtPIN.MaxLength = 6;
             this.txtPIN.Name = "txtPIN";
-            this.txtPIN.Size = new System.Drawing.Size(178, 19);
+            this.txtPIN.Size = new System.Drawing.Size(178, 15);
             this.txtPIN.TabIndex = 17;
             // 
             // panel5
@@ -242,7 +242,7 @@
             this.panel5.BackColor = System.Drawing.Color.SkyBlue;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel5.Location = new System.Drawing.Point(219, 308);
+            this.panel5.Location = new System.Drawing.Point(219, 303);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(177, 1);
             this.panel5.TabIndex = 18;
@@ -262,12 +262,12 @@
             // 
             this.cmbArea.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbArea.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbArea.IntegralHeight = false;
             this.cmbArea.Location = new System.Drawing.Point(16, 281);
             this.cmbArea.Margin = new System.Windows.Forms.Padding(0);
             this.cmbArea.Name = "cmbArea";
-            this.cmbArea.Size = new System.Drawing.Size(177, 28);
+            this.cmbArea.Size = new System.Drawing.Size(177, 24);
             this.cmbArea.TabIndex = 15;
             // 
             // label9
@@ -284,12 +284,12 @@
             // 
             this.cmbCity.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbCity.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCity.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCity.IntegralHeight = false;
             this.cmbCity.Location = new System.Drawing.Point(219, 222);
             this.cmbCity.Margin = new System.Windows.Forms.Padding(0);
             this.cmbCity.Name = "cmbCity";
-            this.cmbCity.Size = new System.Drawing.Size(177, 28);
+            this.cmbCity.Size = new System.Drawing.Size(177, 24);
             this.cmbCity.TabIndex = 13;
             this.cmbCity.Leave += new System.EventHandler(this.cmbCity_Leave);
             // 
@@ -307,12 +307,12 @@
             // 
             this.cmbDistrict.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbDistrict.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbDistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbDistrict.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDistrict.IntegralHeight = false;
             this.cmbDistrict.Location = new System.Drawing.Point(16, 222);
             this.cmbDistrict.Margin = new System.Windows.Forms.Padding(0);
             this.cmbDistrict.Name = "cmbDistrict";
-            this.cmbDistrict.Size = new System.Drawing.Size(177, 28);
+            this.cmbDistrict.Size = new System.Drawing.Size(177, 24);
             this.cmbDistrict.TabIndex = 11;
             this.cmbDistrict.Leave += new System.EventHandler(this.cmbDistrict_Leave);
             // 
@@ -330,12 +330,12 @@
             // 
             this.cmbState.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbState.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmbState.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbState.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbState.IntegralHeight = false;
             this.cmbState.Location = new System.Drawing.Point(219, 163);
             this.cmbState.Margin = new System.Windows.Forms.Padding(0);
             this.cmbState.Name = "cmbState";
-            this.cmbState.Size = new System.Drawing.Size(177, 28);
+            this.cmbState.Size = new System.Drawing.Size(177, 24);
             this.cmbState.TabIndex = 9;
             this.cmbState.Leave += new System.EventHandler(this.cmbState_Leave);
             // 
@@ -353,12 +353,12 @@
             // 
             this.cmbCountry.BackColor = System.Drawing.Color.SkyBlue;
             this.cmbCountry.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbCountry.IntegralHeight = false;
             this.cmbCountry.Location = new System.Drawing.Point(16, 163);
             this.cmbCountry.Margin = new System.Windows.Forms.Padding(0);
             this.cmbCountry.Name = "cmbCountry";
-            this.cmbCountry.Size = new System.Drawing.Size(177, 28);
+            this.cmbCountry.Size = new System.Drawing.Size(177, 24);
             this.cmbCountry.TabIndex = 7;
             this.cmbCountry.Leave += new System.EventHandler(this.cmbCountry_Leave);
             // 
@@ -387,11 +387,11 @@
             // 
             this.txtAddress.BackColor = System.Drawing.Color.SkyBlue;
             this.txtAddress.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAddress.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.Location = new System.Drawing.Point(16, 105);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(381, 19);
+            this.txtAddress.Size = new System.Drawing.Size(381, 15);
             this.txtAddress.TabIndex = 4;
             // 
             // panel4
@@ -399,7 +399,7 @@
             this.panel4.BackColor = System.Drawing.Color.SkyBlue;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel4.Location = new System.Drawing.Point(16, 129);
+            this.panel4.Location = new System.Drawing.Point(16, 124);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(381, 1);
             this.panel4.TabIndex = 5;
@@ -408,11 +408,11 @@
             // 
             this.txtName.BackColor = System.Drawing.Color.SkyBlue;
             this.txtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(19, 46);
             this.txtName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(378, 19);
+            this.txtName.Size = new System.Drawing.Size(378, 15);
             this.txtName.TabIndex = 1;
             // 
             // panel2
@@ -420,7 +420,7 @@
             this.panel2.BackColor = System.Drawing.Color.SkyBlue;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(19, 70);
+            this.panel2.Location = new System.Drawing.Point(19, 65);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(377, 1);
             this.panel2.TabIndex = 2;
